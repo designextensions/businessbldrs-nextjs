@@ -61,7 +61,7 @@ export default function HeroSection() {
               Clear Message. Proven Strategy. <span className="text-yellow-500">Real Growth.</span>
             </h1>
             
-            <p className="text-editorial-lg text-stone-600 mb-8 animate-slide-up stagger-3">Stop wasting money on marketing that doesn't work. Get StoryBrand messaging and AI-powered strategy built for real results.</p>
+            <p className="text-editorial-lg text-stone-600 mb-8 animate-slide-up stagger-3">Get a team that leverages the latest in AI, combined with StoryBrand messaging, to help you grow!</p>
             
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 animate-slide-up stagger-4">
               <Link href="/request-quote">
