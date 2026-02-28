@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { seoConfig } from "@/lib/seo-config";
 import AdaAccessibilityPage from "@/components/pages/ada-accessibility";
 
 export const metadata: Metadata = {
-  title: seoConfig.websiteDesign.title,
-  description: seoConfig.websiteDesign.description,
-  keywords: seoConfig.websiteDesign.keywords,
+  title: "ADA Compliance for Websites - Make Your Site Accessible | Business Builders",
+  description: "ADA website compliance & accessibility services in Florida. Make your website accessible to all users and reduce legal risk. Plans from $79/month.",
+  keywords: "ADA compliance, website accessibility, ADA compliant websites, accessibility toolbar, legal compliance, disability access",
   openGraph: {
-    title: seoConfig.websiteDesign.title,
-    description: seoConfig.websiteDesign.description,
-    images: seoConfig.websiteDesign.ogImage ? [seoConfig.websiteDesign.ogImage] : [],
+    title: "ADA Compliance for Websites - Make Your Site Accessible | Business Builders",
+    description: "ADA website compliance & accessibility services in Florida. Make your website accessible to all users and reduce legal risk. Plans from $79/month.",
+    images: ["/service-website.jpg"],
   },
 };
 

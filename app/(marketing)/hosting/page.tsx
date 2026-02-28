@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { seoConfig } from "@/lib/seo-config";
 import HostingPage from "@/components/pages/hosting";
 
 export const metadata: Metadata = {
-  title: seoConfig.websiteDesign.title,
-  description: seoConfig.websiteDesign.description,
-  keywords: seoConfig.websiteDesign.keywords,
+  title: "Managed Website Hosting - Fast, Secure & Reliable | Business Builders",
+  description: "Managed website hosting with 99.9% uptime, nightly backups, SSL security, and expert support. Stop worrying about your server — we handle everything. Plans from $50/month.",
+  keywords: "managed website hosting, web hosting services, secure hosting, WordPress hosting, website hosting St Augustine, fast website hosting, SSL hosting",
   openGraph: {
-    title: seoConfig.websiteDesign.title,
-    description: seoConfig.websiteDesign.description,
-    images: seoConfig.websiteDesign.ogImage ? [seoConfig.websiteDesign.ogImage] : [],
+    title: "Managed Website Hosting - Fast, Secure & Reliable | Business Builders",
+    description: "Managed website hosting with 99.9% uptime, nightly backups, SSL security, and expert support. Stop worrying about your server — we handle everything. Plans from $50/month.",
+    images: ["/service-website.jpg"],
   },
 };
 
