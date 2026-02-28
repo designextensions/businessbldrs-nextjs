@@ -1,0 +1,85 @@
+Add fallback SEO meta tags to the index.html file. These are safety-net defaults that    
+  will be overridden by Search Atlas OTTO when it loads, but they ensure crawlers always   
+  see something if OTTO fails to load.                                                     
+                                                                                           
+  Find your index.html file (usually in the root or /public folder) and update the <head>  
+  section to include these tags:                                                           
+                                                                                           
+  <!DOCTYPE html>                                                                          
+  <html lang="en">                                                                         
+  <head>                                                                                   
+    <meta charset="UTF-8" />                                                               
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />               
+                                                                                           
+    <!-- FALLBACK SEO META TAGS (OTTO will override these when it loads) -->               
+                                                                                           
+    <!-- Primary Meta Tags -->                                                             
+    <title>St. Augustine Marketing Agency | Business Builders</title>                      
+    <meta name="title" content="St. Augustine Marketing Agency | Business Builders" />     
+    <meta name="description" content="Business Builders is a St. Augustine marketing agency
+   with 26+ years experience. Web design, SEO, HubSpot, social media & branding. Free      
+  consultation. Call 877-378-6101." />                                                     
+    <meta name="keywords" content="st augustine marketing agency, florida marketing        
+  company, hubspot agency, storybrand certified, web design st augustine" />               
+    <meta name="author" content="Business Builders" />                                     
+    <meta name="robots" content="index, follow" />                                         
+    <link rel="canonical" href="https://businessbldrs.com/" />                             
+                                                                                           
+    <!-- Open Graph / Facebook -->                                                         
+    <meta property="og:type" content="website" />                                          
+    <meta property="og:url" content="https://businessbldrs.com/" />                        
+    <meta property="og:title" content="St. Augustine Marketing Agency | Business Builders" 
+  />                                                                                       
+    <meta property="og:description" content="Business Builders is a St. Augustine marketing
+   agency with 26+ years experience. Web design, SEO, HubSpot, social media & branding.    
+  Free consultation." />                                                                   
+    <meta property="og:image" content="https://businessbldrs.com/og-image.jpg" />          
+    <meta property="og:image:width" content="1200" />                                      
+    <meta property="og:image:height" content="630" />                                      
+    <meta property="og:site_name" content="Business Builders" />                           
+    <meta property="og:locale" content="en_US" />                                          
+                                                                                           
+    <!-- Twitter Card -->                                                                  
+    <meta name="twitter:card" content="summary_large_image" />                             
+    <meta name="twitter:url" content="https://businessbldrs.com/" />                       
+    <meta name="twitter:title" content="St. Augustine Marketing Agency | Business Builders"
+   />                                                                                      
+    <meta name="twitter:description" content="Business Builders is a St. Augustine         
+  marketing agency with 26+ years experience. Web design, SEO, HubSpot, social media &     
+  branding. Free consultation." />                                                         
+    <meta name="twitter:image" content="https://businessbldrs.com/og-image.jpg" />         
+                                                                                           
+    <!-- Geo Tags (for local SEO) -->                                                      
+    <meta name="geo.region" content="US-FL" />                                             
+    <meta name="geo.placename" content="St. Augustine" />                                  
+    <meta name="geo.position" content="29.8946;-81.3145" />                                
+    <meta name="ICBM" content="29.8946, -81.3145" />                                       
+                                                                                           
+    <!-- Favicon (add if not already present) -->                                          
+    <link rel="icon" type="image/png" href="/favicon.png" />                               
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />                           
+                                                                                           
+    <!-- Keep any existing stylesheets and scripts below -->                               
+                                                                                           
+  </head>                                                                                  
+  <body>                                                                                   
+    <div id="root"></div>                                                                  
+    <!-- Your existing scripts -->                                                         
+  </body>                                                                                  
+  </html>                                                                                  
+                                                                                           
+  IMPORTANT NOTES:                                                                         
+  1. DO NOT remove the existing OTTO/seoplatform.io script - it should stay                
+  2. These meta tags go BEFORE any scripts in the <head>                                   
+  3. OTTO will dynamically update these tags when it loads - that's fine and expected      
+  4. If an og-image.jpg doesn't exist yet, create a placeholder or use the logo URL instead
+                                                                                           
+  Also, please create a simple OG image if one doesn't exist:                              
+  - Create /public/og-image.jpg (or og-image.png)                                          
+  - Size: 1200x630 pixels                                                                  
+  - Content: Business Builders logo centered, company name, tagline "Marketing Agency | St.
+   Augustine, FL"                                                                          
+  - Use brand colors                                                                       
+                                                                                           
+  After making these changes, the View Page Source should show all these meta tags in the  
+  HTML immediately (before any JavaScript runs).     

@@ -1,0 +1,65 @@
+Add this JSON-LD block to index.html (after the existing schemas):                                                
+                                                                                                                    
+  <script type="application/ld+json">                                                                               
+  {                                                                                                                 
+    "@context": "https://schema.org",                                                                               
+    "@type": "ItemList",                                                                                            
+    "name": "Marketing Services",                                                                                   
+    "itemListElement": [                                                                                            
+      {                                                                                                             
+        "@type": "Service",                                                                                         
+        "position": 1,                                                                                              
+        "name": "Web Design",                                                                                       
+        "description": "Custom website design and development for businesses of all sizes",                         
+        "provider": {"@type": "LocalBusiness", "name": "Business Builders"},                                        
+        "areaServed": {"@type": "Country", "name": "United States"},                                                
+        "serviceType": "Web Design"                                                                                 
+      },                                                                                                            
+      {                                                                                                             
+        "@type": "Service",                                                                                         
+        "position": 2,                                                                                              
+        "name": "SEO Services",                                                                                     
+        "description": "Search engine optimization to improve rankings and organic traffic",                        
+        "provider": {"@type": "LocalBusiness", "name": "Business Builders"},                                        
+        "areaServed": {"@type": "Country", "name": "United States"},                                                
+        "serviceType": "SEO"                                                                                        
+      },                                                                                                            
+      {                                                                                                             
+        "@type": "Service",                                                                                         
+        "position": 3,                                                                                              
+        "name": "HubSpot Implementation",                                                                           
+        "description": "HubSpot CRM setup, customization, and training as a Platinum Partner",                      
+        "provider": {"@type": "LocalBusiness", "name": "Business Builders"},                                        
+        "areaServed": {"@type": "Country", "name": "United States"},                                                
+        "serviceType": "CRM Implementation"                                                                         
+      },                                                                                                            
+      {                                                                                                             
+        "@type": "Service",                                                                                         
+        "position": 4,                                                                                              
+        "name": "Social Media Marketing",                                                                           
+        "description": "Social media strategy, content creation, and advertising",                                  
+        "provider": {"@type": "LocalBusiness", "name": "Business Builders"},                                        
+        "areaServed": {"@type": "Country", "name": "United States"},                                                
+        "serviceType": "Social Media Marketing"                                                                     
+      },                                                                                                            
+      {                                                                                                             
+        "@type": "Service",                                                                                         
+        "position": 5,                                                                                              
+        "name": "Brand Development",                                                                                
+        "description": "Logo design, brand strategy, and visual identity creation",                                 
+        "provider": {"@type": "LocalBusiness", "name": "Business Builders"},                                        
+        "areaServed": {"@type": "Country", "name": "United States"},                                                
+        "serviceType": "Branding"                                                                                   
+      },                                                                                                            
+      {                                                                                                             
+        "@type": "Service",                                                                                         
+        "position": 6,                                                                                              
+        "name": "Content Creation",                                                                                 
+        "description": "Blog writing, video production, and marketing content",                                     
+        "provider": {"@type": "LocalBusiness", "name": "Business Builders"},                                        
+        "areaServed": {"@type": "Country", "name": "United States"},                                                
+        "serviceType": "Content Marketing"                                                                          
+      }                                                                                                             
+    ]                                                                                                               
+  }                                                                                                                 
+  </script>   

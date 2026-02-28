@@ -1,0 +1,23 @@
+| Page                       | Button Label                    | Issue                                         |
+| -------------------------- | ------------------------------- | --------------------------------------------- |
+| **About**                  | schedule a free 15 minutes call | Not working                                   |
+|                            | we help business grow           | Not working                                   |
+| **Branding & Logos**       | Schedule a call                 | Anchors to same page instead of request quote |
+|                            | Get started today               | Anchors to same page instead of request quote |
+|                            | Schedule a Call                 | Anchors to same page instead of request quote |
+| **Video Production**       | Sign up                         | Anchors to same page instead of request quote |
+|                            | Schedule a call                 | Anchors to same page instead of request quote |
+| **Marketing Services**     | View more works                 | Not working                                   |
+|                            | Schedule a call                 | Anchors to same page instead of request quote |
+|                            | Get started today               | Anchors to same page instead of request quote |
+| **App Development**        | Schedule a call                 | Not working                                   |
+|                            | View our work                   | Anchors to same page instead of request quote |
+| **HubSpot CRM**            | Schedule a call                 | Anchors to same page instead of request quote |
+|                            | Contact us to get started today | Anchors to same page instead of request quote |
+|                            | Schedule a call                 | Anchors to same page instead of request quote |
+|                            | Learn more                      | Anchors to same page instead of request quote |
+| **Portfolio**              | Start your project              | 404 page                                      |
+| **Portfolio › Breakwater** | Schedule a call                 | Not working                                   |
+|                            | Request a call                  | Not working                                   |
+| **Events**                 | Register                        | 404 page                                      |
+|                            | Register                        | 404 page                                      |

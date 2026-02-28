@@ -1,0 +1,52 @@
+For each portfolio/case study page, add Article schema.                                                           
+                                                                                                                    
+  Create a component or template that adds this schema to portfolio pages:                                          
+                                                                                                                    
+  <script type="application/ld+json">                                                                               
+  {                                                                                                                 
+    "@context": "https://schema.org",                                                                               
+    "@type": "Article",                                                                                             
+    "headline": "{Case Study Title}",                                                                               
+    "description": "{Brief description of results}",                                                                
+    "image": "{Featured image URL}",                                                                                
+    "author": {                                                                                                     
+      "@type": "Organization",                                                                                      
+      "name": "Business Builders",                                                                                  
+      "url": "https://businessbldrs.com"                                                                            
+    },                                                                                                              
+    "publisher": {                                                                                                  
+      "@type": "Organization",                                                                                      
+      "name": "Business Builders",                                                                                  
+      "logo": {                                                                                                     
+        "@type": "ImageObject",                                                                                     
+        "url": "https://businessbldrs.com/logo.png"                                                                 
+      }                                                                                                             
+    },                                                                                                              
+    "datePublished": "{Publish date}",                                                                              
+    "dateModified": "{Last modified date}",                                                                         
+    "about": {                                                                                                      
+      "@type": "Organization",                                                                                      
+      "name": "{Client name}"                                                                                       
+    },                                                                                                              
+    "mainEntityOfPage": {                                                                                           
+      "@type": "WebPage",                                                                                           
+      "@id": "https://businessbldrs.com/portfolio/{slug}"                                                           
+    }                                                                                                               
+  }                                                                                                                 
+  </script>                                                                                                         
+                                                                                                                    
+  Also add BreadcrumbList to portfolio pages:                                                                       
+                                                                                                                    
+  <script type="application/ld+json">                                                                               
+  {                                                                                                                 
+    "@context": "https://schema.org",                                                                               
+    "@type": "BreadcrumbList",                                                                                      
+    "itemListElement": [                                                                                            
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://businessbldrs.com"},                    
+      {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://businessbldrs.com/portfolio"},     
+      {"@type": "ListItem", "position": 3, "name": "{Case Study Title}", "item":                                    
+  "https://businessbldrs.com/portfolio/{slug}"}                                                                     
+    ]                                                                                                               
+  }                                                                                                                 
+  </script>                                                                                                         
+             
