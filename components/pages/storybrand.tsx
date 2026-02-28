@@ -6,7 +6,6 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-;
 import { ChevronRight, Play, CheckCircle, ArrowRight, Target, Users, TrendingUp } from "lucide-react";
 
 export default function StoryBrand() {

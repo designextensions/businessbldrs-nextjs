@@ -4,7 +4,6 @@ import SEOHead from "@/components/ui/seo-head";
 
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-;
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Download, FileText, Search, ArrowRight, CheckCircle, Lock, BookOpen, Briefcase } from "lucide-react";

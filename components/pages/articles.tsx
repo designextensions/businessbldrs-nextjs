@@ -4,7 +4,6 @@ import SEOHead from "@/components/ui/seo-head";
 
 import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
-;
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Navigation from "@/components/ui/navigation";
@@ -50,7 +49,7 @@ export default function Articles() {
   const [visibleCount, setVisibleCount] = useState(12);
 
   const { data: articles = [], isLoading } = useQuery<BlogArticle[]>({
-    queryKey: ["/api/blog-articles"],
+    queryKey: ["/api/articles"],
   });
 
   const categories = useMemo(() => 

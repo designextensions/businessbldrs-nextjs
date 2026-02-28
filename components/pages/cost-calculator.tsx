@@ -23,7 +23,6 @@ import {
   ArrowRight,
   Zap
 } from "lucide-react";
-;
 
 export default function CostCalculator() {
   const [monthlyRevenue, setMonthlyRevenue] = useState<number>(50000);

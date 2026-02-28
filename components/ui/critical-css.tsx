@@ -34,15 +34,6 @@ export default function CriticalCSS() {
 
     // Add resource hints for better performance
     const addResourceHints = () => {
-      // Preload critical CSS
-      if (!document.querySelector('link[rel="preload"][as="style"]')) {
-        const preloadCSS = document.createElement('link');
-        preloadCSS.rel = 'preload';
-        preloadCSS.as = 'style';
-        preloadCSS.href = '/src/index.css';
-        document.head.appendChild(preloadCSS);
-      }
-
       // Add viewport meta for mobile optimization
       if (!document.querySelector('meta[name="viewport"]')) {
         const viewport = document.createElement('meta');

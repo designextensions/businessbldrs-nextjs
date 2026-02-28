@@ -4,7 +4,6 @@ import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Users, TrendingUp, Shield, Eye, Globe, Check, Video, Camera, Mic, Lightbulb } from "lucide-react";
-;
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import ServicePageSchema from "@/components/ui/service-page-schema";

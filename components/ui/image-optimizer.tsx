@@ -32,7 +32,8 @@ const supportsAVIF = (): Promise<boolean> => {
 const createResponsiveImageUrl = (src: string, width: number, format: string = 'webp'): string => {
   // This would normally use a CDN or image service
   // For now, we'll just append parameters to indicate optimization intent
-  const url = new URL(src, window.location.origin);
+  const origin = typeof window !== 'undefined' ? window.location.origin : 'http://localhost';
+  const url = new URL(src, origin);
   url.searchParams.set('w', width.toString());
   url.searchParams.set('f', format);
   url.searchParams.set('q', '85'); // quality

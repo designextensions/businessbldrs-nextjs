@@ -13,7 +13,6 @@ import VideoModal from "@/components/ui/video-modal";
 import EmailCaptureModal from "@/components/ui/email-capture-modal";
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
-;
 import type { MarketingVideo, BlogArticle, DownloadableResource, AccessTool } from "@/lib/db/schema";
 import { useDownloadGate } from "@/hooks/use-download-gate";
 import { trackEvent } from "@/components/ui/google-analytics";

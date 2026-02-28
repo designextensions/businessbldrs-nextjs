@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Award, Clock, Heart } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
-;
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";

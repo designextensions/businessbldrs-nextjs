@@ -9,7 +9,6 @@ import MegaFooter from "@/components/ui/mega-footer";
 import ServicePageSchema from "@/components/ui/service-page-schema";
 import ServiceFAQSchema, { seoServicesFAQs } from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
-;
 
 export default function SEOServices() {
   const seoServices = [

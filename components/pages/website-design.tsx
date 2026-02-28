@@ -4,7 +4,6 @@ import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Monitor, Smartphone, Zap, Search, Users, MessageSquare, BarChart3, Camera } from "lucide-react";
-;
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import ServicePageSchema from "@/components/ui/service-page-schema";

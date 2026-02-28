@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Play, Quote, Star, ArrowRight, MessageSquare, Users, Award, TrendingUp } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-;
 
 const videoTestimonials = [
   {

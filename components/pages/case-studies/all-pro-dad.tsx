@@ -18,7 +18,7 @@ export default function AllProDadCaseStudy() {
     enabled: true
   });
 
-  const heroImage = portfolioItem?.image || "@assets/Screenshot 2025-08-02 at 1.54.32 PM_1754157276843.png";
+  const heroImage = portfolioItem?.image || "/images/placeholder.jpg";
   return (
     <div className="min-h-screen">
       <SEOHead

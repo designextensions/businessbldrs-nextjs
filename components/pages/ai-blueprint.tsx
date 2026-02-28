@@ -5,7 +5,6 @@ import SEOHead from "@/components/ui/seo-head";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Bot, Brain, Workflow, Search, Target, TrendingUp, Lightbulb, ArrowRight, CheckCircle, Users, Building, Zap, BarChart3, Shield, FileText } from "lucide-react";
-;
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import ServicePageSchema from "@/components/ui/service-page-schema";

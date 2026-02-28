@@ -5,7 +5,6 @@ import SEOHead from "@/components/ui/seo-head";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, Monitor, Shield, Users, BookOpen, Video, Mail, Settings, Database, Menu as MenuIcon } from "lucide-react";
-;
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";

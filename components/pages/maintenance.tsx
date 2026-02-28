@@ -7,7 +7,6 @@ import MegaFooter from "@/components/ui/mega-footer";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, Shield, Clock, Zap, ArrowRight, Users, FileText, BarChart3, Star, Mail } from "lucide-react";
-;
 
 export default function Maintenance() {
   const scrollToSection = (sectionId: string) => {

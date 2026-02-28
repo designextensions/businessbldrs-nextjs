@@ -10,7 +10,6 @@ import MegaFooter from "@/components/ui/mega-footer";
 import ServicePageSchema from "@/components/ui/service-page-schema";
 import ServiceFAQSchema from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
-;
 import type { TeamMember } from "@/lib/db/schema";
 
 export default function MarketingStrategyConsulting() {

@@ -6,7 +6,6 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import { Button } from "@/components/ui/button";
 import { Check, Phone, Calendar, Target, Users, MessageCircle } from "lucide-react";
-;
 
 export default function MinistryBlueprint() {
   return (

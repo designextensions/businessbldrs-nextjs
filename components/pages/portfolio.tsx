@@ -11,7 +11,6 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { ExternalLink, Search, ChevronDown, ArrowRight, Layers, Briefcase } from "lucide-react";
-;
 import type { PortfolioItem } from "@/lib/db/schema";
 const breakwaterCaseStudyImage = "/assets/breakwater-construction-case-study.png";
 import { seoConfig, getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";

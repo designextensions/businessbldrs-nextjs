@@ -10,7 +10,6 @@ import { Play, Video, Search, Clock, Tag, ArrowRight } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import VideoModal from "@/components/ui/video-modal";
-;
 import type { MarketingVideo } from "@/lib/db/schema";
 
 export default function Videos() {

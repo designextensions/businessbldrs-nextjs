@@ -9,7 +9,6 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import ArticleSEO from "@/components/ui/ArticleSEO";
 import { Author, TLDR, FAQ, ExpertQuote, defaultAuthor } from "@/components/ui/geo-components";
-;
 import type { BlogArticle } from "@/lib/db/schema";
 
 export default function Article() {
@@ -64,7 +63,7 @@ export default function Article() {
     );
   }
 
-  const shareUrl = window.location.href;
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
   const shareText = `Check out this article: ${article.title}`;
 
   const shareOnSocial = (platform: string) => {

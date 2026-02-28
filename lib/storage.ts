@@ -12,7 +12,9 @@ import {
   forms,
   formSubmissions,
   mediaAssets,
+  accessTools,
 } from "@/lib/db/schema";
+import type { InsertAccessTool } from "@/lib/db/schema";
 import type {
   InsertBlogArticle,
   InsertTeamMember,
@@ -453,4 +455,44 @@ export async function getFormSubmissionsByFormId(formId: number) {
 export async function createFormSubmission(data: InsertFormSubmission) {
   const results = await db.insert(formSubmissions).values(data).returning();
   return results[0];
+}
+
+// ---- Access Tools ----
+
+export async function getAccessTools() {
+  return db
+    .select()
+    .from(accessTools)
+    .where(eq(accessTools.isActive, true))
+    .orderBy(desc(accessTools.createdAt));
+}
+
+export async function getAllAccessTools() {
+  return db.select().from(accessTools).orderBy(desc(accessTools.createdAt));
+}
+
+export async function getAccessToolById(id: number) {
+  const results = await db
+    .select()
+    .from(accessTools)
+    .where(eq(accessTools.id, id));
+  return results[0] || null;
+}
+
+export async function createAccessTool(data: InsertAccessTool) {
+  const results = await db.insert(accessTools).values(data).returning();
+  return results[0];
+}
+
+export async function updateAccessTool(id: number, data: Partial<InsertAccessTool>) {
+  const results = await db
+    .update(accessTools)
+    .set({ ...data, updatedAt: new Date() })
+    .where(eq(accessTools.id, id))
+    .returning();
+  return results[0];
+}
+
+export async function deleteAccessTool(id: number) {
+  await db.delete(accessTools).where(eq(accessTools.id, id));
 }

@@ -43,8 +43,7 @@ export function AdminAuth({ onAuthSuccess }: AdminAuthProps) {
     setAuthError(null);
 
     try {
-      // Redirect to Replit Auth login with return URL
-      window.location.href = '/api/login?returnTo=/admin';
+      window.location.href = '/admin/login';
     } catch (error) {
       console.error('Login error:', error);
       setAuthError('Failed to initiate login. Please try again.');
@@ -104,7 +103,7 @@ export function AdminAuth({ onAuthSuccess }: AdminAuthProps) {
               </AlertDescription>
             </Alert>
             <Button
-              onClick={() => window.location.href = '/api/logout'}
+              onClick={() => window.location.href = '/api/auth/signout'}
               variant="outline"
               className="w-full"
             >
@@ -163,7 +162,7 @@ export function AdminAuth({ onAuthSuccess }: AdminAuthProps) {
                   Redirecting...
                 </>
               ) : (
-                'Sign In with Replit'
+                'Sign In'
               )}
             </Button>
 
@@ -179,7 +178,7 @@ export function AdminAuth({ onAuthSuccess }: AdminAuthProps) {
           </div>
 
           <div className="text-center text-sm text-slate-500">
-            <p>You'll be redirected to Replit for secure authentication.</p>
+            <p>Sign in with your authorized Business Builders account.</p>
           </div>
         </CardContent>
       </Card>
