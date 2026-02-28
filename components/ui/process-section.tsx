@@ -16,7 +16,7 @@ export default function ProcessSection() {
       imageAlt: "Strategic marketing planning session with Business Builders team developing blueprints"
     },
     {
-      number: "02", 
+      number: "02",
       title: "PRODUCE",
       subtitle: "Create the Right Content",
       description: "Professional websites and videos that convert visitors to customers.",
@@ -32,6 +32,15 @@ export default function ProcessSection() {
       services: ["SEO", "PPC", "Social Media", "CRM & HubSpot Integration"],
       image: "/service-marketing.jpg",
       imageAlt: "Digital marketing dashboard showing SEO, PPC, and social media campaign performance"
+    },
+    {
+      number: "04",
+      title: "PROTECT",
+      subtitle: "Keep Everything Running",
+      description: "Ongoing hosting, maintenance, and compliance to keep your investment safe.",
+      services: ["Managed Hosting", "Website Maintenance", "ADA Compliance", "Security Monitoring"],
+      image: "/service-website.jpg",
+      imageAlt: "Managed website hosting dashboard with uptime monitoring and security alerts"
     }
   ];
 
@@ -42,18 +51,18 @@ export default function ProcessSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="label-industrial inline-block px-4 py-2 bg-charcoal-900 text-white border-2 border-charcoal-900 mb-6">
-            THE SOLUTION
+            HOW WE HELP YOU GROW
           </span>
           <h2 className="headline-lg text-charcoal-900 mb-4">
-            OUR PROVEN<br />
-            <span className="text-yellow-500">3-STEP PROCESS</span>
+            THE COMPLETE<br />
+            <span className="text-yellow-500">GROWTH STACK</span>
           </h2>
-          <p className="text-editorial text-stone-600 max-w-xl mx-auto">
-            26+ years of proven results helping businesses, ministries, and nonprofits grow
+          <p className="text-editorial text-stone-600 max-w-2xl mx-auto">
+            Every service you need to plan, build, promote, and protect your business — all under one roof.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div 
               key={step.number} 
