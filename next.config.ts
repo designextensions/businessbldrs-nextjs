@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: ["*"],
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "businessbldrs.com" },
       { protocol: "https", hostname: "**.businessbldrs.com" },
+      { protocol: "https", hostname: "**" },
     ],
   },
   redirects: async () => [
