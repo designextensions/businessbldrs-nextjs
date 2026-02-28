@@ -39,7 +39,8 @@ export default function HeroSection() {
 
         <h1 className="headline-xl text-charcoal-900 mb-6 animate-slide-up stagger-2">
           Clear Message. <br />
-          Proven Strategy. <span className="text-yellow-500">Real Growth.</span>
+          Proven Strategy. <br />
+          <span className="text-yellow-500">Real Growth.</span>
         </h1>
 
         <p className="text-editorial-lg text-stone-700 mb-10 max-w-2xl mx-auto animate-slide-up stagger-3">
