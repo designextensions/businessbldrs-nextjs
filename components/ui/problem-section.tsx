@@ -40,9 +40,9 @@ export default function ProblemSection({ scrollToSection }: ProblemSectionProps)
               </div>
               
               <h2 className="headline-lg text-white mb-6">
-                IS MARKETING<br />
-                <span className="text-red-400">COSTING YOU</span><br />
-                MONEY?
+                MARKETING SHOULD<br />
+                <span className="text-red-400">MAKE YOU MONEY,</span><br />
+                NOT WASTE IT
               </h2>
               
               <p className="text-editorial text-stone-400 mb-10">
