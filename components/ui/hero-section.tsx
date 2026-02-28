@@ -56,7 +56,7 @@ export default function HeroSection() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-5"
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
           src={heroVideo}
           preload="none"
         />
