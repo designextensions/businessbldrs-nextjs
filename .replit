@@ -16,3 +16,12 @@ externalPort = 80
 
 [env]
 PORT = "5000"
+
+[agent]
+expertMode = true
+
+[userenv]
+
+[userenv.shared]
+NEXTAUTH_URL = "https://0.0.0.0:5000"
+ADMIN_EMAILS = "admin@businessbldrs.com"
