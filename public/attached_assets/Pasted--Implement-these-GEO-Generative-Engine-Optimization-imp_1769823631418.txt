@@ -1,0 +1,147 @@
+ Implement these GEO (Generative Engine Optimization) improvements to make our content more likely to be cited 
+  by AI engines like ChatGPT, Claude, and Perplexity:                                                           
+                                                                                                                
+  ## 1. ADD AUTHOR COMPONENT                                                                                    
+                                                                                                                
+  Create a reusable Author component that displays on all blog posts:                                           
+                                                                                                                
+  const Author = ({ name, title, credentials, image, date }) => (                                               
+    <div className="author-byline">                                                                             
+      <img src={image} alt={name} />                                                                            
+      <div>                                                                                                     
+        <strong>{name}</strong>, {title}                                                                        
+        <p className="credentials">{credentials}</p>                                                            
+        <time>Last updated: {date}</time>                                                                       
+      </div>                                                                                                    
+    </div>                                                                                                      
+  );                                                                                                            
+                                                                                                                
+  Default author for most posts:                                                                                
+  - Name: Jay Owen                                                                                              
+  - Title: CEO & Founder                                                                                        
+  - Credentials: "25+ years in digital marketing | StoryBrand Certified Guide | HubSpot Platinum Partner |      
+  Author of 'Building a Business That Lasts'"                                                                   
+  - Image: /team/jay-owen.jpg                                                                                   
+                                                                                                                
+  ## 2. ADD TL;DR COMPONENT                                                                                     
+                                                                                                                
+  Create a summary component for the top of articles:                                                           
+                                                                                                                
+  const TLDR = ({ children }) => (                                                                              
+    <div className="tldr-box">                                                                                  
+      <strong>TL;DR:</strong> {children}                                                                        
+    </div>                                                                                                      
+  );                                                                                                            
+                                                                                                                
+  Style it with a light background color to stand out.                                                          
+                                                                                                                
+  ## 3. ADD FAQ COMPONENT WITH SCHEMA                                                                           
+                                                                                                                
+  Create an FAQ component that auto-generates FAQPage schema:                                                   
+                                                                                                                
+  const FAQ = ({ items }) => (                                                                                  
+    <>                                                                                                          
+      <script type="application/ld+json">                                                                       
+        {JSON.stringify({                                                                                       
+          "@context": "https://schema.org",                                                                     
+          "@type": "FAQPage",                                                                                   
+          "mainEntity": items.map(item => ({                                                                    
+            "@type": "Question",                                                                                
+            "name": item.question,                                                                              
+            "acceptedAnswer": {                                                                                 
+              "@type": "Answer",                                                                                
+              "text": item.answer                                                                               
+            }                                                                                                   
+          }))                                                                                                   
+        })}                                                                                                     
+      </script>                                                                                                 
+      <section className="faq-section">                                                                         
+        <h2>Frequently Asked Questions</h2>                                                                     
+        {items.map((item, i) => (                                                                               
+          <details key={i}>                                                                                     
+            <summary>{item.question}</summary>                                                                  
+            <p>{item.answer}</p>                                                                                
+          </details>                                                                                            
+        ))}                                                                                                     
+      </section>                                                                                                
+    </>                                                                                                         
+  );                                                                                                            
+                                                                                                                
+  ## 4. ADD ARTICLE SCHEMA TO BLOG POSTS                                                                        
+                                                                                                                
+  For every blog/article page, add Article schema:                                                              
+                                                                                                                
+  const ArticleSchema = ({ title, description, image, author, datePublished, dateModified }) => (               
+    <script type="application/ld+json">                                                                         
+      {JSON.stringify({                                                                                         
+        "@context": "https://schema.org",                                                                       
+        "@type": "Article",                                                                                     
+        "headline": title,                                                                                      
+        "description": description,                                                                             
+        "image": image,                                                                                         
+        "author": {                                                                                             
+          "@type": "Person",                                                                                    
+          "name": author.name,                                                                                  
+          "jobTitle": author.title,                                                                             
+          "url": "https://businessbldrs.com/team/jay-owen"                                                      
+        },                                                                                                      
+        "publisher": {                                                                                          
+          "@type": "Organization",                                                                              
+          "name": "Business Builders",                                                                          
+          "logo": {                                                                                             
+            "@type": "ImageObject",                                                                             
+            "url": "https://businessbldrs.com/logo.png"                                                         
+          }                                                                                                     
+        },                                                                                                      
+        "datePublished": datePublished,                                                                         
+        "dateModified": dateModified,                                                                           
+        "mainEntityOfPage": {                                                                                   
+          "@type": "WebPage",                                                                                   
+          "@id": window.location.href                                                                           
+        }                                                                                                       
+      })}                                                                                                       
+    </script>                                                                                                   
+  );                                                                                                            
+                                                                                                                
+  ## 5. ADD EXPERT QUOTE COMPONENT                                                                              
+                                                                                                                
+  const ExpertQuote = ({ quote, name, title, company }) => (                                                    
+    <blockquote className="expert-quote">                                                                       
+      <p>"{quote}"</p>                                                                                          
+      <cite>— {name}, {title} at {company}</cite>                                                               
+    </blockquote>                                                                                               
+  );                                                                                                            
+                                                                                                                
+  ## 6. UPDATE BLOG POST TEMPLATE                                                                               
+                                                                                                                
+  Every blog post should include:                                                                               
+  1. TL;DR summary at the very top                                                                              
+  2. Author byline with credentials and date                                                                    
+  3. Article schema in head                                                                                     
+  4. At least one Expert Quote                                                                                  
+  5. FAQ section at the bottom (3-5 questions)                                                                  
+  6. FAQPage schema                                                                                             
+                                                                                                                
+  Example structure:                                                                                            
+  <article>                                                                                                     
+    <ArticleSchema {...articleData} />                                                                          
+    <h1>{title}</h1>                                                                                            
+    <Author name="Jay Owen" title="CEO" ... />                                                                  
+    <TLDR>Summary of the article in 2-3 sentences...</TLDR>                                                     
+                                                                                                                
+    {/* Article content */}                                                                                     
+                                                                                                                
+    <ExpertQuote                                                                                                
+      quote="..."                                                                                               
+      name="Jay Owen"                                                                                           
+      title="CEO"                                                                                               
+      company="Business Builders"                                                                               
+    />                                                                                                          
+                                                                                                                
+    <FAQ items={[                                                                                               
+      { question: "...", answer: "..." },                                                                       
+      { question: "...", answer: "..." },                                                                       
+    ]} />                                                                                                       
+  </article>                                                                                                    
+                                                                                                                
+  Please implement these components and update the blog post template to use them.   

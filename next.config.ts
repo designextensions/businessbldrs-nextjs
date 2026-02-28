@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
     { source: '/portfolio/antonio-carlo', destination: '/portfolio', permanent: true },
     { source: '/portfolio/all-pro-dad', destination: '/case-studies/all-pro-dad', permanent: true },
     { source: '/portfolio/hines', destination: '/case-studies/hines', permanent: true },
+    { source: '/portfolio/breakwater-construction', destination: '/case-studies/breakwater-construction', permanent: true },
 
     // Category page redirects
     { source: '/category/:slug*', destination: '/resources/articles', permanent: true },

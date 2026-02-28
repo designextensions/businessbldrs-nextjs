@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+    <title>Business Builders - Marketing Agency | Business Growth Experts</title>
+    <meta name="description" content="Business growth experts helping companies create the right plan, produce the right content, and promote to the right audience. Get your free marketing quote today.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="marketing agency, business growth, digital marketing, website design, SEO, social media marketing, St Augustine Florida">
+    <meta name="author" content="Business Builders">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#FFD700">
+    <link rel="canonical" href="https://businessbldrs.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://businessbldrs.com/">
+    <meta property="og:title" content="Business Builders - Marketing Agency | Business Growth Experts">
+    <meta property="og:description" content="Professional marketing agency with 26+ years of experience. We help businesses grow through strategic planning, content creation, and targeted promotion.">
+    <meta property="og:image" content="/social-share-home.png">
+    <meta property="og:site_name" content="Business Builders">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://businessbldrs.com/">
+    <meta property="twitter:title" content="Business Builders - Marketing Agency | Business Growth Experts">
+    <meta property="twitter:description" content="Professional marketing agency with 26+ years of experience. We help businesses grow through strategic planning, content creation, and targeted promotion.">
+    <meta property="twitter:image" content="/social-share-home.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Business Builders",
+      "alternateName": "Business Builders Marketing Agency",
+      "url": "https://businessbldrs.com",
+      "logo": "https://businessbldrs.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-877-378-6101",
+        "contactType": "customer service",
+        "availableLanguage": "en"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "St. Augustine",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://facebook.com/businessbuilders",
+        "https://twitter.com/businessbuilders",
+        "https://linkedin.com/company/businessbuilders"
+      ],
+      "foundingDate": "1999",
+      "description": "Professional marketing agency with 26+ years of experience helping businesses grow through strategic planning, content creation, and targeted promotion.",
+      "areaServed": "Worldwide",
+      "serviceType": ["Marketing Strategy", "Website Design", "SEO", "Social Media Marketing", "Content Creation", "Brand Development"]
+    }
+    </script>
+    
+    <!-- Performance: DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//businessbldrs.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//js.hs-scripts.com">
+    
+    <!-- Preconnect to font servers -->
+    
+    
+    
+    <!-- Preload hero image for faster LCP -->
+    <link rel="preload" as="image" type="image/webp" href="/assets/hero-1-C2xhtMhV.webp" fetchpriority="high">
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    
+    <!-- Critical CSS inline for faster loading -->
+    <style>
+      /* Critical CSS - Inline for immediate rendering */
+      html{line-height:1.15;-webkit-text-size-adjust:100%}
+      body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:#111827}
+      #root{min-height:100vh}
+      /* Loading skeleton for hero */
+      .loading-skeleton{background:linear-gradient(90deg,#1f2937 0%,#374151 50%,#1f2937 100%);background-size:200% 100%;animation:shimmer 1.5s infinite}
+      @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    </style>
+    
+    <!-- Non-blocking font loading with display:swap -->
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="385156e4c92eb92596ff1168-|49"></script><style type="text/css">@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/400/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:600;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/600/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:600;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/600/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:600;src:url(/cf-fonts/s/poppins/5.0.11/latin/600/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/700/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}</style>
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+    <script type="385156e4c92eb92596ff1168-module" crossorigin src="/assets/index-DrpugHHI.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BQMVSYnF.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Defer all third-party scripts until after page load -->
+    <script type="385156e4c92eb92596ff1168-text/javascript">
+      // Load third-party scripts after page becomes interactive
+      function loadDeferredScripts() {
+        // Google Analytics - load after 2 seconds or on first interaction
+        var gaScript = document.createElement('script');
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-B2QFCHPQTR';
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-B2QFCHPQTR');
+        
+        // Onsite Optimiser - load last, lowest priority
+        setTimeout(function() {
+          var seoScript = document.createElement('script');
+          seoScript.src = 'https://cdn.seoplatform.io/injector.js?websiteId=25937';
+          seoScript.async = true;
+          document.head.appendChild(seoScript);
+        }, 3000);
+      }
+      
+      // Trigger on first user interaction or after 3 seconds
+      var loaded = false;
+      function triggerLoad() {
+        if (!loaded) {
+          loaded = true;
+          loadDeferredScripts();
+        }
+      }
+      
+      // Load on user interaction (scroll, click, touch)
+      ['scroll', 'click', 'touchstart', 'mousemove'].forEach(function(event) {
+        window.addEventListener(event, triggerLoad, { once: true, passive: true });
+      });
+      
+      // Fallback: load after 3 seconds if no interaction
+      setTimeout(triggerLoad, 3000);
+    </script>
+    
+    <!-- Replit banner - defer loading -->
+    <script type="385156e4c92eb92596ff1168-text/javascript" defer src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="385156e4c92eb92596ff1168-|49" defer></script></body>
+</html>

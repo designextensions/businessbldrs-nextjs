@@ -1,0 +1,177 @@
+PageSpeed Insights logo
+PageSpeed Insights
+Report from Dec 12, 2025, 12:48:18 AM
+https://businessbldrs.com/
+Enter a valid URL
+
+
+smartphone
+Mobile
+
+computer
+Desktop
+
+Discover what your real users are experiencing
+No Data
+
+Diagnose performance issues
+55
+Performance
+88
+Accessibility
+58
+Best Practices
+92
+SEO
+55
+FCP
++5
+LCP
++2
+TBT
++20
+CLS
++23
+SI
++6
+Performance
+Values are estimated and may vary. The performance score is calculated directly from these metrics.See calculator.
+0–49
+50–89
+90–100
+Final Screenshot
+
+Metrics
+Expand view
+First Contentful Paint
+3.1 s
+Largest Contentful Paint
+6.6 s
+Total Blocking Time
+420 ms
+Cumulative Layout Shift
+0.09
+Speed Index
+5.1 s
+Captured at Dec 12, 2025, 12:48 AM EST
+Emulated Moto G Power with Lighthouse 13.0.1
+Single page session
+Initial page load
+Slow 4G throttling
+Using HeadlessChromium 137.0.7151.119 with lr
+View Treemap
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Show audits relevant to:
+
+All
+
+FCP
+
+LCP
+
+TBT
+
+CLS
+Insights
+Render blocking requests Est savings of 670 ms
+Use efficient cache lifetimes Est savings of 1,135 KiB
+Forced reflow
+Network dependency tree
+Improve image delivery Est savings of 129 KiB
+Legacy JavaScript Est savings of 26 KiB
+Layout shift culprits
+Optimize DOM size
+LCP breakdown
+3rd parties
+These insights are also available in the Chrome DevTools Performance Panel - record a trace to view more detailed information.
+Diagnostics
+Reduce JavaScript execution time 1.4 s
+Minimize main-thread work 3.4 s
+Reduce unused JavaScript Est savings of 418 KiB
+Reduce unused CSS Est savings of 16 KiB
+Image elements do not have explicit width and height
+Minify JavaScript Est savings of 2 KiB
+Avoid enormous network payloads Total size was 3,976 KiB
+Avoid long main-thread tasks 10 long tasks found
+User Timing marks and measures 7 user timings
+Avoid non-composited animations 5 animated elements found
+More information about the performance of your application. These numbers don't directly affect the Performance score.
+Passed audits (7)
+Show
+88
+Accessibility
+These checks highlight opportunities to improve the accessibility of your web app. Automatic detection can only detect a subset of issues and does not guarantee the accessibility of your web app, so manual testing is also encouraged.
+Names and labels
+Buttons do not have an accessible name
+Links do not have a discernible name
+These are opportunities to improve the semantics of the controls in your application. This may enhance the experience for users of assistive technology, like a screen reader.
+ARIA
+Elements with role="dialog" or role="alertdialog" do not have accessible names.
+These are opportunities to improve the usage of ARIA in your application which may enhance the experience for users of assistive technology, like a screen reader.
+Audio and video
+<video> elements contain a <track> element with [kind="captions"]
+These are opportunities to provide alternative content for audio and video. This may improve the experience for users with hearing or vision impairments.
+Best practices
+Identical links have the same purpose.
+These items highlight common accessibility best practices.
+Additional items to manually check (10)
+Show
+These items address areas which an automated testing tool cannot cover. Learn more in our guide on conducting an accessibility review.
+Passed audits (24)
+Show
+Not applicable (31)
+Show
+58
+Best Practices
+General
+Uses deprecated APIs 1 warning found
+Uses third-party cookies 2 cookies found
+Issues were logged in the Issues panel in Chrome Devtools
+Detected JavaScript libraries
+Trust and Safety
+Ensure CSP is effective against XSS attacks
+Use a strong HSTS policy
+Ensure proper origin isolation with COOP
+Mitigate DOM-based XSS with Trusted Types
+Passed audits (10)
+Show
+Not applicable (2)
+Show
+92
+SEO
+These checks ensure that your page is following basic search engine optimization advice. There are many additional factors Lighthouse does not score here that may affect your search ranking, including performance on Core Web Vitals. Learn more about Google Search Essentials.
+Content Best Practices
+Links do not have descriptive text 6 links found
+Format your HTML in a way that enables crawlers to better understand your app’s content.
+Additional items to manually check (1)
+Show
+Run these additional validators on your site to check additional SEO best practices.
+Passed audits (9)
+Show
+More on PageSpeed Insights
+What's new
+Documentation
+Learn about Web Performance
+Ask questions on Stack Overflow
+Mailing list
+Related Content
+Updates
+Web Fundamentals
+Case Studies
+Podcasts
+Connect
+Twitter
+Youtube
+Google Developers Logo
+Chrome
+Firebase
+All products
+Terms and Privacy Policy
+For details, see the Google Developers Site Policies.

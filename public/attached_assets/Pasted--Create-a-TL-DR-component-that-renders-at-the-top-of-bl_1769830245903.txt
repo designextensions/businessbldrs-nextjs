@@ -1,0 +1,20 @@
+ Create a TL;DR component that renders at the top of blog posts:                                                   
+                                                                                                                    
+  const TLDR = ({ children }) => (                                                                                  
+    <div style={{                                                                                                   
+      background: '#f0f7ff',                                                                                        
+      border: '1px solid #cce0ff',                                                                                  
+      borderRadius: '8px',                                                                                          
+      padding: '16px 20px',                                                                                         
+      marginBottom: '24px'                                                                                          
+    }}>                                                                                                             
+      <strong style={{ color: '#0056b3' }}>TL;DR: </strong>                                                         
+      {children}                                                                                                    
+    </div>                                                                                                          
+  );                                                                                                                
+                                                                                                                    
+  Export and use on blog posts:                                                                                     
+  <TLDR>                                                                                                            
+    HubSpot's free CRM helps small businesses manage contacts and automate                                          
+    marketing without paying a dime. Best for teams under 5 people.                                                 
+  </TLDR>      

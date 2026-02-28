@@ -66,6 +66,28 @@ export class HubSpotService {
     return { properties };
   }
 
+  isConfiguredPublic(): boolean {
+    return this.isConfigured();
+  }
+
+  async testConnection(): Promise<boolean> {
+    if (!this.isConfigured()) return false;
+
+    try {
+      const response = await fetch(`${this.baseUrl}/crm/v3/objects/contacts?limit=1`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`,
+          'Content-Type': 'application/json',
+        },
+      });
+      return response.ok;
+    } catch (error) {
+      console.error('HubSpot connection test failed:', error);
+      return false;
+    }
+  }
+
   async createContact(contact: InsertContact): Promise<HubSpotResponse | null> {
     if (!this.isConfigured()) return null;
 
