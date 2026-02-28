@@ -7,8 +7,15 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 
 const heroVideo = "/assets/Untitled_1754143769049.mp4";
 
+const teamPhotos = [
+  { src: "/bb-team-hero.webp", alt: "Business Builders team member" },
+  { src: "/attached_assets/BB-Team-Photo-1-edited-2_1754613823971.webp", alt: "Business Builders team" },
+  { src: "/attached_assets/BB-2023-Office-Content-Shoot-6961-2048x1152_1754613884042.jpg", alt: "Business Builders office" },
+];
+
 export default function HeroSection() {
   const [currentTypeIndex, setCurrentTypeIndex] = useState(0);
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const organizationTypes = ["BUSINESSES", "MINISTRIES", "NON-PROFITS"];
 
@@ -16,6 +23,13 @@ export default function HeroSection() {
     const interval = setInterval(() => {
       setCurrentTypeIndex((prev) => (prev + 1) % organizationTypes.length);
     }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhotoIndex((prev) => (prev + 1) % teamPhotos.length);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -47,7 +61,6 @@ export default function HeroSection() {
           preload="none"
         />
       )}
-      {/* Light overlay for bright background */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-10 lg:py-14">
         <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,430px)] gap-12 lg:gap-16 items-center">
           <div className="text-charcoal-900 lg:max-w-none lg:pr-12">
@@ -98,15 +111,19 @@ export default function HeroSection() {
           
           <div className="relative animate-slide-up stagger-3">
             <div className="border-industrial-3 bg-white p-4 shadow-offset-yellow">
-              <Image
-                src="/bb-team-hero.webp"
-                alt="Business Builders marketing agency team"
-                className="w-full aspect-[3/4] object-cover object-center"
-                width={480}
-                height={640}
-                priority
-                sizes="(max-width: 1024px) 100vw, 430px"
-              />
+              <div className="relative w-full aspect-[3/4] overflow-hidden">
+                {teamPhotos.map((photo, i) => (
+                  <Image
+                    key={photo.src}
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className={`object-cover object-top transition-opacity duration-1000 ${i === currentPhotoIndex ? 'opacity-100' : 'opacity-0'}`}
+                    priority={i === 0}
+                    sizes="(max-width: 1024px) 100vw, 430px"
+                  />
+                ))}
+              </div>
             </div>
             
             <div className="absolute -bottom-6 -left-6 bg-yellow-400 border-industrial-3 p-4 shadow-offset animate-slide-up stagger-5">
