@@ -48,7 +48,7 @@ export default function HeroSection() {
         />
       )}
       {/* Light overlay for bright background */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-16 lg:py-24">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-10 lg:py-14">
         <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,430px)] gap-12 lg:gap-16 items-center">
           <div className="text-charcoal-900 lg:max-w-none lg:pr-12">
             <div className="mb-4 animate-slide-up stagger-1">
