@@ -58,8 +58,9 @@ export default function HeroSection() {
             </div>
             
             <h1 className="headline-xl text-charcoal-900 mb-6 animate-slide-up stagger-2">
-              The Marketing Agency<br />
-              <span className="text-yellow-500">That Helps You Grow</span>
+              Clear Message.<br />
+              Proven Strategy.<br />
+              <span className="text-yellow-500">Real Growth.</span>
             </h1>
             
             <p className="text-editorial-lg text-stone-600 mb-8 animate-slide-up stagger-3">Stop wasting money on marketing that doesn't work. Get StoryBrand messaging and AI-powered strategy built for real results.</p>
