@@ -4,12 +4,12 @@ import { LazyImage } from "./lazy-image";
 import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import type { PortfolioItem } from "@/lib/db/schema";
-const stjohnsSheriffImage = "/assets/st-johns-county-sheriff.jpg";
-const vantageProAvImage = "/assets/vantage-pro-av.jpg";
-const harrisInsuranceImage = "/assets/harris-insurance.png";
-const inspireNurseImage = "/assets/inspire-nurse-leaders.png";
-const breakwaterImage = "/assets/breakwater-construction-case-study.png";
-const broadmoorImage = "/assets/broadmoor-llc.png";
+const stjohnsSheriffImage = "/attached_assets/st-johns-county-sheriff.jpg";
+const vantageProAvImage = "/attached_assets/vantage-pro-av.jpg";
+const harrisInsuranceImage = "/attached_assets/harris-insurance.png";
+const inspireNurseImage = "/attached_assets/inspire-nurse-leaders.png";
+const breakwaterImage = "/attached_assets/breakwater-construction-case-study.png";
+const broadmoorImage = "/attached_assets/broadmoor-llc.webp";
 
 const FALLBACK_ITEMS = [
   {

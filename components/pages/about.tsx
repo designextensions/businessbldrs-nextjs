@@ -8,10 +8,10 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
-const teamPhotoImage = "/assets/BB-Team-Photo-1-edited-2_1754613823971.png";
-const teamCollabImage = "/assets/BB-2023-Office-Content-Shoot-6961-2048x1152_1754613884042.jpg";
-const stAugustineImage = "/assets/services-st-augustine-img_1754613904507.png";
-const chrisWebsterImage = "/assets/team-chris-webster.jpg";
+const teamPhotoImage = "/attached_assets/BB-Team-Photo-1-edited-2_1754613823971.webp";
+const teamCollabImage = "/attached_assets/BB-2023-Office-Content-Shoot-6961-2048x1152_1754613884042.jpg";
+const stAugustineImage = "/attached_assets/services-st-augustine-img_1754613904507.webp";
+const chrisWebsterImage = "/attached_assets/team-chris-webster.jpg";
 import { seoConfig, getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";
 import SEOHead from "@/components/ui/seo-head";
 

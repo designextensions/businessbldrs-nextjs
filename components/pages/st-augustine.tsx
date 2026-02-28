@@ -8,7 +8,7 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
-const stAugustineImage = "/assets/services-st-augustine-img_1754613904507.png";
+const stAugustineImage = "/attached_assets/services-st-augustine-img_1754613904507.webp";
 import { getBreadcrumbSchema, BASE_URL, localBusinessSchema } from "@/lib/seo-config";
 
 export default function StAugustine() {

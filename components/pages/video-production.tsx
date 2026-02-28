@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
@@ -197,10 +198,13 @@ export default function VideoProduction() {
             
             <div className="relative">
               <div className="bento-card p-2 bg-white">
-                <img
+                <Image
                   src={videoProductionPhoto}
                   alt="Professional video production camera equipment and filming"
-                  loading="eager"
+                  width={800}
+                  height={600}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
                   className="w-full object-cover h-96"
                 />
               </div>

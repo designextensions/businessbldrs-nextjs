@@ -19,7 +19,7 @@ import { useMutation } from "@tanstack/react-query";
 import { trackEvent } from "@/components/ui/google-analytics";
 import { trackHubSpotFormSubmission } from "@/components/ui/hubspot-analytics";
 
-const BB_Full_Lockup_dark_1_3 = "/assets/BB_Full-Lockup_dark-1-3.png";
+const BB_Full_Lockup_dark_1_3 = "/attached_assets/BB_Full-Lockup_dark-1-3.png";
 
 export default function MegaFooter() {
   const [email, setEmail] = useState("");

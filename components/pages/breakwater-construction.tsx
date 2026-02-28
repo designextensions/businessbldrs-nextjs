@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
@@ -7,10 +8,10 @@ import { ArrowRight, TrendingUp, Target, Users, Calculator, Mail, CheckCircle, E
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
-const breakwaterDesktopImage = "/assets/breakwater-desktop-screenshot.png";
-const breakwaterCalculatorImage = "/assets/breakwater-pool-calculator-screenshot.png";
-const breakwaterEmail1Image = "/assets/breakwater-email-sequence-1.jpg";
-const breakwaterEmail2Image = "/assets/breakwater-email-sequence-2.jpg";
+const breakwaterDesktopImage = "/attached_assets/breakwater-desktop-screenshot.png";
+const breakwaterCalculatorImage = "/attached_assets/breakwater-pool-calculator-screenshot.png";
+const breakwaterEmail1Image = "/attached_assets/breakwater-email-sequence-1.jpg";
+const breakwaterEmail2Image = "/attached_assets/breakwater-email-sequence-2.jpg";
 
 export default function BreakwaterConstruction() {
   const scrollToSection = (sectionId: string) => {
@@ -134,13 +135,14 @@ export default function BreakwaterConstruction() {
           
           {/* Featured Image */}
           <div className="relative border-2 border-charcoal-800 shadow-offset overflow-hidden mb-12">
-            <img 
+            <Image
               src={breakwaterDesktopImage}
               alt="Breakwater Construction website design by Business Builders - custom pool builder Northeast Florida with interactive pool calculator and lead generation tools"
               className="w-full h-auto"
-              width="1200"
-              height="675"
-              loading="eager"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
             />
           </div>
         </div>

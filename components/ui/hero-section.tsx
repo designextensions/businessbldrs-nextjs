@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { trackEvent } from "@/components/ui/google-analytics";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
@@ -98,14 +99,14 @@ export default function HeroSection() {
           
           <div className="relative animate-slide-up stagger-3">
             <div className="border-industrial-3 bg-white p-4 shadow-offset-yellow">
-              <img
-                src="/bb-team-hero.png"
+              <Image
+                src="/bb-team-hero.webp"
                 alt="Business Builders marketing agency team"
                 className="w-full aspect-[3/4] object-cover object-center"
-                loading="eager"
-                decoding="async"
-                width="480"
-                height="640"
+                width={480}
+                height={640}
+                priority
+                sizes="(max-width: 1024px) 100vw, 430px"
               />
             </div>
             

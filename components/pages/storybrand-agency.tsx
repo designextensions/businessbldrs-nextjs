@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import SEOHead from "@/components/ui/seo-head";
 
 import { useState } from "react";
-const teamMeetingImg = "/assets/Screenshot_2026-02-16_at_10.23.58_AM_1771255442299.png";
+const teamMeetingImg = "/attached_assets/Screenshot_2026-02-16_at_10.23.58_AM_1771255442299.webp";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, CheckCircle, Star, Users, Target, TrendingUp, Award, MessageSquare, FileText, BarChart3, Shield, Zap, BookOpen, Quote, ChevronRight } from "lucide-react";
@@ -321,9 +322,12 @@ export default function StoryBrandAgency() {
 
             <div className="relative">
               <div className="border-2 border-charcoal-700 overflow-hidden">
-                <img
+                <Image
                   src={teamMeetingImg}
-                  loading="eager"
+                  width={800}
+                  height={600}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
                   alt="Business Builders StoryBrand certified marketing agency team in St. Augustine office"
                   className="w-full"
                 />

@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useQuery } from "@tanstack/react-query";
-const maccLogoImage = "/assets/macc-new-logo-web-fotor-20240502122129.png";
+const maccLogoImage = "/attached_assets/macc-new-logo-web-fotor-20240502122129.png";
 
 const supportFormSchema = z.object({
   firstName: z.string().min(1, "First name is required"),

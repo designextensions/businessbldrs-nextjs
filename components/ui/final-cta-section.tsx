@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
 import Link from "next/link";
-const homeSectionImage = "/assets/Home-section-1-img-1-1.png";
+const homeSectionImage = "/attached_assets/Home-section-1-img-1-1.webp";
 import { PointingHandStamp } from "@/components/ui/vintage-stamps";
 
 export default function FinalCtaSection() {

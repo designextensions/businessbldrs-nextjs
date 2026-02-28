@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
@@ -153,10 +154,13 @@ export default function HubSpotImplementation() {
             
             <div className="relative">
               <div className="bento-card p-2 bg-white">
-                <img
+                <Image
                   src={hubspotDashboardPhoto}
                   alt="HubSpot CRM dashboard analytics and implementation"
-                  loading="eager"
+                  width={800}
+                  height={600}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
                   className="w-full object-cover h-96"
                 />
               </div>

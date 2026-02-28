@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
@@ -207,13 +208,12 @@ export default function MarketingServices() {
             </div>
             
             <div className="relative">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
-                srcSet="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80 400w, https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80 800w, https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=900&q=80 1200w"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 width={800}
                 height={600}
-                loading="eager"
+                priority
                 alt="Business Builders digital marketing team collaborating on SEO, PPC, and social media strategy"
                 className="border-2 border-secondary shadow-offset-yellow w-full"
               />

@@ -9,9 +9,9 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
-const heroImage = "/assets/man-reviews-documents-while-video-call_1759161804996.jpg";
-const wordpressLoginImage = "/assets/wp-login-1_1759161876567.png";
-const dashboardImage = "/assets/dashboard_1759165415740.png";
+const heroImage = "/attached_assets/man-reviews-documents-while-video-call_1759161804996.jpg";
+const wordpressLoginImage = "/attached_assets/wp-login-1_1759161876567.png";
+const dashboardImage = "/attached_assets/dashboard_1759165415740.png";
 const elementorImage = "/assets/stock_images/elementor_page_build_11b47153.jpg";
 
 export default function WebsiteTraining() {

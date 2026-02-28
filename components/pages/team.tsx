@@ -11,7 +11,7 @@ import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
 import type { TeamMember } from "@/lib/db/schema";
-const teamCollabImage = "/assets/BB-2023-Office-Content-Shoot-6961-2048x1152_1754613884042.jpg";
+const teamCollabImage = "/attached_assets/BB-2023-Office-Content-Shoot-6961-2048x1152_1754613884042.jpg";
 
 export default function Team() {
   const { data: teamMembers = [], isLoading } = useQuery<TeamMember[]>({

@@ -25,7 +25,10 @@ lib/
   storage.ts        # Data access layer
 components/         # Shared React components
 hooks/              # Custom React hooks
-public/             # Static assets
+public/
+  assets/           # Hardcoded component images (unique files only)
+  attached_assets/  # CMS-managed media (source of truth for duplicates)
+  portfolio-images/ # Portfolio case study images
 ```
 
 ## Key Configuration
@@ -45,6 +48,14 @@ public/             # Static assets
 | `SENDGRID_API_KEY` | SendGrid for transactional email (optional) |
 | `HUBSPOT_API_KEY` | HubSpot CRM integration (optional) |
 | `FORM_TOKEN_SECRET` | Spam prevention for forms (optional) |
+
+## Image Assets
+
+- Duplicate files between `assets/` and `attached_assets/` were removed (kept in `attached_assets/` as CMS source of truth)
+- Large images (>500KB) converted to WebP format at quality 80
+- Source code references updated to point to correct directory and extension
+- Above-the-fold images use `next/image` with `priority` prop
+- `lib/getQueryClient.ts` provides per-request QueryClient via `React.cache()` for server-side hydration
 
 ## Deployment
 

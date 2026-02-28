@@ -1,9 +1,9 @@
-const pointingHandImg = "/assets/vintage_pointing_hand_stamp_1766517389108.png";
-const anvilImg = "/assets/vintage_ink_stamp_of_a_large_heavy_iron_anvil_1766517389109.png";
-const growthChartImg = "/assets/vintage_growth_chart_stamp_1766517389109.png";
-const approvedImg = "/assets/vintage_approved_text_stamp_distressed_1766517389109.png";
-const postalImg = "/assets/faded_vintage_postal_cancellation_stamp_1766517389109.png";
-const certifiedImg = "/assets/certified_vintage_rubber_stamp_1766517389110.png";
+const pointingHandImg = "/attached_assets/vintage_pointing_hand_stamp_1766517389108.png";
+const anvilImg = "/attached_assets/vintage_ink_stamp_of_a_large_heavy_iron_anvil_1766517389109.webp";
+const growthChartImg = "/attached_assets/vintage_growth_chart_stamp_1766517389109.webp";
+const approvedImg = "/attached_assets/vintage_approved_text_stamp_distressed_1766517389109.webp";
+const postalImg = "/attached_assets/faded_vintage_postal_cancellation_stamp_1766517389109.webp";
+const certifiedImg = "/attached_assets/certified_vintage_rubber_stamp_1766517389110.webp";
 
 interface StampProps {
   className?: string;

@@ -1,5 +1,5 @@
 
-const team_jay_owen_new = "/assets/team-jay-owen-new.jpg";
+const team_jay_owen_new = "/attached_assets/team-jay-owen-new.jpg";
 
 export interface AuthorInfo {
   name: string;

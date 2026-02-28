@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
+import getQueryClient from "@/lib/getQueryClient";
+import { getPortfolioItems } from "@/lib/storage";
 import { seoConfig } from "@/lib/seo-config";
 import PortfolioPage from "@/components/pages/portfolio";
 
@@ -13,6 +16,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
-  return <PortfolioPage />;
+export default async function Page() {
+  const queryClient = getQueryClient();
+  await queryClient.prefetchQuery({
+    queryKey: ["/api/portfolio"],
+    queryFn: getPortfolioItems,
+  });
+
+  return (
+    <HydrationBoundary state={dehydrate(queryClient)}>
+      <PortfolioPage />
+    </HydrationBoundary>
+  );
 }

@@ -4,6 +4,7 @@ hidden = [".next", ".git", "node_modules"]
 
 [nix]
 channel = "stable-24_05"
+packages = ["libwebp"]
 
 [deployment]
 deploymentTarget = "autoscale"
