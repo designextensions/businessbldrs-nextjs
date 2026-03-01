@@ -70,6 +70,8 @@ Four service category master pages organize services under the "Plan, Produce, P
 Components: `components/pages/services-plan.tsx`, `services-produce.tsx`, `services-promote.tsx`, `services-protect.tsx`
 Routes: `app/(marketing)/services/plan/`, `produce/`, `promote/`, `protect/`
 Homepage process cards link to these pages. Navigation mega-menu headers also link to them.
+Each page follows a consistent layout pattern: dark two-column hero (text + photo), stats row, alternating service cards, benefits section, yellow CTA band.
+These pages are listed in `darkHeroPages` and `scrollActivatedPages` in `navigation.tsx` for transparent nav behavior.
 
 ## Deployment
 
