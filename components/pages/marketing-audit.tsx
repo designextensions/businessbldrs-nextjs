@@ -479,22 +479,20 @@ export default function MarketingAudit() {
       </div>
 
       {currentStep === 0 ? (
-        <section className="band-dark relative min-h-screen flex items-center overflow-hidden">
+        <section className="band-dark relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(250,204,21,0.08),transparent_60%)]" />
-          <div className="relative max-w-3xl mx-auto px-6 py-32 text-center">
-            <span className="label-industrial inline-flex items-center gap-2 px-4 py-2 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm mb-8">
+          <div className="relative max-w-3xl mx-auto px-6 pt-32 pb-16 text-center">
+            <span className="label-industrial inline-flex items-center gap-2 px-4 py-2 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm mb-6">
               <Target className="w-4 h-4" />
               FREE MARKETING AUDIT
             </span>
 
-            <h1 className="headline-xl text-white mb-6">
-              Find Out Where Your <br />
-              Marketing <span className="text-yellow-400">Really Stands</span>
+            <h1 className="headline-xl text-white mb-4">
+              Where Does Your Marketing <span className="text-yellow-400">Stand?</span>
             </h1>
 
-            <p className="text-xl text-stone-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Answer 5 quick questions and get a personalized scorecard showing exactly what's working,
-              what needs attention, and where to focus next.
+            <p className="text-lg text-stone-400 mb-8 max-w-xl mx-auto">
+              5 quick questions. Instant personalized scorecard.
             </p>
 
             <button
@@ -505,10 +503,6 @@ export default function MarketingAudit() {
               START YOUR AUDIT
               <ArrowRight className="w-5 h-5" />
             </button>
-
-            <p className="text-stone-500 text-sm mt-6">
-              Takes about 2 minutes. Your results are instant and free.
-            </p>
           </div>
         </section>
       ) : currentStep === leadCaptureStep ? (
