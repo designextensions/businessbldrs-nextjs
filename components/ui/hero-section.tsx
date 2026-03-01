@@ -19,9 +19,9 @@ export default function HeroSection() {
 
   return (
     <section className="pt-24 relative overflow-hidden bg-white" data-testid="hero-section">
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 text-center">
-        <div className="mb-3">
-          <span className="label-industrial inline-block px-4 py-1.5 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm text-xs">
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-18 text-center">
+        <div className="mb-6">
+          <span className="label-industrial inline-block px-4 py-2 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm">
             AI-POWERED MARKETING FOR{" "}
             <span className="rotating-text" key={mounted ? currentTypeIndex : "initial"} suppressHydrationWarning>
               {organizationTypes[currentTypeIndex]}
@@ -29,15 +29,17 @@ export default function HeroSection() {
           </span>
         </div>
 
-        <h1 className="headline-xl text-charcoal-900 mb-3">
-          Clear Message. <span className="italic font-bold">Proven Strategy.</span> <span className="text-yellow-500">Real Growth.</span>
+        <h1 className="headline-xl text-charcoal-900 mb-6">
+          Clear Message. <br />
+          <span className="italic font-bold">Proven Strategy.</span> <br />
+          <span className="text-yellow-500">Real Growth.</span>
         </h1>
 
-        <p className="text-lg text-stone-600 mb-6 max-w-xl mx-auto">
-          AI + StoryBrand messaging to help you grow.
+        <p className="text-editorial-lg text-stone-700 mb-10 max-w-2xl mx-auto">
+          Get a team that leverages the latest in AI, combined with StoryBrand messaging, to help you grow!
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/request-quote">
             <button
               onClick={() => trackEvent('click', {
@@ -45,7 +47,7 @@ export default function HeroSection() {
                 event_label: 'hero_cta_quote_button',
                 button_location: 'hero_section'
               })}
-              className="w-full sm:w-auto whitespace-nowrap bg-charcoal-900 text-white px-7 py-3 font-bold tracking-wide flex items-center justify-center gap-3 border-b-4 border-yellow-400 hover:bg-charcoal-800 transition-colors"
+              className="w-full sm:w-auto whitespace-nowrap bg-charcoal-900 text-white px-8 py-4 font-bold tracking-wide text-lg flex items-center justify-center gap-3 border-b-4 border-yellow-400 hover:bg-charcoal-800 transition-colors"
               data-testid="button-hero-quote"
             >
               REQUEST A QUOTE
@@ -60,7 +62,7 @@ export default function HeroSection() {
                 button_location: 'hero_section'
               })}
               variant="outline"
-              size="lg"
+              size="xl"
               className="w-full sm:w-auto whitespace-nowrap"
               data-testid="button-hero-audit"
             >
@@ -70,7 +72,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative w-full h-[200px] overflow-hidden bg-charcoal-900">
+      <div className="relative w-full h-[150px] overflow-hidden bg-charcoal-900">
         <video
           className="absolute inset-0 w-full h-full object-cover opacity-70"
           autoPlay
@@ -81,7 +83,6 @@ export default function HeroSection() {
           <source src="/assets/Untitled_1754143769049.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/40 via-transparent to-charcoal-900/40" />
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-stone-100" />
       </div>
     </section>
   );
