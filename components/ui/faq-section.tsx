@@ -60,7 +60,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="bg-stone-100 py-20 lg:py-28" id="faq" data-testid="faq-section">
+    <section className="bg-stone-100 py-16 lg:py-20" id="faq" data-testid="faq-section">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

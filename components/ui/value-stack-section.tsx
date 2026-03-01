@@ -25,19 +25,8 @@ export default function ValueStackSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden" data-testid="value-stack-section">
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        playsInline
-        loop
-      >
-        <source src="/assets/Untitled_1754143769049.mp4" type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 bg-charcoal-900/80" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <section data-testid="value-stack-section">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {values.map((value, index) => {
             const Icon = value.icon;
