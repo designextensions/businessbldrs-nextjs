@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { X, Clock, DollarSign, TrendingDown, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { X, Clock, DollarSign, TrendingDown } from "lucide-react";
 const stressedBusinessPerson = "/assets/stock_images/stressed_business_pr_8aedf5dd.jpg";
 
 interface ProblemSectionProps {
@@ -62,54 +60,6 @@ export default function ProblemSection({ scrollToSection }: ProblemSectionProps)
         </div>
       </div>
 
-      <div className="band-yellow py-6 lg:py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-3">
-              <h3 className="font-display font-black text-2xl uppercase text-charcoal-900">
-                YOU DESERVE <span className="shine-yellow">MORE.</span>
-              </h3>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="flex gap-3">
-                <div className="bento-card px-4 py-3 text-center bg-white">
-                  <div className="font-display font-black text-2xl text-charcoal-900 leading-none">26+</div>
-                  <p className="label-industrial text-stone-500 text-[10px]">Years</p>
-                </div>
-                <div className="bento-card px-4 py-3 text-center bg-white">
-                  <div className="font-display font-black text-2xl text-charcoal-900 leading-none">1000+</div>
-                  <p className="label-industrial text-stone-500 text-[10px]">Clients</p>
-                </div>
-                <div className="bento-card px-4 py-3 text-center bg-white">
-                  <div className="flex items-center justify-center gap-0.5 leading-none">
-                    <span className="font-display font-black text-2xl text-charcoal-900">5</span>
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 24 24">
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                      ))}
-                    </div>
-                  </div>
-                  <p className="label-industrial text-stone-500 text-[10px]">Rating</p>
-                </div>
-              </div>
-
-              <Link href="/request-quote">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  data-testid="button-problem-cta"
-                >
-                  GET YOUR FREE QUOTE
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
