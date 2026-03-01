@@ -227,7 +227,8 @@ export default function MarketingAudit() {
   const [leadCaptured, setLeadCaptured] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
-  const totalSteps = questions.length + 1;
+  const leadCaptureStep = questions.length + 1;
+  const totalSteps = leadCaptureStep;
   const progress = showResults ? 100 : Math.round((currentStep / totalSteps) * 100);
 
   const handleLeadSubmit = async () => {
@@ -257,10 +258,10 @@ export default function MarketingAudit() {
       setLeadCaptured(true);
       trackEvent("audit_lead_captured", {
         event_category: "conversion",
-        event_label: "marketing_audit_start",
+        event_label: "marketing_audit_results",
       });
       setIsSubmitting(false);
-      setCurrentStep(1);
+      setShowResults(true);
     } catch {
       setSubmitError("Connection error. Please check your internet and try again.");
       setIsSubmitting(false);
@@ -272,25 +273,23 @@ export default function MarketingAudit() {
   };
 
   const handleNext = () => {
-    const questionIndex = currentStep - 1;
-    if (questionIndex < questions.length - 1) {
+    if (currentStep < questions.length) {
       setCurrentStep(currentStep + 1);
     } else {
-      trackEvent("audit_completed", {
-        event_category: "conversion",
-        event_label: "marketing_audit_results",
-      });
-      setShowResults(true);
+      setCurrentStep(leadCaptureStep);
     }
   };
 
   const handlePrevious = () => {
-    if (currentStep > 1) {
+    if (currentStep === leadCaptureStep) {
+      setCurrentStep(questions.length);
+    } else if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
     }
   };
 
-  const currentQuestion = currentStep > 0 ? questions[currentStep - 1] : null;
+  const isOnQuestion = currentStep >= 1 && currentStep <= questions.length;
+  const currentQuestion = isOnQuestion ? questions[currentStep - 1] : null;
   const currentAnswer = currentQuestion ? answers[currentQuestion.id as keyof AuditAnswers] : "";
   const isAnswered = currentAnswer !== "";
 
@@ -498,6 +497,37 @@ export default function MarketingAudit() {
               what needs attention, and where to focus next.
             </p>
 
+            <button
+              onClick={() => setCurrentStep(1)}
+              className="bg-yellow-400 text-charcoal-900 px-10 py-4 font-bold tracking-wide text-lg inline-flex items-center gap-3 border-2 border-charcoal-900 shadow-offset-sm hover:bg-yellow-300 transition-colors"
+              data-testid="audit-start-button"
+            >
+              START YOUR AUDIT
+              <ArrowRight className="w-5 h-5" />
+            </button>
+
+            <p className="text-stone-500 text-sm mt-6">
+              Takes about 2 minutes. Your results are instant and free.
+            </p>
+          </div>
+        </section>
+      ) : currentStep === leadCaptureStep ? (
+        <section className="band-dark relative min-h-screen flex items-center overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(250,204,21,0.08),transparent_60%)]" />
+          <div className="relative max-w-3xl mx-auto px-6 py-32 text-center">
+            <span className="label-industrial inline-flex items-center gap-2 px-4 py-2 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm mb-8">
+              <CheckCircle className="w-4 h-4" />
+              ALMOST DONE
+            </span>
+
+            <h2 className="headline-lg text-white mb-4">
+              Your Results Are <span className="text-yellow-400">Ready!</span>
+            </h2>
+
+            <p className="text-xl text-stone-300 mb-10 max-w-xl mx-auto leading-relaxed">
+              Enter your info below to see your personalized marketing scorecard.
+            </p>
+
             <div className="max-w-md mx-auto space-y-4">
               <input
                 type="text"
@@ -544,15 +574,18 @@ export default function MarketingAudit() {
                 onClick={handleLeadSubmit}
                 disabled={!isLeadFormValid || isSubmitting}
                 className="w-full bg-yellow-400 text-charcoal-900 px-8 py-4 font-bold tracking-wide text-lg flex items-center justify-center gap-3 border-2 border-charcoal-900 shadow-offset-sm hover:bg-yellow-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                data-testid="audit-start-button"
+                data-testid="audit-submit-button"
               >
-                {isSubmitting ? "STARTING..." : "START YOUR AUDIT"}
+                {isSubmitting ? "LOADING RESULTS..." : "SEE MY RESULTS"}
                 <ArrowRight className="w-5 h-5" />
               </button>
+            </div>
 
-              <p className="text-stone-500 text-sm">
-                Takes about 2 minutes. Your results are instant and free.
-              </p>
+            <div className="mt-8">
+              <Button variant="outline" size="lg" onClick={handlePrevious} className="border-stone-500 text-stone-300 hover:border-white hover:text-white" data-testid="audit-prev">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                BACK
+              </Button>
             </div>
           </div>
         </section>
@@ -621,7 +654,7 @@ export default function MarketingAudit() {
                 className="bg-charcoal-900 text-white px-8 py-3 font-bold tracking-wide flex items-center gap-2 border-b-4 border-yellow-400 hover:bg-charcoal-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
                 data-testid="audit-next"
               >
-                {currentStep === questions.length ? "SEE MY RESULTS" : "NEXT"}
+                NEXT
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
