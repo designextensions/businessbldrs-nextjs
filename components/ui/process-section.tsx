@@ -49,7 +49,7 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section id="process" className="band-white py-20 lg:py-28 relative overflow-hidden" data-testid="process-section">
+    <section id="process" className="band-white pt-10 lg:pt-14 pb-20 lg:pb-28 relative overflow-hidden" data-testid="process-section">
       <GrowthChartStamp className="absolute top-20 -right-20 w-64 h-64 opacity-10 hidden lg:block" />
       <PointingHandStamp className="absolute bottom-10 -left-20 w-80 opacity-10 hidden lg:block" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
