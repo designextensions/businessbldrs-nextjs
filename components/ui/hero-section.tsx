@@ -4,13 +4,13 @@ import Link from "next/link";
 import { trackEvent } from "@/components/ui/google-analytics";
 import { ArrowRight } from "lucide-react";
 
-const heroVideo = "/assets/Untitled_1754143769049.mp4";
-
 export default function HeroSection() {
   const [currentTypeIndex, setCurrentTypeIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const organizationTypes = ["BUSINESSES", "MINISTRIES", "NON-PROFITS"];
 
   useEffect(() => {
+    setMounted(true);
     const interval = setInterval(() => {
       setCurrentTypeIndex((prev) => (prev + 1) % organizationTypes.length);
     }, 3000);
@@ -20,23 +20,26 @@ export default function HeroSection() {
   return (
     <section className="pt-24 relative overflow-hidden bg-white" data-testid="hero-section">
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 text-center">
-        <div className="mb-6 animate-slide-up stagger-1">
+        <div className="mb-6">
           <span className="label-industrial inline-block px-4 py-2 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm">
-            AI-POWERED MARKETING FOR <span className="rotating-text" key={currentTypeIndex}>{organizationTypes[currentTypeIndex]}</span>
+            AI-POWERED MARKETING FOR{" "}
+            <span className="rotating-text" key={mounted ? currentTypeIndex : "initial"} suppressHydrationWarning>
+              {organizationTypes[currentTypeIndex]}
+            </span>
           </span>
         </div>
 
-        <h1 className="headline-xl text-charcoal-900 mb-6 animate-slide-up stagger-2">
+        <h1 className="headline-xl text-charcoal-900 mb-6">
           Clear Message. <br />
           Proven Strategy. <br />
           <span className="text-yellow-500">Real Growth.</span>
         </h1>
 
-        <p className="text-editorial-lg text-stone-700 mb-10 max-w-2xl mx-auto animate-slide-up stagger-3">
+        <p className="text-editorial-lg text-stone-700 mb-10 max-w-2xl mx-auto">
           Get a team that leverages the latest in AI, combined with StoryBrand messaging, to help you grow!
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up stagger-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/request-quote">
             <button
               onClick={() => trackEvent('click', {

@@ -4,7 +4,6 @@ import SEOHead from "@/components/ui/seo-head";
 import { lazy, Suspense, useEffect, useMemo } from "react";
 import Navigation from "@/components/ui/navigation";
 import HeroSection from "@/components/ui/hero-section";
-import AnimatedSection from "@/components/ui/animated-section";
 import { queryClient } from "@/lib/queryClient";
 import MegaFooter from "@/components/ui/mega-footer";
 import { seoConfig, organizationSchema, BASE_URL } from "@/lib/seo-config";
@@ -12,7 +11,6 @@ import CriticalCSS from "@/components/ui/critical-css";
 import ThirdPartyOptimizer from "@/components/ui/third-party-optimizer";
 import SitemapMeta from "@/components/ui/sitemap-generator";
 
-// Lazy-load below-fold sections to reduce initial bundle and TBT
 const ValueStackSection = lazy(() => import("@/components/ui/value-stack-section"));
 const ProblemSection = lazy(() => import("@/components/ui/problem-section"));
 const ProcessSection = lazy(() => import("@/components/ui/process-section"));
@@ -22,7 +20,6 @@ const GettingStartedSection = lazy(() => import("@/components/ui/getting-started
 const CredentialsSection = lazy(() => import("@/components/ui/credentials-section"));
 const TestimonialsSection = lazy(() => import("@/components/ui/testimonials-section"));
 const MarketingMasterclassSection = lazy(() => import("@/components/ui/marketing-masterclass-section"));
-
 const FAQSection = lazy(() => import("@/components/ui/faq-section"));
 
 
@@ -35,7 +32,6 @@ export default function Home() {
     }
   };
 
-  // Memoize structured data to prevent recreating on every render
   const homeStructuredData = useMemo(() => ({
     "@context": "https://schema.org",
     "@graph": [
@@ -179,20 +175,15 @@ export default function Home() {
     ]
   }), []);
 
-  // Prefetch data for below-fold sections after initial load
   useEffect(() => {
-    const timer = setTimeout(() => {
-      queryClient.prefetchQuery({
-        queryKey: ['/api/team'],
-        staleTime: 15 * 60 * 1000,
-      });
-      queryClient.prefetchQuery({
-        queryKey: ['/api/portfolio'],
-        staleTime: 5 * 60 * 1000,
-      });
-    }, 1000);
-
-    return () => clearTimeout(timer);
+    queryClient.prefetchQuery({
+      queryKey: ['/api/team'],
+      staleTime: 15 * 60 * 1000,
+    });
+    queryClient.prefetchQuery({
+      queryKey: ['/api/portfolio'],
+      staleTime: 5 * 60 * 1000,
+    });
   }, []);
 
   return (
@@ -210,81 +201,28 @@ export default function Home() {
       <ThirdPartyOptimizer delayMs={2000} />
       <SitemapMeta />
       <Navigation />
-      <main className="min-h-screen overflow-x-hidden gpu-accelerated" style={{ willChange: 'scroll-position' }}>
+      <main className="min-h-screen overflow-x-hidden">
         <header>
           <HeroSection />
         </header>
         
         <Suspense fallback={null}>
-          <section aria-labelledby="values-heading">
-            <AnimatedSection variant="fadeIn">
-              <ValueStackSection />
-            </AnimatedSection>
-          </section>
-
-          <section aria-labelledby="problems-heading">
-            <AnimatedSection variant="fadeIn">
-              <div id="problem" data-section="problem">
-                <ProblemSection scrollToSection={scrollToSection} />
-              </div>
-            </AnimatedSection>
-          </section>
-
-          <section aria-labelledby="process-heading">
-            <AnimatedSection variant="fadeIn">
-              <ProcessSection />
-            </AnimatedSection>
-          </section>
-
-          <section aria-labelledby="industries-heading">
-            <AnimatedSection variant="fadeIn">
-              <IndustriesSection />
-            </AnimatedSection>
-          </section>
-
-          <section aria-labelledby="portfolio-heading">
-            <AnimatedSection variant="fadeIn">
-              <PortfolioSection />
-            </AnimatedSection>
-          </section>
-
-          <section aria-labelledby="testimonials-heading">
-            <AnimatedSection variant="fadeIn">
-              <TestimonialsSection />
-            </AnimatedSection>
-          </section>
-
-          <section aria-labelledby="getting-started-heading">
-            <AnimatedSection variant="fadeIn">
-              <GettingStartedSection />
-            </AnimatedSection>
-          </section>
-
-          <section aria-labelledby="credentials-heading">
-            <AnimatedSection variant="fadeIn">
-              <CredentialsSection />
-            </AnimatedSection>
-          </section>
-
-          <section aria-labelledby="masterclass-heading">
-            <AnimatedSection variant="fadeIn">
-              <MarketingMasterclassSection />
-            </AnimatedSection>
-          </section>
-
-          <section aria-labelledby="faq-heading">
-            <AnimatedSection variant="fadeIn">
-              <FAQSection />
-            </AnimatedSection>
-          </section>
-
-
+          <ValueStackSection />
+          <div id="problem" data-section="problem">
+            <ProblemSection scrollToSection={scrollToSection} />
+          </div>
+          <ProcessSection />
+          <IndustriesSection />
+          <PortfolioSection />
+          <TestimonialsSection />
+          <GettingStartedSection />
+          <CredentialsSection />
+          <MarketingMasterclassSection />
+          <FAQSection />
         </Suspense>
         
         <footer>
-          <AnimatedSection variant="fadeIn">
-            <MegaFooter />
-          </AnimatedSection>
+          <MegaFooter />
         </footer>
       </main>
     </>
