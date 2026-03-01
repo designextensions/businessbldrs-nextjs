@@ -207,10 +207,10 @@ export default function Home() {
         </header>
         
         <Suspense fallback={null}>
-          <ValueStackSection />
           <div id="problem" data-section="problem">
             <ProblemSection scrollToSection={scrollToSection} />
           </div>
+          <ValueStackSection />
           <ProcessSection />
           <IndustriesSection />
           <PortfolioSection />
