@@ -22,43 +22,31 @@ export default function HubSpotForm({
 
     const createForm = () => {
       const hbspt = (window as any).hbspt;
-      if (hbspt && containerRef.current) {
+      if (hbspt && containerRef.current && !formCreatedRef.current) {
         containerRef.current.innerHTML = "";
+        formCreatedRef.current = true;
         hbspt.forms.create({
           region: region,
           portalId: portalId,
           formId: formId,
-          target: `#${containerId}`
+          target: `#${containerId}`,
         });
-        formCreatedRef.current = true;
       }
     };
 
-    const existingScript = document.querySelector(
-      'script[src*="js.hsforms.net"]'
-    );
-
-    if (existingScript && (window as any).hbspt) {
+    if ((window as any).hbspt) {
       createForm();
-    } else if (!existingScript) {
-      const script = document.createElement("script");
-      script.src = "https://js.hsforms.net/forms/v2.js";
-      script.charset = "utf-8";
-      script.async = true;
-      script.onload = () => {
-        createForm();
-      };
-      document.body.appendChild(script);
-    } else {
-      const checkHbspt = setInterval(() => {
-        if ((window as any).hbspt) {
-          clearInterval(checkHbspt);
-          createForm();
-        }
-      }, 100);
-
-      return () => clearInterval(checkHbspt);
+      return;
     }
+
+    const checkInterval = setInterval(() => {
+      if ((window as any).hbspt) {
+        clearInterval(checkInterval);
+        createForm();
+      }
+    }, 200);
+
+    return () => clearInterval(checkInterval);
   }, [portalId, formId, region, containerId]);
 
   return (
