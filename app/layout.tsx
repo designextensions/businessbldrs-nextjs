@@ -51,6 +51,12 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>{children}</Providers>
+        {/* HubSpot Forms SDK - static vendor URL */}
+        <Script
+          id="hs-forms-loader"
+          src="//js.hsforms.net/forms/embed/v2.js"
+          strategy="lazyOnload"
+        />
         {/* HubSpot Tracking - static vendor URL */}
         <Script
           id="hs-script-loader"
