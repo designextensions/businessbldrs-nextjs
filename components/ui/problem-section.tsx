@@ -30,7 +30,7 @@ export default function ProblemSection({ scrollToSection }: ProblemSectionProps)
           <div className="py-10 lg:py-12 lg:w-1/2">
             <div className="max-w-xl">
               <h2 className="font-display font-black text-3xl sm:text-4xl leading-[1.1] uppercase text-white mb-3">
-                MARKETING SHOULD <span className="text-red-400">MAKE YOU MONEY</span>
+                STOP GUESSING WITH YOUR MARKETING — <span className="text-red-400">GET A PLAN THAT WORKS</span> & A TEAM YOU CAN TRUST
               </h2>
 
               <div className="flex flex-wrap gap-3 mb-0">
