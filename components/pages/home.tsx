@@ -207,23 +207,9 @@ export default function Home() {
         </header>
         
         <Suspense fallback={null}>
-          <div className="relative overflow-hidden">
-            <video
-              className="absolute inset-0 w-full h-full object-cover"
-              autoPlay
-              muted
-              playsInline
-              loop
-            >
-              <source src="/assets/Untitled_1754143769049.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-charcoal-900/80" />
-            <div className="relative z-10">
-              <ValueStackSection />
-              <div id="problem" data-section="problem">
-                <ProblemSection scrollToSection={scrollToSection} />
-              </div>
-            </div>
+          <ValueStackSection />
+          <div id="problem" data-section="problem">
+            <ProblemSection scrollToSection={scrollToSection} />
           </div>
           <ProcessSection />
           <IndustriesSection />

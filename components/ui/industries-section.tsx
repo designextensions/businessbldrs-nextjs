@@ -17,7 +17,7 @@ export default function IndustriesSection() {
   ] as const;
 
   return (
-    <section className="bg-charcoal-900 py-16 lg:py-20 relative overflow-hidden" id="industries" data-testid="industries-section">
+    <section className="bg-charcoal-900 py-20 lg:py-28 relative overflow-hidden" id="industries" data-testid="industries-section">
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

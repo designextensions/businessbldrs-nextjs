@@ -15,9 +15,8 @@ export default function ProblemSection({ scrollToSection }: ProblemSectionProps)
   ];
 
   return (
-    <section className="relative overflow-hidden" data-testid="problem-section">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-      <div className="relative">
+    <section className="relative overflow-hidden" id="problems" data-testid="problem-section">
+      <div className="band-dark relative">
         <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block">
           <img
             src={stressedBusinessPerson}

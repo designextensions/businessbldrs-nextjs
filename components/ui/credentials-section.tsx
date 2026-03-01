@@ -29,18 +29,18 @@ export default function CredentialsSection() {
   ];
 
   return (
-    <section className="band-white py-14 lg:py-20 relative overflow-hidden" data-testid="credentials-section">
+    <section className="band-dark py-20 lg:py-28 relative overflow-hidden" data-testid="credentials-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="label-industrial inline-flex items-center gap-2 px-4 py-2 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm mb-6">
             <BadgeCheck className="w-4 h-4" />
             PROVEN EXPERTISE
           </span>
-          <h2 className="headline-lg text-charcoal-900 mb-4">
+          <h2 className="headline-lg text-white mb-4">
             EXPERIENCE YOU<br />
-            CAN <span className="text-yellow-500">TRUST</span>
+            CAN <span className="text-yellow-400">TRUST</span>
           </h2>
-          <p className="text-editorial text-stone-600 max-w-xl mx-auto">
+          <p className="text-editorial text-stone-400 max-w-xl mx-auto">
             Backed by industry-leading certifications and recognition
           </p>
         </div>
