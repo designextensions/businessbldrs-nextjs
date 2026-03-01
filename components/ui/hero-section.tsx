@@ -18,7 +18,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="pt-24 relative overflow-hidden bg-white" data-testid="hero-section">
+    <section className="pt-16 relative overflow-hidden bg-white" data-testid="hero-section">
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-18 text-center">
         <div className="mb-6">
           <span className="label-industrial inline-block px-4 py-2 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm">
