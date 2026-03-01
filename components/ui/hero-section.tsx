@@ -54,19 +54,19 @@ export default function HeroSection() {
               <ArrowRight className="w-5 h-5" />
             </button>
           </Link>
-          <Link href="/resources">
+          <Link href="/marketing-audit">
             <Button
               onClick={() => trackEvent('click', {
                 event_category: 'engagement',
-                event_label: 'hero_resources_button',
+                event_label: 'hero_marketing_audit_button',
                 button_location: 'hero_section'
               })}
               variant="outline"
               size="xl"
               className="w-full sm:w-auto whitespace-nowrap"
-              data-testid="button-hero-resources"
+              data-testid="button-hero-audit"
             >
-              FREE RESOURCES
+              FREE MARKETING AUDIT
             </Button>
           </Link>
         </div>

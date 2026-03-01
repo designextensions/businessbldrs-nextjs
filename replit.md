@@ -98,6 +98,18 @@ Homepage industries section (`components/ui/industries-section.tsx`):
 - All other cards link to their `/industries/[slug]` page
 - All industry pages listed in `darkHeroPages` and `scrollActivatedPages` in navigation.tsx
 
+## Free Marketing Audit Tool
+
+Interactive lead-generation tool at `/marketing-audit`:
+- Component: `components/pages/marketing-audit.tsx`
+- Route: `app/(marketing)/marketing-audit/page.tsx`
+- API: `app/api/audit-leads/route.ts` (POST — saves to DB + HubSpot)
+- Step 1: Lead capture (name, email, optional domain) with honeypot + rate limiting
+- Steps 2-6: Five quick questions mapped to Plan/Produce/Promote/Protect categories
+- Results: Personalized scorecard with category ratings (Good/Needs Work/Critical) and specific recommendations linking to service pages
+- Homepage hero button changed from "FREE RESOURCES" → "FREE MARKETING AUDIT" linking to `/marketing-audit`
+- Listed in both `darkHeroPages` and `scrollActivatedPages` in navigation.tsx
+
 ## Deployment
 
 - Target: Autoscale
