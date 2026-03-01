@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -39,7 +40,7 @@ export default function AdminLoginForm() {
     <div className="min-h-screen bg-charcoal-900 flex items-center justify-center">
       <div className="bg-white border-2 border-charcoal-900 shadow-offset p-8 w-full max-w-md">
         <div className="mb-6 text-center">
-          <img src="/logo-full.png" alt="Business Builders" className="h-10 mx-auto mb-4" />
+          <Image src="/logo-full.png" alt="Business Builders" width={200} height={40} className="h-10 w-auto mx-auto mb-4" priority />
           <h1 className="text-2xl font-black uppercase tracking-tight text-charcoal-900">
             Admin Login
           </h1>

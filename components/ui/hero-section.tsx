@@ -31,7 +31,7 @@ export default function HeroSection() {
 
         <h1 className="headline-xl text-charcoal-900 mb-6">
           Clear Message. <br />
-          Proven Strategy. <br />
+          <span className="italic font-bold">Proven Strategy.</span> <br />
           <span className="text-yellow-500">Real Growth.</span>
         </h1>
 

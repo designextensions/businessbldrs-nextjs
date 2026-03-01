@@ -52,10 +52,12 @@ public/
 ## Image Assets
 
 - Duplicate files between `assets/` and `attached_assets/` were removed (kept in `attached_assets/` as CMS source of truth)
-- Large images (>500KB) converted to WebP format at quality 80
-- Source code references updated to point to correct directory and extension
-- Above-the-fold images use `next/image` with `priority` prop
+- Only 2 images >500KB exist (blog JPGs, already well-compressed — WebP not smaller)
+- Admin login logo uses `next/image` with `priority` prop
 - `lib/getQueryClient.ts` provides per-request QueryClient via `React.cache()` for server-side hydration
+- All 8 public marketing pages use `HydrationBoundary` for SSR data prefetching
+- Removed unused components: `carousel.tsx`, `chart.tsx`, `optimized-image.tsx`
+- Removed unused packages: `react-icons`, `recharts`, `embla-carousel-react`
 
 ## Deployment
 
