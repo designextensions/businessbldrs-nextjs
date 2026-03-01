@@ -216,10 +216,11 @@ export default function Navigation() {
                       <div className="bg-charcoal-900 border-2 border-white/20 shadow-offset">
                         <div className="grid grid-cols-4 divide-x-2 divide-charcoal-700">
                           <div className="p-6">
-                            <div className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400">
+                            <Link href="/services/plan" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
                               <Target className="w-5 h-5 text-yellow-400" />
-                              <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400">Plan</span>
-                            </div>
+                              <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400 hover:text-yellow-300">Plan</span>
+                              <ArrowRight className="w-3 h-3 text-yellow-400 ml-auto" />
+                            </Link>
                             <div className="space-y-1">
                               <Link href="/storybrand-agency">
                                 <div className={megaMenuItemClass}>
@@ -252,10 +253,11 @@ export default function Navigation() {
                           </div>
 
                           <div className="p-6">
-                            <div className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400">
+                            <Link href="/services/produce" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
                               <Palette className="w-5 h-5 text-yellow-400" />
-                              <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400">Produce</span>
-                            </div>
+                              <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400 hover:text-yellow-300">Produce</span>
+                              <ArrowRight className="w-3 h-3 text-yellow-400 ml-auto" />
+                            </Link>
                             <div className="space-y-1">
                               <Link href="/branding-logos">
                                 <div className={megaMenuItemClass}>
@@ -306,10 +308,11 @@ export default function Navigation() {
                           </div>
 
                           <div className="p-6">
-                            <div className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400">
+                            <Link href="/services/promote" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
                               <Megaphone className="w-5 h-5 text-yellow-400" />
-                              <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400">Promote</span>
-                            </div>
+                              <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400 hover:text-yellow-300">Promote</span>
+                              <ArrowRight className="w-3 h-3 text-yellow-400 ml-auto" />
+                            </Link>
                             <div className="space-y-1">
                               <Link href="/marketing-services">
                                 <div className={megaMenuItemClass}>
@@ -351,10 +354,11 @@ export default function Navigation() {
                           </div>
 
                           <div className="p-6">
-                            <div className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400">
+                            <Link href="/services/protect" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
                               <Shield className="w-5 h-5 text-yellow-400" />
-                              <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400">Protect</span>
-                            </div>
+                              <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400 hover:text-yellow-300">Protect</span>
+                              <ArrowRight className="w-3 h-3 text-yellow-400 ml-auto" />
+                            </Link>
                             <div className="space-y-1">
                               <Link href="/hosting">
                                 <div className={megaMenuItemClass}>

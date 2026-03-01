@@ -59,6 +59,18 @@ public/
 - Removed unused components: `carousel.tsx`, `chart.tsx`, `optimized-image.tsx`
 - Removed unused packages: `react-icons`, `recharts`, `embla-carousel-react`
 
+## Service Category Pages
+
+Four service category master pages organize services under the "Plan, Produce, Promote, Protect" framework:
+- `/services/plan` — StoryBrand Agency, Marketing Blueprint, AI Blueprint
+- `/services/produce` — Branding & Logos, Website Design, Video Production, App Development, AI Development
+- `/services/promote` — Marketing Services, SEO Services, Social Media, HubSpot CRM
+- `/services/protect` — Managed Hosting, Maintenance, ADA Compliance
+
+Components: `components/pages/services-plan.tsx`, `services-produce.tsx`, `services-promote.tsx`, `services-protect.tsx`
+Routes: `app/(marketing)/services/plan/`, `produce/`, `promote/`, `protect/`
+Homepage process cards link to these pages. Navigation mega-menu headers also link to them.
+
 ## Deployment
 
 - Target: Autoscale

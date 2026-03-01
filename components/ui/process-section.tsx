@@ -13,7 +13,8 @@ export default function ProcessSection() {
       description: "Strategic blueprints that set the foundation for success.",
       services: ["Messaging Blueprint", "Video Blueprint", "Website Blueprint", "Marketing Blueprint", "AI Blueprint"],
       image: "/service-strategy.jpg",
-      imageAlt: "Strategic marketing planning session with Business Builders team developing blueprints"
+      imageAlt: "Strategic marketing planning session with Business Builders team developing blueprints",
+      href: "/services/plan"
     },
     {
       number: "02",
@@ -22,7 +23,8 @@ export default function ProcessSection() {
       description: "Professional websites and videos that convert visitors to customers.",
       services: ["Website Development", "Video Production", "Photography", "Brand Identity"],
       image: "/service-video-new.jpg",
-      imageAlt: "Professional video production and content creation by Business Builders"
+      imageAlt: "Professional video production and content creation by Business Builders",
+      href: "/services/produce"
     },
     {
       number: "03",
@@ -31,7 +33,8 @@ export default function ProcessSection() {
       description: "Targeted marketing that reaches your ideal customers.",
       services: ["SEO", "PPC", "Social Media", "CRM & HubSpot Integration"],
       image: "/service-marketing.jpg",
-      imageAlt: "Digital marketing dashboard showing SEO, PPC, and social media campaign performance"
+      imageAlt: "Digital marketing dashboard showing SEO, PPC, and social media campaign performance",
+      href: "/services/promote"
     },
     {
       number: "04",
@@ -40,7 +43,8 @@ export default function ProcessSection() {
       description: "Ongoing hosting, maintenance, and compliance to keep your investment safe.",
       services: ["Managed Hosting", "Website Maintenance", "ADA Compliance", "Security Monitoring"],
       image: "/service-website.jpg",
-      imageAlt: "Managed website hosting dashboard with uptime monitoring and security alerts"
+      imageAlt: "Managed website hosting dashboard with uptime monitoring and security alerts",
+      href: "/services/protect"
     }
   ];
 
@@ -64,9 +68,10 @@ export default function ProcessSection() {
 
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <div 
-              key={step.number} 
-              className={`bento-card p-0 overflow-hidden animate-slide-up stagger-${index + 1}`}
+            <Link
+              key={step.number}
+              href={step.href}
+              className={`bento-card p-0 overflow-hidden animate-slide-up stagger-${index + 1} group transition-all duration-200 hover:shadow-offset-lg hover:-translate-y-1`}
               data-testid={`process-step-${index + 1}`}
             >
               <div className="relative">
@@ -86,7 +91,7 @@ export default function ProcessSection() {
                 <h3 className="headline-md text-charcoal-900 mb-3">{step.title}</h3>
                 <p className="text-stone-600 mb-6">{step.description}</p>
                 
-                <div className="space-y-2">
+                <div className="space-y-2 mb-6">
                   {step.services.map((service, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-yellow-500 flex-shrink-0" />
@@ -94,8 +99,13 @@ export default function ProcessSection() {
                     </div>
                   ))}
                 </div>
+
+                <div className="flex items-center gap-2 text-sm font-display font-bold uppercase text-charcoal-900 group-hover:text-yellow-600 transition-colors">
+                  EXPLORE SERVICES
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
