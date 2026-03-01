@@ -25,7 +25,7 @@ export default function ValueStackSection() {
   ];
 
   return (
-    <section className="bg-charcoal-900 py-12 lg:py-16" data-testid="value-stack-section">
+    <section className="bg-stone-100 py-12 lg:py-16" data-testid="value-stack-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {values.map((value, index) => {
@@ -36,10 +36,10 @@ export default function ValueStackSection() {
                 className="flex flex-col items-center text-center"
                 data-testid={`value-item-${index + 1}`}
               >
-                <div className="w-14 h-14 bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center mb-3">
-                  <Icon className="w-7 h-7 text-yellow-400" strokeWidth={1.5} />
+                <div className="w-14 h-14 bg-charcoal-900/10 border border-charcoal-900/20 flex items-center justify-center mb-3">
+                  <Icon className="w-7 h-7 text-charcoal-900" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-white text-sm font-display font-bold tracking-wide mb-1">
+                <h3 className="text-charcoal-900 text-sm font-display font-bold tracking-wide mb-1">
                   {value.title}
                 </h3>
                 <p className="text-stone-500 text-xs leading-relaxed">
