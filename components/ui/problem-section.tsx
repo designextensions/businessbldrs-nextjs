@@ -81,8 +81,8 @@ export default function ProblemSection({ scrollToSection }: ProblemSectionProps)
 
       <div className="band-yellow py-12 lg:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:flex lg:items-center lg:gap-12">
-            <div className="text-center lg:text-left lg:flex-shrink-0 mb-8 lg:mb-0">
+          <div className="grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-center">
+            <div className="text-center lg:text-left mb-4 lg:mb-0">
               <h3 className="headline-lg text-charcoal-900 mb-2">
                 YOU DESERVE <span className="shine-yellow">MORE.</span>
               </h3>
@@ -101,18 +101,18 @@ export default function ProblemSection({ scrollToSection }: ProblemSectionProps)
               </Link>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 lg:gap-6">
-              <div className="bento-card p-6 text-center bg-white">
-                <div className="headline-md text-charcoal-900 mb-1">26+</div>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bento-card px-5 py-6 text-center bg-white min-w-[120px]">
+                <div className="font-display font-black text-3xl text-charcoal-900 mb-1">26+</div>
                 <p className="label-industrial text-stone-500 text-xs">Years of Experience</p>
               </div>
-              <div className="bento-card p-6 text-center bg-white">
-                <div className="headline-md text-charcoal-900 mb-1">1000+</div>
+              <div className="bento-card px-5 py-6 text-center bg-white min-w-[120px]">
+                <div className="font-display font-black text-3xl text-charcoal-900 mb-1">1000+</div>
                 <p className="label-industrial text-stone-500 text-xs">Businesses Helped</p>
               </div>
-              <div className="bento-card p-6 text-center bg-white">
+              <div className="bento-card px-5 py-6 text-center bg-white min-w-[120px]">
                 <div className="flex items-center justify-center gap-1 mb-1">
-                  <span className="headline-md text-charcoal-900">5</span>
+                  <span className="font-display font-black text-3xl text-charcoal-900">5</span>
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
