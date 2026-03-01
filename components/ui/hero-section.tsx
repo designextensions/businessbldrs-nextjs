@@ -19,7 +19,7 @@ export default function HeroSection() {
 
   return (
     <section className="pt-24 relative overflow-hidden bg-white" data-testid="hero-section">
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 text-center">
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-18 text-center">
         <div className="mb-6">
           <span className="label-industrial inline-block px-4 py-2 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm">
             AI-POWERED MARKETING FOR{" "}
@@ -70,6 +70,19 @@ export default function HeroSection() {
             </Button>
           </Link>
         </div>
+      </div>
+
+      <div className="relative w-full h-[150px] overflow-hidden bg-charcoal-900">
+        <video
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
+          autoPlay
+          muted
+          playsInline
+          loop
+        >
+          <source src="/assets/Untitled_1754143769049.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/40 via-transparent to-charcoal-900/40" />
       </div>
     </section>
   );
