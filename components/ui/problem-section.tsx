@@ -39,7 +39,7 @@ export default function ProblemSection({ scrollToSection }: ProblemSectionProps)
               </div>
 
               <h2 className="font-display font-black text-3xl sm:text-4xl leading-[1.1] uppercase text-white mb-3">
-                MARKETING SHOULDN'T BE LIKE <span className="text-red-400">SLINGING MUD AGAINST A WALL</span> AND HOPING SOMETHING STICKS
+                MARKETING SHOULD <span className="text-red-400">MAKE YOU MONEY</span>
               </h2>
 
               <div className="flex flex-wrap gap-3 mb-0">
