@@ -72,7 +72,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative w-full h-[150px] overflow-hidden bg-charcoal-900">
+      <div className="relative w-full h-[200px] overflow-hidden bg-charcoal-900">
         <video
           className="absolute inset-0 w-full h-full object-cover opacity-70"
           autoPlay
@@ -83,6 +83,7 @@ export default function HeroSection() {
           <source src="/assets/Untitled_1754143769049.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/40 via-transparent to-charcoal-900/40" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-stone-100" />
       </div>
     </section>
   );
