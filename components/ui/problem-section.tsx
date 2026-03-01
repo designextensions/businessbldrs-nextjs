@@ -1,4 +1,4 @@
-import { X, Clock, DollarSign, TrendingDown } from "lucide-react";
+import { Clock, DollarSign, TrendingDown } from "lucide-react";
 const stressedBusinessPerson = "/assets/stock_images/stressed_business_pr_8aedf5dd.jpg";
 
 interface ProblemSectionProps {
@@ -29,13 +29,6 @@ export default function ProblemSection({ scrollToSection }: ProblemSectionProps)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="py-10 lg:py-12 lg:w-1/2">
             <div className="max-w-xl">
-              <div className="flex items-center gap-4 mb-4">
-                <span className="stamp inline-flex items-center gap-2 text-red-500 border-red-500 bg-red-500/10">
-                  <X className="w-4 h-4" />
-                  THE PROBLEM
-                </span>
-              </div>
-
               <h2 className="font-display font-black text-3xl sm:text-4xl leading-[1.1] uppercase text-white mb-3">
                 MARKETING SHOULD <span className="text-red-400">MAKE YOU MONEY</span>
               </h2>
