@@ -18,18 +18,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="pt-24 relative overflow-hidden" data-testid="hero-section">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-        src={heroVideo}
-        preload="auto"
-      />
-      <div className="absolute inset-0 bg-white/60" />
-
+    <section className="pt-24 relative overflow-hidden bg-white" data-testid="hero-section">
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 text-center">
         <div className="mb-6 animate-slide-up stagger-1">
           <span className="label-industrial inline-block px-4 py-2 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm">
