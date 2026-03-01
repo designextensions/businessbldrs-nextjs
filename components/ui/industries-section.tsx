@@ -1,23 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Heart, Car, GraduationCap, ShoppingBag, Church, HardHat, Factory, Stethoscope, Sparkles } from "lucide-react";
+import { ArrowRight, Building2, Heart, Car, GraduationCap, ShoppingBag, Church, HardHat, Factory, Stethoscope, Sparkles, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 export default function IndustriesSection() {
   const industries = [
-    { name: "Accounting", icon: Building2 },
-    { name: "Healthcare", icon: Heart },
-    { name: "Automotive", icon: Car },
-    { name: "Dental", icon: Stethoscope },
-    { name: "Education", icon: GraduationCap },
-    { name: "Consumer Goods", icon: ShoppingBag },
-    { name: "Non-Profits", icon: Church },
-    { name: "Construction", icon: HardHat },
-    { name: "Manufacturing", icon: Factory },
-    { name: "Your Industry", icon: Sparkles },
-  ];
+    { name: "Accounting", icon: Building2, link: "/industries/accounting" },
+    { name: "Healthcare", icon: Heart, link: "/industries/healthcare" },
+    { name: "Automotive", icon: Car, link: "/industries/automotive" },
+    { name: "Dental", icon: Stethoscope, link: "/industries/dental" },
+    { name: "Education", icon: GraduationCap, link: "/industries/education" },
+    { name: "Consumer Goods", icon: ShoppingBag, link: "/industries/consumer-goods" },
+    { name: "Churches & Ministries", icon: Church, link: "https://ministrybuilders.com", external: true },
+    { name: "Construction", icon: HardHat, link: "/industries/construction" },
+    { name: "Manufacturing", icon: Factory, link: "/industries/manufacturing" },
+    { name: "Your Industry", icon: Sparkles, link: "/request-quote" },
+  ] as const;
 
   return (
-    <section className="bg-charcoal-900 py-20 lg:py-28 relative overflow-hidden" data-testid="industries-section">
+    <section className="bg-charcoal-900 py-20 lg:py-28 relative overflow-hidden" id="industries" data-testid="industries-section">
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -39,29 +39,58 @@ export default function IndustriesSection() {
           {industries.map((industry, index) => {
             const Icon = industry.icon;
             const isHighlight = industry.name === "Your Industry";
-            return (
-              <div
-                key={industry.name}
-                className={`group relative p-6 text-center border-2 transition-all duration-200 cursor-default ${
-                  isHighlight
-                    ? "bg-yellow-400 border-yellow-400 text-charcoal-900"
-                    : "bg-charcoal-800/50 border-charcoal-700 hover:border-yellow-400/50 hover:bg-charcoal-800"
-                }`}
-                data-testid={`industry-item-${index}`}
-              >
+            const isExternal = "external" in industry && industry.external;
+
+            const cardContent = (
+              <>
                 <div className={`w-12 h-12 mx-auto mb-3 flex items-center justify-center ${
                   isHighlight
                     ? "bg-charcoal-900"
                     : "bg-yellow-400/10 border border-yellow-400/20 group-hover:bg-yellow-400/20"
                 }`}>
-                  <Icon className={`w-6 h-6 ${isHighlight ? "text-yellow-400" : "text-yellow-400"}`} strokeWidth={1.5} />
+                  <Icon className="w-6 h-6 text-yellow-400" strokeWidth={1.5} />
                 </div>
                 <span className={`font-display font-bold text-sm uppercase tracking-wide block ${
                   isHighlight ? "text-charcoal-900" : "text-white"
                 }`}>
                   {industry.name}
                 </span>
-              </div>
+                {isExternal && (
+                  <ExternalLink className="w-3 h-3 text-stone-500 absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                )}
+              </>
+            );
+
+            const cardClassName = `group relative p-6 text-center border-2 transition-all duration-200 cursor-pointer hover:translate-y-[-2px] ${
+              isHighlight
+                ? "bg-yellow-400 border-yellow-400 text-charcoal-900 hover:bg-yellow-300"
+                : "bg-charcoal-800/50 border-charcoal-700 hover:border-yellow-400/50 hover:bg-charcoal-800"
+            }`;
+
+            if (isExternal) {
+              return (
+                <a
+                  key={industry.name}
+                  href={industry.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cardClassName}
+                  data-testid={`industry-item-${index}`}
+                >
+                  {cardContent}
+                </a>
+              );
+            }
+
+            return (
+              <Link
+                key={industry.name}
+                href={industry.link}
+                className={cardClassName}
+                data-testid={`industry-item-${index}`}
+              >
+                {cardContent}
+              </Link>
             );
           })}
         </div>

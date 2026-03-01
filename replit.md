@@ -73,6 +73,31 @@ Homepage process cards link to these pages. Navigation mega-menu headers also li
 Each page follows a consistent layout pattern: dark two-column hero (text + photo), stats row, alternating service cards, benefits section, yellow CTA band.
 These pages are listed in `darkHeroPages` and `scrollActivatedPages` in `navigation.tsx` for transparent nav behavior.
 
+## Industry Pages
+
+8 SEO-optimized industry landing pages using StoryBrand messaging, built with a shared template:
+- Template: `components/pages/industry-page-template.tsx` (reusable component accepting industry-specific props)
+- Routes: `app/(marketing)/industries/[slug]/page.tsx`
+- Components: `components/pages/industries/[slug].tsx`
+
+Industries with case studies:
+- `/industries/automotive` — Bozard Ford Lincoln (285% more leads)
+- `/industries/construction` — Hines (320% ROI), Breakwater Construction
+- `/industries/manufacturing` — Rulon International (450% more leads)
+
+Industries with portfolio items only:
+- `/industries/education` — Citizens High School, Impact Early Education, etc.
+- `/industries/healthcare` — Midtown Occupational Health, Main Street Medical Supply, etc.
+- `/industries/accounting` — Level Accounting, Strategis CPAs, DuckettLadd
+- `/industries/dental` — Bartram Dental, Bartram Dental Assisting School
+- `/industries/consumer-goods` — Scoville Vodka, Fit Organic, 1st Products
+
+Homepage industries section (`components/ui/industries-section.tsx`):
+- "Churches & Ministries" links externally to ministrybuilders.com (new tab)
+- "Your Industry" links to /request-quote
+- All other cards link to their `/industries/[slug]` page
+- All industry pages listed in `darkHeroPages` and `scrollActivatedPages` in navigation.tsx
+
 ## Deployment
 
 - Target: Autoscale
