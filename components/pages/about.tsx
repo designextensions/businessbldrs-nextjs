@@ -150,18 +150,7 @@ export default function About() {
                 We're on a <span className="text-yellow-500">mission</span>
               </h2>
               <div className="space-y-4 text-xl font-serif text-stone-600">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-yellow-400 mr-4"></div>
-                  <span>to help others grow their businesses</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-yellow-400 mr-4"></div>
-                  <span>through coaching, marketing, and development</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-yellow-400 mr-4"></div>
-                  <span>that's friendly, honest, and glorifying to God.</span>
-                </div>
+                <p>to create more freedom, money, and purpose for everyone around us — our clients, our team, and our families</p>
               </div>
             </div>
             <div className="relative">
