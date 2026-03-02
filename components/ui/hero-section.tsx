@@ -80,7 +80,7 @@ export default function HeroSection() {
           playsInline
           loop
         >
-          <source src="/assets/Untitled_1754143769049.mp4" type="video/mp4" />
+          <source src="/attached_assets/0301.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/40 via-transparent to-charcoal-900/40" />
       </div>
