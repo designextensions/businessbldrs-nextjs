@@ -38,7 +38,7 @@ export default function Navigation() {
   ];
 
   const darkHeroPages = [
-    '/ada-accessibility', '/hosting',
+    '/ada-accessibility', '/hosting', '/request-quote',
     '/services/plan', '/services/produce', '/services/promote', '/services/protect',
     '/industries/automotive', '/industries/construction', '/industries/manufacturing',
     '/industries/education', '/industries/healthcare', '/industries/accounting',
