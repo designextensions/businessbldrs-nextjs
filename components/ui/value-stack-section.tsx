@@ -33,11 +33,11 @@ export default function ValueStackSection() {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center text-center"
+                className="group flex flex-col items-center text-center cursor-default transition-transform duration-300 hover:-translate-y-1"
                 data-testid={`value-item-${index + 1}`}
               >
-                <div className="w-14 h-14 bg-charcoal-900/10 border border-charcoal-900/20 flex items-center justify-center mb-3">
-                  <Icon className="w-7 h-7 text-charcoal-900" strokeWidth={1.5} />
+                <div className="w-14 h-14 bg-yellow-400 border-2 border-charcoal-900 flex items-center justify-center mb-3 transition-all duration-300 group-hover:bg-charcoal-900 group-hover:shadow-offset-sm">
+                  <Icon className="w-7 h-7 text-charcoal-900 transition-colors duration-300 group-hover:text-yellow-400" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-charcoal-900 text-sm font-display font-bold tracking-wide mb-1">
                   {value.title}
