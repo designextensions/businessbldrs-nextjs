@@ -108,13 +108,16 @@ export default function About() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[100vh] flex items-center band-white">
-        {/* Large Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('${teamPhotoImage}')`,
-          }}
-        />
+        {/* Background Video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          playsInline
+          loop
+        >
+          <source src="/attached_assets/0301.mp4" type="video/mp4" />
+        </video>
         {/* Light overlay for text readability */}
         <div className="absolute inset-0 bg-white/85" />
         

@@ -17,7 +17,7 @@ export const seoConfig: Record<string, PageSEO> = {
   about: {
     title: "About Business Builders | 26+ Years of Marketing Excellence",
     description: "About Business Builders — a St. Augustine marketing agency since 1999. Meet our team of HubSpot-certified, StoryBrand-trained marketing experts.",
-    h1: "About Business Builders",
+    h1: "Your Upgraded Marketing Team",
     keywords: "about business builders, st augustine marketing team",
     ogImage: "https://businessbldrs.com/wp-content/uploads/2024/12/BB-2023-Office-Content-Shoot-6961-1024x576.jpg"
   },
