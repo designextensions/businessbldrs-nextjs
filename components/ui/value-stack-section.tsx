@@ -3,6 +3,11 @@ import { Shield, TrendingUp, Handshake, MessageSquare } from "lucide-react";
 export default function ValueStackSection() {
   const values = [
     {
+      icon: MessageSquare,
+      title: "CLARIFY YOUR MESSAGE",
+      description: "StoryBrand framework for clarity"
+    },
+    {
       icon: Shield,
       title: "PROTECT YOUR BRAND",
       description: "Consistent identity that builds trust"
@@ -16,11 +21,6 @@ export default function ValueStackSection() {
       icon: Handshake,
       title: "CLOSE MORE BUSINESS",
       description: "Convert prospects into customers"
-    },
-    {
-      icon: MessageSquare,
-      title: "CLARIFY YOUR MESSAGE",
-      description: "StoryBrand framework for clarity"
     }
   ];
 
