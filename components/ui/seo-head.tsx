@@ -118,31 +118,6 @@ export default function SEOHead({
       });
     };
 
-    // Add SearchAtlas Dynamic Optimization Script
-    const addSearchAtlasScript = () => {
-      // Check if script is already added to prevent duplicates
-      if (!document.querySelector('#sa-dynamic-optimization')) {
-        try {
-          const script = document.createElement('script');
-          script.setAttribute('nowprocket', '');
-          script.setAttribute('nitro-exclude', '');
-          script.type = 'text/javascript';
-          script.id = 'sa-dynamic-optimization';
-          script.dataset.uuid = '30c4130f-316d-48cb-b424-e6f82719c0ef';
-          script.src = 'data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vZGFzaGJvYXJkLnNlYXJjaGF0bGFzLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gIjMwYzQxMzBmLTMxNmQtNDhjYi1iNDI0LWU2ZjgyNzE5YzBlZiI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw==';
-          script.onerror = () => {
-            console.warn('SearchAtlas dynamic optimization script failed to load');
-          };
-          document.head.appendChild(script);
-        } catch (e) {
-          console.warn('SearchAtlas script injection error:', e);
-        }
-      }
-    };
-
-    // Add SearchAtlas script
-    addSearchAtlasScript();
-
     // Add performance optimization preload hints
     addPreloadHints();
 
