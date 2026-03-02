@@ -12,7 +12,7 @@ export const seoConfig: Record<string, PageSEO> = {
     description: "St. Augustine full-service marketing agency since 1999. HubSpot Platinum Partner & StoryBrand Certified. Web design, SEO, social media, branding & video. Call 877-378-6101.",
     h1: "St. Augustine Marketing Agency",
     keywords: "st augustine marketing agency, florida marketing company, business builders",
-    ogImage: "https://businessbldrs.com/social-share-home.png"
+    ogImage: "https://businessbldrs.com/og-image.jpg"
   },
   about: {
     title: "About Business Builders | 26+ Years of Marketing Excellence",

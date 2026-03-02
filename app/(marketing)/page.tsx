@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.home.title,
     description: seoConfig.home.description,
+    url: "https://businessbldrs.com",
+    type: "website",
     images: seoConfig.home.ogImage ? [seoConfig.home.ogImage] : [],
   },
 };
