@@ -129,7 +129,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto text-center">
             
             <h1 className="headline-xl text-charcoal-900 mb-8">
-              {seoConfig.about.h1}
+              Your Upgraded<br />Marketing Team
             </h1>
             <p className="text-editorial-lg text-stone-600 mb-8 max-w-3xl mx-auto">
               <strong className="text-charcoal-900">Your goals become our goals.</strong> With all the companies competing for consumer attention today, a powerful online marketing strategy for your brand is an absolute must. Through high-end website design, effective search engine marketing strategies, and compelling sales copy, we improve traffic to your site and engage visitors with a clear, clean layout that showcases your brand.
@@ -174,7 +174,7 @@ export default function About() {
           <p className="text-editorial-lg text-stone-400 mb-12 max-w-4xl mx-auto">
             We plan, produce, and promote business with messaging, website, videos, development, and marketing. Then we track the results to create measurable success.
           </p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-charcoal-800 border-2 border-yellow-400 p-8 shadow-offset-yellow">
               <div className="w-16 h-16 bg-yellow-400 flex items-center justify-center mx-auto mb-6">
                 <span className="text-charcoal-900 font-display font-bold text-2xl">1</span>
@@ -195,6 +195,13 @@ export default function About() {
               </div>
               <h3 className="font-display font-bold text-2xl text-white uppercase mb-4">PROMOTE</h3>
               <p className="font-serif text-stone-400">Strategic marketing and measurable results tracking</p>
+            </div>
+            <div className="bg-charcoal-800 border-2 border-yellow-400 p-8 shadow-offset-yellow">
+              <div className="w-16 h-16 bg-yellow-400 flex items-center justify-center mx-auto mb-6">
+                <span className="text-charcoal-900 font-display font-bold text-2xl">4</span>
+              </div>
+              <h3 className="font-display font-bold text-2xl text-white uppercase mb-4">PROTECT</h3>
+              <p className="font-serif text-stone-400">Ongoing hosting, maintenance, and compliance to keep your investment safe</p>
             </div>
           </div>
         </div>
