@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.appDevelopment.description,
     images: seoConfig.appDevelopment.ogImage ? [seoConfig.appDevelopment.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/ai-development" },
 };
 
 export default function Page() {

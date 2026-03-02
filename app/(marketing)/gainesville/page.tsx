@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.gainesville.description,
     images: seoConfig.gainesville.ogImage ? [seoConfig.gainesville.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/gainesville" },
 };
 
 export default function Page() {

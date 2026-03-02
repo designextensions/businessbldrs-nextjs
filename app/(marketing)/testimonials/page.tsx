@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.testimonials.description,
     images: seoConfig.testimonials.ogImage ? [seoConfig.testimonials.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/testimonials" },
 };
 
 export default function Page() {

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.hubspot.description,
     images: seoConfig.hubspot.ogImage ? [seoConfig.hubspot.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/hubspot-implementation" },
 };
 
 export default function Page() {

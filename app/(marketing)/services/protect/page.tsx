@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: "Website Hosting, Maintenance & Compliance | Business Builders",
     description: "Protect your digital investment with managed hosting, website maintenance, and ADA compliance services. 99.9% uptime guarantee.",
   },
+  alternates: { canonical: "https://businessbldrs.com/services/protect" },
 };
 
 export default function Page() {

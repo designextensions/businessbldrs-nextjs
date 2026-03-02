@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.websiteDesign.description,
     images: seoConfig.websiteDesign.ogImage ? [seoConfig.websiteDesign.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/website-design" },
 };
 
 export default function Page() {

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.contact.description,
     images: seoConfig.contact.ogImage ? [seoConfig.contact.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/schedule-call" },
 };
 
 export default function Page() {

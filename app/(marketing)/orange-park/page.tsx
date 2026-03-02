@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.orangePark.description,
     images: seoConfig.orangePark.ogImage ? [seoConfig.orangePark.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/orange-park" },
 };
 
 export default function Page() {

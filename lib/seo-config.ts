@@ -8,21 +8,21 @@ export interface PageSEO {
 
 export const seoConfig: Record<string, PageSEO> = {
   home: {
-    title: "St. Augustine Marketing Agency | Business Builders",
+    title: "St. Augustine Marketing Agency",
     description: "St. Augustine full-service marketing agency since 1999. HubSpot Platinum Partner & StoryBrand Certified. Web design, SEO, social media, branding & video. Call 877-378-6101.",
     h1: "St. Augustine Marketing Agency",
     keywords: "st augustine marketing agency, florida marketing company, business builders",
     ogImage: "https://businessbldrs.com/og-image.jpg"
   },
   about: {
-    title: "About Business Builders | 26+ Years of Marketing Excellence",
+    title: "About Us | 26+ Years of Marketing Excellence",
     description: "About Business Builders — a St. Augustine marketing agency since 1999. Meet our team of HubSpot-certified, StoryBrand-trained marketing experts.",
     h1: "Your Upgraded Marketing Team",
     keywords: "about business builders, st augustine marketing team",
     ogImage: "https://businessbldrs.com/wp-content/uploads/2024/12/BB-2023-Office-Content-Shoot-6961-1024x576.jpg"
   },
   services: {
-    title: "Marketing Services | Business Builders",
+    title: "Full-Service Marketing Solutions",
     description: "Full-service marketing agency offering web design, SEO, content creation, social media & HubSpot solutions. StoryBrand Certified.",
     h1: "Digital Marketing Services",
     keywords: "marketing services, web design, seo services, hubspot agency"
@@ -34,127 +34,127 @@ export const seoConfig: Record<string, PageSEO> = {
     keywords: "brand design st augustine, logo design florida, branding agency"
   },
   contact: {
-    title: "Contact Business Builders | St. Augustine Marketing Agency",
+    title: "Contact Us | St. Augustine Marketing Agency",
     description: "Request a free marketing quote from Business Builders. Web design, SEO, social media, HubSpot & branding services in St. Augustine & Jacksonville.",
     h1: "Contact Us",
     keywords: "contact business builders, st augustine marketing contact"
   },
   portfolio: {
-    title: "Marketing Case Studies & Results | Business Builders",
+    title: "Marketing Case Studies & Results",
     description: "See our work — website design, branding, video & marketing projects for businesses across Florida. Case studies with measurable results.",
     h1: "Portfolio & Case Studies",
     keywords: "marketing case studies, portfolio, client results"
   },
   articles: {
-    title: "Marketing Blog & Resources | Business Builders",
+    title: "Marketing Blog & Resources",
     description: "Marketing tips, strategies, and resources from Business Builders. Expert advice on SEO, HubSpot, social media, and growing your business.",
     h1: "Marketing Articles & Resources",
     keywords: "marketing blog, marketing tips, business growth resources"
   },
   downloads: {
-    title: "Free Marketing Templates & Guides | Business Builders",
+    title: "Free Marketing Templates & Guides",
     description: "Download free marketing templates, checklists, and guides. 26+ years of marketing expertise distilled into actionable resources for your business.",
     h1: "Free Marketing Downloads",
     keywords: "free marketing templates, marketing guides, business checklists"
   },
   requestQuote: {
-    title: "Request a Free Marketing Quote | Business Builders",
+    title: "Request a Free Marketing Quote",
     description: "Get a free marketing consultation and quote from Business Builders. Tell us about your business goals and we'll create a custom marketing plan.",
     h1: "Request a Free Quote",
     keywords: "free marketing quote, marketing consultation, business growth plan"
   },
   team: {
-    title: "Meet Our Team | Business Builders Marketing Agency",
+    title: "Meet Our Marketing Team",
     description: "Meet the talented marketing experts at Business Builders. Our team brings 26+ years of combined experience in web design, SEO, and digital marketing.",
     h1: "Meet Our Team",
     keywords: "business builders team, marketing experts, st augustine marketing team"
   },
   testimonials: {
-    title: "Client Testimonials & Reviews | Business Builders",
+    title: "Client Testimonials & Reviews",
     description: "Read what our clients say about working with Business Builders. Real testimonials from businesses, ministries, and nonprofits we've helped grow.",
     h1: "Client Testimonials",
     keywords: "business builders reviews, marketing agency testimonials, client success stories"
   },
   websiteDesign: {
-    title: "Website Design & Development | Business Builders",
+    title: "Website Design & Development",
     description: "Custom website design & development in St. Augustine FL. Responsive, SEO-optimized, ADA-compliant sites built to convert visitors into customers.",
     h1: "Website Design & Development",
     keywords: "website design, web development, wordpress development, shopify development"
   },
   seoServices: {
-    title: "SEO Services St. Augustine | Business Builders",
+    title: "SEO Services St. Augustine",
     description: "Professional SEO services in St. Augustine & Jacksonville FL. Keyword research, on-page optimization, local SEO & analytics. Free SEO audit available.",
     h1: "SEO Services",
     keywords: "seo services, search engine optimization, local seo, st augustine seo"
   },
   videoProduction: {
-    title: "Video Production Services | Business Builders",
+    title: "Video Production Services",
     description: "Professional video production for marketing in St. Augustine & Jacksonville FL. Brand videos, testimonials, social media content & aerial footage.",
     h1: "Video Production Services",
     keywords: "video production, brand videos, testimonial videos, commercial production"
   },
   hubspot: {
-    title: "HubSpot Implementation & Services | Business Builders",
+    title: "HubSpot Implementation & Services",
     description: "HubSpot Platinum Partner in Florida. CRM setup, marketing automation, sales pipeline, onboarding & training. Get more from your HubSpot investment.",
     h1: "HubSpot Implementation",
     keywords: "hubspot implementation, hubspot partner, hubspot services"
   },
   storybrand: {
-    title: "StoryBrand Messaging Framework | Business Builders",
+    title: "StoryBrand Messaging Framework",
     description: "StoryBrand messaging workshops & brand script development. Clarify your message so customers engage. Certified StoryBrand Guide in Florida.",
     h1: "StoryBrand Messaging",
     keywords: "storybrand, messaging framework, brand messaging, storybrand certified"
   },
   socialMedia: {
-    title: "Social Media Marketing Services | Business Builders",
+    title: "Social Media Marketing Services",
     description: "Social media marketing services in St. Augustine & Jacksonville FL. Strategy, content creation, scheduling & reporting for Facebook, Instagram, LinkedIn.",
     h1: "Social Media Marketing",
     keywords: "social media marketing, social media management, social media advertising"
   },
   appDevelopment: {
-    title: "App Development Services | Business Builders",
+    title: "App Development Services",
     description: "Custom mobile app development for iOS, Android & web in St. Augustine FL. From concept to launch, we build apps that grow your business.",
     h1: "Application Development",
     keywords: "app development, mobile app development, web application development"
   },
   resources: {
-    title: "Marketing Resources & Tools | Business Builders",
+    title: "Marketing Resources & Tools",
     description: "Free marketing resources, tools, and guides from Business Builders. Access templates, checklists, videos, and expert insights to grow your business.",
     h1: "Marketing Resources",
     keywords: "marketing resources, marketing tools, free marketing guides"
   },
   events: {
-    title: "Marketing Events & Workshops | Business Builders",
+    title: "Marketing Events & Workshops",
     description: "Join Business Builders for marketing workshops, webinars, and events. Learn marketing strategies and network with business professionals.",
     h1: "Events & Workshops",
     keywords: "marketing events, business workshops, marketing webinars"
   },
   palmCoast: {
-    title: "Palm Coast Marketing Agency | Web Design & SEO | Business Builders",
+    title: "Palm Coast Marketing Agency | Web Design & SEO",
     description: "Business Builders serves Palm Coast businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. Based in nearby St. Augustine. Call 877-378-6101.",
     h1: "Palm Coast's Go-To Marketing Agency",
     keywords: "palm coast marketing agency, palm coast web design, palm coast seo, marketing company palm coast fl"
   },
   ponteVedra: {
-    title: "Ponte Vedra Beach Marketing Agency | Web Design & SEO | Business Builders",
+    title: "Ponte Vedra Beach Marketing Agency | Web Design & SEO",
     description: "Business Builders serves Ponte Vedra Beach businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. Based in nearby St. Augustine. Call 877-378-6101.",
     h1: "Ponte Vedra Beach's Trusted Marketing Agency",
     keywords: "ponte vedra beach marketing agency, ponte vedra web design, ponte vedra seo, marketing company ponte vedra fl"
   },
   orangePark: {
-    title: "Orange Park Marketing Agency | Web Design & SEO | Business Builders",
+    title: "Orange Park Marketing Agency | Web Design & SEO",
     description: "Business Builders serves Orange Park businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. Based in nearby St. Augustine. Call 877-378-6101.",
     h1: "Orange Park's Go-To Marketing Agency",
     keywords: "orange park marketing agency, orange park web design, orange park seo, clay county marketing agency"
   },
   gainesville: {
-    title: "Gainesville Marketing Agency | Web Design & SEO | Business Builders",
+    title: "Gainesville Marketing Agency | Web Design & SEO",
     description: "Business Builders serves Gainesville businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. HubSpot Platinum Partner. Call 877-378-6101.",
     h1: "Gainesville's Trusted Marketing Agency",
     keywords: "gainesville marketing agency, gainesville web design, gainesville seo, alachua county marketing agency"
   },
   daytonaBeach: {
-    title: "Daytona Beach Marketing Agency | Web Design & SEO | Business Builders",
+    title: "Daytona Beach Marketing Agency | Web Design & SEO",
     description: "Business Builders serves Daytona Beach businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. Based in nearby St. Augustine. Call 877-378-6101.",
     h1: "Daytona Beach's Go-To Marketing Agency",
     keywords: "daytona beach marketing agency, daytona beach web design, daytona beach seo, volusia county marketing agency"

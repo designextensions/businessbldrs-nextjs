@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     url: "https://businessbldrs.com/marketing-audit",
     type: "website",
   },
+  alternates: { canonical: "https://businessbldrs.com/marketing-audit" },
 };
 
 export default function MarketingAuditPage() {

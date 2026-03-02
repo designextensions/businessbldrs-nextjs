@@ -153,10 +153,10 @@ export default function SEOServices() {
             
             <h1 className="headline-xl mb-6 leading-tight text-charcoal-900">
               <span className="text-yellow-500">
-                SEO Service
+                SEO Services
               </span>
               <br />
-              Search Engine Marketing & Specialists
+              & Search Engine Marketing
             </h1>
             
             <p className="text-xl text-stone-600 mb-8 leading-relaxed max-w-3xl mx-auto">

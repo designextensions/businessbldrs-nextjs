@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.storybrand.description,
     images: seoConfig.storybrand.ogImage ? [seoConfig.storybrand.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/storybrand-framework" },
 };
 
 export default function Page() {

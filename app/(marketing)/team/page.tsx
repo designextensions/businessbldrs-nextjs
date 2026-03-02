@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description: seoConfig.team.description,
     images: seoConfig.team.ogImage ? [seoConfig.team.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/team" },
 };
 
 export default async function Page() {

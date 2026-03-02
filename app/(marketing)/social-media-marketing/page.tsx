@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.socialMedia.description,
     images: seoConfig.socialMedia.ogImage ? [seoConfig.socialMedia.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/social-media-marketing" },
 };
 
 export default function Page() {

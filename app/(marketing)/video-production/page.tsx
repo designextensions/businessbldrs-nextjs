@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.videoProduction.description,
     images: seoConfig.videoProduction.ogImage ? [seoConfig.videoProduction.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/video-production" },
 };
 
 export default function Page() {

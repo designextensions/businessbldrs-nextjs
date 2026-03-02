@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.requestQuote.description,
     images: seoConfig.requestQuote.ogImage ? [seoConfig.requestQuote.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/request-quote" },
 };
 
 export default function Page() {

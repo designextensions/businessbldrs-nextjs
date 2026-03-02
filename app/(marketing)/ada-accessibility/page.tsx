@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     description: "ADA website compliance & accessibility services in Florida. Make your website accessible to all users and reduce legal risk. Plans from $79/month.",
     images: ["/service-website.jpg"],
   },
+  alternates: { canonical: "https://businessbldrs.com/ada-accessibility" },
 };
 
 export default function Page() {

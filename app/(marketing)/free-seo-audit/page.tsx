@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.seoServices.description,
     images: seoConfig.seoServices.ogImage ? [seoConfig.seoServices.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/free-seo-audit" },
 };
 
 export default function Page() {

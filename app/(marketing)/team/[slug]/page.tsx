@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title,
     description,
+    alternates: { canonical: `https://businessbldrs.com/team/${slug}` },
     openGraph: {
       title,
       description,

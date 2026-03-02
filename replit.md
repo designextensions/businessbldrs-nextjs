@@ -110,6 +110,15 @@ Interactive lead-generation tool at `/marketing-audit`:
 - Homepage hero button changed from "FREE RESOURCES" → "FREE MARKETING AUDIT" linking to `/marketing-audit`
 - Listed in both `darkHeroPages` and `scrollActivatedPages` in navigation.tsx
 
+## SEO Configuration
+
+- **Title template**: `app/layout.tsx` uses `template: "%s | Business Builders"` — individual page titles should NOT include "| Business Builders" suffix
+- **Canonical tags**: Server-side via `alternates: { canonical: "..." }` in each page.tsx metadata + client-side fallback in `seo-head.tsx`
+- **Sitemap**: `app/sitemap.ts` with grouped timestamps (CORE_UPDATED, SERVICE_UPDATED, etc.) and consistent priority hierarchy
+- **Structured data**: Organization + LocalBusiness JSON-LD in layout.tsx; FAQ, Article, Service schemas in respective components
+- **Search Atlas**: Dynamic optimization script in layout.tsx `<head>` (UUID: 30c4130f-316d-48cb-b424-e6f82719c0ef, loads from seo.businessbldrs.com)
+- **OG image**: `public/og-image.jpg` (1200x630, 67KB); metadataBase resolves to https://businessbldrs.com
+
 ## Deployment
 
 - Target: Autoscale

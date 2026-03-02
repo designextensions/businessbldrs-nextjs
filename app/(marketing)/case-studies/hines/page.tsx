@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.portfolio.description,
     images: seoConfig.portfolio.ogImage ? [seoConfig.portfolio.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/case-studies/hines" },
 };
 
 export default function Page() {

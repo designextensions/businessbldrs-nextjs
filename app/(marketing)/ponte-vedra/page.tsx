@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.ponteVedra.description,
     images: seoConfig.ponteVedra.ogImage ? [seoConfig.ponteVedra.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/ponte-vedra" },
 };
 
 export default function Page() {

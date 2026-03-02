@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.daytonaBeach.description,
     images: seoConfig.daytonaBeach.ogImage ? [seoConfig.daytonaBeach.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/daytona-beach" },
 };
 
 export default function Page() {

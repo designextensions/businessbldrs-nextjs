@@ -244,7 +244,7 @@ export default function WebsiteDesign() {
       <section className="py-20 band-stone">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="headline-lg mb-6 text-secondary">
-            Professional Website Design That <span className="text-yellow-400">Grows</span> Your Business
+            Custom Websites Built to <span className="text-yellow-400">Convert</span> Visitors Into Customers
           </h2>
           <p className="text-xl lg:text-2xl text-stone-500 mb-12">
             <strong className="text-secondary">Our custom website design services deliver responsive, conversion-focused websites that help businesses succeed online.</strong> Every website design project includes mobile-responsive development, SEO optimization, and strategic user experience design.

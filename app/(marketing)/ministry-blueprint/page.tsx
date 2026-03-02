@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.resources.description,
     images: seoConfig.resources.ogImage ? [seoConfig.resources.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/ministry-blueprint" },
 };
 
 export default function Page() {

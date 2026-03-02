@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.branding.description,
     images: seoConfig.branding.ogImage ? [seoConfig.branding.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/branding-logos" },
 };
 
 export default function Page() {

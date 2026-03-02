@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.palmCoast.description,
     images: seoConfig.palmCoast.ogImage ? [seoConfig.palmCoast.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/palm-coast" },
 };
 
 export default function Page() {

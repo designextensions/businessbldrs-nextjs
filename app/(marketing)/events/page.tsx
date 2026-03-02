@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.events.description,
     images: seoConfig.events.ogImage ? [seoConfig.events.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/events" },
 };
 
 export default function Page() {

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     description: "Managed website hosting with 99.9% uptime, nightly backups, SSL security, and expert support. Stop worrying about your server — we handle everything. Plans from $50/month.",
     images: ["/service-website.jpg"],
   },
+  alternates: { canonical: "https://businessbldrs.com/hosting" },
 };
 
 export default function Page() {

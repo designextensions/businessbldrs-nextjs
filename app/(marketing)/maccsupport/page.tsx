@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: seoConfig.about.description,
     images: seoConfig.about.ogImage ? [seoConfig.about.ogImage] : [],
   },
+  alternates: { canonical: "https://businessbldrs.com/maccsupport" },
 };
 
 export default function Page() {

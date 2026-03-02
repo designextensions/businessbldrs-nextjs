@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: "Strategic Planning Services | Business Builders",
     description: "Start with the right strategy. StoryBrand messaging, marketing blueprints, and AI strategy planning to set the foundation for your business growth.",
   },
+  alternates: { canonical: "https://businessbldrs.com/services/plan" },
 };
 
 export default function Page() {

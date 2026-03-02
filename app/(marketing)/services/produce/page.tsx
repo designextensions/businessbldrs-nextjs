@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: "Creative Production Services | Business Builders",
     description: "Professional website design, video production, branding, and app development. We create content that converts visitors into customers.",
   },
+  alternates: { canonical: "https://businessbldrs.com/services/produce" },
 };
 
 export default function Page() {
