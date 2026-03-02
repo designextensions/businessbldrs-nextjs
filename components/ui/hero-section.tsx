@@ -73,14 +73,15 @@ export default function HeroSection() {
       </div>
 
       <div className="relative w-full h-[300px] overflow-hidden bg-charcoal-900">
-        <iframe
-          src="https://player.vimeo.com/video/927193763?h=f357da8288&background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full min-h-full pointer-events-none"
-          style={{ aspectRatio: '16/9' }}
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          title="Background video"
-        />
+        <video
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
+          autoPlay
+          muted
+          playsInline
+          loop
+        >
+          <source src="/assets/Untitled_1754143769049.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/40 via-transparent to-charcoal-900/40" />
       </div>
     </section>
