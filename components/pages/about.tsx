@@ -129,7 +129,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto text-center">
             
             <h1 className="headline-xl text-charcoal-900 mb-8">
-              Your Upgraded<br />Marketing Team
+              Your <span className="text-yellow-500">Upgraded</span><br />Marketing Team
             </h1>
             <p className="text-editorial-lg text-stone-600 mb-8 max-w-3xl mx-auto">
               <strong className="text-charcoal-900">Your goals become our goals.</strong> With all the companies competing for consumer attention today, a powerful online marketing strategy for your brand is an absolute must. Through high-end website design, effective search engine marketing strategies, and compelling sales copy, we improve traffic to your site and engage visitors with a clear, clean layout that showcases your brand.
