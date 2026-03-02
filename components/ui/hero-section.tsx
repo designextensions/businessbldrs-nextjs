@@ -72,7 +72,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative w-full h-[200px] overflow-hidden bg-charcoal-900">
+      <div className="relative w-full h-[250px] overflow-hidden bg-charcoal-900">
         <iframe
           src="https://player.vimeo.com/video/927193763?h=f357da8288&background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0"
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full min-h-full pointer-events-none"
