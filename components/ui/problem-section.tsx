@@ -7,14 +7,17 @@ export default function ProblemSection({ scrollToSection }: ProblemSectionProps)
   return (
     <section className="relative overflow-hidden" id="problems" data-testid="problem-section">
       <div className="band-dark relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="py-14 lg:py-20 flex flex-col items-center text-center">
-            <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl leading-[1.15] uppercase text-white max-w-4xl">
-              STOP GUESSING WITH YOUR MARKETING — <span className="text-red-400">GET A PLAN THAT WORKS</span>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="py-12 lg:py-16 flex flex-col items-center text-center gap-2">
+            <p className="label-industrial text-yellow-400 tracking-[0.2em] text-xs mb-1">
+              STOP GUESSING WITH YOUR MARKETING
+            </p>
+            <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl leading-[1.1] uppercase">
+              <span className="text-white">Get a Plan That </span>
+              <span className="text-red-400">Works</span>
             </h2>
-            <div className="w-16 h-1 bg-yellow-400 my-5" />
-            <p className="font-display font-normal italic text-2xl sm:text-3xl lg:text-4xl leading-[1.15] text-stone-300">
-              & a Team You Can Trust
+            <p className="font-display font-normal italic text-xl sm:text-2xl lg:text-3xl text-stone-400 mt-1">
+              & a team you can trust
             </p>
           </div>
         </div>
