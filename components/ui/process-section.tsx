@@ -71,7 +71,7 @@ export default function ProcessSection() {
             <Link
               key={step.number}
               href={step.href}
-              className={`bento-card p-0 overflow-hidden animate-slide-up stagger-${index + 1} group transition-all duration-200 hover:shadow-offset-lg hover:-translate-y-1`}
+              className={`bento-card p-0 overflow-hidden animate-slide-up stagger-${index + 1} group transition-all duration-200 hover:shadow-offset-lg hover:-translate-y-1 flex flex-col`}
               data-testid={`process-step-${index + 1}`}
             >
               <div className="relative">
@@ -86,7 +86,7 @@ export default function ProcessSection() {
                 </div>
               </div>
               
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <div className="label-industrial text-stone-500 mb-2">{step.subtitle}</div>
                 <h3 className="headline-md text-charcoal-900 mb-3">{step.title}</h3>
                 <p className="text-stone-600 mb-6">{step.description}</p>
@@ -100,7 +100,7 @@ export default function ProcessSection() {
                   ))}
                 </div>
 
-                <div className="flex items-center gap-2 text-sm font-display font-bold uppercase text-charcoal-900 group-hover:text-yellow-600 transition-colors">
+                <div className="flex items-center gap-2 text-sm font-display font-bold uppercase text-charcoal-900 group-hover:text-yellow-600 transition-colors mt-auto">
                   EXPLORE SERVICES
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
