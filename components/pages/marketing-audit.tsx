@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, CheckCircle, Target, Globe, Megaphone, Shield, AlertTriangle, ThumbsUp, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -214,6 +214,7 @@ const ratingConfig = {
 
 export default function MarketingAudit() {
   const [currentStep, setCurrentStep] = useState(0);
+  const autoAdvanceRef = useRef<NodeJS.Timeout | null>(null);
   const [leadInfo, setLeadInfo] = useState({ name: "", email: "", domain: "", honeypot: "" });
   const [answers, setAnswers] = useState<AuditAnswers>({
     brandMessage: "",
@@ -270,9 +271,20 @@ export default function MarketingAudit() {
 
   const handleOptionSelect = (questionId: string, value: string) => {
     setAnswers((prev) => ({ ...prev, [questionId]: value }));
+    if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
+    autoAdvanceRef.current = setTimeout(() => {
+      setCurrentStep((prev) => (prev < questions.length ? prev + 1 : leadCaptureStep));
+    }, 500);
   };
 
+  useEffect(() => {
+    return () => {
+      if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
+    };
+  }, []);
+
   const handleNext = () => {
+    if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
     if (currentStep < questions.length) {
       setCurrentStep(currentStep + 1);
     } else {
@@ -281,6 +293,7 @@ export default function MarketingAudit() {
   };
 
   const handlePrevious = () => {
+    if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
     if (currentStep === leadCaptureStep) {
       setCurrentStep(questions.length);
     } else if (currentStep > 1) {
@@ -584,26 +597,26 @@ export default function MarketingAudit() {
           </div>
         </section>
       ) : (
-        <section className="min-h-screen flex items-center py-32">
+        <section className="min-h-screen flex items-center py-20">
           <div className="max-w-3xl mx-auto px-6 w-full">
-            <div className="text-center mb-4">
+            <div className="text-center mb-3">
               <span className="label-industrial inline-block px-3 py-1 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 text-xs">
                 {currentQuestion?.category}
               </span>
             </div>
-            <div className="text-center mb-2">
+            <div className="text-center mb-1">
               <span className="text-sm text-stone-400 font-medium">
                 Question {currentStep} of {questions.length}
               </span>
             </div>
-            <h2 className="headline-lg text-charcoal-900 text-center mb-3">
+            <h2 className="headline-md text-charcoal-900 text-center mb-2">
               {currentQuestion?.title}
             </h2>
-            <p className="text-lg text-stone-500 text-center mb-10 max-w-xl mx-auto">
+            <p className="text-base text-stone-500 text-center mb-6 max-w-xl mx-auto">
               {currentQuestion?.subtitle}
             </p>
 
-            <div className="space-y-4 max-w-xl mx-auto mb-12" role="radiogroup" aria-label={currentQuestion?.title}>
+            <div className="space-y-3 max-w-xl mx-auto mb-8" role="radiogroup" aria-label={currentQuestion?.title}>
               {currentQuestion?.options.map((option) => {
                 const isSelected = currentAnswer === option.value;
                 return (
