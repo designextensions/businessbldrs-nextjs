@@ -87,58 +87,89 @@ export default function GettingStartedSection() {
           })}
         </div>
 
-        <div className="mt-16 bg-charcoal-900 border-2 border-charcoal-800 p-10 lg:p-14">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="headline-md text-white mb-4">
-              STOP WASTING TIME & MONEY ON MARKETING THAT <span className="text-yellow-400">DOESN'T WORK</span>
-            </h3>
-            <p className="text-stone-400 mb-3 text-lg">
-              When you have the right team around you, everything changes.
-            </p>
-            <p className="text-stone-500 mb-8">
-              It would be an honor for our team to become part of your team.
-            </p>
+        <div className="mt-16 relative overflow-hidden border-2 border-charcoal-800">
+          <div className="absolute inset-0">
+            <video
+              className="w-full h-full object-cover opacity-40"
+              autoPlay
+              muted
+              playsInline
+              loop
+            >
+              <source src="/attached_assets/0301.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-charcoal-900/70" />
+          </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-              <Link href="/request-quote">
-                <Button 
-                  size="xl"
-                  data-testid="button-getting-started-cta"
-                >
-                  GET A FREE QUOTE TODAY
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-              <a href="tel:877-378-6101">
-                <Button 
-                  variant="outlineLight"
-                  size="xl"
-                  data-testid="button-getting-started-phone"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  (877) 378-6101
-                </Button>
-              </a>
-            </div>
+          <div className="relative z-10 p-10 lg:p-14">
+            <div className="max-w-3xl mx-auto text-center">
+              <h3 className="headline-lg text-white mb-4">
+                YOUR UPGRADED <span className="text-yellow-400">MARKETING TEAM</span>
+              </h3>
+              <p className="text-stone-300 mb-8 text-lg">
+                We plan, produce, promote, and protect your marketing — so you can focus on running your business.
+              </p>
 
-            <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
-              <div className="text-center">
-                <div className="font-display font-black text-4xl text-yellow-400">26+</div>
-                <div className="label-industrial text-stone-500">YEARS</div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10 max-w-2xl mx-auto">
+                <Link href="/services/plan" className="bg-white/10 border border-white/20 px-4 py-3 text-center hover:bg-yellow-400/20 transition-colors">
+                  <div className="font-display font-black text-lg text-yellow-400">PLAN</div>
+                  <div className="text-xs text-stone-400">Strategy</div>
+                </Link>
+                <Link href="/services/produce" className="bg-white/10 border border-white/20 px-4 py-3 text-center hover:bg-yellow-400/20 transition-colors">
+                  <div className="font-display font-black text-lg text-yellow-400">PRODUCE</div>
+                  <div className="text-xs text-stone-400">Content</div>
+                </Link>
+                <Link href="/services/promote" className="bg-white/10 border border-white/20 px-4 py-3 text-center hover:bg-yellow-400/20 transition-colors">
+                  <div className="font-display font-black text-lg text-yellow-400">PROMOTE</div>
+                  <div className="text-xs text-stone-400">Marketing</div>
+                </Link>
+                <Link href="/services/protect" className="bg-white/10 border border-white/20 px-4 py-3 text-center hover:bg-yellow-400/20 transition-colors">
+                  <div className="font-display font-black text-lg text-yellow-400">PROTECT</div>
+                  <div className="text-xs text-stone-400">Maintenance</div>
+                </Link>
               </div>
-              <div className="text-center">
-                <div className="font-display font-black text-4xl text-yellow-400">1000+</div>
-                <div className="label-industrial text-stone-500">CLIENTS</div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+                <Link href="/request-quote">
+                  <Button 
+                    size="xl"
+                    data-testid="button-getting-started-cta"
+                  >
+                    GET A FREE QUOTE TODAY
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
+                <a href="tel:877-378-6101">
+                  <Button 
+                    variant="outlineLight"
+                    size="xl"
+                    data-testid="button-getting-started-phone"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    (877) 378-6101
+                  </Button>
+                </a>
               </div>
-              <div className="text-center">
-                <div className="flex justify-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                  ))}
+
+              <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                <div className="text-center">
+                  <div className="font-display font-black text-4xl text-yellow-400">26+</div>
+                  <div className="label-industrial text-stone-500">YEARS</div>
                 </div>
-                <div className="label-industrial text-stone-500">RATED</div>
+                <div className="text-center">
+                  <div className="font-display font-black text-4xl text-yellow-400">1000+</div>
+                  <div className="label-industrial text-stone-500">CLIENTS</div>
+                </div>
+                <div className="text-center">
+                  <div className="flex justify-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <div className="label-industrial text-stone-500">RATED</div>
+                </div>
               </div>
             </div>
           </div>
