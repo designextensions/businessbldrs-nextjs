@@ -107,7 +107,8 @@ export default function Navigation() {
   const scrollProgress = isMobile ? 0 : Math.min(scrollY / scrollRange, 1);
   const logoHeight = maxLogoHeight - (maxLogoHeight - minLogoHeight) * scrollProgress;
   const navPadding = isMobile ? 14 : 20;
-  const navHeight = logoHeight + (navPadding * 2);
+  // Fixed nav height for CLS: container never resizes. Logo animates inside.
+  const navHeight = isMobile ? 76 : 96;
   
   const logoTransitionStart = 0.2;
   const logoTransitionEnd = 0.5;
@@ -142,14 +143,13 @@ export default function Navigation() {
 
   return (
     <>
-      <nav 
-        className="navigation-header fixed top-0 left-0 right-0 w-full"
-        style={{ 
-          height: `${navHeight}px`,
-          backgroundColor: isDarkHeroPage 
+      <nav
+        className="navigation-header fixed top-0 left-0 right-0 w-full h-[76px] lg:h-24"
+        style={{
+          backgroundColor: isDarkHeroPage
             ? `rgba(255, 255, 255, ${Math.min(backgroundOpacity, 0.98)})`
             : `rgba(255, 255, 255, ${Math.max(0.3, backgroundOpacity * 0.9)})`,
-          willChange: 'transform, background-color, height',
+          willChange: 'transform, background-color',
           transform: 'translate3d(0, 0, 0)',
           zIndex: 100,
         }}

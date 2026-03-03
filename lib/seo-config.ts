@@ -263,11 +263,6 @@ export const localBusinessSchema = {
     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     "opens": "09:00",
     "closes": "17:00"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "21"
   }
 };
 
