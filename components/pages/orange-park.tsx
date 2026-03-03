@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Search, MessageSquare, Palette, Video, Smartphone, Settings, MapPin, Phone, Star, CheckCircle, Clock, Users, Building } from "lucide-react";
@@ -8,7 +7,6 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
-import { getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";
 
 export default function OrangePark() {
   const services = [
@@ -69,95 +67,8 @@ export default function OrangePark() {
     { number: "50+", label: "Active Clients" }
   ];
 
-  const localBusinessJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://businessbldrs.com/#localbusiness",
-    "name": "Business Builders - Orange Park Marketing Agency",
-    "image": "https://businessbldrs.com/logo-full.png",
-    "url": "https://businessbldrs.com/orange-park",
-    "telephone": "+1-877-378-6101",
-    "priceRange": "$$",
-    "description": "Orange Park marketing agency providing website design, SEO, branding, and digital marketing services. Based in St. Augustine, serving Orange Park and Clay County since 1999.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "701 Market St, Suite 101",
-      "addressLocality": "St. Augustine",
-      "addressRegion": "FL",
-      "postalCode": "32095",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.8946,
-      "longitude": -81.3145
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "21"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Orange Park",
-        "sameAs": "https://en.wikipedia.org/wiki/Orange_Park,_Florida"
-      },
-      {
-        "@type": "City",
-        "name": "Fleming Island"
-      },
-      {
-        "@type": "City",
-        "name": "Green Cove Springs"
-      },
-      {
-        "@type": "City",
-        "name": "Middleburg"
-      },
-      {
-        "@type": "State",
-        "name": "Florida"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/businessbldrs",
-      "https://twitter.com/businessbldrs",
-      "https://www.linkedin.com/company/businessbldrs",
-      "https://www.instagram.com/businessbldrs/",
-      "https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg"
-    ]
-  };
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      localBusinessJsonLd,
-      getBreadcrumbSchema("Orange Park", "/orange-park"),
-      {
-        "@type": "WebPage",
-        "name": "Orange Park Marketing Agency | Business Builders",
-        "description": "Business Builders is a full-service marketing agency serving Orange Park, FL. Website design, SEO, branding, video production, and digital marketing from nearby St. Augustine.",
-        "url": "https://businessbldrs.com/orange-park"
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-stone-50 text-charcoal-900">
-      <SEOHead
-        title="Orange Park Marketing Agency | Web Design & SEO | Business Builders"
-        description="Business Builders serves Orange Park businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. Based in nearby St. Augustine. Call 877-378-6101."
-        keywords="orange park marketing agency, orange park web design, orange park seo, marketing company orange park fl, orange park digital marketing, web designer orange park, clay county marketing agency, marketing agency near me orange park"
-        canonicalUrl={`${BASE_URL}/orange-park`}
-        structuredData={structuredData}
-      />
       <Navigation />
 
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[100vh] flex items-center band-dark">

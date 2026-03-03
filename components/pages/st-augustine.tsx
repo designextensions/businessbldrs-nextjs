@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Search, MessageSquare, Palette, Video, Smartphone, Settings, MapPin, Phone, Star, CheckCircle, Clock, Users } from "lucide-react";
@@ -9,7 +8,6 @@ import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
 const stAugustineImage = "/attached_assets/services-st-augustine-img_1754613904507.webp";
-import { getBreadcrumbSchema, BASE_URL, localBusinessSchema } from "@/lib/seo-config";
 
 export default function StAugustine() {
   const services = [
@@ -70,87 +68,8 @@ export default function StAugustine() {
     { number: "50+", label: "Active Clients" }
   ];
 
-  const localBusinessJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://businessbldrs.com/#localbusiness",
-    "name": "Business Builders - St. Augustine Marketing Agency",
-    "image": "https://businessbldrs.com/logo-full.png",
-    "url": "https://businessbldrs.com/st-augustine",
-    "telephone": "+1-877-378-6101",
-    "priceRange": "$$",
-    "description": "St. Augustine marketing agency providing website design, SEO, branding, and digital marketing services since 1999. Located at 701 Market St, Suite 101.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "701 Market St, Suite 101",
-      "addressLocality": "St. Augustine",
-      "addressRegion": "FL",
-      "postalCode": "32095",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.8946,
-      "longitude": -81.3145
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "21"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "St. Augustine",
-        "sameAs": "https://en.wikipedia.org/wiki/St._Augustine,_Florida"
-      },
-      {
-        "@type": "City",
-        "name": "St. Augustine Beach"
-      },
-      {
-        "@type": "State",
-        "name": "Florida"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/businessbldrs",
-      "https://twitter.com/businessbldrs",
-      "https://www.linkedin.com/company/businessbldrs",
-      "https://www.instagram.com/businessbldrs/",
-      "https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg"
-    ]
-  };
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      localBusinessJsonLd,
-      getBreadcrumbSchema("St. Augustine", "/st-augustine"),
-      {
-        "@type": "WebPage",
-        "name": "St. Augustine Marketing Agency | Business Builders",
-        "description": "Business Builders is a full-service marketing agency based in St. Augustine, FL since 1999. Website design, SEO, branding, video production, and digital marketing.",
-        "url": "https://businessbldrs.com/st-augustine"
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-stone-50 text-charcoal-900">
-      <SEOHead
-        title="St. Augustine Marketing Agency | Business Builders"
-        description="Business Builders is St. Augustine's trusted marketing agency since 1999. Website design, SEO, branding, video production & digital marketing. 701 Market St. Call 877-378-6101."
-        keywords="st augustine marketing agency, st augustine web design, st augustine seo, marketing company st augustine fl, st augustine digital marketing, web designer st augustine, st augustine advertising agency, marketing agency near me st augustine"
-        canonicalUrl={`${BASE_URL}/st-augustine`}
-        structuredData={structuredData}
-      />
       <Navigation />
 
       {/* Hero Section */}

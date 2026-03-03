@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Search, MessageSquare, Palette, Video, Smartphone, Settings, MapPin, Phone, Star, CheckCircle, Clock, Users, Building } from "lucide-react";
@@ -8,7 +7,6 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
-import { getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";
 
 export default function Gainesville() {
   const services = [
@@ -69,91 +67,8 @@ export default function Gainesville() {
     { number: "50+", label: "Active Clients" }
   ];
 
-  const localBusinessJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://businessbldrs.com/#localbusiness",
-    "name": "Business Builders - Gainesville Marketing Agency",
-    "image": "https://businessbldrs.com/logo-full.png",
-    "url": "https://businessbldrs.com/gainesville",
-    "telephone": "+1-877-378-6101",
-    "priceRange": "$$",
-    "description": "Gainesville marketing agency providing website design, SEO, branding, and digital marketing services. Based in St. Augustine, serving Gainesville and Alachua County since 1999.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "701 Market St, Suite 101",
-      "addressLocality": "St. Augustine",
-      "addressRegion": "FL",
-      "postalCode": "32095",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.8946,
-      "longitude": -81.3145
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "21"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Gainesville",
-        "sameAs": "https://en.wikipedia.org/wiki/Gainesville,_Florida"
-      },
-      {
-        "@type": "City",
-        "name": "Alachua"
-      },
-      {
-        "@type": "City",
-        "name": "Newberry"
-      },
-      {
-        "@type": "State",
-        "name": "Florida"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/businessbldrs",
-      "https://twitter.com/businessbldrs",
-      "https://www.linkedin.com/company/businessbldrs",
-      "https://www.instagram.com/businessbldrs/",
-      "https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg"
-    ]
-  };
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      localBusinessJsonLd,
-      getBreadcrumbSchema("Gainesville", "/gainesville"),
-      {
-        "@type": "WebPage",
-        "name": "Gainesville Marketing Agency | Business Builders",
-        "description": "Business Builders is a full-service marketing agency serving Gainesville, FL. Website design, SEO, branding, video production, and digital marketing.",
-        "url": "https://businessbldrs.com/gainesville"
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-stone-50 text-charcoal-900">
-      <SEOHead
-        title="Gainesville Marketing Agency | Web Design & SEO | Business Builders"
-        description="Business Builders serves Gainesville businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. HubSpot Platinum Partner. Call 877-378-6101."
-        keywords="gainesville marketing agency, gainesville web design, gainesville seo, marketing company gainesville fl, gainesville digital marketing, web designer gainesville, alachua county marketing agency, marketing agency near me gainesville"
-        canonicalUrl={`${BASE_URL}/gainesville`}
-        structuredData={structuredData}
-      />
       <Navigation />
 
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[100vh] flex items-center band-dark">

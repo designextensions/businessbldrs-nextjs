@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Search, MessageSquare, Palette, Video, Smartphone, Settings, MapPin, Phone, Star, CheckCircle, Clock, Users, Building } from "lucide-react";
@@ -8,7 +7,6 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
-import { getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";
 
 export default function DaytonaBeach() {
   const services = [
@@ -69,95 +67,8 @@ export default function DaytonaBeach() {
     { number: "50+", label: "Active Clients" }
   ];
 
-  const localBusinessJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://businessbldrs.com/#localbusiness",
-    "name": "Business Builders - Daytona Beach Marketing Agency",
-    "image": "https://businessbldrs.com/logo-full.png",
-    "url": "https://businessbldrs.com/daytona-beach",
-    "telephone": "+1-877-378-6101",
-    "priceRange": "$$",
-    "description": "Daytona Beach marketing agency providing website design, SEO, branding, and digital marketing services. Based in St. Augustine, serving Daytona Beach and Volusia County since 1999.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "701 Market St, Suite 101",
-      "addressLocality": "St. Augustine",
-      "addressRegion": "FL",
-      "postalCode": "32095",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.8946,
-      "longitude": -81.3145
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "21"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Daytona Beach",
-        "sameAs": "https://en.wikipedia.org/wiki/Daytona_Beach,_Florida"
-      },
-      {
-        "@type": "City",
-        "name": "Ormond Beach"
-      },
-      {
-        "@type": "City",
-        "name": "Port Orange"
-      },
-      {
-        "@type": "City",
-        "name": "New Smyrna Beach"
-      },
-      {
-        "@type": "State",
-        "name": "Florida"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/businessbldrs",
-      "https://twitter.com/businessbldrs",
-      "https://www.linkedin.com/company/businessbldrs",
-      "https://www.instagram.com/businessbldrs/",
-      "https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg"
-    ]
-  };
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      localBusinessJsonLd,
-      getBreadcrumbSchema("Daytona Beach", "/daytona-beach"),
-      {
-        "@type": "WebPage",
-        "name": "Daytona Beach Marketing Agency | Business Builders",
-        "description": "Business Builders is a full-service marketing agency serving Daytona Beach, FL. Website design, SEO, branding, video production, and digital marketing.",
-        "url": "https://businessbldrs.com/daytona-beach"
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-stone-50 text-charcoal-900">
-      <SEOHead
-        title="Daytona Beach Marketing Agency | Web Design & SEO | Business Builders"
-        description="Business Builders serves Daytona Beach businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. Based in nearby St. Augustine. Call 877-378-6101."
-        keywords="daytona beach marketing agency, daytona beach web design, daytona beach seo, marketing company daytona beach fl, daytona beach digital marketing, web designer daytona beach, volusia county marketing agency, marketing agency near me daytona beach"
-        canonicalUrl={`${BASE_URL}/daytona-beach`}
-        structuredData={structuredData}
-      />
       <Navigation />
 
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[100vh] flex items-center band-dark">

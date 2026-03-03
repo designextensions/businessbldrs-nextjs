@@ -1,5 +1,4 @@
 "use client";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/ui/navigation";
@@ -8,26 +7,11 @@ import Breadcrumbs from "@/components/ui/breadcrumbs";
 import HubSpotForm from "@/components/ui/hubspot-form";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Star, MessageSquare, Phone, Clock, FileText, Send, Award, Globe, CheckCircle, Users } from "lucide-react";
-import { seoConfig, localBusinessSchema, getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";
+import { seoConfig } from "@/lib/seo-config";
 
 export default function RequestQuote() {
-  const contactStructuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      localBusinessSchema,
-      getBreadcrumbSchema("Contact", "/request-quote")
-    ]
-  };
-
   return (
     <div className="min-h-screen band-dark">
-      <SEOHead 
-        title={seoConfig.contact.title}
-        description={seoConfig.contact.description}
-        keywords={seoConfig.contact.keywords}
-        canonicalUrl={`${BASE_URL}/request-quote`}
-        structuredData={contactStructuredData}
-      />
       <Navigation />
       
       <div className="pt-32 pb-20">

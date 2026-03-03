@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Search, MessageSquare, Palette, Video, Smartphone, Settings, MapPin, Phone, Star, CheckCircle, Clock, Users, Building } from "lucide-react";
@@ -8,7 +7,6 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
-import { getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";
 
 export default function PalmCoast() {
   const services = [
@@ -69,91 +67,8 @@ export default function PalmCoast() {
     { number: "50+", label: "Active Clients" }
   ];
 
-  const localBusinessJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://businessbldrs.com/#localbusiness",
-    "name": "Business Builders - Palm Coast Marketing Agency",
-    "image": "https://businessbldrs.com/logo-full.png",
-    "url": "https://businessbldrs.com/palm-coast",
-    "telephone": "+1-877-378-6101",
-    "priceRange": "$$",
-    "description": "Palm Coast marketing agency providing website design, SEO, branding, and digital marketing services. Based in St. Augustine, serving the Palm Coast and Flagler County area since 1999.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "701 Market St, Suite 101",
-      "addressLocality": "St. Augustine",
-      "addressRegion": "FL",
-      "postalCode": "32095",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.8946,
-      "longitude": -81.3145
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "21"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Palm Coast",
-        "sameAs": "https://en.wikipedia.org/wiki/Palm_Coast,_Florida"
-      },
-      {
-        "@type": "City",
-        "name": "Flagler Beach"
-      },
-      {
-        "@type": "City",
-        "name": "Bunnell"
-      },
-      {
-        "@type": "State",
-        "name": "Florida"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/businessbldrs",
-      "https://twitter.com/businessbldrs",
-      "https://www.linkedin.com/company/businessbldrs",
-      "https://www.instagram.com/businessbldrs/",
-      "https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg"
-    ]
-  };
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      localBusinessJsonLd,
-      getBreadcrumbSchema("Palm Coast", "/palm-coast"),
-      {
-        "@type": "WebPage",
-        "name": "Palm Coast Marketing Agency | Business Builders",
-        "description": "Business Builders is a full-service marketing agency serving Palm Coast, FL. Website design, SEO, branding, video production, and digital marketing from nearby St. Augustine.",
-        "url": "https://businessbldrs.com/palm-coast"
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-stone-50 text-charcoal-900">
-      <SEOHead
-        title="Palm Coast Marketing Agency | Web Design & SEO | Business Builders"
-        description="Business Builders serves Palm Coast businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. Based in nearby St. Augustine. Call 877-378-6101."
-        keywords="palm coast marketing agency, palm coast web design, palm coast seo, marketing company palm coast fl, palm coast digital marketing, web designer palm coast, palm coast advertising agency, marketing agency near me palm coast"
-        canonicalUrl={`${BASE_URL}/palm-coast`}
-        structuredData={structuredData}
-      />
       <Navigation />
 
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[100vh] flex items-center band-dark">

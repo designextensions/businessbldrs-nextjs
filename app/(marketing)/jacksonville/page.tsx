@@ -45,11 +45,6 @@ const jacksonvilleSchema = {
         "opens": "09:00",
         "closes": "17:00"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "21"
-      },
       "areaServed": [
         { "@type": "City", "name": "Jacksonville", "sameAs": "https://en.wikipedia.org/wiki/Jacksonville,_Florida" },
         { "@type": "City", "name": "Jacksonville Beach" },
