@@ -209,7 +209,16 @@ export default function GrantPage() {
       <Navigation />
 
       <section className="band-dark relative pt-32 pb-20 overflow-hidden min-h-[80vh] flex items-center">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(250,204,21,0.08),transparent_60%)]" />
+        <video
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          autoPlay
+          muted
+          playsInline
+          loop
+        >
+          <source src="/attached_assets/0301.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/60 via-charcoal-900/40 to-charcoal-900/70" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <Breadcrumbs items={[{ label: "Nonprofit Grant" }]} />
           <div className="max-w-4xl mx-auto text-center">
