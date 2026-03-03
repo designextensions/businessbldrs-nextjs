@@ -119,6 +119,17 @@ Interactive lead-generation tool at `/marketing-audit`:
 - **Search Atlas**: Dynamic optimization script in layout.tsx `<head>` (UUID: 30c4130f-316d-48cb-b424-e6f82719c0ef, loads from seo.businessbldrs.com)
 - **OG image**: `public/og-image.jpg` (1200x630, 67KB); metadataBase resolves to https://businessbldrs.com
 
+## Nonprofit Marketing Grant Page
+
+Annual $50,000 marketing grant for 501(c)(3) nonprofits and churches:
+- Route: `/grant` — `app/(marketing)/grant/page.tsx`
+- Component: `components/pages/grant.tsx` (client component)
+- API: `app/api/grant-application/route.ts` (POST — saves to DB via createContact + HubSpot sync + SendGrid email notification)
+- Package: brand kit, messaging framework, website redesign, 1yr hosting, 1yr updates, email templates, social templates, 12 custom posts
+- Form: honeypot spam protection + IP rate limiting (5/10min)
+- FAQ structured data (FAQPage) rendered server-side in page.tsx
+- Listed in `darkHeroPages` and `scrollActivatedPages` in navigation.tsx
+
 ## Deployment
 
 - Target: Autoscale
