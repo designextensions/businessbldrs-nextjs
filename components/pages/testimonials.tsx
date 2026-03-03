@@ -233,6 +233,44 @@ export default function Testimonials() {
         </div>
       </section>
 
+      {/* Donald Miller Expert Endorsement */}
+      <section className="py-20 band-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="label-industrial text-yellow-400 mb-2 block">EXPERT ENDORSEMENT</span>
+            <h2 className="headline-md font-display uppercase text-white mb-4">
+              Endorsed by <span className="text-yellow-400">Donald Miller</span>
+            </h2>
+            <p className="text-stone-400 max-w-2xl mx-auto">
+              Donald Miller, founder of StoryBrand and bestselling author of{" "}
+              <em>Building a StoryBrand</em>, personally recommends Business Builders as a certified partner.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="border-2 border-yellow-400 shadow-offset-yellow overflow-hidden aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/5wzrqaNJlLA?rel=0&modestbranding=1"
+                title="Donald Miller Recommends Business Builders — StoryBrand Certified Agency"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="border-2 border-yellow-400 px-6 py-3 bg-charcoal-800 text-center">
+                <p className="font-display font-bold text-yellow-400 uppercase text-sm tracking-wide">Donald Miller</p>
+                <p className="text-stone-400 text-xs">Founder of StoryBrand · Author of Building a StoryBrand</p>
+              </div>
+              <div className="border-2 border-charcoal-700 px-6 py-3 bg-charcoal-800 text-center">
+                <p className="label-industrial text-stone-400 text-xs">ONE OF A SELECT GROUP OF</p>
+                <p className="font-display font-bold text-white uppercase text-sm">StoryBrand Certified Agencies</p>
+                <p className="label-industrial text-stone-400 text-xs">IN THE UNITED STATES</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Written Testimonials - Quote Cards */}
       <section className="band-stone py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

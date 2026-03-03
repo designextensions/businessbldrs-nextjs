@@ -107,10 +107,10 @@ export const seoConfig: Record<string, PageSEO> = {
     keywords: "hubspot implementation, hubspot partner, hubspot services"
   },
   storybrandAgency: {
-    title: "StoryBrand Marketing Agency",
-    description: "Business Builders is a StoryBrand Certified marketing agency. Clarify your message, attract qualified leads, and grow with a proven strategy.",
+    title: "StoryBrand Certified Agency",
+    description: "Business Builders is a StoryBrand Certified Agency with 26+ years of experience. Endorsed by Donald Miller. We clarify your message, build your marketing, and grow your business.",
     h1: "StoryBrand Marketing Agency",
-    keywords: "storybrand marketing agency, storybrand agency, storybrand certified agency, certified storybrand guide"
+    keywords: "storybrand certified agency, storybrand agency, storybrand marketing agency, certified storybrand guide, donald miller storybrand agency, storybrand agency florida"
   },
   storybrandMessaging: {
     title: "StoryBrand Messaging Blueprint",

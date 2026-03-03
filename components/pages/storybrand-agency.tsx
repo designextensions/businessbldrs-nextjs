@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import SEOHead from "@/components/ui/seo-head";
 
+const DONALD_MILLER_VIDEO_ID = "5wzrqaNJlLA"; // YouTube: Donald Miller endorsement
+
 import { useState } from "react";
 const teamMeetingImg = "/attached_assets/Screenshot_2026-02-16_at_10.23.58_AM_1771255442299.webp";
 import { Button } from "@/components/ui/button";
@@ -348,10 +350,10 @@ export default function StoryBrandAgency() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12">
             {[
-              { icon: Award, label: "StoryBrand Certified" },
+              { icon: Award, label: "StoryBrand Certified Agency" },
               { icon: Shield, label: "HubSpot Platinum Partner" },
-              { icon: Star, label: "Founded 1999" },
-              { icon: TrendingUp, label: "500+ Projects Delivered" },
+              { icon: Star, label: "Endorsed by Donald Miller" },
+              { icon: TrendingUp, label: "Founded 1999 — 26+ Years" },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2">
                 <item.icon className="w-4 h-4 text-yellow-400" />
@@ -382,18 +384,89 @@ export default function StoryBrandAgency() {
               </p>
             </div>
             <div className="lg:col-span-2">
-              <div className="bg-charcoal-900 border-2 border-charcoal-800 p-8">
+              <div className="bg-charcoal-900 border-2 border-yellow-400 p-8 shadow-offset-yellow">
                 <Quote className="w-10 h-10 text-yellow-400 mb-4" />
                 <p className="font-display uppercase text-2xl text-white font-bold leading-tight mb-6">
                   When you confuse, you lose.
                 </p>
                 <p className="text-stone-400 text-sm leading-relaxed mb-6">
-                  Every day your messaging is unclear, you're losing customers to competitors who communicate better.
+                  Every day your messaging is unclear, you're losing customers to competitors who communicate better — not necessarily those who do better work.
                 </p>
-                <div className="border-t border-charcoal-700 pt-4">
-                  <p className="label-industrial text-yellow-400 text-xs">Donald Miller</p>
-                  <p className="text-stone-500 text-xs">Author, Building a StoryBrand</p>
+                <div className="border-t border-charcoal-700 pt-4 flex items-center gap-3">
+                  <div className="w-8 h-8 bg-yellow-400 flex items-center justify-center flex-shrink-0">
+                    <span className="font-display font-bold text-charcoal-900 text-xs">DM</span>
+                  </div>
+                  <div>
+                    <p className="label-industrial text-yellow-400 text-xs">Donald Miller</p>
+                    <p className="text-stone-500 text-xs">Founder, StoryBrand — Author, Building a StoryBrand</p>
+                  </div>
                 </div>
+              </div>
+              <div className="mt-4 bg-charcoal-800 border-2 border-charcoal-700 p-4 flex items-center gap-3">
+                <Award className="w-6 h-6 text-yellow-400 flex-shrink-0" />
+                <p className="text-stone-400 text-xs leading-relaxed">
+                  Business Builders is one of a select group of <strong className="text-white">StoryBrand Certified Agencies</strong> in the United States — certified directly by Donald Miller's organization.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Donald Miller Endorsement */}
+      <section className="py-20 band-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="label-industrial text-yellow-400 mb-2 block">STRAIGHT FROM THE SOURCE</span>
+            <h2 className="headline-md font-display uppercase text-white mb-4">
+              Donald Miller Recommends <span className="text-yellow-400">Business Builders</span>
+            </h2>
+            <p className="text-stone-400 max-w-2xl mx-auto">
+              Business Builders is trained and certified directly by Donald Miller's StoryBrand organization. Here's what he has to say about working with us.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="border-2 border-yellow-400 shadow-offset-yellow overflow-hidden aspect-video">
+                <iframe
+                  src={`https://www.youtube.com/embed/${DONALD_MILLER_VIDEO_ID}?rel=0&modestbranding=1`}
+                  title="Donald Miller Recommends Business Builders — StoryBrand Certified Agency"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-yellow-400 border-2 border-charcoal-900 flex items-center justify-center shadow-offset-sm flex-shrink-0">
+                  <Award className="w-6 h-6 text-charcoal-900" />
+                </div>
+                <div>
+                  <p className="label-industrial text-yellow-400 text-xs">CERTIFIED BY THE CREATOR</p>
+                  <p className="font-display uppercase font-bold text-white">StoryBrand Certified Agency</p>
+                </div>
+              </div>
+              <p className="text-stone-400 leading-relaxed mb-6">
+                There are hundreds of StoryBrand Certified Guides in the world. A <strong className="text-white">StoryBrand Certified Agency</strong> is a different level — every member of our team is trained in the framework, and our entire marketing process is built around it.
+              </p>
+              <p className="text-stone-400 leading-relaxed mb-8">
+                Donald Miller, the founder of StoryBrand and author of <em>Building a StoryBrand</em>, has personally endorsed Business Builders. That's not something any marketing agency can say.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/request-quote">
+                  <Button size="lg">
+                    WORK WITH US
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
+                <Link href="/storybrand-framework">
+                  <Button variant="outlineLight" size="lg">
+                    LEARN THE FRAMEWORK
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
