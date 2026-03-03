@@ -98,7 +98,7 @@ export default function Articles() {
         "@type": "CollectionPage",
         "name": seoConfig.articles.title,
         "description": seoConfig.articles.description,
-        "url": `${BASE_URL}/articles`,
+        "url": `${BASE_URL}/resources/articles`,
         "mainEntity": {
           "@type": "ItemList",
           "itemListElement": sortedArticles.slice(0, 20).map((article, index) => ({
@@ -112,7 +112,7 @@ export default function Articles() {
           }))
         }
       },
-      getBreadcrumbSchema("Articles", "/articles")
+      getBreadcrumbSchema("Articles", "/resources/articles")
     ]
   };
 
@@ -122,7 +122,7 @@ export default function Articles() {
         title={seoConfig.articles.title}
         description={seoConfig.articles.description}
         keywords={seoConfig.articles.keywords}
-        canonicalUrl={`${BASE_URL}/articles`}
+        canonicalUrl={`${BASE_URL}/resources/articles`}
         structuredData={articlesStructuredData}
       />
       <Navigation />

@@ -3,13 +3,13 @@ import { seoConfig } from "@/lib/seo-config";
 import StorybrandMessagingPage from "@/components/pages/storybrand-messaging";
 
 export const metadata: Metadata = {
-  title: seoConfig.storybrand.title,
-  description: seoConfig.storybrand.description,
-  keywords: seoConfig.storybrand.keywords,
+  title: seoConfig.storybrandMessaging.title,
+  description: seoConfig.storybrandMessaging.description,
+  keywords: seoConfig.storybrandMessaging.keywords,
   openGraph: {
-    title: seoConfig.storybrand.title,
-    description: seoConfig.storybrand.description,
-    images: seoConfig.storybrand.ogImage ? [seoConfig.storybrand.ogImage] : [],
+    title: seoConfig.storybrandMessaging.title,
+    description: seoConfig.storybrandMessaging.description,
+    images: seoConfig.storybrandMessaging.ogImage ? [seoConfig.storybrandMessaging.ogImage] : [],
   },
   alternates: { canonical: "https://businessbldrs.com/storybrand-messaging" },
 };

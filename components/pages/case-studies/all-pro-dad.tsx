@@ -40,7 +40,7 @@ export default function AllProDadCaseStudy() {
             "name": "Business Builders",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://businessbldrs.com/logo.png"
+              "url": "https://businessbldrs.com/logo-full.png"
             }
           },
           "datePublished": "2025-01-01",

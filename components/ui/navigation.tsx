@@ -33,7 +33,7 @@ export default function Navigation() {
   const lightBackgroundPages = [
     '/team', '/downloads', '/ministry-blueprint', '/cost-calculator',
     '/privacy-policy', '/terms-and-conditions', '/maintenance',
-    '/portfolio', '/articles', '/resources/articles', '/resources', '/videos',
+    '/portfolio', '/resources/articles', '/resources', '/videos',
     '/storybrand-agency'
   ];
 
@@ -418,7 +418,7 @@ export default function Navigation() {
                   </Link>
                   <div className={dropdownClass}>
                     <Link href="/resources"><div className={dropdownItemClass}><Book className="w-4 h-4 mr-3 text-yellow-400" /> All Resources</div></Link>
-                    <Link href="/articles"><div className={dropdownItemClass}><Book className="w-4 h-4 mr-3 text-yellow-400" /> Articles</div></Link>
+                    <Link href="/resources/articles"><div className={dropdownItemClass}><Book className="w-4 h-4 mr-3 text-yellow-400" /> Articles</div></Link>
                     <Link href="/videos"><div className={dropdownItemClass}><Video className="w-4 h-4 mr-3 text-yellow-400" /> Videos</div></Link>
                     <Link href="/downloads"><div className={dropdownItemClass}><Settings className="w-4 h-4 mr-3 text-yellow-400" /> Downloads</div></Link>
                   </div>
@@ -558,7 +558,7 @@ export default function Navigation() {
                     <div className="pl-4 pt-3 space-y-2 border-l-2 border-yellow-400 ml-2">
                       {[
                         { href: "/resources", label: "All Resources" },
-                        { href: "/articles", label: "Articles" },
+                        { href: "/resources/articles", label: "Articles" },
                         { href: "/videos", label: "Videos" },
                         { href: "/downloads", label: "Downloads" },
                       ].map(item => (

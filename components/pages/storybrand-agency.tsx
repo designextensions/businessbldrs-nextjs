@@ -203,8 +203,8 @@ export default function StoryBrandAgency() {
               "@type": "ProfessionalService",
               "name": "Business Builders — StoryBrand Certified Agency",
               "url": "https://businessbldrs.com/storybrand-agency",
-              "logo": "https://businessbldrs.com/logo.png",
-              "image": "https://businessbldrs.com/social-share-home.png",
+              "logo": "https://businessbldrs.com/logo-full.png",
+              "image": "https://businessbldrs.com/og-image.jpg",
               "description": "StoryBrand Certified Marketing Agency helping businesses clarify their message and grow using Donald Miller's 7-Part Framework.",
               "address": {
                 "@type": "PostalAddress",

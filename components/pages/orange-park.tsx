@@ -74,7 +74,7 @@ export default function OrangePark() {
     "@type": "LocalBusiness",
     "@id": "https://businessbldrs.com/#localbusiness",
     "name": "Business Builders - Orange Park Marketing Agency",
-    "image": "https://businessbldrs.com/logo.png",
+    "image": "https://businessbldrs.com/logo-full.png",
     "url": "https://businessbldrs.com/orange-park",
     "telephone": "+1-877-378-6101",
     "priceRange": "$$",

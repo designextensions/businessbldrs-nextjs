@@ -75,7 +75,7 @@ export default function StAugustine() {
     "@type": "LocalBusiness",
     "@id": "https://businessbldrs.com/#localbusiness",
     "name": "Business Builders - St. Augustine Marketing Agency",
-    "image": "https://businessbldrs.com/logo.png",
+    "image": "https://businessbldrs.com/logo-full.png",
     "url": "https://businessbldrs.com/st-augustine",
     "telephone": "+1-877-378-6101",
     "priceRange": "$$",

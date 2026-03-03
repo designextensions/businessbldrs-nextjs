@@ -74,7 +74,7 @@ export default function Gainesville() {
     "@type": "LocalBusiness",
     "@id": "https://businessbldrs.com/#localbusiness",
     "name": "Business Builders - Gainesville Marketing Agency",
-    "image": "https://businessbldrs.com/logo.png",
+    "image": "https://businessbldrs.com/logo-full.png",
     "url": "https://businessbldrs.com/gainesville",
     "telephone": "+1-877-378-6101",
     "priceRange": "$$",

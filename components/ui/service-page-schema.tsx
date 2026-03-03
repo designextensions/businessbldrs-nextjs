@@ -15,7 +15,7 @@ export default function ServicePageSchema({
 }: ServicePageSchemaProps) {
   const baseUrl = "https://businessbldrs.com";
   const pageUrl = `${baseUrl}/${slug}`;
-  const logoUrl = `${baseUrl}/logo.png`;
+  const logoUrl = `${baseUrl}/logo-full.png`;
   const imageUrl = image || `${baseUrl}/og-image.png`;
 
   const serviceSchema = {

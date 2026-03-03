@@ -74,7 +74,7 @@ export default function PonteVedra() {
     "@type": "LocalBusiness",
     "@id": "https://businessbldrs.com/#localbusiness",
     "name": "Business Builders - Ponte Vedra Beach Marketing Agency",
-    "image": "https://businessbldrs.com/logo.png",
+    "image": "https://businessbldrs.com/logo-full.png",
     "url": "https://businessbldrs.com/ponte-vedra",
     "telephone": "+1-877-378-6101",
     "priceRange": "$$",

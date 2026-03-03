@@ -326,7 +326,7 @@ export default function Resources() {
               </h2>
             </div>
             {blogArticles.length > 3 && (
-              <Link href="/articles" className="mt-4 md:mt-0">
+              <Link href="/resources/articles" className="mt-4 md:mt-0">
                 <span className="label-industrial text-charcoal-900 hover:text-yellow-600 transition-colors inline-flex items-center gap-2">
                   VIEW ALL ARTICLES <ArrowRight className="w-4 h-4" />
                 </span>

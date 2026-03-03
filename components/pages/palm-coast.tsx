@@ -74,7 +74,7 @@ export default function PalmCoast() {
     "@type": "LocalBusiness",
     "@id": "https://businessbldrs.com/#localbusiness",
     "name": "Business Builders - Palm Coast Marketing Agency",
-    "image": "https://businessbldrs.com/logo.png",
+    "image": "https://businessbldrs.com/logo-full.png",
     "url": "https://businessbldrs.com/palm-coast",
     "telephone": "+1-877-378-6101",
     "priceRange": "$$",

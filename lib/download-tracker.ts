@@ -19,10 +19,22 @@ interface UserCredentials {
   capturedAt: string;
 }
 
+const DEFAULT_DOWNLOAD_TRACKING: DownloadTracking = {
+  downloadCount: 0,
+  downloadedResourceIds: [],
+  firstDownloadAt: null,
+};
+
+function canUseLocalStorage(): boolean {
+  return typeof window !== "undefined" && typeof window.localStorage !== "undefined";
+}
+
 /**
  * Get the current download tracking data from localStorage
  */
 function getDownloadTracking(): DownloadTracking {
+  if (!canUseLocalStorage()) return DEFAULT_DOWNLOAD_TRACKING;
+
   try {
     const data = localStorage.getItem(DOWNLOAD_TRACKING_KEY);
     if (data) {
@@ -31,17 +43,15 @@ function getDownloadTracking(): DownloadTracking {
   } catch (error) {
     console.error('Error reading download tracking:', error);
   }
-  return {
-    downloadCount: 0,
-    downloadedResourceIds: [],
-    firstDownloadAt: null
-  };
+  return DEFAULT_DOWNLOAD_TRACKING;
 }
 
 /**
  * Save download tracking data to localStorage
  */
 function saveDownloadTracking(tracking: DownloadTracking): void {
+  if (!canUseLocalStorage()) return;
+
   try {
     localStorage.setItem(DOWNLOAD_TRACKING_KEY, JSON.stringify(tracking));
   } catch (error) {
@@ -67,6 +77,8 @@ export function getDownloadedResourceIds(): number[] {
  * Check if user has already provided their email
  */
 export function hasProvidedEmail(): boolean {
+  if (!canUseLocalStorage()) return false;
+
   try {
     const data = localStorage.getItem(USER_CREDENTIALS_KEY);
     if (data) {
@@ -83,6 +95,8 @@ export function hasProvidedEmail(): boolean {
  * Get stored user credentials
  */
 export function getUserCredentials(): UserCredentials | null {
+  if (!canUseLocalStorage()) return null;
+
   try {
     const data = localStorage.getItem(USER_CREDENTIALS_KEY);
     if (data) {
@@ -117,6 +131,8 @@ export function recordDownload(resourceId: number): void {
  * Store user credentials after email capture
  */
 export function setUserCredentials(email: string, name: string, company?: string): void {
+  if (!canUseLocalStorage()) return;
+
   try {
     const credentials: UserCredentials = {
       email,
@@ -141,6 +157,8 @@ export function hasDownloadedResource(resourceId: number): boolean {
  * Clear all download tracking data (for testing/debugging)
  */
 export function clearDownloadTracking(): void {
+  if (!canUseLocalStorage()) return;
+
   try {
     localStorage.removeItem(DOWNLOAD_TRACKING_KEY);
     localStorage.removeItem(USER_CREDENTIALS_KEY);

@@ -8,10 +8,17 @@ export interface PageSEO {
 
 export const seoConfig: Record<string, PageSEO> = {
   home: {
+    title: "Business Builders | Full-Service Marketing Agency",
+    description: "Business Builders helps businesses grow with StoryBrand messaging, web design, SEO, HubSpot implementation, and digital marketing.",
+    h1: "Marketing Agency",
+    keywords: "marketing agency, storybrand marketing agency, web design, seo services, hubspot partner, business builders",
+    ogImage: "https://businessbldrs.com/og-image.jpg"
+  },
+  stAugustine: {
     title: "St. Augustine Marketing Agency",
     description: "St. Augustine full-service marketing agency since 1999. HubSpot Platinum Partner & StoryBrand Certified. Web design, SEO, social media, branding & video. Call 877-378-6101.",
     h1: "St. Augustine Marketing Agency",
-    keywords: "st augustine marketing agency, florida marketing company, business builders",
+    keywords: "st augustine marketing agency, st augustine digital marketing, st augustine seo, st augustine web design, marketing company st augustine fl",
     ogImage: "https://businessbldrs.com/og-image.jpg"
   },
   about: {
@@ -99,11 +106,23 @@ export const seoConfig: Record<string, PageSEO> = {
     h1: "HubSpot Implementation",
     keywords: "hubspot implementation, hubspot partner, hubspot services"
   },
-  storybrand: {
-    title: "StoryBrand Messaging Framework",
-    description: "StoryBrand messaging workshops & brand script development. Clarify your message so customers engage. Certified StoryBrand Guide in Florida.",
-    h1: "StoryBrand Messaging",
-    keywords: "storybrand, messaging framework, brand messaging, storybrand certified"
+  storybrandAgency: {
+    title: "StoryBrand Marketing Agency",
+    description: "Business Builders is a StoryBrand Certified marketing agency. Clarify your message, attract qualified leads, and grow with a proven strategy.",
+    h1: "StoryBrand Marketing Agency",
+    keywords: "storybrand marketing agency, storybrand agency, storybrand certified agency, certified storybrand guide"
+  },
+  storybrandMessaging: {
+    title: "StoryBrand Messaging Blueprint",
+    description: "Build a clear StoryBrand messaging blueprint with proven frameworks, brand scripts, and actionable marketing plans.",
+    h1: "StoryBrand Messaging Blueprint",
+    keywords: "storybrand messaging, marketing blueprint, storybrand brandscript, brand messaging strategy"
+  },
+  storybrandFramework: {
+    title: "StoryBrand Framework Guide",
+    description: "Learn the StoryBrand Framework and how clear messaging helps businesses connect with customers and increase conversions.",
+    h1: "StoryBrand Framework",
+    keywords: "storybrand framework, donald miller storybrand, storybrand 7 part framework, brandscript guide"
   },
   socialMedia: {
     title: "Social Media Marketing Services",
@@ -169,7 +188,7 @@ export const organizationSchema = {
   "name": "Business Builders",
   "alternateName": "Business Builders Marketing Agency",
   "url": "https://businessbldrs.com",
-  "logo": "https://businessbldrs.com/logo.png",
+  "logo": "https://businessbldrs.com/logo-full.png",
   "foundingDate": "1999",
   "description": "Professional marketing agency with 26+ years of experience helping businesses grow through strategic planning, content creation, and targeted promotion.",
   "address": {
@@ -198,7 +217,7 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://businessbldrs.com/#localbusiness",
   "name": "Business Builders",
-  "image": "https://businessbldrs.com/logo.png",
+  "image": "https://businessbldrs.com/logo-full.png",
   "url": "https://businessbldrs.com",
   "telephone": "+1-877-378-6101",
   "priceRange": "$$",
@@ -262,7 +281,7 @@ export function getArticleSchema(article: {
     "@type": "Article",
     "headline": article.title,
     "description": article.description,
-    "image": article.image || "https://businessbldrs.com/logo.png",
+    "image": article.image || "https://businessbldrs.com/logo-full.png",
     "datePublished": article.datePublished,
     "dateModified": article.dateModified || article.datePublished,
     "author": {
@@ -274,7 +293,7 @@ export function getArticleSchema(article: {
       "name": "Business Builders",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://businessbldrs.com/logo.png"
+        "url": "https://businessbldrs.com/logo-full.png"
       }
     },
     "mainEntityOfPage": {

@@ -6,7 +6,7 @@ import Navigation from "@/components/ui/navigation";
 import HeroSection from "@/components/ui/hero-section";
 import { queryClient } from "@/lib/queryClient";
 import MegaFooter from "@/components/ui/mega-footer";
-import { seoConfig, organizationSchema, BASE_URL } from "@/lib/seo-config";
+import { seoConfig, BASE_URL } from "@/lib/seo-config";
 import CriticalCSS from "@/components/ui/critical-css";
 import ThirdPartyOptimizer from "@/components/ui/third-party-optimizer";
 import SitemapMeta from "@/components/ui/sitemap-generator";
@@ -43,7 +43,7 @@ export default function Home() {
         "url": "https://businessbldrs.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://businessbldrs.com/logo.png",
+          "url": "https://businessbldrs.com/logo-full.png",
           "width": 200,
           "height": 60
         },
@@ -51,10 +51,10 @@ export default function Home() {
         "foundingDate": "1999",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "",
+          "streetAddress": "701 Market St Ste 101",
           "addressLocality": "St. Augustine",
           "addressRegion": "FL",
-          "postalCode": "",
+          "postalCode": "32095",
           "addressCountry": "US"
         },
         "contactPoint": [
@@ -73,7 +73,7 @@ export default function Home() {
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
-          "reviewCount": "50+"
+          "reviewCount": 50
         }
       },
       {
@@ -84,17 +84,7 @@ export default function Home() {
         "description": "Professional marketing agency helping businesses grow",
         "publisher": {
           "@id": "https://businessbldrs.com/#organization"
-        },
-        "potentialAction": [
-          {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://businessbldrs.com/search?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
-        ]
+        }
       },
       {
         "@type": "Service",
