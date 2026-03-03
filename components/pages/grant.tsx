@@ -388,7 +388,7 @@ export default function GrantPage() {
                       value={formData.contactName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors text-charcoal-900 bg-white"
                       placeholder="Full name"
                     />
                   </div>
@@ -403,7 +403,7 @@ export default function GrantPage() {
                       value={formData.contactEmail}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors text-charcoal-900 bg-white"
                       placeholder="you@organization.org"
                     />
                   </div>
@@ -417,7 +417,7 @@ export default function GrantPage() {
                       name="website"
                       value={formData.website}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors text-charcoal-900 bg-white"
                       placeholder="https://yourorganization.org"
                     />
                   </div>
@@ -477,7 +477,7 @@ export default function GrantPage() {
                       value={formData.organizationName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors text-charcoal-900 bg-white"
                       placeholder="Your organization's legal name"
                     />
                   </div>
@@ -491,7 +491,7 @@ export default function GrantPage() {
                       value={formData.organizationType}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors bg-white"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors text-charcoal-900 bg-white"
                     >
                       <option value="">Select type...</option>
                       <option value="501(c)(3) Nonprofit">501(c)(3) Nonprofit</option>
@@ -508,7 +508,7 @@ export default function GrantPage() {
                       name="yearFounded"
                       value={formData.yearFounded}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors text-charcoal-900 bg-white"
                       placeholder="e.g. 2010"
                     />
                   </div>
@@ -521,7 +521,7 @@ export default function GrantPage() {
                       name="annualBudget"
                       value={formData.annualBudget}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors bg-white"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors text-charcoal-900 bg-white"
                     >
                       <option value="">Select range...</option>
                       <option value="Under $50,000">Under $50,000</option>
@@ -551,7 +551,7 @@ export default function GrantPage() {
                       name="contactPhone"
                       value={formData.contactPhone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors text-charcoal-900 bg-white"
                       placeholder="(555) 555-5555"
                     />
                   </div>
@@ -575,7 +575,7 @@ export default function GrantPage() {
                       onChange={handleChange}
                       required
                       rows={4}
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors resize-vertical"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors resize-vertical text-charcoal-900 bg-white"
                       placeholder="Describe your organization's mission, who you serve, and the impact you make..."
                     />
                   </div>
@@ -589,7 +589,7 @@ export default function GrantPage() {
                       value={formData.currentMarketingEfforts}
                       onChange={handleChange}
                       rows={3}
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors resize-vertical"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors resize-vertical text-charcoal-900 bg-white"
                       placeholder="Tell us about your current website, social media presence, and any marketing you're doing..."
                     />
                   </div>
@@ -604,7 +604,7 @@ export default function GrantPage() {
                       onChange={handleChange}
                       required
                       rows={4}
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors resize-vertical"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors resize-vertical text-charcoal-900 bg-white"
                       placeholder="Share how this marketing grant could help amplify your mission and what impact it would have..."
                     />
                   </div>
@@ -617,7 +617,7 @@ export default function GrantPage() {
                       name="howTheyHeardAboutUs"
                       value={formData.howTheyHeardAboutUs}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors bg-white"
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors text-charcoal-900 bg-white"
                     >
                       <option value="">Select one...</option>
                       <option value="Google Search">Google Search</option>
