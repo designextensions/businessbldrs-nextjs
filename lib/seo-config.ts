@@ -106,6 +106,30 @@ export const seoConfig: Record<string, PageSEO> = {
     h1: "HubSpot Implementation",
     keywords: "hubspot implementation, hubspot partner, hubspot services"
   },
+  whatIsStorybrand: {
+    title: "What Is StoryBrand? The 7-Part Framework Explained",
+    description: "Learn what StoryBrand is, how the 7-part framework works, and why it helps businesses clarify their message and convert more customers.",
+    h1: "What Is StoryBrand?",
+    keywords: "what is storybrand, storybrand framework, donald miller storybrand, building a storybrand, storybrand explained, 7 part storybrand framework"
+  },
+  storybrandBrandscript: {
+    title: "What Is a StoryBrand BrandScript? (And How to Write One)",
+    description: "The StoryBrand BrandScript is the foundation of all your marketing. Learn what it is, what it includes, and how a certified agency builds one for your business.",
+    h1: "StoryBrand BrandScript",
+    keywords: "storybrand brandscript, how to write a brandscript, brandscript template, storybrand messaging, brand messaging framework"
+  },
+  storybrandWebsite: {
+    title: "What Does a StoryBrand Website Look Like?",
+    description: "Discover the 8 must-have elements of a StoryBrand website — and the common mistakes that kill conversions. See how Business Builders builds sites that convert.",
+    h1: "What a StoryBrand Website Looks Like",
+    keywords: "storybrand website, storybrand web design, storybrand website design, storybrand homepage, website that converts"
+  },
+  whatIsAStorybrandAgency: {
+    title: "What Does a StoryBrand Certified Agency Do?",
+    description: "Learn what a StoryBrand Certified Agency actually does, the services they provide, and what questions to ask before hiring one. Business Builders is certified by Donald Miller.",
+    h1: "What Does a StoryBrand Certified Agency Do?",
+    keywords: "what is a storybrand agency, storybrand certified agency, what does a storybrand agency do, how to find a storybrand agency, certified storybrand guide"
+  },
   storybrandAgency: {
     title: "StoryBrand Certified Agency",
     description: "Business Builders is a StoryBrand Certified Agency with 26+ years of experience. Endorsed by Donald Miller. We clarify your message, build your marketing, and grow your business.",

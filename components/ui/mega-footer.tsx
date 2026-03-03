@@ -132,6 +132,7 @@ export default function MegaFooter() {
                 { href: "/website-design", label: "Website Design" },
                 { href: "/marketing-services", label: "Marketing Services" },
                 { href: "/branding-logos", label: "Brand Strategy" },
+                { href: "/storybrand-agency", label: "StoryBrand Agency" },
                 { href: "/storybrand-messaging", label: "StoryBrand Messaging" },
                 { href: "/video-production", label: "Video Production" },
                 { href: "/hubspot-implementation", label: "HubSpot Implementation" },

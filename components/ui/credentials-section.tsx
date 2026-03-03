@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Award, Shield, CheckCircle, Star, BadgeCheck } from 'lucide-react';
 
 export default function CredentialsSection() {
@@ -48,10 +49,11 @@ export default function CredentialsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {credentials.map((credential, index) => {
             const IconComponent = credential.icon;
+            const isStorybrand = index === 0;
             return (
               <div
                 key={index}
-                className={`p-6 bg-white border-2 border-charcoal-800 hover:border-yellow-400 animate-slide-up stagger-${index + 1}`}
+                className={`p-6 bg-white border-2 border-charcoal-800 hover:border-yellow-400 animate-slide-up stagger-${index + 1}${isStorybrand ? ' cursor-pointer' : ''}`}
                 data-testid={`credential-${index}`}
               >
                 <div className="flex flex-col items-center text-center">
@@ -63,9 +65,15 @@ export default function CredentialsSection() {
                     {credential.highlight}
                   </span>
                   
-                  <h3 className="font-display font-bold text-charcoal-900 mb-3 leading-tight uppercase text-sm">
-                    {credential.title}
-                  </h3>
+                  {isStorybrand ? (
+                    <Link href="/storybrand-agency" className="font-display font-bold text-charcoal-900 mb-3 leading-tight uppercase text-sm hover:text-yellow-600 transition-colors block">
+                      {credential.title}
+                    </Link>
+                  ) : (
+                    <h3 className="font-display font-bold text-charcoal-900 mb-3 leading-tight uppercase text-sm">
+                      {credential.title}
+                    </h3>
+                  )}
                   
                   <p className="text-stone-600 text-sm font-serif">
                     {credential.description}
