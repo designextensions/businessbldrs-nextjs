@@ -421,13 +421,13 @@ export default function GrantPage() {
                       Website URL
                     </label>
                     <input
-                      type="url"
+                      type="text"
                       id="website"
                       name="website"
                       value={formData.website}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors text-charcoal-900 bg-white"
-                      placeholder="https://yourorganization.org"
+                      placeholder="yourorganization.org"
                     />
                   </div>
                 </div>
