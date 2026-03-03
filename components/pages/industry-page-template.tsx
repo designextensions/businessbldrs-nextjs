@@ -1,9 +1,6 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema from "@/components/ui/service-faq-schema";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, ChevronDown, HelpCircle, Target, Palette, Megaphone, AlertTriangle } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
@@ -140,23 +137,6 @@ export default function IndustryPageTemplate({
 
   return (
     <div className="min-h-screen">
-      <ServicePageSchema
-        serviceName={`${industry} Marketing Services`}
-        description={seo.description}
-        slug={`industries/${slug}`}
-        serviceType={`${industry} Marketing`}
-      />
-      <ServiceFAQSchema
-        serviceName={`${industry} Marketing`}
-        slug={`industries/${slug}`}
-        faqs={faqs}
-      />
-      <SEOHead
-        title={seo.title}
-        description={seo.description}
-        keywords={seo.keywords}
-        canonicalUrl={`https://businessbldrs.com/industries/${slug}`}
-      />
       <Navigation />
 
       <section className="band-dark pt-32 pb-20">

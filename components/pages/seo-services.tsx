@@ -1,13 +1,10 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
 
 import { ArrowRight, CheckCircle, Search, TrendingUp, Target, BarChart3, Users, Zap, Globe, Star, Phone, Mail, Award, Clock, MousePointer, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema, { seoServicesFAQs } from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function SEOServices() {
@@ -82,60 +79,8 @@ export default function SEOServices() {
     "Enhance local search presence for St. Augustine customers"
   ];
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "SEO Services",
-    "description": "Professional SEO service, search engine marketing, and SEO expert services to improve your online presence and search rankings.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Business Builders",
-      "url": "https://businessbldrs.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "St. Augustine",
-        "addressRegion": "FL",
-        "addressCountry": "US"
-      }
-    },
-    "serviceType": "SEO Services",
-    "areaServed": "St. Augustine, Florida",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "SEO Services",
-      "itemListElement": seoServices.map(service => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": service.title,
-          "description": service.description
-        }
-      }))
-    }
-  };
-
   return (
     <div className="min-h-screen bg-white">
-      <ServicePageSchema
-        serviceName="SEO Services"
-        description="Search engine optimization services to improve rankings and drive organic traffic. Expert SEO specialists providing keyword research, on-page optimization, and technical SEO audits."
-        slug="seo-services"
-        serviceType="SEO"
-      />
-      <ServiceFAQSchema
-        serviceName="SEO Services"
-        slug="seo-services"
-        faqs={seoServicesFAQs}
-      />
-      <SEOHead 
-        title="SEO Service, Search Engine Marketing & SEO Experts - Business Builders"
-        description="Business Builders provides seo service, search engine marketing, seo expert, and seo specialists to improve your online presence."
-        keywords="SEO service, search engine marketing, SEO expert, SEO specialists, search engine optimization, local SEO, St Augustine SEO"
-        canonicalUrl="https://businessbldrs.com/seo-services"
-        structuredData={structuredData}
-        pageType="website"
-      />
-      
       <Navigation />
       
       {/* Hero Section */}

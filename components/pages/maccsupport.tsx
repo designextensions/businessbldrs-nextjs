@@ -1,6 +1,4 @@
 "use client";
-import SEOHead from "@/components/ui/seo-head";
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -137,28 +135,8 @@ export default function MACCSupport() {
     }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
   return (
     <div className="min-h-screen bg-white text-foreground">
-      <SEOHead
-        title="MACC Website Support - Business Builders Technical Support"
-        description="Get technical support for your MACC website from Business Builders. Submit support requests, get help with website issues, and access resources for website management."
-        keywords="MACC support, website support, technical support, Business Builders, website help, website maintenance"
-        canonicalUrl="https://businessbldrs.com/maccsupport"
-        structuredData={faqSchema}
-      />
       <Navigation />
 
       {/* Hero Section */}

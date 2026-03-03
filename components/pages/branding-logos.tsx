@@ -1,17 +1,14 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Palette, Camera, Video, MessageSquare, Target, Lightbulb, Zap } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema, { brandingFAQs } from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 const logoDesignPhoto = "/assets/stock_images/logo_design_branding_c955f376.jpg";
-import { seoConfig, getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";
+import { seoConfig } from "@/lib/seo-config";
 
 export default function BrandingLogos() {
   const scrollToSection = (sectionId: string) => {
@@ -92,55 +89,8 @@ export default function BrandingLogos() {
     }
   ];
 
-  const brandingStructuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "name": seoConfig.branding.title,
-        "provider": {
-          "@type": "Organization",
-          "name": "Business Builders"
-        },
-        "description": seoConfig.branding.description,
-        "areaServed": ["St. Augustine, FL", "Jacksonville, FL"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Branding Services",
-          "itemListElement": brandingServices.map(service => ({
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": service.title,
-              "description": service.description
-            }
-          }))
-        }
-      },
-      getBreadcrumbSchema("Branding & Logos", "/branding-logos")
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-white text-foreground">
-      <ServicePageSchema
-        serviceName="Brand Development & Logo Design"
-        description="Logo design, brand strategy, and visual identity creation. Build a brand that turns heads and is instantly recognizable to your customers."
-        slug="branding-logos"
-        serviceType="Branding"
-      />
-      <ServiceFAQSchema
-        serviceName="Branding & Logo Design"
-        slug="branding-logos"
-        faqs={brandingFAQs}
-      />
-      <SEOHead
-        title={seoConfig.branding.title}
-        description={seoConfig.branding.description}
-        keywords={seoConfig.branding.keywords}
-        canonicalUrl={`${BASE_URL}/branding-logos`}
-        structuredData={brandingStructuredData}
-      />
       <Navigation />
       
       {/* Hero Section */}

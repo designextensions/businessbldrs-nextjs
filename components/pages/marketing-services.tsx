@@ -1,14 +1,10 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import SEOHead from "@/components/ui/seo-head";
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, MousePointer, Share2, Users, Mail, TrendingUp, Award, Target, Lightbulb, Zap } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function MarketingServices() {
@@ -118,62 +114,6 @@ export default function MarketingServices() {
 
   return (
     <div className="min-h-screen bg-white text-foreground">
-      <ServicePageSchema
-        serviceName="Marketing Services"
-        description="Comprehensive digital marketing services including SEO, PPC, social media, and email marketing. StoryBrand certified agency and HubSpot Platinum Partner helping businesses grow since 1999."
-        slug="marketing-services"
-        serviceType="Digital Marketing"
-      />
-      <ServiceFAQSchema
-        serviceName="Marketing Services"
-        slug="marketing-services"
-        faqs={[
-          {
-            question: "What marketing services does Business Builders offer?",
-            answer: "Business Builders provides comprehensive marketing services including SEO, paid search (PPC), social media marketing, email marketing, influencer partnerships, content marketing, and marketing strategy consulting. As a StoryBrand Certified Agency and HubSpot Platinum Partner, we combine clear messaging with powerful tools to drive measurable results."
-          },
-          {
-            question: "How much do your marketing services cost?",
-            answer: "Marketing service costs depend on the scope and channels included in your strategy. We offer customized marketing partnerships tailored to your business goals and budget. Schedule a free consultation call to discuss your needs and receive a personalized proposal with transparent pricing."
-          },
-          {
-            question: "How do you measure marketing success?",
-            answer: "We measure success through clear KPIs aligned with your business goals, including website traffic growth, lead generation, conversion rates, cost per acquisition, and overall ROI. We provide detailed monthly reporting with actionable insights and recommendations for continuous improvement."
-          },
-          {
-            question: "Can you work with our existing marketing team?",
-            answer: "Absolutely. We frequently collaborate with in-house marketing teams, providing strategic guidance, specialized expertise, and additional capacity where needed. Whether you need full-service marketing management or support in specific areas like SEO or paid advertising, we tailor our approach to complement your team."
-          }
-        ]}
-      />
-      <SEOHead
-        title="Marketing Services & Digital Marketing Solutions - Business Builders"
-        description="Comprehensive marketing services including digital marketing, SEO, PPC, social media, and email marketing. StoryBrand certified agency helping businesses grow since 1999."
-        keywords="marketing services, digital marketing, business marketing, SEO services, PPC advertising, social media marketing, email marketing, StoryBrand certified, marketing agency St Augustine"
-        canonicalUrl="https://businessbldrs.com/marketing-services"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Digital Marketing Services",
-          "provider": {
-            "@type": "Organization",
-            "name": "Business Builders"
-          },
-          "description": "Comprehensive digital marketing services that make marketing clear and effective, helping businesses get attention and acquire customers",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Marketing Solutions",
-            "itemListElement": marketingSolutions.map(solution => ({
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": solution.title,
-                "description": solution.description
-              }
-            }))
-          }
-        }}
-      />
       <Navigation />
       
       {/* Hero Section */}

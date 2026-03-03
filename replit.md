@@ -115,7 +115,7 @@ Interactive lead-generation tool at `/marketing-audit`:
 - **Title template**: `app/layout.tsx` uses `template: "%s | Business Builders"` — individual page titles should NOT include "| Business Builders" suffix
 - **Canonical tags**: Server-side via `alternates: { canonical: "..." }` in each page.tsx metadata + client-side fallback in `seo-head.tsx`
 - **Sitemap**: `app/sitemap.ts` with grouped timestamps (CORE_UPDATED, SERVICE_UPDATED, etc.) and consistent priority hierarchy
-- **Structured data**: Organization + LocalBusiness JSON-LD in layout.tsx; FAQ, Article, Service schemas in respective components
+- **Structured data**: Organization + LocalBusiness JSON-LD in layout.tsx (global); FAQ + Service schemas rendered server-side in each `page.tsx` file using `generateFAQSchema()` and `generateServiceSchema()` from `lib/structured-data.ts`. NO JSON-LD `<script>` tags should be in client components (`"use client"`) to prevent hydration duplication.
 - **Search Atlas**: Dynamic optimization script in layout.tsx `<head>` (UUID: 30c4130f-316d-48cb-b424-e6f82719c0ef, loads from seo.businessbldrs.com)
 - **OG image**: `public/og-image.jpg` (1200x630, 67KB); metadataBase resolves to https://businessbldrs.com
 

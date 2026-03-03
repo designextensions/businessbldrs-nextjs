@@ -83,19 +83,6 @@ interface FAQProps {
 }
 
 export function FAQ({ items }: FAQProps) {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": items.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  };
-
   return (
     <>
       <section className="faq-section mt-12 pt-8 border-t-2 border-stone-200">

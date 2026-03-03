@@ -1,14 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Share2, Heart, TrendingUp, Users, Calendar, BarChart, MessageSquare, Camera, Video, Target, Lightbulb, Zap, Award } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema, { socialMediaFAQs } from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function SocialMediaMarketing() {
@@ -146,45 +143,6 @@ export default function SocialMediaMarketing() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <ServicePageSchema
-        serviceName="Social Media Marketing"
-        description="Social media marketing services to enhance visibility and engagement across social channels. Expert social media management, content creation, and advertising campaigns."
-        slug="social-media-marketing"
-        serviceType="Social Media Marketing"
-      />
-      <ServiceFAQSchema
-        serviceName="Social Media Marketing"
-        slug="social-media-marketing"
-        faqs={socialMediaFAQs}
-      />
-      <SEOHead
-        title="Social Media Marketing Services by Business Builders"
-        description="Business Builders provides social media marketing services to enhance visibility and engagement across social channels. Expert social media management, content creation, and advertising campaigns."
-        keywords="social media marketing, Facebook marketing, Instagram marketing, LinkedIn marketing, TikTok marketing, social media management, content creation, social media advertising, community management, St Augustine social media"
-        canonicalUrl="https://businessbldrs.com/social-media-marketing"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Social Media Marketing Services",
-          "provider": {
-            "@type": "Organization",
-            "name": "Business Builders"
-          },
-          "description": "Comprehensive social media marketing services that enhance brand visibility and drive engagement across all major social platforms",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Social Media Solutions",
-            "itemListElement": platformServices.map(service => ({
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": service.title,
-                "description": service.description
-              }
-            }))
-          }
-        }}
-      />
       <Navigation />
       
       {/* Hero Section */}

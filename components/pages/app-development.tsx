@@ -1,14 +1,10 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import SEOHead from "@/components/ui/seo-head";
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Smartphone, Globe, Code, Server, Clock, AlertTriangle, Target, Users, TrendingUp, Lightbulb, Wrench, Quote } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function AppDevelopment() {
@@ -116,62 +112,6 @@ export default function AppDevelopment() {
 
   return (
     <div className="min-h-screen bg-white">
-      <ServicePageSchema
-        serviceName="Custom App Development"
-        description="Custom software and app development services including WordPress websites, iOS and Android apps, web applications, and hosting and maintenance. Streamline your business with tailored technology solutions."
-        slug="app-development"
-        serviceType="Software Development"
-      />
-      <ServiceFAQSchema
-        serviceName="App Development"
-        slug="app-development"
-        faqs={[
-          {
-            question: "What types of apps and software do you build?",
-            answer: "We build a wide range of custom solutions including WordPress websites, native iOS and Android mobile apps, web applications, custom integrations, and enterprise software. Each solution is tailored to your specific business needs and designed to streamline your processes, improve productivity, and scale with your growth."
-          },
-          {
-            question: "How long does custom app development take?",
-            answer: "Development timelines vary based on project complexity. A WordPress website typically takes 6-12 weeks, while custom web applications and mobile apps can take 3-6 months. We start every project with a discovery phase to define scope, then provide a detailed timeline and milestones so you know exactly what to expect."
-          },
-          {
-            question: "How much does custom app development cost?",
-            answer: "Costs depend on the type and complexity of the project. WordPress websites start around $7,500, while custom web applications and mobile apps are scoped individually based on features and requirements. Schedule a free 15-minute discovery call to discuss your project, and we will provide a custom quote with transparent pricing."
-          },
-          {
-            question: "Do you provide ongoing support after launch?",
-            answer: "Yes, we offer comprehensive hosting and maintenance services to keep your website or application fast, secure, and up to date. Our support includes regular updates, security monitoring, performance optimization, and feature enhancements so you can focus on running your business."
-          }
-        ]}
-      />
-      <SEOHead
-        title="Custom App Development Services - iOS, Android, Web Apps | Business Builders"
-        description="Get ahead with custom software and app development. WordPress websites, iOS/Android apps, web applications, and hosting services that streamline your business processes."
-        keywords="app development, custom software, iOS app development, Android app development, web applications, WordPress websites, hosting maintenance, St Augustine app development"
-        canonicalUrl="https://businessbldrs.com/app-development"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Custom App Development Services",
-          "provider": {
-            "@type": "Organization",
-            "name": "Business Builders"
-          },
-          "description": "Custom software and app development services including WordPress websites, iOS/Android apps, web applications, and hosting maintenance",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Development Services",
-            "itemListElement": developmentServices.map(service => ({
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": service.title,
-                "description": service.description
-              }
-            }))
-          }
-        }}
-      />
       <Navigation />
       
       {/* Hero Section */}

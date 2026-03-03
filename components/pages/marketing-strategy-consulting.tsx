@@ -1,14 +1,10 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
-
 import { useQuery } from "@tanstack/react-query";
 import { ArrowRight, CheckCircle, Users, Target, TrendingUp, Lightbulb, BarChart3, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import type { TeamMember } from "@/lib/db/schema";
 
@@ -76,72 +72,8 @@ export default function MarketingStrategyConsulting() {
     "Clear ROI measurement and reporting frameworks"
   ];
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Marketing Strategy Consulting",
-    "description": "Professional marketing strategy consultant providing strategic marketing, marketing consulting, and tailored marketing plan services for effective growth.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Business Builders",
-      "url": "https://businessbldrs.com"
-    },
-    "serviceType": "Marketing Strategy Consulting",
-    "areaServed": "Worldwide",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Marketing Strategy Services",
-      "itemListElement": strategyServices.map((service, index) => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": service.title,
-          "description": service.description
-        },
-        "position": index + 1
-      }))
-    }
-  };
-
   return (
     <div className="min-h-screen">
-      <ServicePageSchema
-        serviceName="Marketing Strategy Consulting"
-        description="Professional marketing strategy consulting to accelerate your business growth. Expert consultants develop comprehensive marketing plans that deliver measurable results and sustainable growth."
-        slug="marketing-strategy-consulting"
-        serviceType="Marketing Consulting"
-      />
-      <ServiceFAQSchema
-        serviceName="Marketing Strategy Consulting"
-        slug="marketing-strategy-consulting"
-        faqs={[
-          {
-            question: "What does a marketing strategy consultant do?",
-            answer: "A marketing strategy consultant analyzes your current marketing efforts, identifies opportunities for growth, and develops a comprehensive plan tailored to your business goals. This includes competitive research, customer journey mapping, channel strategy, budget allocation, and KPI development to ensure measurable results from your marketing investment."
-          },
-          {
-            question: "How much does marketing strategy consulting cost?",
-            answer: "Marketing strategy consulting costs vary based on the scope and complexity of your needs. Business Builders offers a free 30-minute strategy consultation to assess your situation. From there, we develop customized proposals based on your specific goals, whether you need a one-time strategic plan or ongoing consulting support."
-          },
-          {
-            question: "How long does it take to see results from a new marketing strategy?",
-            answer: "Initial improvements can often be seen within the first 30-60 days of implementing a new strategy, particularly with paid channels. Organic strategies like SEO and content marketing typically show significant results within 3-6 months. We establish clear KPIs and provide monthly reporting so you can track progress throughout the engagement."
-          },
-          {
-            question: "What makes Business Builders different from other marketing consultants?",
-            answer: "With over 26 years of experience, Business Builders combines strategic marketing expertise with hands-on execution capabilities. As both a StoryBrand Certified Agency and HubSpot Platinum Partner, we bring proven frameworks and cutting-edge tools to every engagement. We do not just create plans — we help implement them and measure the results."
-          }
-        ]}
-      />
-      <SEOHead
-        title="Marketing Strategy Consultant | Strategic Marketing - Business Builders"
-        description="Professional marketing strategy consultant providing strategic marketing, marketing consulting, and tailored marketing plan services for effective growth."
-        keywords="marketing strategy consultant, strategic marketing, marketing consulting, marketing plan services, business growth strategy, marketing strategy agency"
-        canonicalUrl="https://businessbldrs.com/marketing-strategy-consulting"
-        structuredData={structuredData}
-        pageType="website"
-      />
-      
       <Navigation />
       
       {/* Hero Section */}

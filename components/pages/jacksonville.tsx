@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Search, MessageSquare, Palette, Video, Smartphone, Settings, MapPin, Phone, Star, CheckCircle, Clock, Users, Building } from "lucide-react";
@@ -8,7 +7,6 @@ import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
-import { getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";
 
 export default function Jacksonville() {
   const services = [
@@ -69,99 +67,8 @@ export default function Jacksonville() {
     { number: "50+", label: "Active Clients" }
   ];
 
-  const localBusinessJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://businessbldrs.com/#localbusiness",
-    "name": "Business Builders - Jacksonville Marketing Agency",
-    "image": "https://businessbldrs.com/logo-full.png",
-    "url": "https://businessbldrs.com/jacksonville",
-    "telephone": "+1-877-378-6101",
-    "priceRange": "$$",
-    "description": "Jacksonville marketing agency providing website design, SEO, branding, and digital marketing services. Based in St. Augustine, serving the greater Jacksonville metro area since 1999.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "701 Market St, Suite 101",
-      "addressLocality": "St. Augustine",
-      "addressRegion": "FL",
-      "postalCode": "32095",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.8946,
-      "longitude": -81.3145
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "21"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Jacksonville",
-        "sameAs": "https://en.wikipedia.org/wiki/Jacksonville,_Florida"
-      },
-      {
-        "@type": "City",
-        "name": "Jacksonville Beach"
-      },
-      {
-        "@type": "City",
-        "name": "Neptune Beach"
-      },
-      {
-        "@type": "City",
-        "name": "Atlantic Beach"
-      },
-      {
-        "@type": "City",
-        "name": "St. Augustine"
-      },
-      {
-        "@type": "State",
-        "name": "Florida"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/businessbldrs",
-      "https://twitter.com/businessbldrs",
-      "https://www.linkedin.com/company/businessbldrs",
-      "https://www.instagram.com/businessbldrs/",
-      "https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg"
-    ]
-  };
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      localBusinessJsonLd,
-      getBreadcrumbSchema("Jacksonville", "/jacksonville"),
-      {
-        "@type": "WebPage",
-        "name": "Jacksonville Marketing Agency | Business Builders",
-        "description": "Business Builders is a full-service marketing agency serving Jacksonville, FL. Website design, SEO, branding, video production, and digital marketing from nearby St. Augustine.",
-        "url": "https://businessbldrs.com/jacksonville"
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-stone-50 text-charcoal-900">
-      <SEOHead
-        title="Jacksonville Marketing Agency | Web Design & SEO | Business Builders"
-        description="Business Builders serves Jacksonville businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. Based in nearby St. Augustine. Call 877-378-6101."
-        keywords="jacksonville marketing agency, jacksonville web design, jacksonville seo, marketing company jacksonville fl, jacksonville digital marketing, web designer jacksonville, jacksonville advertising agency, marketing agency near me jacksonville"
-        canonicalUrl={`${BASE_URL}/jacksonville`}
-        structuredData={structuredData}
-      />
       <Navigation />
 
       {/* Hero Section */}

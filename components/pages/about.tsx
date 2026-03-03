@@ -12,8 +12,7 @@ const teamPhotoImage = "/attached_assets/BB-Team-Photo-1-edited-2_1754613823971.
 const teamCollabImage = "/attached_assets/BB-2023-Office-Content-Shoot-6961-2048x1152_1754613884042.jpg";
 const stAugustineImage = "/attached_assets/services-st-augustine-img_1754613904507.webp";
 const chrisWebsterImage = "/attached_assets/team-chris-webster.jpg";
-import { seoConfig, getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";
-import SEOHead from "@/components/ui/seo-head";
+
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
@@ -69,41 +68,8 @@ export default function About() {
     }
   ];
 
-  const aboutStructuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "AboutPage",
-        "name": "About Business Builders",
-        "description": seoConfig.about.description,
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Business Builders",
-          "foundingDate": "1999",
-          "foundingLocation": {
-            "@type": "Place",
-            "name": "St. Augustine, Florida"
-          },
-          "founder": {
-            "@type": "Person",
-            "name": "Jay Owen"
-          }
-        }
-      },
-      getBreadcrumbSchema("About Us", "/about")
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-stone-50 text-charcoal-900">
-      <SEOHead
-        title={seoConfig.about.title}
-        description={seoConfig.about.description}
-        keywords={seoConfig.about.keywords}
-        ogImage={seoConfig.about.ogImage}
-        canonicalUrl={`${BASE_URL}/about`}
-        structuredData={aboutStructuredData}
-      />
       <Navigation />
 
       {/* Hero Section */}
@@ -376,44 +342,6 @@ export default function About() {
           </div>
         </div>
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How long has Business Builders been in business?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Business Builders (originally named Design Extensions) was founded in 1999, giving us over 26 years of experience in web design, marketing, and helping businesses grow. What started as a high school passion project has grown into a full-service digital marketing agency that has helped hundreds of businesses, ministries, and nonprofits succeed online."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Where is Business Builders located?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Business Builders is based in beautiful St. Augustine, Florida, the oldest city in the United States. While our roots are local, we serve clients nationwide and have partnered with businesses, ministries, and nonprofits across the country. Our team works both in-office and remotely to deliver results no matter where our clients are located."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What industries do you specialize in?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We work across a diverse range of industries including automotive, construction, manufacturing, healthcare, nonprofits, ministries, professional services, real estate, and more. Our proven Plan-Produce-Promote process adapts to any industry, and our 26+ years of experience means we have seen what works across many different markets. Whether you are a local business or a national brand, we tailor our strategies to your specific audience."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What makes Business Builders different from other agencies?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Several things set us apart: we are a certified StoryBrand agency that uses proven messaging frameworks to help your brand connect with customers. We are also a HubSpot Platinum Partner with deep CRM and automation expertise. Most importantly, we have been growing every single year since 1999 because we build long-term relationships with our clients -- many have been with us for over a decade. Our faith-driven values of quality, commitment, and joy mean we treat every project like it matters, because it does."
-              }
-            }
-          ]
-        }).replace(/</g, '\\u003c') }} />
       </section>
 
       {/* Ready to Forge CTA */}

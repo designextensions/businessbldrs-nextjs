@@ -1,16 +1,11 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
-
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Bot, Brain, Workflow, Search, Code, Server, Zap, ArrowRight, CheckCircle, Target, TrendingUp, Users, Database, Mail, BarChart3, MessageSquare, FileText, Settings, Cpu, Cog } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
-import { aiDevelopmentFAQs } from "@/components/ui/service-faq-schema";
 
 export default function AIDevelopment() {
   const scrollToSection = (sectionId: string) => {
@@ -118,34 +113,6 @@ export default function AIDevelopment() {
 
   return (
     <div className="min-h-screen">
-      <SEOHead
-        title="AI Development & Workflows - Custom AI Solutions | Business Builders"
-        description="We build custom AI tools and automated workflows that run your business. From chatbots and knowledge bases to CRM integrations and reporting dashboards. Turn your AI strategy into working solutions."
-        keywords="AI development, AI workflows, custom AI tools, AI chatbots, business automation, AI integration, HubSpot AI, CRM automation, AI-powered search, workflow automation"
-        canonicalUrl="https://businessbldrs.com/ai-development"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "AI Development & Workflows",
-          "provider": {
-            "@type": "Organization",
-            "name": "Business Builders"
-          },
-          "description": "Custom AI development and workflow automation services. We build chatbots, automated workflows, AI-powered search, and data intelligence dashboards tailored to your business.",
-          "url": "https://businessbldrs.com/ai-development"
-        }}
-      />
-      <ServicePageSchema
-        serviceName="AI Development & Workflows"
-        description="Custom AI development and workflow automation services. We build the AI tools — chatbots, automations, search, dashboards — that turn your strategy into real business results."
-        slug="ai-development"
-        serviceType="AI Development"
-      />
-      <ServiceFAQSchema
-        serviceName="AI Development & Workflows"
-        slug="ai-development"
-        faqs={aiDevelopmentFAQs}
-      />
       <Navigation />
 
       <section className="pt-32 pb-16 band-dark">

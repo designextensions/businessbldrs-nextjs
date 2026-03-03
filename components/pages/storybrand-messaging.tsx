@@ -1,14 +1,10 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import SEOHead from "@/components/ui/seo-head";
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Users, Target, FileText, Mail, BarChart3, Zap } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function StoryBrandMessaging() {
@@ -106,61 +102,6 @@ export default function StoryBrandMessaging() {
 
   return (
     <div className="min-h-screen bg-white">
-      <ServicePageSchema
-        serviceName="StoryBrand Messaging Blueprint"
-        description="Strategic marketing blueprint using the proven StoryBrand framework to clarify your message, create effective marketing plans, and acquire more customers. Packages from $1,950."
-        slug="storybrand-messaging"
-        serviceType="Marketing Consulting"
-      />
-      <ServiceFAQSchema
-        serviceName="StoryBrand Messaging"
-        slug="storybrand-messaging"
-        faqs={[
-          {
-            question: "What is the StoryBrand framework?",
-            answer: "The StoryBrand framework is a proven marketing methodology developed by Donald Miller that helps businesses clarify their messaging by positioning the customer as the hero and your business as the guide. It uses a 7-part storytelling structure to create clear, compelling messaging that resonates with your target audience and drives them to take action."
-          },
-          {
-            question: "How is a Marketing Blueprint different from a regular marketing plan?",
-            answer: "A Marketing Blueprint goes beyond a traditional marketing plan by starting with your core messaging using the StoryBrand BrandScript. It includes a clear one-liner, website wireframe with homepage copy, a 12-month marketing plan, lead-generating assets, and email nurturing campaigns. Everything is built on a foundation of crystal-clear messaging that speaks directly to your customers."
-          },
-          {
-            question: "How long does the StoryBrand Blueprint process take?",
-            answer: "The process starts with a strategic consultation that ranges from 1 hour for the Messaging Blueprint to two full days for the Premier Blueprint. After the consultation, deliverables are typically completed within 2-4 weeks depending on the package selected. The Marketing and Premier Blueprints include implementation planning for a full 12-month marketing strategy."
-          },
-          {
-            question: "Do I need to be familiar with StoryBrand before starting?",
-            answer: "No prior knowledge of StoryBrand is needed. Our certified StoryBrand guides walk you through the entire framework during the consultation. We handle all the strategy and copywriting, translating your business expertise into clear, customer-focused messaging that drives results."
-          }
-        ]}
-      />
-      <SEOHead
-        title="StoryBrand Messaging Blueprint - Clear Marketing Strategy | Business Builders"
-        description="Get crystal clear messaging with our StoryBrand framework. Create a marketing blueprint that gets attention and acquires customers. Custom packages from $1,950."
-        keywords="StoryBrand messaging, marketing blueprint, brand strategy, clear messaging, marketing plan, customer acquisition, StoryBrand framework"
-        canonicalUrl="https://businessbldrs.com/storybrand-messaging"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "StoryBrand Messaging Blueprint",
-          "provider": {
-            "@type": "Organization",
-            "name": "Business Builders"
-          },
-          "description": "Strategic marketing blueprint using the proven StoryBrand framework to clarify your message and create effective marketing plans",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "StoryBrand Blueprint Packages",
-            "itemListElement": blueprintPackages.map(pkg => ({
-              "@type": "Offer",
-              "name": pkg.name,
-              "price": pkg.price.replace('$', ''),
-              "priceCurrency": "USD",
-              "description": pkg.description
-            }))
-          }
-        }}
-      />
       <Navigation />
       
       {/* Hero Section */}

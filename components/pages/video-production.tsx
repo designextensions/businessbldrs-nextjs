@@ -1,14 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Users, TrendingUp, Shield, Eye, Globe, Check, Video, Camera, Mic, Lightbulb } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema, { videoProductionFAQs } from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 const videoProductionPhoto = "/assets/stock_images/professional_video_p_a35e2814.jpg";
 
@@ -126,44 +123,6 @@ export default function VideoProduction() {
 
   return (
     <div className="min-h-screen bg-white">
-      <ServicePageSchema
-        serviceName="Video Production"
-        description="Professional video production services that produce results. From Standard to Hollywood packages starting at $5,500. Increase conversions by up to 80% with video marketing."
-        slug="video-production"
-        serviceType="Content Marketing"
-      />
-      <ServiceFAQSchema
-        serviceName="Video Production"
-        slug="video-production"
-        faqs={videoProductionFAQs}
-      />
-      <SEOHead
-        title="Video Production Services - Professional Video Marketing | Business Builders"
-        description="Professional video production services that produce results. From Standard to Hollywood packages starting at $5,500. Increase conversions by up to 80% with video marketing."
-        keywords="video production, video marketing, professional videos, business videos, video advertising, St Augustine video production, Jacksonville video production"
-        canonicalUrl="https://businessbldrs.com/video-production"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Video Production Services",
-          "provider": {
-            "@type": "Organization",
-            "name": "Business Builders"
-          },
-          "description": "Professional video production services that help businesses increase engagement, conversions, and brand trust through high-quality video content",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Video Production Packages",
-            "itemListElement": packages.map(pkg => ({
-              "@type": "Offer",
-              "name": pkg.name,
-              "price": pkg.price.replace('$', '').replace(',', ''),
-              "priceCurrency": "USD",
-              "description": `${pkg.name} video production package`
-            }))
-          }
-        }}
-      />
       <Navigation />
       
       {/* Hero Section */}

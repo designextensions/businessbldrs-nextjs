@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
-
 import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
@@ -13,7 +11,7 @@ import { LazyImage } from "@/components/ui/lazy-image";
 import { ExternalLink, Search, ChevronDown, ArrowRight, Layers, Briefcase } from "lucide-react";
 import type { PortfolioItem } from "@/lib/db/schema";
 const breakwaterCaseStudyImage = "/attached_assets/breakwater-construction-case-study.png";
-import { seoConfig, getBreadcrumbSchema, BASE_URL } from "@/lib/seo-config";
+import { seoConfig } from "@/lib/seo-config";
 
 interface CaseStudy {
   title: string;
@@ -122,19 +120,6 @@ export default function Portfolio() {
     return counts;
   }, [nonCaseStudyItems]);
 
-  const portfolioStructuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "CollectionPage",
-        "name": seoConfig.portfolio.title,
-        "description": seoConfig.portfolio.description,
-        "url": `${BASE_URL}/portfolio`
-      },
-      getBreadcrumbSchema("Portfolio", "/portfolio")
-    ]
-  };
-
   if (isError) {
     return (
       <div className="min-h-screen band-stone">
@@ -162,14 +147,6 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-white text-charcoal-900">
-      <SEOHead
-        title={seoConfig.portfolio.title}
-        description={seoConfig.portfolio.description}
-        keywords={seoConfig.portfolio.keywords}
-        ogImage="/bozard-ford-featured.png"
-        canonicalUrl={`${BASE_URL}/portfolio`}
-        structuredData={portfolioStructuredData}
-      />
       <Navigation />
 
       {/* Hero */}
@@ -479,44 +456,6 @@ export default function Portfolio() {
             </Accordion>
           </div>
 
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What types of projects has Business Builders completed?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We have built over 100 websites and completed hundreds of marketing campaigns since 1999. Our portfolio includes custom website designs, e-commerce platforms, SEO campaigns, social media marketing, video production, branding and logo design, HubSpot implementations, and comprehensive digital marketing strategies."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can I see results from your marketing campaigns?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, our case studies showcase real results from our client partnerships. For example, Bozard Ford Lincoln saw a 285% increase in qualified leads, and Rulon International achieved a 450% increase in qualified leads through our digital transformation work."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you work with businesses in my industry?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We serve a diverse range of industries including automotive, construction, manufacturing, healthcare, nonprofits, ministries, professional services, hospitality, real estate, and many more."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How do I get started on a project with Business Builders?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Getting started is easy. Schedule a free 15-minute consultation call where we will discuss your goals, challenges, and vision. We follow our proven Plan-Produce-Promote process to ensure every project delivers measurable results."
-                }
-              }
-            ]
-          }).replace(/</g, '\\u003c') }} />
         </div>
       </section>
 

@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import SEOHead from "@/components/ui/seo-head";
-
 const DONALD_MILLER_VIDEO_ID = "5wzrqaNJlLA"; // YouTube: Donald Miller endorsement
 
 import { useState } from "react";
@@ -12,8 +10,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ArrowRight, CheckCircle, Star, Users, Target, TrendingUp, Award, MessageSquare, FileText, BarChart3, Shield, Zap, BookOpen, Quote, ChevronRight } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function StoryBrandAgency() {
@@ -182,85 +178,6 @@ export default function StoryBrandAgency() {
 
   return (
     <div className="min-h-screen">
-      <ServicePageSchema
-        serviceName="StoryBrand Certified Marketing Agency"
-        description="Business Builders is a StoryBrand Certified Agency in St. Augustine, FL. Our certified guides use Donald Miller's 7-Part Framework to clarify your message, build marketing funnels, and grow your business. 26+ years experience. HubSpot Platinum Partner."
-        slug="storybrand-agency"
-        serviceType="Marketing Agency"
-      />
-      <ServiceFAQSchema
-        serviceName="StoryBrand Marketing Agency"
-        slug="storybrand-agency"
-        faqs={faqs}
-      />
-      <SEOHead
-        title="StoryBrand Certified Agency | Business Builders — St. Augustine, FL"
-        description="Business Builders is a certified StoryBrand marketing agency with 26+ years experience. We clarify your message and grow your business using Donald Miller's proven framework."
-        keywords="StoryBrand agency, StoryBrand marketing agency, StoryBrand certified agency, certified StoryBrand guide, Donald Miller StoryBrand, StoryBrand certified, marketing agency St Augustine, StoryBrand framework agency"
-        canonicalUrl="https://businessbldrs.com/storybrand-agency"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "ProfessionalService",
-              "name": "Business Builders — StoryBrand Certified Agency",
-              "url": "https://businessbldrs.com/storybrand-agency",
-              "logo": "https://businessbldrs.com/logo-full.png",
-              "image": "https://businessbldrs.com/og-image.jpg",
-              "description": "StoryBrand Certified Marketing Agency helping businesses clarify their message and grow using Donald Miller's 7-Part Framework.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "701 Market St Ste 101",
-                "addressLocality": "St. Augustine",
-                "addressRegion": "FL",
-                "postalCode": "32095",
-                "addressCountry": "US"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 29.8946,
-                "longitude": -81.3145
-              },
-              "telephone": "+1-877-378-6101",
-              "priceRange": "$$$",
-              "openingHours": "Mo-Fr 09:00-17:00",
-              "areaServed": [
-                { "@type": "City", "name": "St. Augustine" },
-                { "@type": "City", "name": "Jacksonville" },
-                { "@type": "State", "name": "Florida" },
-                { "@type": "Country", "name": "United States" }
-              ],
-              "hasCredential": [
-                {
-                  "@type": "EducationalOccupationalCredential",
-                  "credentialCategory": "Professional Certification",
-                  "name": "StoryBrand Certified Agency"
-                },
-                {
-                  "@type": "EducationalOccupationalCredential",
-                  "credentialCategory": "Professional Certification",
-                  "name": "HubSpot Platinum Partner"
-                }
-              ],
-              "sameAs": [
-                "https://www.facebook.com/businessbldrs",
-                "https://www.instagram.com/businessbldrs",
-                "https://www.linkedin.com/company/business-builders",
-                "https://www.youtube.com/@businessbldrs"
-              ],
-              "knowsAbout": ["StoryBrand Framework", "Digital Marketing", "Website Design", "SEO", "HubSpot CRM", "Brand Strategy", "Content Marketing"]
-            },
-            {
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://businessbldrs.com" },
-                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://businessbldrs.com/services" },
-                { "@type": "ListItem", "position": 3, "name": "StoryBrand Certified Agency", "item": "https://businessbldrs.com/storybrand-agency" }
-              ]
-            }
-          ]
-        }}
-      />
       <Navigation />
 
       {/* Hero Section - Dark */}

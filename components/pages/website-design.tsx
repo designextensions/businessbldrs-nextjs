@@ -1,14 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Monitor, Smartphone, Zap, Search, Users, MessageSquare, BarChart3, Camera } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema, { websiteDesignFAQs } from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 const scrollToSection = (sectionId: string) => {
@@ -147,54 +144,6 @@ export default function WebsiteDesign() {
 
   return (
     <div className="min-h-screen bg-white text-foreground">
-      <ServicePageSchema
-        serviceName="Website Design & Development"
-        description="Professional website design services and custom web development with responsive design, SEO optimization, and conversion-focused layouts. Expert website design packages for businesses."
-        slug="website-design"
-        serviceType="Web Design"
-      />
-      <ServiceFAQSchema
-        serviceName="Website Design"
-        slug="website-design"
-        faqs={websiteDesignFAQs}
-      />
-      <SEOHead
-        title="Website Design & Responsive Web Development Services - Business Builders"
-        description="Professional website design services and custom web development with responsive design, SEO optimization, and conversion-focused layouts. Expert website design packages for businesses in St Augustine FL."
-        keywords="website design, responsive website design, web development, custom website design, business website design, website design services, professional web design, St Augustine website design, website development"
-        canonicalUrl="https://businessbldrs.com/website-design"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Website Design & Development",
-          "provider": {
-            "@type": "Organization",
-            "name": "Business Builders"
-          },
-          "description": "Professional website design and development services with custom designs, SEO optimization, and mobile responsiveness",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Website Design Packages",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "name": "Starter Website Package",
-                "description": "5-page website with responsive design and basic SEO"
-              },
-              {
-                "@type": "Offer",
-                "name": "Professional Website Package", 
-                "description": "Up to 10 pages with advanced features and custom design"
-              },
-              {
-                "@type": "Offer",
-                "name": "Enterprise Website Package",
-                "description": "15+ pages with e-commerce, custom functionality, and premium features"
-              }
-            ]
-          }
-        }}
-      />
       <Navigation />
       
       {/* Hero Section */}

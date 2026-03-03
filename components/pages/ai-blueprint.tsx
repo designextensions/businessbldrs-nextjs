@@ -1,16 +1,12 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Bot, Brain, Workflow, Search, Target, TrendingUp, Lightbulb, ArrowRight, CheckCircle, Users, Building, Zap, BarChart3, Shield, FileText } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
-import { aiBlueprintFAQs } from "@/components/ui/service-faq-schema";
 
 export default function AIBlueprint() {
   const scrollToSection = (sectionId: string) => {
@@ -131,34 +127,6 @@ export default function AIBlueprint() {
 
   return (
     <div className="min-h-screen">
-      <SEOHead
-        title="AI Blueprint - AI Strategy & Planning | Business Builders"
-        description="Get a custom AI strategy for your business. Business Builders' AI Blueprint service helps you plan AI workflows, automate processes, and build smarter systems. Top 1% AI Builders."
-        keywords="AI blueprint, AI strategy, AI consulting, AI workflow design, business AI planning, AI implementation roadmap, AI for small business, artificial intelligence strategy"
-        canonicalUrl="https://businessbldrs.com/ai-blueprint"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "AI Blueprint - AI Strategy & Planning",
-          "provider": {
-            "@type": "Organization",
-            "name": "Business Builders"
-          },
-          "description": "Custom AI strategy and planning service helping businesses leverage artificial intelligence for efficiency, growth, and competitive advantage.",
-          "url": "https://businessbldrs.com/ai-blueprint"
-        }}
-      />
-      <ServicePageSchema
-        serviceName="AI Blueprint"
-        description="Custom AI strategy and planning service. We help businesses strategize AI adoption, design custom workflows, and build implementation roadmaps for smarter, more efficient operations."
-        slug="ai-blueprint"
-        serviceType="AI Consulting"
-      />
-      <ServiceFAQSchema
-        serviceName="AI Blueprint"
-        slug="ai-blueprint"
-        faqs={aiBlueprintFAQs}
-      />
       <Navigation />
 
       <section className="pt-32 pb-16 band-dark">

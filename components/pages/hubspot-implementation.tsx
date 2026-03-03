@@ -1,14 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Settings, Users, Zap, BarChart3, Globe, GraduationCap, CheckCircle, Clock, Heart, Award, Target, Lightbulb } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import ServicePageSchema from "@/components/ui/service-page-schema";
-import ServiceFAQSchema, { hubspotFAQs } from "@/components/ui/service-faq-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 const hubspotDashboardPhoto = "/assets/stock_images/hubspot_crm_software_3d3386af.jpg";
 const hubspotAnalyticsPhoto = "/assets/stock_images/hubspot_crm_software_8e448282.jpg";
@@ -80,45 +77,6 @@ export default function HubSpotImplementation() {
 
   return (
     <div className="min-h-screen">
-      <ServicePageSchema
-        serviceName="HubSpot Implementation"
-        description="Seamless HubSpot CRM setup for maximum impact. As Platinum HubSpot Partners, we provide expert CRM implementation, marketing automation, and ongoing support services."
-        slug="hubspot-implementation"
-        serviceType="CRM Implementation"
-      />
-      <ServiceFAQSchema
-        serviceName="HubSpot Implementation"
-        slug="hubspot-implementation"
-        faqs={hubspotFAQs}
-      />
-      <SEOHead
-        title="HubSpot CRM Implementation Services - Platinum Partner | Business Builders"
-        description="Seamless HubSpot setup for maximum impact. As Platinum HubSpot Partners, we provide expert CRM implementation, marketing automation, and ongoing support services."
-        keywords="HubSpot implementation, HubSpot CRM setup, HubSpot Platinum Partner, marketing automation, sales enablement, CRM implementation, St Augustine HubSpot"
-        canonicalUrl="https://businessbldrs.com/hubspot-implementation"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "HubSpot CRM Implementation Services",
-          "provider": {
-            "@type": "Organization",
-            "name": "Business Builders"
-          },
-          "description": "Comprehensive HubSpot implementation services including CRM setup, marketing automation, sales enablement, and ongoing support by Platinum HubSpot Partners",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "HubSpot Services",
-            "itemListElement": serviceOfferings.map(service => ({
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": service.title,
-                "description": service.description
-              }
-            }))
-          }
-        }}
-      />
       <Navigation />
       
       {/* Hero Section */}

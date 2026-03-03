@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -119,12 +118,6 @@ export default function Resources() {
       <Breadcrumbs items={[
         { label: "Resources" }
       ]} />
-      <SEOHead
-        title="Free Marketing Resources - Videos, Articles & Downloads | Business Builders"
-        description="Access free marketing strategy videos, expert articles, and downloadable templates to grow your business. Learn from 26+ years of marketing expertise."
-        keywords="marketing resources, free marketing videos, business growth articles, marketing templates, marketing guides, digital marketing resources"
-        canonicalUrl="https://businessbldrs.com/resources"
-      />
       <Navigation />
 
       {/* Hero Section - Dark theme matching videos/downloads pages */}
@@ -604,44 +597,6 @@ export default function Resources() {
           </div>
         </div>
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Are Business Builders resources free to access?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, all our resources including marketing videos, expert articles, and most downloadable templates are completely free to access. Some premium downloads may require an email address so we can deliver the file to you, but we never charge for our educational marketing content."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How often do you publish new content?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We publish new articles weekly and add new video content and downloadable resources regularly. Our team draws on over 26 years of marketing experience to create practical, actionable content that helps businesses grow. Subscribe to our newsletter or check back often to stay up to date with the latest resources."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I share these resources with my team?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Absolutely! We encourage you to share our articles, videos, and downloadable resources with your team, colleagues, and business partners. Our goal is to help as many businesses as possible succeed with better marketing. Feel free to share links to any of our resources."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What topics do your resources cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Our resources cover a wide range of digital marketing topics including SEO strategy, website design best practices, social media marketing, email campaigns, StoryBrand messaging, HubSpot CRM, video marketing, branding, and business growth strategies. Whether you are a small business owner or a marketing professional, you will find content relevant to your needs."
-              }
-            }
-          ]
-        }).replace(/</g, '\\u003c') }} />
       </section>
 
       {/* CTA Section */}
