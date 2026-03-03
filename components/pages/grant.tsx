@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Heart, Palette, MessageSquare, Globe, Server, Wrench, Mail, Share2, CheckCircle, ChevronDown, Gift, Users, Building, Clock } from "lucide-react";
+import { ArrowRight, Heart, Palette, MessageSquare, Globe, Server, Wrench, Mail, Share2, CheckCircle, Gift, Users, Building, Clock, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Navigation from "@/components/ui/navigation";
@@ -15,7 +15,6 @@ interface FormData {
   contactEmail: string;
   contactPhone: string;
   organizationType: string;
-  ein: string;
   website: string;
   yearFounded: string;
   missionStatement: string;
@@ -111,7 +110,6 @@ export default function GrantPage() {
     contactEmail: "",
     contactPhone: "",
     organizationType: "",
-    ein: "",
     website: "",
     yearFounded: "",
     missionStatement: "",
@@ -121,6 +119,7 @@ export default function GrantPage() {
     howTheyHeardAboutUs: "",
     honeypot: "",
   });
+  const [formStep, setFormStep] = useState<1 | 2>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -129,17 +128,54 @@ export default function GrantPage() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const isFormValid =
-    formData.organizationName.trim().length >= 2 &&
+  const isStep1Valid =
     formData.contactName.trim().length >= 2 &&
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.contactEmail.trim()) &&
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.contactEmail.trim());
+
+  const isStep2Valid =
+    formData.organizationName.trim().length >= 2 &&
     formData.organizationType !== "" &&
     formData.missionStatement.trim().length >= 20 &&
     formData.whyTheyNeedGrant.trim().length >= 20;
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleStep1Submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isFormValid || isSubmitting) return;
+    if (!isStep1Valid || isSubmitting) return;
+
+    setIsSubmitting(true);
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/grant-application", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          step: 1,
+          contactName: formData.contactName,
+          contactEmail: formData.contactEmail,
+          website: formData.website,
+          honeypot: formData.honeypot,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setFormStep(2);
+        setSubmitStatus("idle");
+      } else {
+        setErrorMessage(data.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setErrorMessage("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleStep2Submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!isStep2Valid || isSubmitting) return;
 
     setIsSubmitting(true);
     setSubmitStatus("idle");
@@ -149,7 +185,7 @@ export default function GrantPage() {
       const res = await fetch("/api/grant-application", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ step: 2, ...formData }),
       });
 
       const data = await res.json();
@@ -302,6 +338,22 @@ export default function GrantPage() {
             </p>
           </div>
 
+          <div className="flex items-center justify-center gap-4 mb-10">
+            <div className="flex items-center gap-2">
+              <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center font-bold text-sm ${formStep >= 1 ? "bg-yellow-400 border-yellow-400 text-charcoal-900" : "border-stone-500 text-stone-500"}`}>
+                {formStep > 1 ? <CheckCircle className="w-5 h-5" /> : "1"}
+              </div>
+              <span className={`text-sm font-bold ${formStep >= 1 ? "text-yellow-400" : "text-stone-500"}`}>Your Info</span>
+            </div>
+            <div className={`w-12 h-0.5 ${formStep >= 2 ? "bg-yellow-400" : "bg-stone-600"}`} />
+            <div className="flex items-center gap-2">
+              <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center font-bold text-sm ${formStep >= 2 ? "bg-yellow-400 border-yellow-400 text-charcoal-900" : "border-stone-500 text-stone-500"}`}>
+                2
+              </div>
+              <span className={`text-sm font-bold ${formStep >= 2 ? "text-yellow-400" : "text-stone-500"}`}>Full Application</span>
+            </div>
+          </div>
+
           {submitStatus === "success" ? (
             <div className="bento-card bg-white p-12 text-center">
               <div className="w-16 h-16 bg-green-50 border-2 border-green-200 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -316,8 +368,98 @@ export default function GrantPage() {
                 <Link href="/">Return to Homepage</Link>
               </Button>
             </div>
+          ) : formStep === 1 ? (
+            <form onSubmit={handleStep1Submit} className="space-y-8">
+              <div className="bento-card bg-white p-8">
+                <h3 className="font-bold text-charcoal-900 text-xl mb-2 flex items-center gap-2">
+                  <Users className="w-5 h-5 text-yellow-600" />
+                  Get Started
+                </h3>
+                <p className="text-stone-500 text-sm mb-6">Just a few quick details to begin your application.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="contactName" className="block text-sm font-bold text-charcoal-900 mb-2">
+                      Your Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="contactName"
+                      name="contactName"
+                      value={formData.contactName}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
+                      placeholder="Full name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="contactEmail" className="block text-sm font-bold text-charcoal-900 mb-2">
+                      Email Address <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="contactEmail"
+                      name="contactEmail"
+                      value={formData.contactEmail}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
+                      placeholder="you@organization.org"
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label htmlFor="website" className="block text-sm font-bold text-charcoal-900 mb-2">
+                      Website URL
+                    </label>
+                    <input
+                      type="url"
+                      id="website"
+                      name="website"
+                      value={formData.website}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
+                      placeholder="https://yourorganization.org"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="sr-only" aria-hidden="true">
+                <label htmlFor="honeypot">Leave this blank</label>
+                <input
+                  type="text"
+                  id="honeypot"
+                  name="honeypot"
+                  value={formData.honeypot}
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
+              {errorMessage && (
+                <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 text-red-700 text-center">
+                  {errorMessage}
+                </div>
+              )}
+
+              <div className="text-center">
+                <Button
+                  type="submit"
+                  disabled={!isStep1Valid || isSubmitting}
+                  size="lg"
+                  className="bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset hover:bg-yellow-300 font-bold text-lg px-12 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "Saving..." : "Continue to Application"}
+                  {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}
+                </Button>
+                <p className="text-stone-400 text-sm mt-4">
+                  Step 1 of 2 — we'll save your info so you can come back anytime.
+                </p>
+              </div>
+            </form>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleStep2Submit} className="space-y-8">
               <div className="bento-card bg-white p-8">
                 <h3 className="font-bold text-charcoal-900 text-xl mb-6 flex items-center gap-2">
                   <Building className="w-5 h-5 text-yellow-600" />
@@ -355,34 +497,6 @@ export default function GrantPage() {
                       <option value="501(c)(3) Nonprofit">501(c)(3) Nonprofit</option>
                       <option value="Church">Church</option>
                     </select>
-                  </div>
-                  <div>
-                    <label htmlFor="ein" className="block text-sm font-bold text-charcoal-900 mb-2">
-                      EIN / Tax ID
-                    </label>
-                    <input
-                      type="text"
-                      id="ein"
-                      name="ein"
-                      value={formData.ein}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
-                      placeholder="XX-XXXXXXX"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="website" className="block text-sm font-bold text-charcoal-900 mb-2">
-                      Website URL
-                    </label>
-                    <input
-                      type="url"
-                      id="website"
-                      name="website"
-                      value={formData.website}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
-                      placeholder="https://yourorganization.org"
-                    />
                   </div>
                   <div>
                     <label htmlFor="yearFounded" className="block text-sm font-bold text-charcoal-900 mb-2">
@@ -427,36 +541,6 @@ export default function GrantPage() {
                   Contact Information
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="contactName" className="block text-sm font-bold text-charcoal-900 mb-2">
-                      Your Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="contactName"
-                      name="contactName"
-                      value={formData.contactName}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
-                      placeholder="Full name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="contactEmail" className="block text-sm font-bold text-charcoal-900 mb-2">
-                      Email Address <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="contactEmail"
-                      name="contactEmail"
-                      value={formData.contactEmail}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors"
-                      placeholder="you@organization.org"
-                    />
-                  </div>
                   <div className="md:col-span-2">
                     <label htmlFor="contactPhone" className="block text-sm font-bold text-charcoal-900 mb-2">
                       Phone Number
@@ -547,39 +631,36 @@ export default function GrantPage() {
                 </div>
               </div>
 
-              <div className="sr-only" aria-hidden="true">
-                <label htmlFor="honeypot">Leave this blank</label>
-                <input
-                  type="text"
-                  id="honeypot"
-                  name="honeypot"
-                  value={formData.honeypot}
-                  onChange={handleChange}
-                  tabIndex={-1}
-                  autoComplete="off"
-                />
-              </div>
-
               {submitStatus === "error" && (
                 <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 text-red-700 text-center">
                   {errorMessage}
                 </div>
               )}
 
-              <div className="text-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Button
+                  type="button"
+                  onClick={() => setFormStep(1)}
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-stone-400 text-stone-300 hover:bg-stone-800 hover:text-white font-bold px-8"
+                >
+                  <ArrowLeft className="w-5 h-5 mr-2" />
+                  Back
+                </Button>
                 <Button
                   type="submit"
-                  disabled={!isFormValid || isSubmitting}
+                  disabled={!isStep2Valid || isSubmitting}
                   size="lg"
                   className="bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset hover:bg-yellow-300 font-bold text-lg px-12 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Submitting..." : "Submit Application"}
                   {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}
                 </Button>
-                <p className="text-stone-400 text-sm mt-4">
-                  By submitting, you agree to be contacted about your application.
-                </p>
               </div>
+              <p className="text-stone-400 text-sm mt-4 text-center">
+                By submitting, you agree to be contacted about your application.
+              </p>
             </form>
           )}
         </div>

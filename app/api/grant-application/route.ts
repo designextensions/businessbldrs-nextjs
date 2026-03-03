@@ -39,23 +39,65 @@ export async function POST(request: NextRequest) {
 
     const body = await request.json();
     const {
-      organizationName,
+      step,
       contactName,
       contactEmail,
+      website,
+      honeypot,
+      organizationName,
       contactPhone,
       organizationType,
-      ein,
-      website,
       yearFounded,
       missionStatement,
       annualBudget,
       currentMarketingEfforts,
       whyTheyNeedGrant,
       howTheyHeardAboutUs,
-      honeypot,
     } = body;
 
     if (honeypot && honeypot.length > 0) {
+      return NextResponse.json({ success: true });
+    }
+
+    if (step === 1) {
+      if (!contactName || !contactEmail) {
+        return NextResponse.json(
+          { success: false, message: "Please provide your name and email." },
+          { status: 400 }
+        );
+      }
+
+      const leadMessage = [
+        "Nonprofit Grant — Step 1 Lead Capture",
+        website ? `Website: ${website}` : null,
+      ].filter(Boolean).join("\n");
+
+      try {
+        await createContact({
+          name: contactName,
+          email: contactEmail,
+          phone: "",
+          company: "",
+          message: leadMessage,
+          service: "Nonprofit Grant Lead",
+        });
+      } catch (dbError) {
+        console.error("Database save error (non-critical):", dbError);
+      }
+
+      try {
+        await hubspotService.createContact({
+          name: contactName,
+          email: contactEmail,
+          phone: "",
+          company: "",
+          message: leadMessage,
+          service: "Nonprofit Grant Lead",
+        });
+      } catch (hubspotError) {
+        console.error("HubSpot sync error (non-critical):", hubspotError);
+      }
+
       return NextResponse.json({ success: true });
     }
 
@@ -67,10 +109,9 @@ export async function POST(request: NextRequest) {
     }
 
     const contactMessage = [
-      `Nonprofit Grant Application`,
+      `Nonprofit Grant Application (Complete)`,
       `Organization: ${organizationName}`,
       `Type: ${organizationType}`,
-      ein ? `EIN: ${ein}` : null,
       website ? `Website: ${website}` : null,
       yearFounded ? `Year Founded: ${yearFounded}` : null,
       annualBudget ? `Annual Budget: ${annualBudget}` : null,
@@ -120,7 +161,6 @@ export async function POST(request: NextRequest) {
             <h3>Organization Details</h3>
             <p><strong>Organization Name:</strong> ${organizationName}</p>
             <p><strong>Organization Type:</strong> ${organizationType}</p>
-            ${ein ? `<p><strong>EIN / Tax ID:</strong> ${ein}</p>` : ""}
             ${website ? `<p><strong>Website:</strong> ${website}</p>` : ""}
             ${yearFounded ? `<p><strong>Year Founded:</strong> ${yearFounded}</p>` : ""}
             ${annualBudget ? `<p><strong>Annual Budget:</strong> ${annualBudget}</p>` : ""}
