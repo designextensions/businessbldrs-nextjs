@@ -20,7 +20,7 @@ const grantFAQs = [
   },
   {
     question: "When is the application deadline?",
-    answer: "We accept applications on a rolling basis throughout the year. The grant recipient is selected annually, and all applications received by December 31st are considered for the following year's award. We announce the winner in Q1 of each year.",
+    answer: "The deadline for the 2026 grant is March 14, 2026. All applications must be received by that date to be considered. We announce the winner shortly after the deadline closes.",
   },
   {
     question: "How is the grant recipient selected?",
