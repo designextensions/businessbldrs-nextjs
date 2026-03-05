@@ -201,6 +201,20 @@ export const seoConfig: Record<string, PageSEO> = {
     description: "Business Builders serves Daytona Beach businesses with website design, SEO, branding, video production & digital marketing. 26+ years experience. Based in nearby St. Augustine. Call 877-378-6101.",
     h1: "Daytona Beach's Go-To Marketing Agency",
     keywords: "daytona beach marketing agency, daytona beach web design, daytona beach seo, volusia county marketing agency"
+  },
+  giveaway: {
+    title: "Win Free Tickets to the Future Focused Leaders Summit | Business Builders",
+    description: "Enter to win 1 of 5 free tickets ($1,947 value) to the Future Focused Leaders Summit: AI & Community. April 6-8, 2026 in St. Augustine Beach, FL. Apply now.",
+    h1: "Win Tickets to the Future Focused Leaders Summit",
+    keywords: "future focused leaders summit, free tickets giveaway, ai summit florida, business leadership event, st augustine conference 2026",
+    ogImage: "https://businessbldrs.com/og-image.jpg"
+  },
+  grant: {
+    title: "$25,000 Small Business Grant | Business Builders",
+    description: "Enter to win a $25,000 Messaging & Website Redesign. Exclusive to Scale with Stability attendees. Includes StoryBrand BrandScript + full website redesign.",
+    h1: "$25,000 Small Business Grant",
+    keywords: "small business grant, free website redesign, storybrand brandscript, scale with stability, business builders grant",
+    ogImage: "https://businessbldrs.com/og-image.jpg"
   }
 };
 
