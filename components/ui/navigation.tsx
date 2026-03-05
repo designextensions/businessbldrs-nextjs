@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronRight, Users, UserCheck, Globe, MessageSquare, Palette, Video, Search, Smartphone, Settings, Briefcase, Calendar, Book, Star, X, Menu, Target, Megaphone, Bot, BarChart3, TrendingUp, ArrowRight, FileText, Shield, Server } from "lucide-react";
+import { ChevronDown, ChevronRight, Users, UserCheck, Globe, MessageSquare, Palette, Video, Search, Smartphone, Settings, Briefcase, Calendar, Book, Star, X, Menu, Target, Megaphone, Bot, BarChart3, TrendingUp, ArrowRight, FileText, Shield, Server, Gift } from "lucide-react";
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 
@@ -34,7 +34,7 @@ export default function Navigation() {
     '/team', '/downloads', '/ministry-blueprint', '/cost-calculator',
     '/privacy-policy', '/terms-and-conditions', '/maintenance',
     '/portfolio', '/resources/articles', '/resources', '/videos',
-    '/storybrand-agency'
+    '/storybrand-agency', '/promotions'
   ];
 
   const darkHeroPages = [
@@ -421,6 +421,7 @@ export default function Navigation() {
                     <Link href="/resources/articles"><div className={dropdownItemClass}><Book className="w-4 h-4 mr-3 text-yellow-400" /> Articles</div></Link>
                     <Link href="/videos"><div className={dropdownItemClass}><Video className="w-4 h-4 mr-3 text-yellow-400" /> Videos</div></Link>
                     <Link href="/downloads"><div className={dropdownItemClass}><Settings className="w-4 h-4 mr-3 text-yellow-400" /> Downloads</div></Link>
+                    <Link href="/promotions"><div className={dropdownItemClass}><Gift className="w-4 h-4 mr-3 text-yellow-400" /> Promotions</div></Link>
                   </div>
                 </div>
               </div>
@@ -561,6 +562,7 @@ export default function Navigation() {
                         { href: "/resources/articles", label: "Articles" },
                         { href: "/videos", label: "Videos" },
                         { href: "/downloads", label: "Downloads" },
+                        { href: "/promotions", label: "Promotions" },
                       ].map(item => (
                         <Link key={item.href} href={item.href}>
                           <div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>{item.label}</div>

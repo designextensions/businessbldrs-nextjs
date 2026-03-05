@@ -130,6 +130,15 @@ Annual $50,000 marketing grant for 501(c)(3) nonprofits and churches:
 - FAQ structured data (FAQPage) rendered server-side in page.tsx
 - Listed in `darkHeroPages` and `scrollActivatedPages` in navigation.tsx
 
+## Promotions Page
+
+Aggregation page at `/promotions` listing active grants and giveaways:
+- Route: `app/(marketing)/promotions/page.tsx`
+- Component: `components/pages/promotions.tsx`
+- Cards link to `/grant`, `/sws`, and `/giveaway`
+- Listed under Resources dropdown in navigation (desktop + mobile)
+- Added to `lightBackgroundPages` in `navigation.tsx`
+
 ## Deployment
 
 - Target: Autoscale
