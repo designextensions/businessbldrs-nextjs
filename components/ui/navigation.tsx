@@ -18,7 +18,7 @@ export default function Navigation() {
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
   const [bannerDismissed, setBannerDismissed] = useState(false);
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const bannerHeight = bannerDismissed ? 0 : 40;
+  const bannerHeight = 44;
 
   const openServicesMenu = useCallback(() => {
     if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
@@ -29,6 +29,7 @@ export default function Navigation() {
     servicesTimeoutRef.current = setTimeout(() => setServicesMenuOpen(false), 150);
   }, []);
   const location = usePathname();
+  const showBanner = !bannerDismissed && location !== '/grant';
   
   const isHomePage = location === '/';
   
@@ -146,10 +147,10 @@ export default function Navigation() {
 
   return (
     <>
-      {!bannerDismissed && location !== '/grant' && (
+      {showBanner && (
         <div
-          className="fixed top-0 left-0 right-0 bg-charcoal-900 text-white flex items-center justify-center px-4"
-          style={{ zIndex: 101, height: `${bannerHeight}px` }}
+          className="fixed top-0 left-0 right-0 bg-charcoal-900 text-white flex items-center justify-center px-4 py-3"
+          style={{ zIndex: 101 }}
         >
           <Link
             href="/grant"
@@ -174,7 +175,7 @@ export default function Navigation() {
       <nav
         className="navigation-header fixed left-0 right-0 w-full h-[76px] lg:h-24"
         style={{
-          top: `${!bannerDismissed && location !== '/grant' ? bannerHeight : 0}px`,
+          top: `${showBanner ? bannerHeight : 0}px`,
           backgroundColor: isDarkHeroPage
             ? `rgba(255, 255, 255, ${Math.min(backgroundOpacity, 0.98)})`
             : `rgba(255, 255, 255, ${Math.max(0.3, backgroundOpacity * 0.9)})`,
@@ -243,7 +244,7 @@ export default function Navigation() {
                   </Link>
                   <div
                     className={`fixed left-0 right-0 transition-all duration-200 z-50 ${servicesMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-                    style={{ top: `${navHeight + (!bannerDismissed && location !== '/grant' ? bannerHeight : 0)}px` }}
+                    style={{ top: `${navHeight + (showBanner ? bannerHeight : 0)}px` }}
                     onMouseEnter={openServicesMenu}
                     onMouseLeave={closeServicesMenu}
                   >
@@ -616,7 +617,7 @@ export default function Navigation() {
           </div>
         </div>
       )}
-      {!bannerDismissed && location !== '/grant' && (
+      {showBanner && (
         <div style={{ height: `${bannerHeight}px` }} />
       )}
     </>
