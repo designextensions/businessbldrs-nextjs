@@ -377,6 +377,7 @@
   /* Bento Grid Card */
   .bento-card {
     background: white;
+    color: hsl(30, 6%, 10%);
     border: 2px solid hsl(30, 6%, 10%);
     box-shadow: var(--shadow-offset);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
