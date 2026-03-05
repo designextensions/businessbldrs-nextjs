@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Gift, Heart, Users, Ticket, Clock, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/ui/navigation";
@@ -12,6 +13,8 @@ const promotions = [
     title: "Nonprofit Marketing Grant",
     href: "/grant",
     icon: Heart,
+    image: "/ministry-baptism-scene.webp",
+    imageAlt: "Community outreach and giving back",
     value: "$50,000",
     tagline: "Annual Philanthropic Initiative",
     description:
@@ -28,6 +31,8 @@ const promotions = [
     title: "Scale With Stability Grant",
     href: "/sws",
     icon: Users,
+    image: "/jay-owen-headshot.jpg",
+    imageAlt: "Jay Owen — CEO of Business Builders",
     value: "$25,000",
     tagline: "Small Business Grant",
     description:
@@ -44,6 +49,8 @@ const promotions = [
     title: "Future Focused Leaders Summit Giveaway",
     href: "/giveaway",
     icon: Ticket,
+    image: "/embassy-suites-st-augustine.jpeg",
+    imageAlt: "Embassy Suites beachfront venue in St. Augustine Beach, FL",
     value: "$1,947",
     tagline: "Win 1 of 5 Free Tickets",
     description:
@@ -85,6 +92,16 @@ export default function PromotionsPage() {
               key={promo.href}
               className="bg-white border-2 border-charcoal-900 shadow-offset flex flex-col"
             >
+              <div className="relative w-full h-48 overflow-hidden">
+                <Image
+                  src={promo.image}
+                  alt={promo.imageAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/40 to-transparent" />
+              </div>
               <div className="p-6 sm:p-8 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-yellow-400 border-2 border-charcoal-900 flex items-center justify-center">
