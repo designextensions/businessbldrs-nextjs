@@ -225,7 +225,7 @@ export default function GiveawayPage() {
                   <span className="label-industrial bg-yellow-400 text-foreground px-3 py-1 hidden sm:inline-block">FREE</span>
                 </div>
                 <div className="p-6">
-                  <HubSpotForm formId="PLACEHOLDER" />
+                  <HubSpotForm formId="cf7baca3-9b6a-4d92-9c80-90fb4e8a12b1" />
                 </div>
               </div>
             </div>
