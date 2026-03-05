@@ -33,6 +33,7 @@ const promotions = [
     icon: Users,
     image: "/jay-owen-headshot.jpg",
     imageAlt: "Jay Owen — CEO of Business Builders",
+    imagePosition: "object-top",
     value: "$25,000",
     tagline: "Small Business Grant",
     description:
@@ -97,7 +98,7 @@ export default function PromotionsPage() {
                   src={promo.image}
                   alt={promo.imageAlt}
                   fill
-                  className="object-cover"
+                  className={`object-cover ${promo.imagePosition || "object-center"}`}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/40 to-transparent" />
