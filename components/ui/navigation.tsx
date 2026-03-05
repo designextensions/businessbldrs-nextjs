@@ -17,7 +17,8 @@ export default function Navigation() {
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const bannerHeight = 40;
+  const headerWrapperRef = useRef<HTMLDivElement>(null);
+  const [headerHeight, setHeaderHeight] = useState(0);
 
   const openServicesMenu = useCallback(() => {
     if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
@@ -103,6 +104,17 @@ export default function Navigation() {
     setServicesMenuOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    const measure = () => {
+      if (headerWrapperRef.current) {
+        setHeaderHeight(headerWrapperRef.current.offsetHeight);
+      }
+    };
+    measure();
+    window.addEventListener('resize', measure, { passive: true });
+    return () => window.removeEventListener('resize', measure);
+  }, [showBanner]);
+
   const baseMaxLogoHeight = isMobile ? 48 : 56;
   const maxLogoHeight = isHomePage && !isMobile ? baseMaxLogoHeight * 1.1 : baseMaxLogoHeight;
   const minLogoHeight = isMobile ? 48 : 36;
@@ -146,38 +158,32 @@ export default function Navigation() {
 
   return (
     <>
-      {showBanner && (
-        <div
-          className="fixed top-0 left-0 right-0 bg-charcoal-900 text-white flex items-center justify-center px-4"
-          style={{ zIndex: 101, height: `${bannerHeight}px` }}
+      <div ref={headerWrapperRef} className="fixed top-0 left-0 right-0" style={{ zIndex: 100 }}>
+        {showBanner && (
+          <div className="bg-charcoal-900 text-white flex items-center justify-center px-4 py-2.5">
+            <Link
+              href="/grant"
+              className="flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wide hover:text-yellow-300 transition-colors"
+            >
+              <Heart className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
+              <span>
+                <span className="hidden sm:inline">NOW GIVING AWAY </span>$50K NONPROFIT MARKETING GRANT
+                <span className="text-yellow-400"> — APPLY NOW</span>
+              </span>
+              <ArrowRight className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
+            </Link>
+          </div>
+        )}
+        <nav
+          className="navigation-header w-full h-[76px] lg:h-24"
+          style={{
+            backgroundColor: isDarkHeroPage
+              ? `rgba(255, 255, 255, ${Math.min(backgroundOpacity, 0.98)})`
+              : `rgba(255, 255, 255, ${Math.max(0.3, backgroundOpacity * 0.9)})`,
+            willChange: 'background-color',
+          }}
+          data-testid="navigation"
         >
-          <Link
-            href="/grant"
-            className="flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wide hover:text-yellow-300 transition-colors"
-          >
-            <Heart className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
-            <span>
-              <span className="hidden sm:inline">NOW GIVING AWAY </span>$50K NONPROFIT MARKETING GRANT
-              <span className="text-yellow-400"> — APPLY NOW</span>
-            </span>
-            <ArrowRight className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
-          </Link>
-        </div>
-      )}
-      <nav
-        className="navigation-header fixed left-0 right-0 w-full h-[76px] lg:h-24"
-        style={{
-          top: `${showBanner ? bannerHeight : 0}px`,
-          backgroundColor: isDarkHeroPage
-            ? `rgba(255, 255, 255, ${Math.min(backgroundOpacity, 0.98)})`
-            : `rgba(255, 255, 255, ${Math.max(0.3, backgroundOpacity * 0.9)})`,
-          willChange: 'transform, background-color',
-          transform: 'translate3d(0, 0, 0)',
-          zIndex: 100,
-          transition: 'top 300ms ease-out',
-        }}
-        data-testid="navigation"
-      >
         {/* Partial black line aligned with content area */}
         <div className="absolute bottom-0 left-0 right-0 px-4 sm:px-6 lg:px-8" style={{ opacity: showDarkHeroNav ? 0 : 1, transition: 'opacity 300ms ease-out' }}>
           <div className="max-w-7xl mx-auto h-[2px] bg-charcoal-900" />
@@ -236,7 +242,7 @@ export default function Navigation() {
                   </Link>
                   <div
                     className={`fixed left-0 right-0 transition-all duration-200 z-50 ${servicesMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-                    style={{ top: `${navHeight + (showBanner ? bannerHeight : 0)}px` }}
+                    style={{ top: `${headerHeight}px` }}
                     onMouseEnter={openServicesMenu}
                     onMouseLeave={closeServicesMenu}
                   >
@@ -468,7 +474,8 @@ export default function Navigation() {
             </div>
           </div>
         </div>
-      </nav>
+        </nav>
+      </div>
 
       {isClient && isOpen && (
         <div className="lg:hidden fixed inset-0 z-40">
@@ -610,7 +617,7 @@ export default function Navigation() {
         </div>
       )}
       {showBanner && (
-        <div style={{ height: `${bannerHeight}px` }} />
+        <div style={{ height: `${headerHeight > 0 ? headerHeight - navHeight : 40}px` }} />
       )}
     </>
   );
