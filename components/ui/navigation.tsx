@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronRight, Users, UserCheck, Globe, MessageSquare, Palette, Video, Search, Smartphone, Settings, Briefcase, Calendar, Book, Star, X, Menu, Target, Megaphone, Bot, BarChart3, TrendingUp, ArrowRight, FileText, Shield, Server } from "lucide-react";
+import { ChevronDown, ChevronRight, Users, UserCheck, Globe, MessageSquare, Palette, Video, Search, Smartphone, Settings, Briefcase, Calendar, Book, Star, X, Menu, Target, Megaphone, Bot, BarChart3, TrendingUp, ArrowRight, FileText, Shield, Server, Heart } from "lucide-react";
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 
@@ -16,7 +16,9 @@ export default function Navigation() {
   const [isClient, setIsClient] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
+  const [bannerDismissed, setBannerDismissed] = useState(false);
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const bannerHeight = bannerDismissed ? 0 : 40;
 
   const openServicesMenu = useCallback(() => {
     if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
@@ -144,15 +146,42 @@ export default function Navigation() {
 
   return (
     <>
+      {!bannerDismissed && location !== '/grant' && (
+        <div
+          className="fixed top-0 left-0 right-0 bg-charcoal-900 text-white flex items-center justify-center px-4"
+          style={{ zIndex: 101, height: `${bannerHeight}px` }}
+        >
+          <Link
+            href="/grant"
+            className="flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wide hover:text-yellow-300 transition-colors"
+          >
+            <Heart className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
+            <span>
+              <span className="hidden sm:inline">NOW GIVING AWAY </span>$50K NONPROFIT MARKETING GRANT
+              <span className="text-yellow-400"> — APPLY NOW</span>
+            </span>
+            <ArrowRight className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
+          </Link>
+          <button
+            onClick={(e) => { e.preventDefault(); setBannerDismissed(true); }}
+            className="absolute right-3 text-stone-400 hover:text-white transition-colors"
+            aria-label="Dismiss banner"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      )}
       <nav
-        className="navigation-header fixed top-0 left-0 right-0 w-full h-[76px] lg:h-24"
+        className="navigation-header fixed left-0 right-0 w-full h-[76px] lg:h-24"
         style={{
+          top: `${!bannerDismissed && location !== '/grant' ? bannerHeight : 0}px`,
           backgroundColor: isDarkHeroPage
             ? `rgba(255, 255, 255, ${Math.min(backgroundOpacity, 0.98)})`
             : `rgba(255, 255, 255, ${Math.max(0.3, backgroundOpacity * 0.9)})`,
           willChange: 'transform, background-color',
           transform: 'translate3d(0, 0, 0)',
           zIndex: 100,
+          transition: 'top 300ms ease-out',
         }}
         data-testid="navigation"
       >
@@ -214,7 +243,7 @@ export default function Navigation() {
                   </Link>
                   <div
                     className={`fixed left-0 right-0 transition-all duration-200 z-50 ${servicesMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-                    style={{ top: `${navHeight}px` }}
+                    style={{ top: `${navHeight + (!bannerDismissed && location !== '/grant' ? bannerHeight : 0)}px` }}
                     onMouseEnter={openServicesMenu}
                     onMouseLeave={closeServicesMenu}
                   >
