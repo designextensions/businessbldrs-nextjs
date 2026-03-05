@@ -38,7 +38,7 @@ export default function Navigation() {
   ];
 
   const darkHeroPages = [
-    '/ada-accessibility', '/hosting', '/request-quote',
+    '/ada-accessibility', '/hosting', '/request-quote', '/giveaway',
     '/services/plan', '/services/produce', '/services/promote', '/services/protect',
     '/industries/automotive', '/industries/construction', '/industries/manufacturing',
     '/industries/education', '/industries/healthcare', '/industries/accounting',
@@ -47,7 +47,7 @@ export default function Navigation() {
     '/grant'
   ];
   
-  const scrollActivatedPages = ['/about', '/services', '/testimonials', '/website-design', '/storybrand-messaging', '/branding-logos', '/video-production', '/marketing-services', '/app-development', '/hubspot-implementation', '/request-quote', '/st-augustine', '/jacksonville', '/palm-coast', '/ponte-vedra', '/orange-park', '/gainesville', '/daytona-beach', '/ai-blueprint', '/ai-development', '/ada-accessibility', '/hosting', '/maintenance', '/services/plan', '/services/produce', '/services/promote', '/services/protect', '/industries/automotive', '/industries/construction', '/industries/manufacturing', '/industries/education', '/industries/healthcare', '/industries/accounting', '/industries/dental', '/industries/consumer-goods', '/marketing-audit', '/grant'];
+  const scrollActivatedPages = ['/about', '/services', '/testimonials', '/website-design', '/storybrand-messaging', '/branding-logos', '/video-production', '/marketing-services', '/app-development', '/hubspot-implementation', '/request-quote', '/giveaway', '/st-augustine', '/jacksonville', '/palm-coast', '/ponte-vedra', '/orange-park', '/gainesville', '/daytona-beach', '/ai-blueprint', '/ai-development', '/ada-accessibility', '/hosting', '/maintenance', '/services/plan', '/services/produce', '/services/promote', '/services/protect', '/industries/automotive', '/industries/construction', '/industries/manufacturing', '/industries/education', '/industries/healthcare', '/industries/accounting', '/industries/dental', '/industries/consumer-goods', '/marketing-audit', '/grant'];
   
   const normalizedLocation = location.replace(/\/$/, '');
   
