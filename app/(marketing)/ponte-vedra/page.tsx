@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import PonteVedraPage from "@/components/pages/ponte-vedra";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.ponteVedra.title,
     description: seoConfig.ponteVedra.description,
-    images: seoConfig.ponteVedra.ogImage ? [seoConfig.ponteVedra.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.ponteVedra.title, seoConfig.ponteVedra.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/ponte-vedra" },
 };

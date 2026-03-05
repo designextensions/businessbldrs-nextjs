@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import AdaAccessibilityPage from "@/components/pages/ada-accessibility";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ADA Compliance for Websites - Make Your Site Accessible | Business Builders",
     description: "ADA website compliance & accessibility services in Florida. Make your website accessible to all users and reduce legal risk. Plans from $79/month.",
-    images: ["/service-website.jpg"],
+    images: [getOgImageUrl("ADA Compliance for Websites - Make Your Site Accessible | Business Builders", "ADA website compliance & accessibility services in Florida. Make your website accessible to all users and reduce legal risk. Plans from $79/month.")],
   },
   alternates: { canonical: "https://businessbldrs.com/ada-accessibility" },
 };

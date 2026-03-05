@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import DentalPage from "@/components/pages/industries/dental";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dental Marketing Agency | StoryBrand Certified",
     description: "StoryBrand Certified dental marketing agency with 26+ years of experience. We help dental practices attract new patients through strategic messaging, websites, SEO, and video production.",
-    images: ["/service-marketing.jpg"],
+    images: [getOgImageUrl("Dental Marketing Agency | StoryBrand Certified", "StoryBrand Certified dental marketing agency with 26+ years of experience. We help dental practices attract new patients through strategic messaging, websites, SEO, and video production.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/dental" },
 };

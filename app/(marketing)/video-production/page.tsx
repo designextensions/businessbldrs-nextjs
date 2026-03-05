@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import { videoProductionFAQs } from "@/components/ui/service-faq-schema";
 import VideoProductionPage from "@/components/pages/video-production";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.videoProduction.title,
     description: seoConfig.videoProduction.description,
-    images: seoConfig.videoProduction.ogImage ? [seoConfig.videoProduction.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.videoProduction.title, seoConfig.videoProduction.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/video-production" },
 };

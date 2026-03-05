@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import TestimonialsPage from "@/components/pages/testimonials";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.testimonials.title,
     description: seoConfig.testimonials.description,
-    images: seoConfig.testimonials.ogImage ? [seoConfig.testimonials.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.testimonials.title, seoConfig.testimonials.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/testimonials" },
 };

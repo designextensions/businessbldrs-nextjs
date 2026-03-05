@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import EventsPage from "@/components/pages/events";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.events.title,
     description: seoConfig.events.description,
-    images: seoConfig.events.ogImage ? [seoConfig.events.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.events.title, seoConfig.events.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/events" },
 };

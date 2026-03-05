@@ -3,6 +3,7 @@ import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import getQueryClient from "@/lib/getQueryClient";
 import { getTeamMembers } from "@/lib/storage";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import TeamPage from "@/components/pages/team";
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.team.title,
     description: seoConfig.team.description,
-    images: seoConfig.team.ogImage ? [seoConfig.team.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.team.title, seoConfig.team.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/team" },
 };

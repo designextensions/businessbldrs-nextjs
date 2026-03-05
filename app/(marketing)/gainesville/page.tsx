@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import GainesvillePage from "@/components/pages/gainesville";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.gainesville.title,
     description: seoConfig.gainesville.description,
-    images: seoConfig.gainesville.ogImage ? [seoConfig.gainesville.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.gainesville.title, seoConfig.gainesville.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/gainesville" },
 };

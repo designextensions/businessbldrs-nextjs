@@ -7,6 +7,7 @@ import { teamMembers } from "@/lib/db/schema";
 import { and, eq } from "drizzle-orm";
 import TeamMemberPage from "@/components/pages/team-member";
 import { notFound } from "next/navigation";
+import { getOgImageUrl } from "@/lib/og-utils";
 
 export const dynamicParams = false;
 
@@ -52,13 +53,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title,
       description,
-      images: member.image ? [member.image] : [],
+      images: member.image ? [member.image] : [getOgImageUrl(title, description || "")],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: member.image ? [member.image] : [],
+      images: member.image ? [member.image] : [getOgImageUrl(title, description || "")],
     },
   };
 }

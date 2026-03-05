@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import ManufacturingPage from "@/components/pages/industries/manufacturing";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Manufacturing Marketing Agency | StoryBrand Certified",
     description: "StoryBrand Certified manufacturing marketing agency helping industrial companies generate qualified leads. 450% more leads for Rulon International.",
-    images: ["/service-branding.jpg"],
+    images: [getOgImageUrl("Manufacturing Marketing Agency | StoryBrand Certified", "StoryBrand Certified manufacturing marketing agency helping industrial companies generate qualified leads. 450% more leads for Rulon International. Full-service B2B manufacturing marketing including websites, SEO, and video.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/manufacturing" },
 };

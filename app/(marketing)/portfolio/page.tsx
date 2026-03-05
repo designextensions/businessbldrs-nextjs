@@ -3,6 +3,7 @@ import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import getQueryClient from "@/lib/getQueryClient";
 import { getPortfolioItems } from "@/lib/storage";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema } from "@/lib/structured-data";
 import PortfolioPage from "@/components/pages/portfolio";
 
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.portfolio.title,
     description: seoConfig.portfolio.description,
-    images: seoConfig.portfolio.ogImage ? [seoConfig.portfolio.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.portfolio.title, seoConfig.portfolio.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/portfolio" },
 };

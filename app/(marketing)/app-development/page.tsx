@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import AppDevelopmentPage from "@/components/pages/app-development";
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.appDevelopment.title,
     description: seoConfig.appDevelopment.description,
-    images: seoConfig.appDevelopment.ogImage ? [seoConfig.appDevelopment.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.appDevelopment.title, seoConfig.appDevelopment.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/app-development" },
 };

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import { websiteDesignFAQs } from "@/components/ui/service-faq-schema";
 import WebsiteDesignPage from "@/components/pages/website-design";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.websiteDesign.title,
     description: seoConfig.websiteDesign.description,
-    images: seoConfig.websiteDesign.ogImage ? [seoConfig.websiteDesign.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.websiteDesign.title, seoConfig.websiteDesign.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/website-design" },
 };

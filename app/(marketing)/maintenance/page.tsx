@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import MaintenancePage from "@/components/pages/maintenance";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.websiteDesign.title,
     description: seoConfig.websiteDesign.description,
-    images: seoConfig.websiteDesign.ogImage ? [seoConfig.websiteDesign.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.websiteDesign.title, seoConfig.websiteDesign.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/maintenance" },
 };

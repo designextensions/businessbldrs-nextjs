@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import EducationPage from "@/components/pages/industries/education";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Education Marketing Agency | StoryBrand Certified",
     description: "StoryBrand Certified education marketing agency helping schools, universities, and educational institutions increase enrollment through clear messaging, websites, and digital marketing strategies.",
-    images: ["/service-marketing.jpg"],
+    images: [getOgImageUrl("Education Marketing Agency | StoryBrand Certified", "StoryBrand Certified education marketing agency helping schools, universities, and educational institutions increase enrollment through clear messaging, websites, and digital marketing strategies.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/education" },
 };

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import HealthcarePage from "@/components/pages/industries/healthcare";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Healthcare Marketing Agency | StoryBrand Certified",
     description: "StoryBrand Certified healthcare marketing agency helping medical practices, doctors, and health organizations grow their patient base through clear messaging, websites, and HIPAA-aware digital marketing.",
-    images: ["/service-strategy.jpg"],
+    images: [getOgImageUrl("Healthcare Marketing Agency | StoryBrand Certified", "StoryBrand Certified healthcare marketing agency helping medical practices, doctors, and health organizations grow their patient base through clear messaging, websites, and HIPAA-aware digital marketing.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/healthcare" },
 };

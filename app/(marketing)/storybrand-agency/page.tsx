@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import StorybrandAgencyPage from "@/components/pages/storybrand-agency";
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.storybrandAgency.title,
     description: seoConfig.storybrandAgency.description,
-    images: seoConfig.storybrandAgency.ogImage ? [seoConfig.storybrandAgency.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.storybrandAgency.title, seoConfig.storybrandAgency.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/storybrand-agency" },
 };

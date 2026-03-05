@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import MarketingStrategyConsultingPage from "@/components/pages/marketing-strategy-consulting";
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.services.title,
     description: seoConfig.services.description,
-    images: seoConfig.services.ogImage ? [seoConfig.services.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.services.title, seoConfig.services.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/marketing-strategy-consulting" },
 };

@@ -3,6 +3,7 @@ import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import getQueryClient from "@/lib/getQueryClient";
 import { getMarketingVideos } from "@/lib/storage";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import VideosPage from "@/components/pages/videos";
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.resources.title,
     description: seoConfig.resources.description,
-    images: seoConfig.resources.ogImage ? [seoConfig.resources.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.resources.title, seoConfig.resources.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/videos" },
 };

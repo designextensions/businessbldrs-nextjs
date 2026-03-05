@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import { brandingFAQs } from "@/components/ui/service-faq-schema";
 import BrandingLogosPage from "@/components/pages/branding-logos";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.branding.title,
     description: seoConfig.branding.description,
-    images: seoConfig.branding.ogImage ? [seoConfig.branding.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.branding.title, seoConfig.branding.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/branding-logos" },
 };

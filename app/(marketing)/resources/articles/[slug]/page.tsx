@@ -7,6 +7,7 @@ import { blogArticles } from "@/lib/db/schema";
 import { and, eq } from "drizzle-orm";
 import ArticlePage from "@/components/pages/article";
 import { notFound } from "next/navigation";
+import { getOgImageUrl } from "@/lib/og-utils";
 
 export const dynamicParams = false;
 
@@ -49,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: article.title,
       description: article.excerpt,
-      images: article.image ? [article.image] : [],
+      images: article.image ? [article.image] : [getOgImageUrl(article.title, article.excerpt || "")],
     },
   };
 }

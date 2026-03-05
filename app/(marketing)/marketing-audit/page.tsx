@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import MarketingAudit from "@/components/pages/marketing-audit";
 
 export const metadata: Metadata = {
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   keywords:
     "free marketing audit, marketing scorecard, marketing assessment, business marketing evaluation, StoryBrand",
   openGraph: {
+    images: [getOgImageUrl("Free Marketing Audit | Business Builders", "Take our free 2-minute marketing audit and get a personalized scorecard showing where your business stands across Plan, Produce, Promote, and Protect.")],
     title: "Free Marketing Audit | Business Builders",
     description:
       "Answer 5 quick questions and get a personalized marketing scorecard with actionable recommendations.",

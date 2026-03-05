@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import { aiBlueprintFAQs } from "@/components/ui/service-faq-schema";
 import AiBlueprintPage from "@/components/pages/ai-blueprint";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.resources.title,
     description: seoConfig.resources.description,
-    images: seoConfig.resources.ogImage ? [seoConfig.resources.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.resources.title, seoConfig.resources.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/ai-blueprint" },
 };

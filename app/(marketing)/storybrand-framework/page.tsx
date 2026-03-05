@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import StorybrandFrameworkPage from "@/components/pages/storybrand";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.storybrandFramework.title,
     description: seoConfig.storybrandFramework.description,
-    images: seoConfig.storybrandFramework.ogImage ? [seoConfig.storybrandFramework.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.storybrandFramework.title, seoConfig.storybrandFramework.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/storybrand-framework" },
 };

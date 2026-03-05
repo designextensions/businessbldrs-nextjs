@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import PalmCoastPage from "@/components/pages/palm-coast";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.palmCoast.title,
     description: seoConfig.palmCoast.description,
-    images: seoConfig.palmCoast.ogImage ? [seoConfig.palmCoast.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.palmCoast.title, seoConfig.palmCoast.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/palm-coast" },
 };

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import AccountingPage from "@/components/pages/industries/accounting";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Accounting Firm Marketing Agency | StoryBrand Certified",
     description: "StoryBrand Certified accounting firm marketing agency helping CPAs, bookkeepers, and financial services firms grow beyond referrals through clear messaging, websites, and digital marketing strategies.",
-    images: ["/service-website.jpg"],
+    images: [getOgImageUrl("Accounting Firm Marketing Agency | StoryBrand Certified", "StoryBrand Certified accounting firm marketing agency helping CPAs, bookkeepers, and financial services firms grow beyond referrals through clear messaging, websites, and digital marketing strategies.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/accounting" },
 };

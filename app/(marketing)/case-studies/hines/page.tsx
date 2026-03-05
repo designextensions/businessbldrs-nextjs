@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import HinesPage from "@/components/pages/case-studies/hines";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.portfolio.title,
     description: seoConfig.portfolio.description,
-    images: seoConfig.portfolio.ogImage ? [seoConfig.portfolio.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.portfolio.title, seoConfig.portfolio.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/case-studies/hines" },
 };

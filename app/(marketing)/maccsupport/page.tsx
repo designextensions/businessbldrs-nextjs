@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema } from "@/lib/structured-data";
 import MaccsupportPage from "@/components/pages/maccsupport";
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.about.title,
     description: seoConfig.about.description,
-    images: seoConfig.about.ogImage ? [seoConfig.about.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.about.title, seoConfig.about.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/maccsupport" },
 };

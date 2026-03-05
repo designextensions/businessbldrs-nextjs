@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import JacksonvillePage from "@/components/pages/jacksonville";
 
 export const metadata: Metadata = {

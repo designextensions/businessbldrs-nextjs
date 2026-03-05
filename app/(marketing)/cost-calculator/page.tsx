@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import CostCalculatorPage from "@/components/pages/cost-calculator";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.requestQuote.title,
     description: seoConfig.requestQuote.description,
-    images: seoConfig.requestQuote.ogImage ? [seoConfig.requestQuote.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.requestQuote.title, seoConfig.requestQuote.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/cost-calculator" },
 };

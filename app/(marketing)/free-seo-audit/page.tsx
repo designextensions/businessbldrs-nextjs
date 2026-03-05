@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import FreeSeoAuditPage from "@/components/pages/free-seo-audit";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.seoServices.title,
     description: seoConfig.seoServices.description,
-    images: seoConfig.seoServices.ogImage ? [seoConfig.seoServices.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.seoServices.title, seoConfig.seoServices.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/free-seo-audit" },
 };

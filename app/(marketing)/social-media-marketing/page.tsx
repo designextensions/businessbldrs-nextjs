@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import { socialMediaFAQs } from "@/components/ui/service-faq-schema";
 import SocialMediaMarketingPage from "@/components/pages/social-media-marketing";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.socialMedia.title,
     description: seoConfig.socialMedia.description,
-    images: seoConfig.socialMedia.ogImage ? [seoConfig.socialMedia.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.socialMedia.title, seoConfig.socialMedia.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/social-media-marketing" },
 };

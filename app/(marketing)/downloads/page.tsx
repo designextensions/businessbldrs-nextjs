@@ -3,6 +3,7 @@ import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import getQueryClient from "@/lib/getQueryClient";
 import { getDownloadableResources } from "@/lib/storage";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import DownloadsPage from "@/components/pages/downloads";
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.downloads.title,
     description: seoConfig.downloads.description,
-    images: seoConfig.downloads.ogImage ? [seoConfig.downloads.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.downloads.title, seoConfig.downloads.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/downloads" },
 };

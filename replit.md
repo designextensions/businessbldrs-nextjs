@@ -117,7 +117,7 @@ Interactive lead-generation tool at `/marketing-audit`:
 - **Sitemap**: `app/sitemap.ts` with grouped timestamps (CORE_UPDATED, SERVICE_UPDATED, etc.) and consistent priority hierarchy
 - **Structured data**: Organization + LocalBusiness JSON-LD in layout.tsx (global); FAQ + Service schemas rendered server-side in each `page.tsx` file using `generateFAQSchema()` and `generateServiceSchema()` from `lib/structured-data.ts`. NO JSON-LD `<script>` tags should be in client components (`"use client"`) to prevent hydration duplication.
 - **Search Atlas**: Dynamic optimization script in layout.tsx `<head>` (UUID: 30c4130f-316d-48cb-b424-e6f82719c0ef, loads from seo.businessbldrs.com)
-- **OG image**: `public/og-image.jpg` (1200x630, 67KB); metadataBase resolves to https://businessbldrs.com
+- **OG images**: Dynamic per-page OG images via `app/api/og/route.tsx` (Edge runtime, `next/og` ImageResponse). Each page calls `getOgImageUrl(title, description)` from `lib/og-utils.ts` to generate a unique 1200x630 branded image with dark charcoal background, yellow accent, page title, and description. Home page retains the static `public/og-image.jpg`. Dynamic pages (articles, team members) use their CMS image if available, falling back to the generated OG image.
 
 ## Nonprofit Marketing Grant Page
 

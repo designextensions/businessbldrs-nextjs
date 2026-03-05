@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import { hubspotFAQs } from "@/components/ui/service-faq-schema";
 import HubspotImplementationPage from "@/components/pages/hubspot-implementation";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.hubspot.title,
     description: seoConfig.hubspot.description,
-    images: seoConfig.hubspot.ogImage ? [seoConfig.hubspot.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.hubspot.title, seoConfig.hubspot.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/hubspot-implementation" },
 };

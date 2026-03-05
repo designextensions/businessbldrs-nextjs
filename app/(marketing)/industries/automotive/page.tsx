@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import AutomotivePage from "@/components/pages/industries/automotive";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Automotive Marketing Agency | StoryBrand Certified",
     description: "StoryBrand Certified automotive marketing agency helping car dealerships generate more leads and sell more vehicles. 285% more leads for Bozard Ford Lincoln.",
-    images: ["/service-video-new.jpg"],
+    images: [getOgImageUrl("Automotive Marketing Agency | StoryBrand Certified", "StoryBrand Certified automotive marketing agency helping car dealerships generate more leads and sell more vehicles. 285% more leads for Bozard Ford Lincoln. Full-service auto dealer digital marketing.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/automotive" },
 };

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoConfig } from "@/lib/seo-config";
+import { getOgImageUrl } from "@/lib/og-utils";
 import ScheduleCallPage from "@/components/pages/schedule-call";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.contact.title,
     description: seoConfig.contact.description,
-    images: seoConfig.contact.ogImage ? [seoConfig.contact.ogImage] : [],
+    images: [getOgImageUrl(seoConfig.contact.title, seoConfig.contact.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/schedule-call" },
 };

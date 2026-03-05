@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import ConsumerGoodsPage from "@/components/pages/industries/consumer-goods";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Consumer Goods Marketing Agency | StoryBrand Certified",
     description: "StoryBrand Certified consumer goods marketing agency with 26+ years of experience. We help product brands grow through strategic branding, e-commerce marketing, and compelling storytelling.",
-    images: ["/service-branding.jpg"],
+    images: [getOgImageUrl("Consumer Goods Marketing Agency | StoryBrand Certified", "StoryBrand Certified consumer goods marketing agency with 26+ years of experience. We help product brands grow through strategic branding, e-commerce marketing, and compelling storytelling.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/consumer-goods" },
 };

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import ConstructionPage from "@/components/pages/industries/construction";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Construction Marketing Agency | StoryBrand Certified",
     description: "StoryBrand Certified construction marketing agency helping contractors and builders generate consistent leads. 320% ROI for Hines.",
-    images: ["/service-strategy.jpg"],
+    images: [getOgImageUrl("Construction Marketing Agency | StoryBrand Certified", "StoryBrand Certified construction marketing agency helping contractors and builders generate consistent leads. 320% ROI for Hines. Full-service contractor marketing including websites, SEO, and video.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/construction" },
 };

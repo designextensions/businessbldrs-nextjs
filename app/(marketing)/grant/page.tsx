@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/og-utils";
 import { generateFAQSchema } from "@/lib/structured-data";
 import GrantPage from "@/components/pages/grant";
 
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
   description: "Apply for Business Builders' annual $50,000 nonprofit marketing grant. Free brand kit, website redesign, messaging strategy, hosting, and social media for 501(c)(3) organizations and churches.",
   keywords: "nonprofit marketing grant, free marketing for nonprofits, church marketing grant, 501c3 marketing grant, nonprofit website redesign, free nonprofit branding",
   openGraph: {
+    images: [getOgImageUrl("Nonprofit Marketing Grant | $50,000 Package", "Apply for Business Builders' annual $50,000 nonprofit marketing grant. Free brand kit, website redesign, messaging strategy, hosting, and social media for 501(c)(3) organizations and churches.")],
     title: "Nonprofit Marketing Grant | $50,000 Package",
     description: "Apply for Business Builders' annual $50,000 nonprofit marketing grant. Free brand kit, website redesign, messaging strategy, hosting, and social media for 501(c)(3) organizations and churches.",
   },
