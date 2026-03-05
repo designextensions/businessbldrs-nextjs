@@ -16,9 +16,8 @@ export default function Navigation() {
   const [isClient, setIsClient] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
-  const [bannerDismissed, setBannerDismissed] = useState(false);
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const bannerHeight = 44;
+  const bannerHeight = 40;
 
   const openServicesMenu = useCallback(() => {
     if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
@@ -29,7 +28,7 @@ export default function Navigation() {
     servicesTimeoutRef.current = setTimeout(() => setServicesMenuOpen(false), 150);
   }, []);
   const location = usePathname();
-  const showBanner = !bannerDismissed && location !== '/grant';
+  const showBanner = location !== '/grant';
   
   const isHomePage = location === '/';
   
@@ -149,8 +148,8 @@ export default function Navigation() {
     <>
       {showBanner && (
         <div
-          className="fixed top-0 left-0 right-0 bg-charcoal-900 text-white flex items-center justify-center px-4 py-3"
-          style={{ zIndex: 101 }}
+          className="fixed top-0 left-0 right-0 bg-charcoal-900 text-white flex items-center justify-center px-4"
+          style={{ zIndex: 101, height: `${bannerHeight}px` }}
         >
           <Link
             href="/grant"
@@ -163,13 +162,6 @@ export default function Navigation() {
             </span>
             <ArrowRight className="w-3.5 h-3.5 text-yellow-400 flex-shrink-0" />
           </Link>
-          <button
-            onClick={(e) => { e.preventDefault(); setBannerDismissed(true); }}
-            className="absolute right-3 text-stone-400 hover:text-white transition-colors"
-            aria-label="Dismiss banner"
-          >
-            <X className="w-4 h-4" />
-          </button>
         </div>
       )}
       <nav
