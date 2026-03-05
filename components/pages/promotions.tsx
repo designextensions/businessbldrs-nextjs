@@ -13,8 +13,8 @@ const promotions = [
     title: "Nonprofit Marketing Grant",
     href: "/grant",
     icon: Heart,
-    image: "/ministry-baptism-scene.webp",
-    imageAlt: "Community outreach and giving back",
+    image: "/nonprofit-grant-community.jpeg",
+    imageAlt: "Community gathering and nonprofit event",
     value: "$50,000",
     tagline: "Annual Philanthropic Initiative",
     description:
