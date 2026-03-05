@@ -61,11 +61,17 @@ export default function SWSPage() {
       <Navigation />
 
       {/* ═══════════════ HERO ═══════════════ */}
-      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-        {/* Gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal-900 via-charcoal-800 to-[hsl(30,6%,12%)]" />
-        {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "40px 40px" }} />
+      <section className="band-dark relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+        <video
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          autoPlay
+          muted
+          playsInline
+          loop
+        >
+          <source src="/attached_assets/0301.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/60 via-charcoal-900/40 to-charcoal-900/70" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-24 pb-16">
           {/* Badge */}
