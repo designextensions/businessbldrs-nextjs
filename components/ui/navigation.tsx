@@ -616,6 +616,9 @@ export default function Navigation() {
           </div>
         </div>
       )}
+      {!bannerDismissed && location !== '/grant' && (
+        <div style={{ height: `${bannerHeight}px` }} />
+      )}
     </>
   );
 }
