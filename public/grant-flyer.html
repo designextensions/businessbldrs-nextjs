@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$25,000 Small Business Grant — Business Builders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #1a1a18;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .flyer {
+      width: 8.5in;
+      height: 11in;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ─── TOP 35% ─── */
+    .top {
+      flex: 0 0 35%;
+      background: #1a1a18;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6in 0.75in;
+      text-align: center;
+      position: relative;
+    }
+    .top .logo {
+      height: 40px;
+      margin-bottom: 24px;
+      filter: brightness(10) saturate(0);
+    }
+    .top .badge {
+      display: inline-block;
+      background: #facc15;
+      color: #1a1a18;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      margin-bottom: 20px;
+    }
+    .top h1 {
+      font-size: 48px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .top h1 .yellow { color: #facc15; }
+    .top .subhead {
+      font-size: 18px;
+      color: #a8a29e;
+      font-weight: 400;
+      max-width: 5.5in;
+    }
+
+    /* ─── MIDDLE 30% ─── */
+    .middle {
+      flex: 0 0 30%;
+      background: #ffffff;
+      padding: 0.5in 0.75in;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .deliverable {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+    }
+    .deliverable + .deliverable {
+      border-top: 2px solid #e7e5e4;
+    }
+    .check {
+      width: 32px;
+      height: 32px;
+      background: #facc15;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .check svg { width: 18px; height: 18px; }
+    .deliverable h3 {
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      letter-spacing: -0.01em;
+    }
+    .deliverable .value {
+      font-size: 13px;
+      font-weight: 700;
+      color: #facc15;
+      background: #1a1a18;
+      display: inline-block;
+      padding: 2px 8px;
+      margin-bottom: 4px;
+    }
+    .deliverable p {
+      font-size: 13px;
+      color: #78716c;
+      line-height: 1.5;
+    }
+    .total-callout {
+      margin-top: 20px;
+      background: #1a1a18;
+      text-align: center;
+      padding: 14px 24px;
+    }
+    .total-callout span {
+      font-size: 24px;
+      font-weight: 900;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+    .total-callout .yellow { color: #facc15; }
+
+    /* ─── BREAKOUT 15% ─── */
+    .breakout {
+      flex: 0 0 15%;
+      background: #facc15;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 0.3in 0.75in;
+    }
+    .breakout .headshot-block img {
+      border-color: #1a1a18;
+    }
+    .breakout .headshot-block .name {
+      color: #1a1a18;
+    }
+    .breakout .headshot-block .title {
+      color: #57534e;
+    }
+    .breakout-info {
+      flex: 1;
+    }
+    .breakout-info .breakout-label {
+      font-size: 9px;
+      font-weight: 700;
+      color: #1a1a18;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+      opacity: 0.7;
+    }
+    .breakout-info .session-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #1a1a18;
+      text-transform: uppercase;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+    .breakout-info .session-desc {
+      font-size: 12px;
+      color: #44403c;
+      line-height: 1.5;
+    }
+    .bonus-tag {
+      display: inline-block;
+      background: #1a1a18;
+      color: #facc15;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 5px 12px;
+      margin-top: 8px;
+    }
+
+    /* ─── BOTTOM 20% ─── */
+    .bottom {
+      flex: 0 0 20%;
+      background: #1a1a18;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      padding: 0.3in 0.75in;
+    }
+    .qr-block {
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .qr-block img {
+      width: 140px;
+      height: 140px;
+      border: 4px solid #facc15;
+    }
+    .qr-block .scan-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #facc15;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-top: 8px;
+    }
+    .bottom-info {
+      text-align: left;
+    }
+    .bottom-info .deadline-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #a8a29e;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+    }
+    .bottom-info .deadline {
+      font-size: 28px;
+      font-weight: 900;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .bottom-info .creds {
+      font-size: 11px;
+      color: #78716c;
+      line-height: 1.6;
+    }
+    .bottom-info .url {
+      font-size: 13px;
+      font-weight: 700;
+      color: #facc15;
+      margin-top: 10px;
+      letter-spacing: 0.02em;
+    }
+    .headshot-block {
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .headshot-block img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #facc15;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .headshot-block .name {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .headshot-block .title {
+      font-size: 10px;
+      color: #a8a29e;
+      margin-top: 2px;
+    }
+
+    /* ─── Print ─── */
+    @media print {
+      @page {
+        size: 8.5in 11in;
+        margin: 0;
+      }
+      body { background: #fff; }
+      .flyer {
+        width: 8.5in;
+        height: 11in;
+        margin: 0;
+        page-break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flyer">
+
+    <!-- TOP 40% -->
+    <div class="top">
+      <img class="logo" src="https://businessbldrs.com/logo-full.png" alt="Business Builders" />
+      <div class="badge">Exclusive to Scale with Stability Attendees</div>
+      <h1><span class="yellow">$25,000</span><br />Small Business Grant</h1>
+      <p class="subhead">Win a Custom Messaging &amp; Website Redesign</p>
+    </div>
+
+    <!-- MIDDLE 35% -->
+    <div class="middle">
+      <div class="deliverable">
+        <div class="check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div>
+          <h3>StoryBrand BrandScript</h3>
+          <span class="value">$7,500 VALUE</span>
+          <p>Complete messaging framework — brand voice, positioning, key talking points, and a marketing roadmap to grow your business.</p>
+        </div>
+      </div>
+
+      <div class="deliverable">
+        <div class="check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div>
+          <h3>Custom Website Redesign</h3>
+          <span class="value">$17,500 VALUE</span>
+          <p>Full StoryBrand website build — mobile-responsive, SEO-optimized, and designed to convert visitors into customers.</p>
+        </div>
+      </div>
+
+      <div class="total-callout">
+        <span>$25,000 <span class="yellow">Total Value</span></span>
+      </div>
+    </div>
+
+    <!-- BREAKOUT SESSION -->
+    <div class="breakout">
+      <div class="headshot-block">
+        <img src="jay-owen-headshot.jpg" alt="Jay Owen — Founder & CEO, Business Builders" />
+        <div class="name">Jay Owen</div>
+        <div class="title">Founder &amp; CEO</div>
+      </div>
+      <div class="breakout-info">
+        <div class="breakout-label">SWS Breakout Session</div>
+        <div class="session-title">&ldquo;Building a<br />Kingdom Business&rdquo;</div>
+        <div class="session-desc">Join Jay&rsquo;s breakout for an exclusive bonus only available to attendees in the room.</div>
+        <div class="bonus-tag">&#9733; Attend for a Special Bonus</div>
+      </div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="bottom">
+      <div class="qr-block">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://businessbldrs.com/sws&size=200x200" alt="QR Code — businessbldrs.com/sws" />
+        <div class="scan-label">Scan to Enter</div>
+      </div>
+      <div class="bottom-info">
+        <div class="deadline-label">Entry Deadline</div>
+        <div class="deadline">April 25, 2026</div>
+        <div class="creds">
+          StoryBrand Certified &bull; HubSpot Platinum Partner &bull; 26+ Years<br />
+          1 winner selected &bull; Open to SWS attendees only
+        </div>
+        <div class="url">businessbldrs.com/sws</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

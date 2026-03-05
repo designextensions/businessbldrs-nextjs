@@ -215,6 +215,13 @@ export const seoConfig: Record<string, PageSEO> = {
     h1: "$25,000 Small Business Grant",
     keywords: "small business grant, free website redesign, storybrand brandscript, scale with stability, business builders grant",
     ogImage: "https://businessbldrs.com/og-image.jpg"
+  },
+  sws: {
+    title: "$25,000 Small Business Grant — Scale with Stability | Business Builders",
+    description: "Exclusive to Scale with Stability attendees. Enter to win a $25,000 Messaging & Website Redesign — StoryBrand BrandScript + full custom website.",
+    h1: "$25,000 Small Business Grant",
+    keywords: "scale with stability grant, small business grant, free website redesign, storybrand brandscript, sws attendees, business builders grant",
+    ogImage: "https://businessbldrs.com/og-image.jpg"
   }
 };
 
