@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import HubSpotForm from "@/components/ui/hubspot-form";
+import HubSpotNativeForm from "@/components/ui/hubspot-native-form";
 import Image from "next/image";
 import {
   Send, FileSearch, Trophy, Calendar, MapPin, Ticket,
@@ -225,7 +225,19 @@ export default function GiveawayPage() {
                   <span className="label-industrial bg-yellow-400 text-foreground px-3 py-1 hidden sm:inline-block">FREE</span>
                 </div>
                 <div className="p-6">
-                  <HubSpotForm formId="cf7baca3-9b6a-4d92-9c80-90fb4e8a12b1" />
+                  <HubSpotNativeForm
+                    formId="cf7baca3-9b6a-4d92-9c80-90fb4e8a12b1"
+                    submitLabel="Submit Application"
+                    successMessage="Thank you for applying! We'll review your application and notify you if you've been selected for a free ticket."
+                    fields={[
+                      { name: "firstname", label: "First Name", type: "text", required: true, placeholder: "First name", halfWidth: true },
+                      { name: "lastname", label: "Last Name", type: "text", required: true, placeholder: "Last name", halfWidth: true },
+                      { name: "email", label: "Email", type: "email", required: true, placeholder: "you@company.com" },
+                      { name: "phone", label: "Phone Number", type: "tel", required: true, placeholder: "(555) 123-4567" },
+                      { name: "company", label: "Company Name", type: "text", required: true, placeholder: "Your company" },
+                      { name: "message", label: "Why do you want to attend?", type: "textarea", required: true, placeholder: "Tell us about yourself and why you'd like to attend the Future Focused Leaders Summit..." },
+                    ]}
+                  />
                 </div>
               </div>
             </div>

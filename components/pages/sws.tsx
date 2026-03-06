@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
-import HubSpotForm from "@/components/ui/hubspot-form";
+import HubSpotNativeForm from "@/components/ui/hubspot-native-form";
 import {
   Send, FileSearch, Trophy, ArrowDown, Clock, ChevronRight,
   Star, Award, Globe, FileText, CheckCircle, Users, Sparkles
@@ -283,7 +283,19 @@ export default function SWSPage() {
                   <span className="label-industrial bg-yellow-400 text-foreground px-3 py-1 hidden sm:inline-block">FREE</span>
                 </div>
                 <div className="p-6">
-                  <HubSpotForm formId="be3f7837-27dc-4af7-9d8a-5403d7c79bb9" />
+                  <HubSpotNativeForm
+                    formId="be3f7837-27dc-4af7-9d8a-5403d7c79bb9"
+                    submitLabel="Enter the Grant"
+                    successMessage="Thank you for entering! We'll review your application and announce the winner soon."
+                    fields={[
+                      { name: "firstname", label: "First Name", type: "text", required: true, placeholder: "First name", halfWidth: true },
+                      { name: "lastname", label: "Last Name", type: "text", required: true, placeholder: "Last name", halfWidth: true },
+                      { name: "email", label: "Email", type: "email", required: true, placeholder: "you@company.com" },
+                      { name: "phone", label: "Phone Number", type: "tel", required: true, placeholder: "(555) 123-4567" },
+                      { name: "company", label: "Company Name", type: "text", required: true, placeholder: "Your company" },
+                      { name: "message", label: "Tell us about your business", type: "textarea", required: true, placeholder: "Tell us about your business and why you'd like to win the $25,000 grant..." },
+                    ]}
+                  />
                 </div>
               </div>
             </div>
