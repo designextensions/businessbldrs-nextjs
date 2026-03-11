@@ -38,7 +38,7 @@ export default function Navigation() {
   ];
 
   const darkHeroPages = [
-    '/ada-accessibility', '/hosting', '/request-quote', '/giveaway', '/grant', '/sws',
+    '/', '/ada-accessibility', '/hosting', '/request-quote', '/giveaway', '/grant', '/sws',
     '/services/plan', '/services/produce', '/services/promote', '/services/protect',
     '/industries/automotive', '/industries/construction', '/industries/manufacturing',
     '/industries/education', '/industries/healthcare', '/industries/accounting',
@@ -46,9 +46,9 @@ export default function Navigation() {
     '/marketing-audit'
   ];
   
-  const scrollActivatedPages = ['/about', '/services', '/testimonials', '/website-design', '/storybrand-messaging', '/branding-logos', '/video-production', '/marketing-services', '/app-development', '/hubspot-implementation', '/request-quote', '/giveaway', '/grant', '/sws', '/st-augustine', '/jacksonville', '/palm-coast', '/ponte-vedra', '/orange-park', '/gainesville', '/daytona-beach', '/ai-blueprint', '/ai-development', '/ada-accessibility', '/hosting', '/maintenance', '/services/plan', '/services/produce', '/services/promote', '/services/protect', '/industries/automotive', '/industries/construction', '/industries/manufacturing', '/industries/education', '/industries/healthcare', '/industries/accounting', '/industries/dental', '/industries/consumer-goods', '/marketing-audit'];
+  const scrollActivatedPages = ['/', '/about', '/services', '/testimonials', '/website-design', '/storybrand-messaging', '/branding-logos', '/video-production', '/marketing-services', '/app-development', '/hubspot-implementation', '/request-quote', '/giveaway', '/grant', '/sws', '/st-augustine', '/jacksonville', '/palm-coast', '/ponte-vedra', '/orange-park', '/gainesville', '/daytona-beach', '/ai-blueprint', '/ai-development', '/ada-accessibility', '/hosting', '/maintenance', '/services/plan', '/services/produce', '/services/promote', '/services/protect', '/industries/automotive', '/industries/construction', '/industries/manufacturing', '/industries/education', '/industries/healthcare', '/industries/accounting', '/industries/dental', '/industries/consumer-goods', '/marketing-audit'];
   
-  const normalizedLocation = location.replace(/\/$/, '');
+  const normalizedLocation = location === '/' ? '/' : location.replace(/\/$/, '');
   
   const needsDarkBackground = lightBackgroundPages.some(page => 
     normalizedLocation === page || normalizedLocation.startsWith(page + '/')
@@ -56,7 +56,7 @@ export default function Navigation() {
 
   const isDarkHeroPage = darkHeroPages.includes(normalizedLocation);
   
-  const isScrollActivatedPage = scrollActivatedPages.includes(location);
+  const isScrollActivatedPage = scrollActivatedPages.includes(normalizedLocation);
 
   useEffect(() => {
     let ticking = false;
