@@ -1,0 +1,63 @@
+2026-03-11T23:45:02Z info: Deployment: 3b8a8e57-3dd7-4ce8-8835-1b888f704e9b
+2026-03-11T23:45:02Z info: Build: 0dbf7de6-2b3c-4385-9996-bda4978ca653
+2026-03-11T23:45:02Z info: Running Security Scan
+2026-03-11T23:45:06Z info: Security Scan Complete
+2026-03-11T23:45:06Z info: Connecting to builder
+2026-03-11T23:45:07Z info: Builder connected
+2026-03-11T23:45:07Z info: Installing packages
+2026-03-11T23:45:08Z info: Starting Build
+
+> businessbldrs-nextjs@0.1.0 build
+> next build
+
+
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+✓ Compiled successfully in 11.1s
+
+  Running TypeScript ...
+
+  Collecting page data using 7 workers ...
+
+⚠ Using edge runtime on a page currently disables static generation for that page
+
+  Generating static pages using 7 workers (0/429) ...
+
+  Generating static pages using 7 workers (107/429) 
+
+  Generating static pages using 7 workers (214/429) 
+
+  Generating static pages using 7 workers (321/429) 
+
+✓ Generating static pages using 7 workers (429/429) in 21.1s
+
+  Finalizing page optimization ...
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.11.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1
+npm notice To update run: npm install -g npm@11.11.1
+npm notice
+
+2026-03-11T23:46:03Z info: Pushing pid1 binary layer...
+2026-03-11T23:46:05Z info: Created pid1 binary layer
+2026-03-11T23:46:12Z info: Pushing hosting layer...
+2026-03-11T23:46:12Z info: Retrieved cached nix layer
+2026-03-11T23:46:12Z info: Created hosting layer
+2026-03-11T23:50:09Z info: Created Repl layer
+2026-03-11T23:50:15Z info: Creating Autoscale service
+2026-03-11T23:52:55Z error: The deployment is failing health checks. This can happen if the application isn't responding, responds with an error, or doesn't respond in time. Health checks are sent to the / endpoint by default and must respond as soon as possible. Make sure that the / endpoint is implemented and returns a 200 status code in a timely manner. Avoid doing expensive or long running operations on the / endpoint, prefer deferring them to a different route. Check the logs for more information.
