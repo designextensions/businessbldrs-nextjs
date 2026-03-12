@@ -1,0 +1,15 @@
+modules = ["nodejs-20", "web", "postgresql-16"]
+run = "npm run dev"
+hidden = [".next", ".git", "node_modules"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["libwebp"]
+
+[deployment]
+deploymentTarget = "autoscale"
+build = ["npm", "run", "build"]
+run = ["npm", "run", "start"]
+publicDir = "public"
+
+
