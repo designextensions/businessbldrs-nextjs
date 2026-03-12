@@ -144,3 +144,5 @@ Aggregation page at `/promotions` listing active grants and giveaways:
 - Target: Autoscale
 - Build: `npm run build`
 - Run: `npm run start`
+- `artifacts/` and `attached_assets/` directories are excluded from git (`.gitignore`) to keep the deployment layer lean. The mockup sandbox (`artifacts/mockup-sandbox/`) exists locally for dev only and its 258MB `node_modules/` must never ship in production.
+- The `"use client"` directive is required on `components/ui/hero-section.tsx` (uses React hooks)
