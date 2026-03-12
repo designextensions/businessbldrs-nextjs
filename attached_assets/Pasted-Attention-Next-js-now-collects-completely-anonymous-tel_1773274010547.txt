@@ -1,0 +1,190 @@
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+
+https://nextjs.org/telemetry
+
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+✓ Compiled successfully in 11.2s
+
+  Running TypeScript ...
+
+  Collecting page data using 7 workers ...
+
+⚠ Using edge runtime on a page currently disables static generation for that page
+
+  Generating static pages using 7 workers (0/429) ...
+
+  Generating static pages using 7 workers (107/429) 
+
+  Generating static pages using 7 workers (214/429) 
+
+  Generating static pages using 7 workers (321/429) 
+
+✓ Generating static pages using 7 workers (429/429) in 27.1s
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /ada-accessibility
+├ ○ /admin
+├ ○ /admin/create-article
+├ ƒ /admin/edit-article/[id]
+├ ○ /admin/login
+├ ○ /admin/navigation
+├ ○ /ai-blueprint
+├ ○ /ai-development
+├ ƒ /api/access-tools
+├ ƒ /api/access-tools/[id]
+├ ƒ /api/admin/articles
+├ ƒ /api/admin/articles/[id]
+├ ƒ /api/admin/auth/status
+├ ƒ /api/admin/hubspot/test
+├ ƒ /api/admin/hubspot/test-contact
+├ ƒ /api/admin/import-portfolio
+├ ƒ /api/admin/import-wordpress
+├ ƒ /api/articles
+├ ƒ /api/articles/[id]
+├ ƒ /api/articles/by-slug/[slug]
+├ ƒ /api/audit-leads
+├ ƒ /api/auth/[...nextauth]
+├ ƒ /api/auth/user
+├ ƒ /api/blog-articles
+├ ƒ /api/blog-articles/[id]
+├ ƒ /api/blog-articles/featured
+├ ƒ /api/blog-articles/recent
+├ ƒ /api/contacts
+├ ƒ /api/downloadable-resources
+├ ƒ /api/downloadable-resources/[id]
+├ ƒ /api/downloads
+├ ƒ /api/downloads/[id]
+├ ƒ /api/events
+├ ƒ /api/events/[id]
+├ ƒ /api/form-submissions
+├ ƒ /api/form-token
+├ ƒ /api/forms
+├ ƒ /api/forms/[slug]
+├ ƒ /api/grant-application
+├ ƒ /api/marketing-videos
+├ ƒ /api/marketing-videos/[id]
+├ ƒ /api/media
+├ ƒ /api/media-assets
+├ ƒ /api/media-assets/[id]
+├ ƒ /api/media-assets/sync
+├ ƒ /api/media/[id]
+├ ƒ /api/navigation
+├ ƒ /api/navigation/[id]
+├ ƒ /api/og
+├ ƒ /api/portfolio
+├ ƒ /api/portfolio/[id]
+├ ƒ /api/team
+├ ƒ /api/team/[slug]
+├ ƒ /api/videos
+├ ƒ /api/videos/[id]
+├ ○ /app-development
+├ ○ /branding-logos
+├ ○ /case-studies/all-pro-dad
+├ ○ /case-studies/bozard-ford-lincoln
+├ ○ /case-studies/breakwater-construction
+├ ○ /case-studies/hines
+├ ○ /case-studies/rulon-international
+├ ○ /cost-calculator
+├ ○ /daytona-beach
+├ ○ /downloads
+├ ○ /events
+├ ○ /free-seo-audit
+├ ○ /gainesville
+├ ○ /giveaway
+├ ○ /grant
+├ ○ /hosting
+├ ○ /hubspot-implementation
+├ ○ /industries/accounting
+├ ○ /industries/automotive
+├ ○ /industries/construction
+├ ○ /industries/consumer-goods
+├ ○ /industries/dental
+├ ○ /industries/education
+├ ○ /industries/healthcare
+├ ○ /industries/manufacturing
+├ ○ /jacksonville
+├ ○ /maccsupport
+├ ○ /maintenance
+├ ○ /marketing-audit
+├ ○ /marketing-plan-builder
+├ ○ /marketing-services
+├ ○ /marketing-strategy-consulting
+├ ○ /ministry-blueprint
+├ ○ /orange-park
+├ ○ /palm-coast
+├ ○ /ponte-vedra
+├ ○ /portfolio
+├ ○ /portfolio/breakwater-construction
+├ ○ /privacy-policy
+├ ○ /promotions
+├ ○ /request-quote
+├ ○ /resources
+├ ○ /resources/articles
+├ ● /resources/articles/[slug]
+│ ├ /resources/articles/what-is-the-storybrand-framework-and-why-its-a-game-changer-for-your-marketing
+│ ├ /resources/articles/why-do-i-need-website-maintenance
+│ ├ /resources/articles/5-reasons-to-attend-a-marketing-workshop
+│ └ [+304 more paths]
+├ ○ /robots.txt
+├ ○ /schedule-call
+├ ○ /seo-services
+├ ○ /services
+├ ○ /services/plan
+├ ○ /services/produce
+├ ○ /services/promote
+├ ○ /services/protect
+├ ○ /sitemap.xml
+├ ○ /social-media-marketing
+├ ○ /st-augustine
+├ ○ /storybrand-agency
+├ ○ /storybrand-brandscript
+├ ○ /storybrand-framework
+├ ○ /storybrand-messaging
+├ ○ /storybrand-website
+├ ○ /sws
+├ ○ /team
+├ ● /team/[slug]
+│ ├ /team/jared-andre
+│ ├ /team/stacy-powell
+│ ├ /team/natalie-schneider
+│ └ [+8 more paths]
+├ ○ /terms-and-conditions
+├ ○ /testimonials
+├ ○ /tools
+├ ○ /video-production
+├ ○ /videos
+├ ○ /website-design
+├ ○ /website-training
+├ ○ /what-is-a-storybrand-agency
+└ ○ /what-is-storybrand
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.11.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1
+npm notice To update run: npm install -g npm@11.11.1
+npm notice
+
+2026-03-12T00:00:51Z info: Pushing pid1 binary layer...
+2026-03-12T00:00:53Z info: Created pid1 binary layer
+2026-03-12T00:00:55Z info: Pushing Repl layer...
+2026-03-12T00:00:55Z info: Pushing hosting layer...
+2026-03-12T00:00:55Z info: Retrieved cached nix layer
+2026-03-12T00:00:55Z info: Created hosting layer
+2026-03-12T00:03:54Z info: Created Repl layer
+2026-03-12T00:03:59Z info: Creating Autoscale service
+2026-03-12T00:06:28Z error: The deployment is failing health checks. This can happen if the application isn't responding, responds with an error, or doesn't respond in time. Health checks are sent to the / endpoint by default and must respond as soon as possible. Make sure that the / endpoint is implemented and returns a 200 status code in a timely manner. Avoid doing expensive or long running operations on the / endpoint, prefer deferring them to a different route. Check the logs for more information.
