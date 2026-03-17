@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -188,22 +189,18 @@ export default function AIBlueprint() {
             </div>
 
             <div className="relative">
-              <div className="grid grid-cols-1 gap-4">
-                {[
-                  { value: "500+", label: "AI Workflows Built", icon: Workflow },
-                  { value: "10x", label: "Efficiency Gains", icon: Zap },
-                  { value: "Top 1%", label: "AI Builders", icon: Shield }
-                ].map((stat, index) => (
-                  <div key={index} className="bg-charcoal-800 border-2 border-charcoal-700 p-6 flex items-center gap-4">
-                    <div className="w-14 h-14 bg-yellow-400 border-2 border-charcoal-900 shadow-offset-sm flex items-center justify-center flex-shrink-0">
-                      <stat.icon className="w-7 h-7 text-charcoal-900" />
-                    </div>
-                    <div>
-                      <div className="font-display font-black text-3xl text-yellow-400">{stat.value}</div>
-                      <div className="label-industrial text-stone-400 text-xs">{stat.label}</div>
-                    </div>
-                  </div>
-                ))}
+              <div className="border-2 border-charcoal-700 shadow-offset overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+                  alt="AI technology visualization showing neural networks and data analysis"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-yellow-400 border-2 border-charcoal-900 shadow-offset px-6 py-3">
+                <div className="font-display font-black text-charcoal-900 text-lg">TOP 1% AI BUILDERS</div>
               </div>
             </div>
           </div>
@@ -222,16 +219,50 @@ export default function AIBlueprint() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white border-2 border-charcoal-800 p-8 shadow-offset hover:shadow-offset-yellow transition-all duration-300">
-                <div className="w-14 h-14 bg-yellow-400 border-2 border-charcoal-900 shadow-offset-sm flex items-center justify-center mb-6">
-                  <benefit.icon className="w-7 h-7 text-charcoal-900" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="border-2 border-charcoal-800 shadow-offset overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80"
+                alt="Business analytics dashboard showing data-driven strategy and insights"
+                width={800}
+                height={500}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="space-y-6">
+              {benefits.slice(0, 2).map((benefit, index) => (
+                <div key={index} className="bg-white border-2 border-charcoal-800 p-8 shadow-offset hover:shadow-offset-yellow transition-all duration-300">
+                  <div className="w-14 h-14 bg-yellow-400 border-2 border-charcoal-900 shadow-offset-sm flex items-center justify-center mb-6">
+                    <benefit.icon className="w-7 h-7 text-charcoal-900" />
+                  </div>
+                  <h3 className="text-xl font-display uppercase font-bold mb-3 text-charcoal-900">{benefit.title}</h3>
+                  <p className="text-stone-500 leading-relaxed">{benefit.description}</p>
                 </div>
-                <h3 className="text-xl font-display uppercase font-bold mb-3 text-charcoal-900">{benefit.title}</h3>
-                <p className="text-stone-500 leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 order-2 lg:order-1">
+              {benefits.slice(2).map((benefit, index) => (
+                <div key={index} className="bg-white border-2 border-charcoal-800 p-8 shadow-offset hover:shadow-offset-yellow transition-all duration-300">
+                  <div className="w-14 h-14 bg-yellow-400 border-2 border-charcoal-900 shadow-offset-sm flex items-center justify-center mb-6">
+                    <benefit.icon className="w-7 h-7 text-charcoal-900" />
+                  </div>
+                  <h3 className="text-xl font-display uppercase font-bold mb-3 text-charcoal-900">{benefit.title}</h3>
+                  <p className="text-stone-500 leading-relaxed">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="border-2 border-charcoal-800 shadow-offset overflow-hidden order-1 lg:order-2">
+              <Image
+                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80"
+                alt="AI and automation technology powering modern business operations"
+                width={800}
+                height={500}
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -248,18 +279,27 @@ export default function AIBlueprint() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {deliverables.map((item, index) => (
-              <div key={index} className="border-2 border-charcoal-800 p-8 flex gap-6 items-start shadow-offset hover:shadow-offset-yellow transition-all duration-300">
-                <div className="w-16 h-16 bg-yellow-400 border-2 border-charcoal-900 shadow-offset-sm flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-8 h-8 text-charcoal-900" />
-                </div>
-                <div>
+          <div className="grid lg:grid-cols-5 gap-8 items-start">
+            <div className="lg:col-span-3 grid md:grid-cols-2 gap-8">
+              {deliverables.map((item, index) => (
+                <div key={index} className="border-2 border-charcoal-800 p-8 shadow-offset hover:shadow-offset-yellow transition-all duration-300">
+                  <div className="w-16 h-16 bg-yellow-400 border-2 border-charcoal-900 shadow-offset-sm flex items-center justify-center mb-6">
+                    <item.icon className="w-8 h-8 text-charcoal-900" />
+                  </div>
                   <h3 className="text-xl font-display uppercase font-bold mb-3 text-charcoal-900">{item.title}</h3>
                   <p className="text-stone-500 leading-relaxed">{item.description}</p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="lg:col-span-2 border-2 border-charcoal-800 shadow-offset overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=900&q=80"
+                alt="Modern technology workspace with AI tools and strategic planning documents"
+                width={600}
+                height={900}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -276,17 +316,32 @@ export default function AIBlueprint() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-yellow-400 border-2 border-black shadow-offset flex items-center justify-center mx-auto mb-6">
-                  <step.icon className="w-10 h-10 text-black" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="border-2 border-charcoal-700 shadow-offset overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80"
+                alt="Team collaboration and strategic planning session for AI implementation"
+                width={800}
+                height={500}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="space-y-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="flex gap-6 items-start">
+                  <div className="w-16 h-16 bg-yellow-400 border-2 border-black shadow-offset-sm flex items-center justify-center flex-shrink-0">
+                    <step.icon className="w-8 h-8 text-black" />
+                  </div>
+                  <div>
+                    <div className="flex items-baseline gap-3 mb-2">
+                      <span className="text-yellow-400 text-3xl font-display font-black">{step.number}</span>
+                      <h3 className="text-xl font-display uppercase text-white">{step.title}</h3>
+                    </div>
+                    <p className="text-stone-400 leading-relaxed">{step.description}</p>
+                  </div>
                 </div>
-                <div className="text-yellow-400 text-6xl font-display mb-4">{step.number}</div>
-                <h3 className="text-xl font-display uppercase mb-4 text-white">{step.title}</h3>
-                <p className="text-stone-400 leading-relaxed">{step.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -303,16 +358,27 @@ export default function AIBlueprint() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {audiences.map((audience, index) => (
-              <div key={index} className="bg-white border-2 border-charcoal-800 p-8 shadow-offset hover:shadow-offset-yellow transition-all duration-300 text-center">
-                <div className="w-14 h-14 bg-yellow-400 border-2 border-charcoal-900 shadow-offset-sm flex items-center justify-center mx-auto mb-6">
-                  <audience.icon className="w-7 h-7 text-charcoal-900" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-2 gap-6">
+              {audiences.map((audience, index) => (
+                <div key={index} className="bg-white border-2 border-charcoal-800 p-6 shadow-offset hover:shadow-offset-yellow transition-all duration-300 text-center">
+                  <div className="w-14 h-14 bg-yellow-400 border-2 border-charcoal-900 shadow-offset-sm flex items-center justify-center mx-auto mb-4">
+                    <audience.icon className="w-7 h-7 text-charcoal-900" />
+                  </div>
+                  <h3 className="text-base font-display uppercase font-bold mb-2 text-charcoal-900">{audience.title}</h3>
+                  <p className="text-stone-500 leading-relaxed text-sm">{audience.description}</p>
                 </div>
-                <h3 className="text-lg font-display uppercase font-bold mb-3 text-charcoal-900">{audience.title}</h3>
-                <p className="text-stone-500 leading-relaxed text-sm">{audience.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="border-2 border-charcoal-800 shadow-offset overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+                alt="Diverse team of professionals collaborating on business growth strategy"
+                width={800}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>

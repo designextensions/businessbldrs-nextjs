@@ -43,7 +43,7 @@ export default function Navigation() {
     '/industries/automotive', '/industries/construction', '/industries/manufacturing',
     '/industries/education', '/industries/healthcare', '/industries/accounting',
     '/industries/dental', '/industries/consumer-goods',
-    '/marketing-audit'
+    '/marketing-audit', '/ai-blueprint'
   ];
   
   const scrollActivatedPages = ['/', '/about', '/services', '/testimonials', '/website-design', '/storybrand-messaging', '/branding-logos', '/video-production', '/marketing-services', '/app-development', '/hubspot-implementation', '/request-quote', '/giveaway', '/grant', '/sws', '/st-augustine', '/jacksonville', '/palm-coast', '/ponte-vedra', '/orange-park', '/gainesville', '/daytona-beach', '/ai-blueprint', '/ai-development', '/ada-accessibility', '/hosting', '/maintenance', '/services/plan', '/services/produce', '/services/promote', '/services/protect', '/industries/automotive', '/industries/construction', '/industries/manufacturing', '/industries/education', '/industries/healthcare', '/industries/accounting', '/industries/dental', '/industries/consumer-goods', '/marketing-audit'];
