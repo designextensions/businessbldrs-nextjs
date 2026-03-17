@@ -59,6 +59,10 @@ export default function Navigation() {
   const isScrollActivatedPage = scrollActivatedPages.includes(normalizedLocation);
 
   useEffect(() => {
+    setIsClient(true);
+    setIsMobile(window.innerWidth < 640);
+    setScrollY(window.scrollY);
+
     let ticking = false;
     let resizeTimeout: NodeJS.Timeout;
 
@@ -79,7 +83,6 @@ export default function Navigation() {
       }, 150);
     };
 
-    setIsMobile(window.innerWidth < 640);
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleResize, { passive: true });
     
@@ -88,10 +91,6 @@ export default function Navigation() {
       window.removeEventListener('resize', handleResize);
       clearTimeout(resizeTimeout);
     };
-  }, []);
-
-  useEffect(() => {
-    setIsClient(true);
   }, []);
 
   useEffect(() => {
