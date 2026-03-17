@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ["*"],
+  allowedDevOrigins: ["*.replit.dev", "*.worf.replit.dev", "*.replit.app"],
+  devIndicators: false,
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "businessbldrs.com" },

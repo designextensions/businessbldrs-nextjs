@@ -139,6 +139,14 @@ Aggregation page at `/promotions` listing active grants and giveaways:
 - Listed under Resources dropdown in navigation (desktop + mobile)
 - Added to `lightBackgroundPages` in `navigation.tsx`
 
+## Hydration Notes
+
+- Homepage (`components/pages/home.tsx`) uses `next/dynamic` (NOT `React.lazy()`) for code-splitting sections. `React.lazy()` is incompatible with Next.js App Router SSR and causes tree mismatches.
+- `suppressHydrationWarning` is applied to `<html>` and `<body>` in `app/layout.tsx` — this is standard for Next.js apps where browser extensions or proxy environments modify root attributes.
+- The nested `<footer>` wrapper was removed from `home.tsx` — `MegaFooter` already returns its own `<footer>` element.
+- accessiBe widget is disabled (license expired) — re-enable in `app/layout.tsx` after license renewal.
+- The Replit dev preview proxy may intermittently inject monitoring scripts causing hydration warnings in development; these do NOT affect production builds.
+
 ## Deployment
 
 - Target: Autoscale

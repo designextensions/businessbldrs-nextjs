@@ -52,7 +52,7 @@ export default function RootLayout({
   const bizSchema = JSON.stringify(localBusinessSchema);
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Structured Data - static JSON-LD strings, no user input */}
         <script
@@ -65,14 +65,8 @@ export default function RootLayout({
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: bizSchema }}
         />
-        <script
-          type="text/javascript"
-          id="sa-dynamic-optimization"
-          data-uuid="30c4130f-316d-48cb-b424-e6f82719c0ef"
-          src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vc2VvLmJ1c2luZXNzYmxkcnMuY29tL3NjcmlwdHMvZHluYW1pY19vcHRpbWl6YXRpb24uanMiO3NjcmlwdC5kYXRhc2V0LnV1aWQgPSAiMzBjNDEzMGYtMzE2ZC00OGNiLWI0MjQtZTZmODI3MTljMGVmIjtzY3JpcHQuaWQgPSAic2EtZHluYW1pYy1vcHRpbWl6YXRpb24tbG9hZGVyIjtkb2N1bWVudC5oZWFkLmFwcGVuZENoaWxkKHNjcmlwdCk7"
-        />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <Providers>{children}</Providers>
         {/* HubSpot Forms SDK - static vendor URL */}
         <Script
@@ -86,10 +80,16 @@ export default function RootLayout({
           src="//js.hs-scripts.com/485253.js"
           strategy="lazyOnload"
         />
-        {/* accessiBe Accessibility Widget */}
-        <Script id="acsb-widget" strategy="afterInteractive">
-          {`(function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init(); }; h.appendChild(s); })();`}
+        {/* SEO Dynamic Optimization - static vendor URL */}
+        <Script
+          id="sa-dynamic-optimization"
+          strategy="lazyOnload"
+          data-uuid="30c4130f-316d-48cb-b424-e6f82719c0ef"
+        >
+          {`var s=document.createElement("script");s.setAttribute("nowprocket","");s.setAttribute("nitro-exclude","");s.src="https://seo.businessbldrs.com/scripts/dynamic_optimization.js";s.dataset.uuid="30c4130f-316d-48cb-b424-e6f82719c0ef";s.id="sa-dynamic-optimization-loader";document.head.appendChild(s);`}
         </Script>
+        {/* accessiBe Accessibility Widget - disabled: license expired, causes hydration errors */}
+        {/* Re-enable with valid license: <Script id="acsb-widget" strategy="lazyOnload">{`(function(){ var s = document.createElement('script'); s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init(); }; document.head.appendChild(s); })();`}</Script> */}
       </body>
     </html>
   );
