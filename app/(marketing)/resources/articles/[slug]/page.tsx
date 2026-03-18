@@ -9,7 +9,7 @@ import ArticlePage from "@/components/pages/article";
 import { notFound } from "next/navigation";
 import { getOgImageUrl } from "@/lib/og-utils";
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 async function getPublishedArticleBySlug(slug: string) {
   return db.query.blogArticles.findFirst({

@@ -9,7 +9,7 @@ import TeamMemberPage from "@/components/pages/team-member";
 import { notFound } from "next/navigation";
 import { getOgImageUrl } from "@/lib/og-utils";
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 async function getActiveTeamMemberBySlug(slug: string) {
   return db.query.teamMembers.findFirst({

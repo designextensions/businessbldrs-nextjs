@@ -155,7 +155,7 @@ export function ArticleSchema({
   dateModified,
   url
 }: ArticleSchemaProps) {
-  const pageUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
+  const pageUrl = url || '';
   
   const articleSchema = {
     "@context": "https://schema.org",
