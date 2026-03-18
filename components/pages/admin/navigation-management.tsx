@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useQuery, useMutation } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -11,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest, queryClient } from "@/lib/queryClient";
+import { apiRequest } from "@/lib/queryClient";
 import { Plus, Edit2, Trash2, Eye, EyeOff, ChevronRight, GripVertical } from "lucide-react";
 import type { NavigationItem, InsertNavigationItemType } from "@/lib/db/schema";
 
@@ -27,6 +27,7 @@ interface NavigationFormData {
 }
 
 export default function NavigationManagementPage() {
+  const queryClient = useQueryClient();
   const [editingItem, setEditingItem] = useState<NavigationItem | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [formData, setFormData] = useState<NavigationFormData>({

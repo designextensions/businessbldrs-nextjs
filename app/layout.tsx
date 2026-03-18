@@ -54,7 +54,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Structured Data - static JSON-LD strings, no user input */}
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger

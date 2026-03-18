@@ -1,9 +1,9 @@
 "use client";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
+import { useQueryClient } from "@tanstack/react-query";
 import Navigation from "@/components/ui/navigation";
 import HeroSection from "@/components/ui/hero-section";
-import { queryClient } from "@/lib/queryClient";
 import MegaFooter from "@/components/ui/mega-footer";
 import CriticalCSS from "@/components/ui/critical-css";
 import ThirdPartyOptimizer from "@/components/ui/third-party-optimizer";
@@ -22,6 +22,7 @@ const FAQSection = dynamic(() => import("@/components/ui/faq-section"));
 
 
 export default function Home() {
+  const queryClient = useQueryClient();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -39,7 +40,7 @@ export default function Home() {
       queryKey: ['/api/portfolio'],
       staleTime: 5 * 60 * 1000,
     });
-  }, []);
+  }, [queryClient]);
 
   return (
     <>

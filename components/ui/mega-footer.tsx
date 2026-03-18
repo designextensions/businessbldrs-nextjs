@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   Phone,
@@ -24,6 +24,11 @@ const BB_Full_Lockup_dark_1_3 = "/attached_assets/BB_Full-Lockup_dark-1-3.png";
 export default function MegaFooter() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [currentYear, setCurrentYear] = useState(2026);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
   const { toast } = useToast();
 
   const submitMutation = useMutation({
@@ -224,8 +229,8 @@ export default function MegaFooter() {
 
         <div className="mt-12 pt-8 border-t-2 border-charcoal-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-stone-500 text-sm">
-              © {new Date().getFullYear()} Business Builders. All rights reserved.
+            <p className="text-stone-500 text-sm" suppressHydrationWarning>
+              © {currentYear} Business Builders. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link href="/privacy-policy" className="text-stone-500 hover:text-yellow-400 text-sm transition-colors">

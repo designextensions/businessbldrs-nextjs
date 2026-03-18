@@ -54,6 +54,9 @@ public/
 - Duplicate files between `assets/` and `attached_assets/` were removed (kept in `attached_assets/` as CMS source of truth)
 - Only 2 images >500KB exist (blog JPGs, already well-compressed — WebP not smaller)
 - Admin login logo uses `next/image` with `priority` prop
+- `lib/queryClient.ts` exports `makeQueryClient()` and `getQueryClientSingleton()` — creates per-request QueryClient on server, browser singleton on client. No module-level singleton (prevents cross-request cache leakage and hydration mismatches)
+- `components/providers.tsx` uses `useState(getQueryClientSingleton)` to initialize QueryClient
+- Admin components use `useQueryClient()` hook for cache invalidation (not module import)
 - `lib/getQueryClient.ts` provides per-request QueryClient via `React.cache()` for server-side hydration
 - All 8 public marketing pages use `HydrationBoundary` for SSR data prefetching
 - Removed unused components: `carousel.tsx`, `chart.tsx`, `optimized-image.tsx`
