@@ -169,7 +169,7 @@ export default function StoryBrandMessaging() {
                   <step.icon className="w-10 h-10 text-black" />
                 </div>
                 <div className="text-yellow-400 text-6xl font-display mb-4">{step.number}</div>
-                <h3 className="text-xl font-display uppercase font-bold mb-4">{step.title}</h3>
+                <h3 className="text-xl font-display uppercase font-bold mb-4 text-charcoal-900">{step.title}</h3>
                 <p className="text-stone-500 leading-relaxed">{step.description}</p>
               </div>
             ))}
@@ -259,7 +259,7 @@ export default function StoryBrandMessaging() {
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-display uppercase font-bold mb-2">{pkg.name}</h3>
+                  <h3 className="text-2xl font-display uppercase font-bold mb-2 text-charcoal-900">{pkg.name}</h3>
                   <p className="text-stone-500 text-sm mb-4">{pkg.description}</p>
                   <p className="text-stone-500 text-sm mb-6">{pkg.duration}</p>
                   <div className="text-4xl font-display font-black text-yellow-400 mb-2">{pkg.price}</div>

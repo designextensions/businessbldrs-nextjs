@@ -310,7 +310,7 @@ export default function AppDevelopment() {
                 <div className="w-16 h-16 bg-yellow-400 border-2 border-black shadow-offset-sm flex items-center justify-center mx-auto mb-6">
                   <service.icon className="w-8 h-8 text-black" />
                 </div>
-                <h3 className="text-xl font-display uppercase mb-4">{service.title}</h3>
+                <h3 className="text-xl font-display uppercase mb-4 text-charcoal-900">{service.title}</h3>
                 <p className="text-stone-500 leading-relaxed">{service.description}</p>
               </div>
             ))}

@@ -153,7 +153,7 @@ export default function BrandingLogos() {
                 <div className="w-20 h-20 bg-yellow-400 border-2 border-secondary flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-2xl font-display uppercase font-bold mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-display uppercase font-bold mb-4 text-charcoal-900">{service.title}</h3>
                 <p className="text-stone-500 leading-relaxed">{service.description}</p>
               </div>
             ))}

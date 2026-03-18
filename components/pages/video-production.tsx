@@ -187,7 +187,7 @@ export default function VideoProduction() {
                 <div className="w-20 h-20 bg-yellow-400 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 border-2 border-black shadow-offset-sm">
                   <benefit.icon className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-xl font-display font-bold uppercase mb-4">{benefit.title}</h3>
+                <h3 className="text-xl font-display font-bold uppercase mb-4 text-charcoal-900">{benefit.title}</h3>
                 <p className="text-stone-500 leading-relaxed text-sm">{benefit.description}</p>
               </div>
             ))}
@@ -247,7 +247,7 @@ export default function VideoProduction() {
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-display font-bold uppercase mb-4">{pkg.name}</h3>
+                  <h3 className="text-2xl font-display font-bold uppercase mb-4 text-charcoal-900">{pkg.name}</h3>
                   <div className="text-3xl font-display font-black text-yellow-500 mb-6">
                     {pkg.price.includes('$') ? (
                       <>starting at<br />{pkg.price}</>
@@ -307,7 +307,7 @@ export default function VideoProduction() {
                   <step.icon className="w-10 h-10 text-black" />
                 </div>
                 <div className="text-yellow-500 text-6xl font-display font-black mb-4">{step.number}</div>
-                <h3 className="text-xl font-display font-bold uppercase mb-4">{step.title}</h3>
+                <h3 className="text-xl font-display font-bold uppercase mb-4 text-charcoal-900">{step.title}</h3>
                 <p className="text-stone-500 leading-relaxed">{step.description}</p>
               </div>
             ))}
