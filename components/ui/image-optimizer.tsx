@@ -30,14 +30,12 @@ const supportsAVIF = (): Promise<boolean> => {
 
 // Create responsive image URLs
 const createResponsiveImageUrl = (src: string, width: number, format: string = 'webp'): string => {
-  // This would normally use a CDN or image service
-  // For now, we'll just append parameters to indicate optimization intent
-  const origin = typeof window !== 'undefined' ? window.location.origin : 'http://localhost';
-  const url = new URL(src, origin);
+  const base = 'http://localhost';
+  const url = new URL(src, base);
   url.searchParams.set('w', width.toString());
   url.searchParams.set('f', format);
-  url.searchParams.set('q', '85'); // quality
-  return url.toString();
+  url.searchParams.set('q', '85');
+  return url.pathname + url.search;
 };
 
 export default function ImageOptimizer({

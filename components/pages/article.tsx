@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 import { useQuery } from "@tanstack/react-query";
@@ -20,6 +21,11 @@ export default function Article() {
   });
 
   const article = articles.find(a => a.slug === slug || a.id.toString() === slug);
+
+  const [shareUrl, setShareUrl] = useState('');
+  useEffect(() => {
+    setShareUrl(window.location.href);
+  }, []);
 
   if (isLoading) {
     return (
@@ -63,7 +69,6 @@ export default function Article() {
     );
   }
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
   const shareText = `Check out this article: ${article.title}`;
 
   const shareOnSocial = (platform: string) => {
