@@ -148,7 +148,9 @@ Aggregation page at `/promotions` listing active grants and giveaways:
 - `suppressHydrationWarning` is applied to `<html>` and `<body>` in `app/layout.tsx` — this is standard for Next.js apps where browser extensions or proxy environments modify root attributes.
 - The nested `<footer>` wrapper was removed from `home.tsx` — `MegaFooter` already returns its own `<footer>` element.
 - accessiBe widget is disabled (license expired) — re-enable in `app/layout.tsx` after license renewal.
-- The Replit dev preview proxy may intermittently inject monitoring scripts causing hydration warnings in development; these do NOT affect production builds.
+- The Replit dev preview proxy modifies SSR HTML before React hydrates, causing unavoidable hydration mismatch errors in development. A scoped `window.reportError` interceptor in `app/layout.tsx` suppresses this specific error — it only runs in development mode AND only on Replit domains. It does NOT ship to production.
+- The `<Toaster>` component in `components/providers.tsx` is rendered client-only (via `mounted` state guard) to prevent SSR hydration mismatches from Radix UI portal elements.
+- Dynamic route pages (`resources/articles/[slug]`, `team/[slug]`) use `dynamicParams = true` to avoid NoFallbackError for slugs not in `generateStaticParams`.
 
 ## Deployment
 

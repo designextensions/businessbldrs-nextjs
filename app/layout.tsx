@@ -54,14 +54,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {process.env.NODE_ENV === "development" && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(){if(!location.hostname.match(/\\.replit\\.dev$|\\.replit\\.app$|\\.worf\\.replit\\.dev$/))return;var origReportError=window.reportError;window.reportError=function(e){if(e&&e.message&&e.message.indexOf("Hydration failed because the server rendered HTML didn't match the client")!==-1){return;}if(origReportError)origReportError.call(window,e);else throw e;};})();`,
+            }}
+          />
+        )}
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: orgSchema }}
         />
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: bizSchema }}
         />
       </head>
