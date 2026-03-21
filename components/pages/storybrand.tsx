@@ -121,15 +121,31 @@ export default function StoryBrand() {
             </p>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Visual - Plan Produce Promote Framework */}
           <div className="max-w-4xl mx-auto mb-12">
-            <img
-              src="https://businessbldrs.com/wp-content/uploads/2024/11/marketing-blueprint-img-1-1024x436.png"
-              alt="Business Builders marketing strategy blueprint showing the plan-produce-promote framework"
-              className="w-full shadow-offset border-2 border-charcoal-900"
-              width={1024}
-              height={436}
-            />
+            <div className="grid grid-cols-3 gap-0 border-2 border-charcoal-900 shadow-offset overflow-hidden">
+              <div className="bg-charcoal-900 p-8 text-center border-r-2 border-charcoal-700">
+                <div className="w-16 h-16 bg-yellow-400 flex items-center justify-center mx-auto mb-4 border-2 border-charcoal-900">
+                  <Target className="w-8 h-8 text-charcoal-900" />
+                </div>
+                <h3 className="text-xl font-display uppercase text-yellow-400 mb-2">Plan</h3>
+                <p className="text-stone-400 text-sm">Clarify your message</p>
+              </div>
+              <div className="bg-charcoal-900 p-8 text-center border-r-2 border-charcoal-700">
+                <div className="w-16 h-16 bg-yellow-400 flex items-center justify-center mx-auto mb-4 border-2 border-charcoal-900">
+                  <Users className="w-8 h-8 text-charcoal-900" />
+                </div>
+                <h3 className="text-xl font-display uppercase text-yellow-400 mb-2">Produce</h3>
+                <p className="text-stone-400 text-sm">Create compelling content</p>
+              </div>
+              <div className="bg-charcoal-900 p-8 text-center">
+                <div className="w-16 h-16 bg-yellow-400 flex items-center justify-center mx-auto mb-4 border-2 border-charcoal-900">
+                  <TrendingUp className="w-8 h-8 text-charcoal-900" />
+                </div>
+                <h3 className="text-xl font-display uppercase text-yellow-400 mb-2">Promote</h3>
+                <p className="text-stone-400 text-sm">Amplify your reach</p>
+              </div>
+            </div>
           </div>
 
           {/* Quick Navigation */}
@@ -218,9 +234,10 @@ export default function StoryBrand() {
             </div>
             <div>
               <img
-                src="https://businessbldrs.com/wp-content/uploads/2024/12/Mask-Group-11@2x-1024x665.png"
-                alt="StoryBrand Framework diagram showing the seven-part storytelling structure for business messaging"
+                src="/attached_assets/BB-Team-Photo-1-edited-2_1754613823971.webp"
+                alt="Business Builders team — StoryBrand certified marketing agency in St. Augustine, FL"
                 className="w-full shadow-offset border-2 border-secondary"
+                loading="lazy"
                 width={1024}
                 height={665}
               />
@@ -280,11 +297,12 @@ export default function StoryBrand() {
             </div>
             <div>
               <img
-                src="https://businessbldrs.com/wp-content/uploads/2024/12/shutterstock_371016464@2x-1024x868.png"
-                alt="Team applying StoryBrand messaging strategy to business marketing materials"
+                src="/attached_assets/BB-2023-Office-Content-Shoot-6961-2048x1152_1754613884042.jpg"
+                alt="Business Builders team collaborating on StoryBrand messaging strategy"
                 className="w-full shadow-offset border-2 border-secondary"
+                loading="lazy"
                 width={1024}
-                height={868}
+                height={576}
               />
             </div>
           </div>
@@ -339,11 +357,12 @@ export default function StoryBrand() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <img
-                src="https://businessbldrs.com/wp-content/uploads/2024/12/45@2x-1024x590.png"
+                src="/attached_assets/BB-Team-Photo-1-edited-2_1754613823971.webp"
                 alt="Business Builders StoryBrand Certified Agency team delivering marketing results for clients"
                 className="w-full shadow-offset border-2 border-secondary"
+                loading="lazy"
                 width={1024}
-                height={590}
+                height={665}
               />
             </div>
             <div className="space-y-8">
