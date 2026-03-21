@@ -202,6 +202,7 @@ export default function ServicesPage() {
                   className="w-full"
                   width={1200}
                   height={800}
+                  fetchPriority="high"
                 />
               </div>
             </div>

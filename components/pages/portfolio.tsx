@@ -176,14 +176,14 @@ export default function Portfolio() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {CASE_STUDIES.map((cs) => (
+            {CASE_STUDIES.map((cs, index) => (
               <Link key={cs.title} href={cs.link}>
                 <div className="group cursor-pointer bg-white border-2 border-stone-200 hover:border-yellow-400 transition-all duration-300 overflow-hidden h-full flex flex-col hover:shadow-lg">
                   <div className="relative h-52 overflow-hidden">
                     <img
                       src={cs.image}
                       alt={`${cs.title} - portfolio project by Business Builders`}
-                      loading="lazy"
+                      loading={index < 3 ? "eager" : "lazy"}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       width={800}
                       height={600}

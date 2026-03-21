@@ -18,6 +18,7 @@ const nextConfig: NextConfig = {
         { key: "X-Content-Type-Options", value: "nosniff" },
         { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
         { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+        { key: "Content-Security-Policy", value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://seo.businessbldrs.com https://acsbapp.com https://www.googletagmanager.com https://www.google-analytics.com https://js.hsforms.net https://js.hs-scripts.com https://js.hs-analytics.net https://js.hscollectedforms.net https://js.hs-banner.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://acsbapp.com; img-src 'self' data: blob: https: http:; font-src 'self' https://fonts.gstatic.com https://acsbapp.com data:; connect-src 'self' https: wss:; frame-src 'self' https://www.youtube.com https://player.vimeo.com https://js.hsforms.net https://app.hubspot.com; media-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' https://forms.hsforms.com" },
       ],
     },
     {
@@ -30,6 +31,12 @@ const nextConfig: NextConfig = {
       source: "/_next/static/:path*",
       headers: [
         { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+      ],
+    },
+    {
+      source: "/:path((?!api|_next/static|_next/image|favicon.ico).*)",
+      headers: [
+        { key: "Cache-Control", value: "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400" },
       ],
     },
   ],
