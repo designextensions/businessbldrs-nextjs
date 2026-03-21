@@ -5,7 +5,7 @@ import { and, eq } from "drizzle-orm";
 import ArticlePage from "@/components/pages/article";
 import { notFound } from "next/navigation";
 import { getOgImageUrl } from "@/lib/og-utils";
-import { getArticleSchema } from "@/lib/seo-config";
+import { getArticleSchema, getArticleVideoSchemas } from "@/lib/seo-config";
 
 export const dynamicParams = true;
 
@@ -70,12 +70,27 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     author: article.author,
   });
 
+  const videoSchemas = getArticleVideoSchemas({
+    title: article.title,
+    description: article.excerpt,
+    datePublished: article.date,
+    content: article.content ?? undefined,
+  });
+
+  let jsonLd;
+  if (videoSchemas.length > 0) {
+    const { "@context": _ctx, ...articleWithoutContext } = articleJsonLd;
+    jsonLd = { "@context": "https://schema.org", "@graph": [articleWithoutContext, ...videoSchemas] };
+  } else {
+    jsonLd = articleJsonLd;
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c"),
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
       <ArticlePage article={article} />

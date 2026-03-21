@@ -434,6 +434,40 @@ export function getBreadcrumbSchema(pageName: string, pagePath: string) {
   };
 }
 
+export function extractYouTubeVideoIds(html: string): string[] {
+  const regex = /(?:youtube\.com\/embed\/|youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/g;
+  const ids: string[] = [];
+  let match;
+  while ((match = regex.exec(html)) !== null) {
+    if (!ids.includes(match[1])) {
+      ids.push(match[1]);
+    }
+  }
+  return ids;
+}
+
+export function getArticleVideoSchemas(article: {
+  title: string;
+  description: string;
+  datePublished: string;
+  content?: string;
+}) {
+  if (!article.content) return [];
+  const videoIds = extractYouTubeVideoIds(article.content);
+  return videoIds.map((videoId, index) => ({
+    "@type": "VideoObject",
+    "name": `${article.title}${videoIds.length > 1 ? ` - Video ${index + 1}` : ''}`,
+    "description": article.description,
+    "thumbnailUrl": `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+    "embedUrl": `https://www.youtube.com/embed/${videoId}`,
+    "uploadDate": article.datePublished,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Business Builders"
+    }
+  }));
+}
+
 export function getArticleSchema(article: {
   title: string;
   description: string;
