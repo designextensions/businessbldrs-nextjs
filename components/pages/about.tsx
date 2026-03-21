@@ -123,6 +123,7 @@ export default function About() {
                 src={teamCollabImage}
                 alt="Business Builders Team Working - Collaborative Process"
                 className="w-full border-2 border-charcoal-900 shadow-offset"
+                loading="lazy"
                 width={2048}
                 height={1152}
               />
@@ -221,6 +222,7 @@ export default function About() {
                 src={stAugustineImage}
                 alt="Castillo de San Marcos - Historic St. Augustine, Florida"
                 className="w-full border-2 border-charcoal-900 shadow-offset"
+                loading="lazy"
                 width={1356}
                 height={1402}
               />
@@ -238,6 +240,7 @@ export default function About() {
                 src={chrisWebsterImage}
                 alt="Jay Owen - Founder & CEO of Business Builders"
                 className="w-full max-w-md mx-auto border-2 border-yellow-400 shadow-offset-yellow"
+                loading="lazy"
                 width={1024}
                 height={683}
               />

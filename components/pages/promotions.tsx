@@ -85,7 +85,7 @@ export default function PromotionsPage() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {promotions.map((promo) => (
+          {promotions.map((promo, index) => (
             <div
               key={promo.href}
               className="bg-white border-2 border-charcoal-900 shadow-offset flex flex-col"
@@ -97,6 +97,7 @@ export default function PromotionsPage() {
                   fill
                   className={`object-cover ${promo.imagePosition || "object-center"}`}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={index === 0}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/40 to-transparent" />
               </div>

@@ -312,6 +312,7 @@ export default function RulonInternationalCaseStudy() {
                   src="https://businessbldrs.com/wp-content/uploads/2025/01/Rulon-1.png"
                   alt="Rulon International website design"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                   width={1024}
                   height={768}
                 />
@@ -385,6 +386,7 @@ export default function RulonInternationalCaseStudy() {
                     src={image}
                     alt={`Rulon International video ${index + 1}`}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                     width={480}
                     height={270}
                   />
@@ -433,6 +435,7 @@ export default function RulonInternationalCaseStudy() {
                   src="https://businessbldrs.com/wp-content/uploads/2025/01/Rulon-2.png"
                   alt="Rulon International marketing campaign results"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                   width={1024}
                   height={768}
                 />
