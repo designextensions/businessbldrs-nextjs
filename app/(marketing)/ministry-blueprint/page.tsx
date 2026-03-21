@@ -4,13 +4,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import MinistryBlueprintPage from "@/components/pages/ministry-blueprint";
 
 export const metadata: Metadata = {
-  title: seoConfig.resources.title,
-  description: seoConfig.resources.description,
-  keywords: seoConfig.resources.keywords,
+  title: seoConfig.ministryBlueprint.title,
+  description: seoConfig.ministryBlueprint.description,
+  keywords: seoConfig.ministryBlueprint.keywords,
   openGraph: {
-    title: seoConfig.resources.title,
-    description: seoConfig.resources.description,
-    images: [getOgImageUrl(seoConfig.resources.title, seoConfig.resources.description)],
+    title: seoConfig.ministryBlueprint.title,
+    description: seoConfig.ministryBlueprint.description,
+    images: [getOgImageUrl(seoConfig.ministryBlueprint.title, seoConfig.ministryBlueprint.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/ministry-blueprint" },
 };

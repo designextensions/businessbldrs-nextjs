@@ -4,13 +4,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import MaintenancePage from "@/components/pages/maintenance";
 
 export const metadata: Metadata = {
-  title: seoConfig.websiteDesign.title,
-  description: seoConfig.websiteDesign.description,
-  keywords: seoConfig.websiteDesign.keywords,
+  title: seoConfig.maintenance.title,
+  description: seoConfig.maintenance.description,
+  keywords: seoConfig.maintenance.keywords,
   openGraph: {
-    title: seoConfig.websiteDesign.title,
-    description: seoConfig.websiteDesign.description,
-    images: [getOgImageUrl(seoConfig.websiteDesign.title, seoConfig.websiteDesign.description)],
+    title: seoConfig.maintenance.title,
+    description: seoConfig.maintenance.description,
+    images: [getOgImageUrl(seoConfig.maintenance.title, seoConfig.maintenance.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/maintenance" },
 };

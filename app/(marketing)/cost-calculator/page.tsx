@@ -4,13 +4,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import CostCalculatorPage from "@/components/pages/cost-calculator";
 
 export const metadata: Metadata = {
-  title: seoConfig.requestQuote.title,
-  description: seoConfig.requestQuote.description,
-  keywords: seoConfig.requestQuote.keywords,
+  title: seoConfig.costCalculator.title,
+  description: seoConfig.costCalculator.description,
+  keywords: seoConfig.costCalculator.keywords,
   openGraph: {
-    title: seoConfig.requestQuote.title,
-    description: seoConfig.requestQuote.description,
-    images: [getOgImageUrl(seoConfig.requestQuote.title, seoConfig.requestQuote.description)],
+    title: seoConfig.costCalculator.title,
+    description: seoConfig.costCalculator.description,
+    images: [getOgImageUrl(seoConfig.costCalculator.title, seoConfig.costCalculator.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/cost-calculator" },
 };

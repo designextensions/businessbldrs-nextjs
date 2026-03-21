@@ -4,13 +4,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import HinesPage from "@/components/pages/case-studies/hines";
 
 export const metadata: Metadata = {
-  title: seoConfig.portfolio.title,
-  description: seoConfig.portfolio.description,
-  keywords: seoConfig.portfolio.keywords,
+  title: seoConfig.caseStudyHines.title,
+  description: seoConfig.caseStudyHines.description,
+  keywords: seoConfig.caseStudyHines.keywords,
   openGraph: {
-    title: seoConfig.portfolio.title,
-    description: seoConfig.portfolio.description,
-    images: [getOgImageUrl(seoConfig.portfolio.title, seoConfig.portfolio.description)],
+    title: seoConfig.caseStudyHines.title,
+    description: seoConfig.caseStudyHines.description,
+    images: [getOgImageUrl(seoConfig.caseStudyHines.title, seoConfig.caseStudyHines.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/case-studies/hines" },
 };

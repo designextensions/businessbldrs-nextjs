@@ -4,13 +4,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import AllProDadPage from "@/components/pages/case-studies/all-pro-dad";
 
 export const metadata: Metadata = {
-  title: seoConfig.portfolio.title,
-  description: seoConfig.portfolio.description,
-  keywords: seoConfig.portfolio.keywords,
+  title: seoConfig.caseStudyAllProDad.title,
+  description: seoConfig.caseStudyAllProDad.description,
+  keywords: seoConfig.caseStudyAllProDad.keywords,
   openGraph: {
-    title: seoConfig.portfolio.title,
-    description: seoConfig.portfolio.description,
-    images: [getOgImageUrl(seoConfig.portfolio.title, seoConfig.portfolio.description)],
+    title: seoConfig.caseStudyAllProDad.title,
+    description: seoConfig.caseStudyAllProDad.description,
+    images: [getOgImageUrl(seoConfig.caseStudyAllProDad.title, seoConfig.caseStudyAllProDad.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/case-studies/all-pro-dad" },
 };

@@ -4,13 +4,13 @@ import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data"
 import AccountingPage from "@/components/pages/industries/accounting";
 
 export const metadata: Metadata = {
-  title: "Accounting Firm Marketing Agency | StoryBrand Certified",
-  description: "StoryBrand Certified accounting firm marketing agency helping CPAs, bookkeepers, and financial services firms grow beyond referrals through clear messaging, websites, and digital marketing strategies.",
+  title: "Accounting Firm Marketing",
+  description: "Accounting firm marketing agency helping CPAs and bookkeepers grow beyond referrals. StoryBrand Certified. Clear messaging, websites, and digital strategy.",
   keywords: "accounting firm marketing, CPA marketing agency, accountant marketing, bookkeeper marketing, storybrand accounting, accounting digital marketing, CPA firm growth",
   openGraph: {
-    title: "Accounting Firm Marketing Agency | StoryBrand Certified",
-    description: "StoryBrand Certified accounting firm marketing agency helping CPAs, bookkeepers, and financial services firms grow beyond referrals through clear messaging, websites, and digital marketing strategies.",
-    images: [getOgImageUrl("Accounting Firm Marketing Agency | StoryBrand Certified", "StoryBrand Certified accounting firm marketing agency helping CPAs, bookkeepers, and financial services firms grow beyond referrals through clear messaging, websites, and digital marketing strategies.")],
+    title: "Accounting Firm Marketing",
+    description: "Accounting firm marketing agency helping CPAs and bookkeepers grow beyond referrals. StoryBrand Certified. Clear messaging, websites, and digital strategy.",
+    images: [getOgImageUrl("Accounting Firm Marketing", "Accounting firm marketing agency helping CPAs and bookkeepers grow beyond referrals.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/accounting" },
 };

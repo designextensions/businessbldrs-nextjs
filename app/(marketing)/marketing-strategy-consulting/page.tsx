@@ -5,13 +5,13 @@ import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data"
 import MarketingStrategyConsultingPage from "@/components/pages/marketing-strategy-consulting";
 
 export const metadata: Metadata = {
-  title: seoConfig.services.title,
-  description: seoConfig.services.description,
-  keywords: seoConfig.services.keywords,
+  title: seoConfig.marketingStrategyConsulting.title,
+  description: seoConfig.marketingStrategyConsulting.description,
+  keywords: seoConfig.marketingStrategyConsulting.keywords,
   openGraph: {
-    title: seoConfig.services.title,
-    description: seoConfig.services.description,
-    images: [getOgImageUrl(seoConfig.services.title, seoConfig.services.description)],
+    title: seoConfig.marketingStrategyConsulting.title,
+    description: seoConfig.marketingStrategyConsulting.description,
+    images: [getOgImageUrl(seoConfig.marketingStrategyConsulting.title, seoConfig.marketingStrategyConsulting.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/marketing-strategy-consulting" },
 };

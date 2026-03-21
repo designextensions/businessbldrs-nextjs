@@ -40,6 +40,39 @@ export async function getBlogArticles() {
     .orderBy(desc(blogArticles.createdAt));
 }
 
+const blogArticleSummaryColumns = {
+  id: blogArticles.id,
+  title: blogArticles.title,
+  excerpt: blogArticles.excerpt,
+  author: blogArticles.author,
+  date: blogArticles.date,
+  readTime: blogArticles.readTime,
+  category: blogArticles.category,
+  image: blogArticles.image,
+  slug: blogArticles.slug,
+  isPublished: blogArticles.isPublished,
+  isFeatured: blogArticles.isFeatured,
+  createdAt: blogArticles.createdAt,
+  updatedAt: blogArticles.updatedAt,
+};
+
+export async function getBlogArticleSummaries() {
+  return db
+    .select(blogArticleSummaryColumns)
+    .from(blogArticles)
+    .where(eq(blogArticles.isPublished, true))
+    .orderBy(desc(blogArticles.createdAt));
+}
+
+export async function getFeaturedBlogArticleSummaries() {
+  return db
+    .select(blogArticleSummaryColumns)
+    .from(blogArticles)
+    .where(and(eq(blogArticles.isPublished, true), eq(blogArticles.isFeatured, true)))
+    .orderBy(desc(blogArticles.createdAt))
+    .limit(6);
+}
+
 export async function getAllBlogArticles() {
   return db.select().from(blogArticles).orderBy(desc(blogArticles.createdAt));
 }

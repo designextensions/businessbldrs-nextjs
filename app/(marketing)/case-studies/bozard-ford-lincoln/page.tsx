@@ -4,13 +4,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import BozardFordLincolnPage from "@/components/pages/case-studies/bozard-ford-lincoln";
 
 export const metadata: Metadata = {
-  title: seoConfig.portfolio.title,
-  description: seoConfig.portfolio.description,
-  keywords: seoConfig.portfolio.keywords,
+  title: seoConfig.caseStudyBozard.title,
+  description: seoConfig.caseStudyBozard.description,
+  keywords: seoConfig.caseStudyBozard.keywords,
   openGraph: {
-    title: seoConfig.portfolio.title,
-    description: seoConfig.portfolio.description,
-    images: [getOgImageUrl(seoConfig.portfolio.title, seoConfig.portfolio.description)],
+    title: seoConfig.caseStudyBozard.title,
+    description: seoConfig.caseStudyBozard.description,
+    images: [getOgImageUrl(seoConfig.caseStudyBozard.title, seoConfig.caseStudyBozard.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/case-studies/bozard-ford-lincoln" },
 };

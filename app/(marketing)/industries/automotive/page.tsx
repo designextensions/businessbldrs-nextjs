@@ -4,13 +4,13 @@ import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data"
 import AutomotivePage from "@/components/pages/industries/automotive";
 
 export const metadata: Metadata = {
-  title: "Automotive Marketing Agency | StoryBrand Certified",
-  description: "StoryBrand Certified automotive marketing agency helping car dealerships generate more leads and sell more vehicles. 285% more leads for Bozard Ford Lincoln. Full-service auto dealer digital marketing.",
+  title: "Automotive Marketing Agency",
+  description: "Automotive marketing agency helping car dealerships generate more leads. StoryBrand Certified. 285% more leads for Bozard Ford Lincoln. Full-service digital.",
   keywords: "automotive marketing agency, car dealership marketing, auto dealer digital marketing, automotive SEO, storybrand automotive, vehicle sales marketing",
   openGraph: {
-    title: "Automotive Marketing Agency | StoryBrand Certified",
-    description: "StoryBrand Certified automotive marketing agency helping car dealerships generate more leads and sell more vehicles. 285% more leads for Bozard Ford Lincoln.",
-    images: [getOgImageUrl("Automotive Marketing Agency | StoryBrand Certified", "StoryBrand Certified automotive marketing agency helping car dealerships generate more leads and sell more vehicles. 285% more leads for Bozard Ford Lincoln. Full-service auto dealer digital marketing.")],
+    title: "Automotive Marketing Agency",
+    description: "Automotive marketing agency helping car dealerships generate more leads. StoryBrand Certified. 285% more leads for Bozard Ford Lincoln. Full-service digital.",
+    images: [getOgImageUrl("Automotive Marketing Agency", "StoryBrand Certified automotive marketing agency helping car dealerships generate more leads.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/automotive" },
 };

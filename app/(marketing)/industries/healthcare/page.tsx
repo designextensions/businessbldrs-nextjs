@@ -4,13 +4,13 @@ import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data"
 import HealthcarePage from "@/components/pages/industries/healthcare";
 
 export const metadata: Metadata = {
-  title: "Healthcare Marketing Agency | StoryBrand Certified",
-  description: "StoryBrand Certified healthcare marketing agency helping medical practices, doctors, and health organizations grow their patient base through clear messaging, websites, and HIPAA-aware digital marketing.",
+  title: "Healthcare Marketing Agency",
+  description: "Healthcare marketing agency helping medical practices and health organizations grow their patient base. StoryBrand Certified. HIPAA-aware digital marketing.",
   keywords: "healthcare marketing agency, medical practice marketing, doctor marketing, hospital marketing, storybrand healthcare, healthcare digital marketing, patient acquisition",
   openGraph: {
-    title: "Healthcare Marketing Agency | StoryBrand Certified",
-    description: "StoryBrand Certified healthcare marketing agency helping medical practices, doctors, and health organizations grow their patient base through clear messaging, websites, and HIPAA-aware digital marketing.",
-    images: [getOgImageUrl("Healthcare Marketing Agency | StoryBrand Certified", "StoryBrand Certified healthcare marketing agency helping medical practices, doctors, and health organizations grow their patient base through clear messaging, websites, and HIPAA-aware digital marketing.")],
+    title: "Healthcare Marketing Agency",
+    description: "Healthcare marketing agency helping medical practices and health organizations grow their patient base. StoryBrand Certified. HIPAA-aware digital marketing.",
+    images: [getOgImageUrl("Healthcare Marketing Agency", "Healthcare marketing agency helping medical practices grow their patient base.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/healthcare" },
 };

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import getQueryClient from "@/lib/getQueryClient";
-import { getBlogArticles } from "@/lib/storage";
+import { getBlogArticleSummaries } from "@/lib/storage";
 import { seoConfig } from "@/lib/seo-config";
 import { getOgImageUrl } from "@/lib/og-utils";
 import ArticlesPage from "@/components/pages/articles";
@@ -22,7 +22,7 @@ export default async function Page() {
   const queryClient = getQueryClient();
   await queryClient.prefetchQuery({
     queryKey: ["/api/articles"],
-    queryFn: getBlogArticles,
+    queryFn: getBlogArticleSummaries,
   });
 
   return (

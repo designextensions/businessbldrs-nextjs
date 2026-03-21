@@ -4,13 +4,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import RulonInternationalPage from "@/components/pages/case-studies/rulon-international";
 
 export const metadata: Metadata = {
-  title: seoConfig.portfolio.title,
-  description: seoConfig.portfolio.description,
-  keywords: seoConfig.portfolio.keywords,
+  title: seoConfig.caseStudyRulon.title,
+  description: seoConfig.caseStudyRulon.description,
+  keywords: seoConfig.caseStudyRulon.keywords,
   openGraph: {
-    title: seoConfig.portfolio.title,
-    description: seoConfig.portfolio.description,
-    images: [getOgImageUrl(seoConfig.portfolio.title, seoConfig.portfolio.description)],
+    title: seoConfig.caseStudyRulon.title,
+    description: seoConfig.caseStudyRulon.description,
+    images: [getOgImageUrl(seoConfig.caseStudyRulon.title, seoConfig.caseStudyRulon.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/case-studies/rulon-international" },
 };

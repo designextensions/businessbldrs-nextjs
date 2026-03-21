@@ -4,13 +4,13 @@ import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data"
 import ConstructionPage from "@/components/pages/industries/construction";
 
 export const metadata: Metadata = {
-  title: "Construction Marketing Agency | StoryBrand Certified",
-  description: "StoryBrand Certified construction marketing agency helping contractors and builders generate consistent leads. 320% ROI for Hines. Full-service contractor marketing including websites, SEO, and video.",
+  title: "Construction Marketing Agency",
+  description: "Construction marketing agency helping contractors and builders generate consistent leads. StoryBrand Certified. 320% ROI for Hines. Websites, SEO, video.",
   keywords: "construction marketing agency, contractor marketing, construction company marketing, builder marketing, storybrand construction, construction digital marketing",
   openGraph: {
-    title: "Construction Marketing Agency | StoryBrand Certified",
-    description: "StoryBrand Certified construction marketing agency helping contractors and builders generate consistent leads. 320% ROI for Hines.",
-    images: [getOgImageUrl("Construction Marketing Agency | StoryBrand Certified", "StoryBrand Certified construction marketing agency helping contractors and builders generate consistent leads. 320% ROI for Hines. Full-service contractor marketing including websites, SEO, and video.")],
+    title: "Construction Marketing Agency",
+    description: "Construction marketing agency helping contractors and builders generate consistent leads. StoryBrand Certified. 320% ROI for Hines. Websites, SEO, video.",
+    images: [getOgImageUrl("Construction Marketing Agency", "StoryBrand Certified construction marketing agency helping contractors generate consistent leads.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/construction" },
 };

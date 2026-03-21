@@ -4,13 +4,13 @@ import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data"
 import ManufacturingPage from "@/components/pages/industries/manufacturing";
 
 export const metadata: Metadata = {
-  title: "Manufacturing Marketing Agency | StoryBrand Certified",
-  description: "StoryBrand Certified manufacturing marketing agency helping industrial companies generate qualified leads. 450% more leads for Rulon International. Full-service B2B manufacturing marketing including websites, SEO, and video.",
+  title: "Manufacturing Marketing Agency",
+  description: "Manufacturing marketing agency helping industrial companies generate qualified leads. StoryBrand Certified. 450% more leads for Rulon International.",
   keywords: "manufacturing marketing agency, industrial marketing, B2B manufacturing marketing, factory marketing, storybrand manufacturing, industrial digital marketing",
   openGraph: {
-    title: "Manufacturing Marketing Agency | StoryBrand Certified",
-    description: "StoryBrand Certified manufacturing marketing agency helping industrial companies generate qualified leads. 450% more leads for Rulon International.",
-    images: [getOgImageUrl("Manufacturing Marketing Agency | StoryBrand Certified", "StoryBrand Certified manufacturing marketing agency helping industrial companies generate qualified leads. 450% more leads for Rulon International. Full-service B2B manufacturing marketing including websites, SEO, and video.")],
+    title: "Manufacturing Marketing Agency",
+    description: "Manufacturing marketing agency helping industrial companies generate qualified leads. StoryBrand Certified. 450% more leads for Rulon International.",
+    images: [getOgImageUrl("Manufacturing Marketing Agency", "Manufacturing marketing agency helping industrial companies generate qualified leads.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/manufacturing" },
 };

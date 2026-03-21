@@ -4,13 +4,13 @@ import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data"
 import DentalPage from "@/components/pages/industries/dental";
 
 export const metadata: Metadata = {
-  title: "Dental Marketing Agency | StoryBrand Certified",
-  description: "StoryBrand Certified dental marketing agency with 26+ years of experience. We help dental practices attract new patients through strategic messaging, websites, SEO, and video production.",
+  title: "Dental Marketing Agency",
+  description: "Dental marketing agency with 26+ years of experience. We help dental practices attract new patients through strategic messaging, websites, SEO, and video.",
   keywords: "dental marketing agency, dentist marketing, dental practice marketing, dental SEO, storybrand dental, dental digital marketing, new patient marketing dentist",
   openGraph: {
-    title: "Dental Marketing Agency | StoryBrand Certified",
-    description: "StoryBrand Certified dental marketing agency with 26+ years of experience. We help dental practices attract new patients through strategic messaging, websites, SEO, and video production.",
-    images: [getOgImageUrl("Dental Marketing Agency | StoryBrand Certified", "StoryBrand Certified dental marketing agency with 26+ years of experience. We help dental practices attract new patients through strategic messaging, websites, SEO, and video production.")],
+    title: "Dental Marketing Agency",
+    description: "Dental marketing agency with 26+ years of experience. We help dental practices attract new patients through strategic messaging, websites, SEO, and video.",
+    images: [getOgImageUrl("Dental Marketing Agency", "Dental marketing agency helping dental practices attract new patients.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/dental" },
 };

@@ -4,13 +4,13 @@ import { generateFAQSchema, generateServiceSchema } from "@/lib/structured-data"
 import EducationPage from "@/components/pages/industries/education";
 
 export const metadata: Metadata = {
-  title: "Education Marketing Agency | StoryBrand Certified",
-  description: "StoryBrand Certified education marketing agency helping schools, universities, and educational institutions increase enrollment through clear messaging, websites, and digital marketing strategies.",
+  title: "Education Marketing Agency",
+  description: "Education marketing agency helping schools and universities increase enrollment. StoryBrand Certified. Clear messaging, websites, and digital strategy.",
   keywords: "education marketing agency, school marketing, university marketing, private school marketing, storybrand education, education digital marketing, enrollment marketing",
   openGraph: {
-    title: "Education Marketing Agency | StoryBrand Certified",
-    description: "StoryBrand Certified education marketing agency helping schools, universities, and educational institutions increase enrollment through clear messaging, websites, and digital marketing strategies.",
-    images: [getOgImageUrl("Education Marketing Agency | StoryBrand Certified", "StoryBrand Certified education marketing agency helping schools, universities, and educational institutions increase enrollment through clear messaging, websites, and digital marketing strategies.")],
+    title: "Education Marketing Agency",
+    description: "Education marketing agency helping schools and universities increase enrollment. StoryBrand Certified. Clear messaging, websites, and digital strategy.",
+    images: [getOgImageUrl("Education Marketing Agency", "Education marketing agency helping schools and universities increase enrollment.")],
   },
   alternates: { canonical: "https://businessbldrs.com/industries/education" },
 };

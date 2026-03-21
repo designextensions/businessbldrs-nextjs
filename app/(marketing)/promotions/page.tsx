@@ -3,12 +3,12 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import PromotionsPage from "@/components/pages/promotions";
 
 export const metadata: Metadata = {
-  title: "Promotions — Grants & Giveaways",
+  title: "Promotions & Giveaways",
   description:
-    "Explore active promotions, grants, and giveaways from Business Builders. Apply for our $50,000 nonprofit marketing grant, $25,000 small business grant, or win free tickets to the Future Focused Leaders Summit.",
+    "Explore active promotions, grants, and giveaways from Business Builders. Apply for our $50,000 nonprofit grant or $25,000 small business grant.",
   openGraph: {
-    images: [getOgImageUrl("Promotions — Grants & Giveaways", "Explore active promotions, grants, and giveaways from Business Builders. Apply for our $50,000 nonprofit marketing grant, $25,000 small business grant, or win free tickets to the Future Focused Leaders Summit.")],
-    title: "Promotions — Grants & Giveaways | Business Builders",
+    images: [getOgImageUrl("Promotions & Giveaways", "Explore active promotions, grants, and giveaways from Business Builders.")],
+    title: "Promotions & Giveaways",
     description:
       "Explore active promotions, grants, and giveaways from Business Builders.",
   },

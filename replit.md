@@ -175,7 +175,11 @@ squirrel report --regression-since businessbldrs.com --format llm
 
 **Latest audit results (March 2026):** Score 45/100 (Grade F). Full findings in `SEO-AUDIT-FINDINGS.md`. Raw data in `seo-audit-*-report.txt` files.
 
-**Key issues:** Oversized HTML (>2MB), duplicate metadata (24 pages), missing E-E-A-T signals, 35 orphan pages, keyword stuffing, invalid JSON-LD, CLS/image issues.
+**Key issues (partially fixed by Task #5):**
+- ~~Oversized HTML (>2MB)~~ — Fixed: `getBlogArticleSummaries()` and `getFeaturedBlogArticleSummaries()` exclude `content` field from blog queries on `/resources` and `/resources/articles` pages
+- ~~Duplicate metadata (24 pages)~~ — Fixed: All pages now use unique titles/descriptions. 12+ new `seoConfig` entries centralized in `lib/seo-config.ts`. Removed hardcoded " | Business Builders" suffix from all page titles (layout template handles it)
+- ~~Title/description length violations~~ — Fixed: All titles ≤40 chars (≤60 with suffix), all descriptions 120-160 chars
+- Missing E-E-A-T signals, 35 orphan pages, keyword stuffing, invalid JSON-LD, CLS/image issues (pending Tasks #6, #7)
 
 ## Deployment
 
