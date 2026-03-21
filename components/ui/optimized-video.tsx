@@ -10,6 +10,7 @@ interface OptimizedVideoProps {
   loop?: boolean;
   controls?: boolean;
   preload?: 'none' | 'metadata' | 'auto';
+  decorative?: boolean;
 }
 
 export function OptimizedVideo({
@@ -21,6 +22,7 @@ export function OptimizedVideo({
   loop = false,
   controls = true,
   preload = 'none',
+  decorative = true,
   ...props
 }: OptimizedVideoProps) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -38,7 +40,7 @@ export function OptimizedVideo({
           autoPlay={autoPlay}
           muted={muted}
           loop={loop}
-          aria-hidden="true"
+          aria-hidden={decorative ? "true" : undefined}
           controls={controls}
           preload={preload}
           className="w-full h-full"

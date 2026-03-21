@@ -8,6 +8,7 @@ interface LazyVideoProps {
   muted?: boolean;
   loop?: boolean;
   playsInline?: boolean;
+  decorative?: boolean;
   onLoadStart?: () => void;
   onCanPlay?: () => void;
   children?: React.ReactNode;
@@ -21,6 +22,7 @@ export default function LazyVideo({
   muted = true,
   loop = true,
   playsInline = true,
+  decorative = true,
   onLoadStart,
   onCanPlay,
   children
@@ -102,7 +104,7 @@ export default function LazyVideo({
             autoPlay={autoPlay}
             muted={muted}
             loop={loop}
-            aria-hidden="true"
+            aria-hidden={decorative ? "true" : undefined}
             playsInline={playsInline}
             poster={poster}
             preload="metadata" // Only load metadata initially
