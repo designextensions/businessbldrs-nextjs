@@ -152,6 +152,31 @@ Aggregation page at `/promotions` listing active grants and giveaways:
 - The `<Toaster>` component in `components/providers.tsx` is rendered client-only (via `mounted` state guard) to prevent SSR hydration mismatches from Radix UI portal elements.
 - Dynamic route pages (`resources/articles/[slug]`, `team/[slug]`) use `dynamicParams = true` to avoid NoFallbackError for slugs not in `generateStaticParams`.
 
+## SEO Audit (SquirrelScan)
+
+SquirrelScan CLI (v0.0.38) is installed for repeatable SEO audits.
+
+**Configuration:** `squirrel.toml` (project root) — configured for `businessbldrs.com` domain with full coverage mode.
+
+**Reproduce audits:**
+```bash
+# Quick health check (25 pages, ~30s)
+squirrel audit https://businessbldrs.com -C quick --format llm -o seo-audit-quick-report.txt
+
+# Surface audit (50 pages, ~60s)
+squirrel audit https://businessbldrs.com -C surface -m 50 --format llm -o seo-audit-surface-report.txt
+
+# Deep audit (75 pages, ~90s — max before Cloudflare rate limiting)
+squirrel audit https://businessbldrs.com -C surface -m 75 --format llm -o seo-audit-full-report.txt
+
+# Compare against previous audit (regression detection)
+squirrel report --regression-since businessbldrs.com --format llm
+```
+
+**Latest audit results (March 2026):** Score 45/100 (Grade F). Full findings in `SEO-AUDIT-FINDINGS.md`. Raw data in `seo-audit-*-report.txt` files.
+
+**Key issues:** Oversized HTML (>2MB), duplicate metadata (24 pages), missing E-E-A-T signals, 35 orphan pages, keyword stuffing, invalid JSON-LD, CLS/image issues.
+
 ## Deployment
 
 - Target: Autoscale
