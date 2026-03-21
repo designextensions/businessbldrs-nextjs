@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Users, Target, FileText, Mail, BarChart3, Zap } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function StoryBrandMessaging() {
@@ -102,7 +100,6 @@ export default function StoryBrandMessaging() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 band-white">
@@ -390,7 +387,6 @@ export default function StoryBrandMessaging() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

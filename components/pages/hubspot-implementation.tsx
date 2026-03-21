@@ -4,8 +4,6 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Settings, Users, Zap, BarChart3, Globe, GraduationCap, CheckCircle, Clock, Heart, Award, Target, Lightbulb } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 const hubspotDashboardPhoto = "/assets/stock_images/hubspot_crm_software_3d3386af.jpg";
 const hubspotAnalyticsPhoto = "/assets/stock_images/hubspot_crm_software_8e448282.jpg";
@@ -77,7 +75,6 @@ export default function HubSpotImplementation() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="band-white relative pt-32 pb-20 overflow-hidden">
@@ -398,7 +395,6 @@ export default function HubSpotImplementation() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

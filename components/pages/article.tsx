@@ -4,8 +4,6 @@ import Link from "next/link";
 
 import { ArrowLeft, Calendar, User, Clock, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import ArticleSEO from "@/components/ui/ArticleSEO";
 import { Author, TLDR, FAQ, ExpertQuote, defaultAuthor } from "@/components/ui/geo-components";
 import type { BlogArticle } from "@/lib/db/schema";
@@ -41,7 +39,6 @@ export default function Article({ article }: ArticleProps) {
   return (
     <div className="min-h-screen">
       {article && <ArticleSEO article={article} />}
-      <Navigation />
       
       {/* Article Header - Light Band */}
       <section className="band-white pt-32 pb-12">
@@ -248,7 +245,6 @@ export default function Article({ article }: ArticleProps) {
         </div>
       </section>
       
-      <MegaFooter />
     </div>
   );
 }

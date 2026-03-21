@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Users, MessageSquare, Target, Shield, TrendingUp, AlertTriangle } from "lucide-react";
 
@@ -46,7 +44,6 @@ const frameworkSteps = [
 export default function WhatIsStorybrandPage() {
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       {/* Hero */}
       <section className="pt-32 pb-16 band-dark">
@@ -166,7 +163,6 @@ export default function WhatIsStorybrandPage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

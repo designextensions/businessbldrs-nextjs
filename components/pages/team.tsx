@@ -6,8 +6,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Award, Clock, Heart } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
 import type { TeamMember } from "@/lib/db/schema";
@@ -79,7 +77,6 @@ export default function Team() {
           }
         }}
       />
-      <Navigation />
       
       {/* Hero Section - Light theme matching site-wide style */}
       <section className="relative pt-32 pb-24 overflow-hidden band-white">
@@ -260,7 +257,6 @@ export default function Team() {
         </div>
       </section>
       
-      <MegaFooter />
     </div>
   );
 }

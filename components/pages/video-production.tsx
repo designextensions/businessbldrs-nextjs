@@ -4,8 +4,6 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Users, TrendingUp, Shield, Eye, Globe, Check, Video, Camera, Mic, Lightbulb } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 const videoProductionPhoto = "/assets/stock_images/professional_video_p_a35e2814.jpg";
 
@@ -123,7 +121,6 @@ export default function VideoProduction() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="band-white pt-32 pb-20 overflow-hidden">
@@ -430,7 +427,6 @@ export default function VideoProduction() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

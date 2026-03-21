@@ -1,8 +1,6 @@
 "use client";
 import SEOHead from "@/components/ui/seo-head";
 
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 
 export default function PrivacyPolicy() {
   return (
@@ -13,7 +11,6 @@ export default function PrivacyPolicy() {
         keywords="privacy policy, data protection, GDPR, Business Builders"
         canonicalUrl="https://businessbldrs.com/privacy-policy"
       />
-      <Navigation />
       
       {/* Hero Section */}
       <section className="band-white pt-32 pb-16">
@@ -232,7 +229,6 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

@@ -2,8 +2,6 @@
 import Link from "next/link";
 import SEOHead from "@/components/ui/seo-head";
 
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { Button } from "@/components/ui/button";
 import { Check, Phone, Calendar, Target, Users, MessageCircle } from "lucide-react";
 
@@ -16,7 +14,6 @@ export default function MinistryBlueprint() {
         keywords="ministry marketing, church growth, ministry communication, church outreach, ministry blueprint, church marketing"
         canonicalUrl="https://businessbldrs.com/ministry-blueprint"
       />
-      <Navigation />
       
       <div className="pt-24">
         <section className="band-stone py-20">
@@ -391,7 +388,6 @@ export default function MinistryBlueprint() {
         </section>
       </div>
       
-      <MegaFooter />
     </div>
   );
 }

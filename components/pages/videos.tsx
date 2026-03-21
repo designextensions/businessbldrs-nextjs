@@ -7,8 +7,6 @@ import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Play, Video, Search, Clock, Tag, ArrowRight } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import VideoModal from "@/components/ui/video-modal";
 import type { MarketingVideo } from "@/lib/db/schema";
 
@@ -58,7 +56,6 @@ export default function Videos() {
         keywords="marketing videos, strategy training, business growth videos, digital marketing tutorials, marketing education, business training"
         canonicalUrl="https://businessbldrs.com/videos"
       />
-      <Navigation />
       
       <section className="pt-32 pb-16 band-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -294,7 +291,6 @@ export default function Videos() {
         </div>
       </section>
 
-      <MegaFooter />
       
       {selectedVideo && (
         <VideoModal

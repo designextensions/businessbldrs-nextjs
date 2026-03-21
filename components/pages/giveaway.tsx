@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import HubSpotNativeForm from "@/components/ui/hubspot-native-form";
 import Image from "next/image";
 import {
@@ -67,7 +65,6 @@ export default function GiveawayPage() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       {/* ═══════════════ HERO — SPLIT LAYOUT WITH VENUE PHOTO ═══════════════ */}
       <section className="band-dark pt-28 md:pt-32 pb-16 md:pb-20 overflow-hidden">
@@ -419,7 +416,6 @@ export default function GiveawayPage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

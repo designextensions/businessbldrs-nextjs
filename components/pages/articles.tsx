@@ -6,8 +6,6 @@ import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { Search, Calendar, User, ArrowRight, Clock, ChevronDown, Grid, List, BookOpen, TrendingUp } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import type { BlogArticle } from "@/lib/db/schema";
@@ -127,7 +125,6 @@ export default function Articles() {
         canonicalUrl={`${BASE_URL}/resources/articles`}
         structuredData={articlesStructuredData}
       />
-      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-12 band-dark">
@@ -433,7 +430,6 @@ export default function Articles() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

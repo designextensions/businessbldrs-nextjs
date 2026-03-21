@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, MousePointer, Share2, Users, Mail, TrendingUp, Award, Target, Lightbulb, Zap } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function MarketingServices() {
@@ -114,7 +112,6 @@ export default function MarketingServices() {
 
   return (
     <div className="min-h-screen bg-white text-foreground">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="band-white relative pt-32 pb-20 overflow-hidden">
@@ -424,7 +421,6 @@ export default function MarketingServices() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

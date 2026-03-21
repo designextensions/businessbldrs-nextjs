@@ -4,8 +4,6 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, CheckCircle, Target, Globe, Megaphone, Shield, AlertTriangle, ThumbsUp, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import SEOHead from "@/components/ui/seo-head";
 import { trackEvent } from "@/components/ui/google-analytics";
 
@@ -335,7 +333,6 @@ export default function MarketingAudit() {
           pageType="website"
         />
 
-        <Navigation />
 
         <section className="band-dark relative pt-32 pb-16 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(250,204,21,0.08),transparent_60%)]" />
@@ -466,7 +463,6 @@ export default function MarketingAudit() {
           </div>
         </section>
 
-        <MegaFooter />
       </div>
     );
   }
@@ -482,7 +478,6 @@ export default function MarketingAudit() {
         pageType="website"
       />
 
-      <Navigation />
 
       <div className="w-full bg-stone-200 h-1 fixed top-0 z-[60]">
         <div
@@ -682,7 +677,6 @@ export default function MarketingAudit() {
         </section>
       )}
 
-      <MegaFooter />
     </div>
   );
 }

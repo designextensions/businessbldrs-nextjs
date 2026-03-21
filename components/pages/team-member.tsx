@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -37,7 +35,6 @@ function TeamMemberBio() {
   if (error || !teamMember) {
     return (
       <div className="min-h-screen band-dark">
-        <Navigation />
         <div className="pt-32 flex items-center justify-center min-h-[calc(100vh-8rem)]">
           <div className="text-center">
             <h1 className="headline-md text-white mb-4">Team Member Not Found</h1>
@@ -50,7 +47,6 @@ function TeamMemberBio() {
             </Link>
           </div>
         </div>
-        <MegaFooter />
       </div>
     );
   }
@@ -59,7 +55,6 @@ function TeamMemberBio() {
     <div className="min-h-screen bg-white">
       <TeamMemberSEO member={teamMember} />
       
-      <Navigation />
 
       {/* Header Section - Light Band */}
       <section className="pt-32 pb-16 band-white relative overflow-hidden">
@@ -311,7 +306,6 @@ function TeamMemberBio() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

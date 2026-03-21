@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Palette, Globe, Video, Smartphone, Bot, Target, Layers, Award } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { LazyImage } from "@/components/ui/lazy-image";
 
@@ -110,7 +108,6 @@ export default function ServicesProducePage() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       <section className="band-dark pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -285,7 +282,6 @@ export default function ServicesProducePage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Megaphone, TrendingUp, Search, BarChart3, Settings, Target, Share2, DollarSign } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { LazyImage } from "@/components/ui/lazy-image";
 
@@ -97,7 +95,6 @@ export default function ServicesPromotePage() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       <section className="band-dark pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -273,7 +270,6 @@ export default function ServicesPromotePage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

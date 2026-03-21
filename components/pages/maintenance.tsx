@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import SEOHead from "@/components/ui/seo-head";
 
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, Shield, Clock, Zap, ArrowRight, Users, FileText, BarChart3, Star, Mail } from "lucide-react";
@@ -113,7 +111,6 @@ export default function Maintenance() {
         canonicalUrl="/maintenance"
       />
       
-      <Navigation />
       
       {/* Hero Section */}
       <section className="band-white pt-32 pb-20 overflow-hidden">
@@ -462,7 +459,6 @@ export default function Maintenance() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

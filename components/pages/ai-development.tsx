@@ -3,8 +3,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Bot, Brain, Workflow, Search, Code, Server, Zap, ArrowRight, CheckCircle, Target, TrendingUp, Users, Database, Mail, BarChart3, MessageSquare, FileText, Settings, Cpu, Cog } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function AIDevelopment() {
@@ -113,7 +111,6 @@ export default function AIDevelopment() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       <section className="pt-32 pb-16 band-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -411,7 +408,6 @@ export default function AIDevelopment() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

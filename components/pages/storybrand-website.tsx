@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, X, Monitor } from "lucide-react";
 
@@ -53,7 +51,6 @@ const antiPatterns = [
 export default function StorybrandWebsitePage() {
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       {/* Hero */}
       <section className="pt-32 pb-16 band-dark">
@@ -176,7 +173,6 @@ export default function StorybrandWebsitePage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

@@ -5,8 +5,6 @@ import SEOHead from "@/components/ui/seo-head";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Play, Quote, Star, ArrowRight, MessageSquare, Users, Award, TrendingUp } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 
 const videoTestimonials = [
   {
@@ -156,7 +154,6 @@ export default function Testimonials() {
           "@graph": [videoTestimonialsSchema, breadcrumbSchema]
         }}
       />
-      <Navigation />
 
       {/* Hero Section - Dark theme with featured video */}
       <section className="pt-32 pb-16 band-dark">
@@ -491,7 +488,6 @@ export default function Testimonials() {
         </div>
       )}
 
-      <MegaFooter />
     </div>
   );
 }

@@ -4,8 +4,6 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Palette, Camera, Video, MessageSquare, Target, Lightbulb, Zap } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 const logoDesignPhoto = "/assets/stock_images/logo_design_branding_c955f376.jpg";
 import { seoConfig } from "@/lib/seo-config";
@@ -91,7 +89,6 @@ export default function BrandingLogos() {
 
   return (
     <div className="min-h-screen bg-white text-foreground">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden band-white">
@@ -350,7 +347,6 @@ export default function BrandingLogos() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

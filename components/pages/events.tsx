@@ -2,8 +2,6 @@
 import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { Calendar, MapPin, ExternalLink } from "lucide-react";
 
 const futureEvents = [
@@ -42,7 +40,6 @@ export default function Events() {
         keywords="business events, marketing workshops, leadership summits, virtual events, in-person conferences"
         canonicalUrl="https://businessbldrs.com/events"
       />
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden band-white">
@@ -181,7 +178,6 @@ export default function Events() {
         </div>
       </section>
       
-      <MegaFooter />
     </div>
   );
 }

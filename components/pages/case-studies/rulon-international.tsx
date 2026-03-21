@@ -4,8 +4,6 @@ import SEOHead from "@/components/ui/seo-head";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Play, ExternalLink, CheckCircle } from "lucide-react";
 import Link from "next/link";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import AnimatedSection from "@/components/ui/animated-section";
 import CaseStudySchema from "@/components/ui/case-study-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
@@ -57,7 +55,6 @@ export default function RulonInternationalCaseStudy() {
         slug="rulon-international"
         datePublished="2025-01-01"
       />
-      <Navigation />
 
       {/* Breadcrumbs */}
       <div className="pt-32 pb-8 band-white">
@@ -466,7 +463,6 @@ export default function RulonInternationalCaseStudy() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

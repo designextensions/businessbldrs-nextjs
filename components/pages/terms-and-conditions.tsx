@@ -1,8 +1,6 @@
 "use client";
 import SEOHead from "@/components/ui/seo-head";
 
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 
 export default function TermsAndConditions() {
   return (
@@ -13,7 +11,6 @@ export default function TermsAndConditions() {
         keywords="terms and conditions, client agreement, Business Builders"
         canonicalUrl="https://businessbldrs.com/terms-and-conditions"
       />
-      <Navigation />
       
       {/* Hero Section */}
       <section className="band-white pt-32 pb-16">
@@ -204,7 +201,6 @@ export default function TermsAndConditions() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

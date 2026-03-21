@@ -3,8 +3,6 @@ import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Target, TrendingUp, Users, Building, Calendar, CheckCircle } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import CaseStudySchema from "@/components/ui/case-study-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import Link from "next/link";
@@ -60,7 +58,6 @@ export default function BreakwaterConstructionCaseStudy() {
         slug="breakwater-construction"
         datePublished="2025-01-01"
       />
-      <Navigation />
 
       {/* Breadcrumbs */}
       <div className="pt-32 pb-8 band-white">
@@ -315,7 +312,6 @@ export default function BreakwaterConstructionCaseStudy() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

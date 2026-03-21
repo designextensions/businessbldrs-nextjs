@@ -5,8 +5,6 @@ import Link from "next/link";
 import { ArrowRight, Heart, Palette, MessageSquare, Globe, Server, Wrench, Mail, Share2, CheckCircle, Gift, Users, Building, Clock, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 interface FormData {
@@ -206,7 +204,6 @@ export default function GrantPage() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       <section className="band-dark relative pt-32 pb-20 overflow-hidden min-h-[80vh] flex items-center">
         <video
@@ -710,7 +707,6 @@ export default function GrantPage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

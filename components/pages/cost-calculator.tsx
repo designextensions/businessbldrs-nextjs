@@ -8,8 +8,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { 
   Calculator, 
   TrendingDown, 
@@ -125,7 +123,6 @@ export default function CostCalculator() {
         keywords="marketing ROI calculator, cost of not marketing, marketing investment calculator, business growth calculator"
         canonicalUrl="https://businessbldrs.com/cost-calculator"
       />
-      <Navigation />
       
       <div className="pt-24 pb-20">
         <div className="container mx-auto px-6">
@@ -476,7 +473,6 @@ export default function CostCalculator() {
         </div>
       </div>
       
-      <MegaFooter />
     </div>
   );
 }

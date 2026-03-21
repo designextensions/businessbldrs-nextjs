@@ -3,8 +3,6 @@ import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Target, TrendingUp, Users, Eye, MousePointer, Mail, UserPlus, BarChart, Monitor } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import CaseStudySchema from "@/components/ui/case-study-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import Link from "next/link";
@@ -59,7 +57,6 @@ export default function AllProDadCaseStudy() {
         slug="all-pro-dad"
         datePublished="2025-01-01"
       />
-      <Navigation />
 
       {/* Breadcrumbs */}
       <div className="pt-32 pb-8 band-white">
@@ -393,7 +390,6 @@ export default function AllProDadCaseStudy() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

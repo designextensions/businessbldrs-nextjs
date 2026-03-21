@@ -3,8 +3,6 @@ import Link from "next/link";
 
 import { ArrowRight, CheckCircle, Search, TrendingUp, Target, BarChart3, Users, Zap, Globe, Star, Phone, Mail, Award, Clock, MousePointer, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function SEOServices() {
@@ -81,7 +79,6 @@ export default function SEOServices() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 band-white">
@@ -530,7 +527,6 @@ export default function SEOServices() {
         </div>
       </section>
       
-      <MegaFooter />
     </div>
   );
 }

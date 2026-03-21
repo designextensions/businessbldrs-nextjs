@@ -2,9 +2,7 @@
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import { useQueryClient } from "@tanstack/react-query";
-import Navigation from "@/components/ui/navigation";
 import HeroSection from "@/components/ui/hero-section";
-import MegaFooter from "@/components/ui/mega-footer";
 import CriticalCSS from "@/components/ui/critical-css";
 import ThirdPartyOptimizer from "@/components/ui/third-party-optimizer";
 import SitemapMeta from "@/components/ui/sitemap-generator";
@@ -48,7 +46,6 @@ export default function Home() {
 
       <ThirdPartyOptimizer delayMs={2000} />
       <SitemapMeta />
-      <Navigation />
       <div className="min-h-screen overflow-x-hidden">
         <header>
           <HeroSection />
@@ -67,7 +64,6 @@ export default function Home() {
         <MarketingMasterclassSection />
         <FAQSection />
         
-        <MegaFooter />
       </div>
     </>
   );

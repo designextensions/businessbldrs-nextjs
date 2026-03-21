@@ -3,8 +3,6 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Search, MessageSquare, Palette, Video, Smartphone, Settings, MapPin, Phone, Star, CheckCircle, Clock, Users, Building } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
 
@@ -69,7 +67,6 @@ export default function Jacksonville() {
 
   return (
     <div className="min-h-screen bg-stone-50 text-charcoal-900">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[100vh] flex items-center band-dark">
@@ -363,7 +360,6 @@ export default function Jacksonville() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

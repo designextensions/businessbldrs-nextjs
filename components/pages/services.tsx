@@ -5,8 +5,6 @@ import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Hammer, Wrench, Cog, Monitor, Video, Megaphone, Smartphone } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import MarketingMasterclassSection from "@/components/ui/marketing-masterclass-section";
 import { ApprovedStamp, GrowthChartStamp } from "@/components/ui/vintage-stamps";
@@ -168,7 +166,6 @@ export default function ServicesPage() {
         canonicalUrl={`${BASE_URL}/services`}
         structuredData={servicesStructuredData}
       />
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 band-white overflow-hidden">
@@ -309,7 +306,6 @@ export default function ServicesPage() {
         </div>
       </section>
       
-      <MegaFooter />
     </div>
   );
 }

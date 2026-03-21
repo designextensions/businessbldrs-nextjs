@@ -4,8 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Gift, Heart, Users, Ticket, Clock, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 const promotions = [
@@ -69,7 +67,6 @@ const promotions = [
 export default function PromotionsPage() {
   return (
     <div className="min-h-screen bg-stone-100">
-      <Navigation />
 
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <Breadcrumbs items={[{ label: "Resources", href: "/resources" }, { label: "Promotions" }]} />
@@ -157,7 +154,6 @@ export default function PromotionsPage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

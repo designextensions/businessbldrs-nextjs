@@ -8,8 +8,6 @@ const teamMeetingImg = "/attached_assets/Screenshot_2026-02-16_at_10.23.58_AM_17
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, CheckCircle, Star, Users, Target, TrendingUp, Award, MessageSquare, FileText, BarChart3, Shield, Zap, BookOpen, Quote, ChevronRight, Heart } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function StoryBrandAgency() {
@@ -178,7 +176,6 @@ export default function StoryBrandAgency() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       {/* Hero Section - Dark */}
       <section className="pt-32 pb-16 band-dark">
@@ -789,7 +786,6 @@ export default function StoryBrandAgency() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

@@ -3,8 +3,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronDown, ChevronUp, Clock, Shield, CreditCard, Users, AlertTriangle, Play, Loader2 } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -137,7 +135,6 @@ export default function MACCSupport() {
 
   return (
     <div className="min-h-screen bg-white text-foreground">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="band-white pt-32 pb-20 overflow-hidden">
@@ -444,7 +441,6 @@ export default function MACCSupport() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
@@ -55,7 +53,6 @@ const useCases = [
 export default function StorybrandBrandscriptPage() {
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       {/* Hero */}
       <section className="pt-32 pb-16 band-dark">
@@ -167,7 +164,6 @@ export default function StorybrandBrandscriptPage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

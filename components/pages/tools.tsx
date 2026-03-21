@@ -1,7 +1,5 @@
 "use client";
 
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -73,7 +71,6 @@ export default function Tools() {
   if (isLoading) {
     return (
       <div className="min-h-screen band-dark">
-        <Navigation />
         <div className="pt-24 pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -97,7 +94,6 @@ export default function Tools() {
 
   return (
     <div className="min-h-screen band-dark">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 band-white relative overflow-hidden">
@@ -380,7 +376,6 @@ export default function Tools() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

@@ -2,8 +2,6 @@
 import SEOHead from "@/components/ui/seo-head";
 
 import { useEffect } from "react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Search, Gauge, Users, FileText, MapPin, Zap } from "lucide-react";
 
@@ -80,7 +78,6 @@ export default function FreeSEOAudit() {
         canonicalUrl="https://businessbldrs.com/free-seo-audit"
       />
       
-      <Navigation />
       
       <section className="band-white relative pt-32 pb-20 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6">
@@ -340,7 +337,6 @@ export default function FreeSEOAudit() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

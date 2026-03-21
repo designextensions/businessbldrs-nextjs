@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Smartphone, Globe, Code, Server, Clock, AlertTriangle, Target, Users, TrendingUp, Lightbulb, Wrench, Quote } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function AppDevelopment() {
@@ -112,7 +110,6 @@ export default function AppDevelopment() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 band-white overflow-hidden">
@@ -460,7 +457,6 @@ export default function AppDevelopment() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

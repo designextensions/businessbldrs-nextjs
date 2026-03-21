@@ -2,8 +2,6 @@
 import Link from "next/link";
 import SEOHead from "@/components/ui/seo-head";
 
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronRight, Play, CheckCircle, ArrowRight, Target, Users, TrendingUp } from "lucide-react";
@@ -107,7 +105,6 @@ export default function StoryBrand() {
         }}
       />
 
-      <Navigation />
 
       {/* Hero Section */}
       <section className="band-white pt-32 pb-20">
@@ -379,7 +376,6 @@ export default function StoryBrand() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

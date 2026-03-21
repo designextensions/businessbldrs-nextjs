@@ -4,8 +4,6 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Share2, Heart, TrendingUp, Users, Calendar, BarChart, MessageSquare, Camera, Video, Target, Lightbulb, Zap, Award } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 export default function SocialMediaMarketing() {
@@ -143,7 +141,6 @@ export default function SocialMediaMarketing() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden band-white">
@@ -409,7 +406,6 @@ export default function SocialMediaMarketing() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

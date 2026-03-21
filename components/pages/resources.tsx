@@ -4,8 +4,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, Play, FileText, Download, Video, BookOpen, Settings, ExternalLink, Lock, CheckCircle, Briefcase } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { FallbackResourceImage } from "@/components/ui/fallback-image";
 import VideoModal from "@/components/ui/video-modal";
@@ -118,7 +116,6 @@ export default function Resources() {
       <Breadcrumbs items={[
         { label: "Resources" }
       ]} />
-      <Navigation />
 
       {/* Hero Section - Dark theme matching videos/downloads pages */}
       <section className="pt-32 pb-16 band-dark">
@@ -638,7 +635,6 @@ export default function Resources() {
         </div>
       </section>
 
-      <MegaFooter />
 
       {selectedVideo && (
         <VideoModal

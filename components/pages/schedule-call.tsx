@@ -4,8 +4,6 @@ import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Clock, Target, TrendingUp, Zap, MessageSquare, Users, CheckCircle, Star } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { useEffect } from "react";
 
@@ -46,7 +44,6 @@ export default function ScheduleCall() {
         }}
       />
       
-      <Navigation />
       
       <div>
         {/* Breadcrumbs */}
@@ -324,7 +321,6 @@ export default function ScheduleCall() {
         </section>
       </div>
 
-      <MegaFooter />
     </div>
   );
 }

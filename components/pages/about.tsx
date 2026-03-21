@@ -4,8 +4,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, Users, Target, Heart, Shield, Star, Coffee } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
 const teamPhotoImage = "/attached_assets/BB-Team-Photo-1-edited-2_1754613823971.webp";
@@ -70,7 +68,6 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-stone-50 text-charcoal-900">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[100vh] flex items-center band-white">
@@ -369,7 +366,6 @@ export default function About() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

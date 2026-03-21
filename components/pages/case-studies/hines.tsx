@@ -3,8 +3,6 @@ import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Building2, TrendingUp, Users, Globe, Target, Facebook, BarChart, Home } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import CaseStudySchema from "@/components/ui/case-study-schema";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import Link from "next/link";
@@ -59,7 +57,6 @@ export default function HinesCaseStudy() {
         slug="hines"
         datePublished="2025-01-01"
       />
-      <Navigation />
 
       {/* Breadcrumbs */}
       <div className="pt-32 pb-8 band-white">
@@ -416,7 +413,6 @@ export default function HinesCaseStudy() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

@@ -5,8 +5,6 @@ import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Target, Users, Calculator, Mail, CheckCircle, ExternalLink } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 const breakwaterDesktopImage = "/attached_assets/breakwater-desktop-screenshot.png";
 const breakwaterCalculatorImage = "/attached_assets/breakwater-pool-calculator-screenshot.png";
@@ -109,7 +107,6 @@ export default function BreakwaterConstruction() {
           }
         }}
       />
-      <Navigation />
       
       {/* Breadcrumbs */}
       <div className="pt-32 pb-8 band-white">
@@ -521,7 +518,6 @@ export default function BreakwaterConstruction() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

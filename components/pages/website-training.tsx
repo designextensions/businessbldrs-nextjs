@@ -5,8 +5,6 @@ import SEOHead from "@/components/ui/seo-head";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, Monitor, Shield, Users, BookOpen, Video, Mail, Settings, Database, Menu as MenuIcon } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 const heroImage = "/attached_assets/man-reviews-documents-while-video-call_1759161804996.jpg";
@@ -107,7 +105,6 @@ export default function WebsiteTraining() {
           }
         }}
       />
-      <Navigation />
       
       {/* Hero Section */}
       <section className="band-white pt-32 pb-20 overflow-hidden">
@@ -392,7 +389,6 @@ export default function WebsiteTraining() {
         </div>
       </section>
       
-      <MegaFooter />
     </div>
   );
 }

@@ -5,8 +5,6 @@ import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { ExternalLink, Search, ChevronDown, ArrowRight, Layers, Briefcase } from "lucide-react";
 import type { PortfolioItem } from "@/lib/db/schema";
@@ -123,7 +121,6 @@ export default function Portfolio() {
   if (isError) {
     return (
       <div className="min-h-screen band-stone">
-        <Navigation />
         <div className="pt-32 pb-20 text-center">
           <div className="container mx-auto px-6">
             <h2 className="font-display font-bold uppercase text-4xl md:text-6xl text-charcoal-900 mb-6">
@@ -140,14 +137,12 @@ export default function Portfolio() {
             </button>
           </div>
         </div>
-        <MegaFooter />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-white text-charcoal-900">
-      <Navigation />
 
       {/* Hero */}
       <section className="pt-32 pb-16 band-dark">
@@ -461,7 +456,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

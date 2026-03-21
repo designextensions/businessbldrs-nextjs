@@ -6,8 +6,6 @@ import { useState } from "react";
 import { ArrowRight, ArrowLeft, CheckCircle, Target, Building, TrendingUp, Users, Lightbulb, Video, Globe, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 
 interface QuizAnswers {
   businessType: string;
@@ -340,7 +338,6 @@ export default function MarketingPlanBuilder() {
           pageType="website"
         />
         
-        <Navigation />
         
         <section className="band-white relative pt-32 pb-20 overflow-hidden">
           <div className="relative max-w-7xl mx-auto px-6">
@@ -511,7 +508,6 @@ export default function MarketingPlanBuilder() {
           </div>
         </section>
 
-        <MegaFooter />
       </div>
     );
   }
@@ -527,7 +523,6 @@ export default function MarketingPlanBuilder() {
         pageType="website"
       />
       
-      <Navigation />
       
       <section className="band-white relative pt-32 pb-20 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6">
@@ -640,7 +635,6 @@ export default function MarketingPlanBuilder() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

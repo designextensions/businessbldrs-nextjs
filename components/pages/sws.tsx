@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import HubSpotNativeForm from "@/components/ui/hubspot-native-form";
 import {
   Send, FileSearch, Trophy, ArrowDown, Clock, ChevronRight,
@@ -58,7 +56,6 @@ export default function SWSPage() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       {/* ═══════════════ HERO ═══════════════ */}
       <section className="band-dark relative min-h-[92vh] flex items-center justify-center overflow-hidden">
@@ -441,7 +438,6 @@ export default function SWSPage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

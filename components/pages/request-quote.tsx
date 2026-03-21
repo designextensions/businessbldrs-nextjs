@@ -1,8 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import HubSpotForm from "@/components/ui/hubspot-form";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -12,7 +10,6 @@ import { seoConfig } from "@/lib/seo-config";
 export default function RequestQuote() {
   return (
     <div className="min-h-screen band-dark">
-      <Navigation />
       
       <div className="pt-32 pb-20">
         <div className="container mx-auto px-6">
@@ -283,7 +280,6 @@ export default function RequestQuote() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

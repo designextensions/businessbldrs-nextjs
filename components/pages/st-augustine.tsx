@@ -3,8 +3,6 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Search, MessageSquare, Palette, Video, Smartphone, Settings, MapPin, Phone, Star, CheckCircle, Clock, Users } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { CertifiedStamp, AnvilStamp } from "@/components/ui/vintage-stamps";
 const stAugustineImage = "/attached_assets/services-st-augustine-img_1754613904507.webp";
@@ -70,7 +68,6 @@ export default function StAugustine() {
 
   return (
     <div className="min-h-screen bg-stone-50 text-charcoal-900">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[100vh] flex items-center band-white">
@@ -415,7 +412,6 @@ export default function StAugustine() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

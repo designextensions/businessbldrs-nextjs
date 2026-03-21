@@ -4,8 +4,6 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Monitor, Smartphone, Zap, Search, Users, MessageSquare, BarChart3, Camera } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 const scrollToSection = (sectionId: string) => {
@@ -144,7 +142,6 @@ export default function WebsiteDesign() {
 
   return (
     <div className="min-h-screen bg-white text-foreground">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 band-white">
@@ -470,7 +467,6 @@ export default function WebsiteDesign() {
         </div>
       </section>
       
-      <MegaFooter />
     </div>
   );
 }

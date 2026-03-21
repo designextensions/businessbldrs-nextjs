@@ -5,8 +5,6 @@ import SEOHead from "@/components/ui/seo-head";
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Shield, TrendingUp, Users, Scan, Monitor, FileText, Scale, Gavel, Globe, ArrowRight, AlertTriangle, Eye, Keyboard } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 const scrollToSection = (sectionId: string) => {
@@ -229,7 +227,6 @@ export default function ADAAccessibilityPage() {
           ]
         }}
       />
-      <Navigation />
 
       {/* Hero Section - Dark */}
       <section className="band-dark pt-32 pb-20">
@@ -496,7 +493,6 @@ export default function ADAAccessibilityPage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }

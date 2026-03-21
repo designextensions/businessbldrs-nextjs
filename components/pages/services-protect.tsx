@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Shield, Server, Settings, Heart, DollarSign, Scale } from "lucide-react";
-import Navigation from "@/components/ui/navigation";
-import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import { LazyImage } from "@/components/ui/lazy-image";
 
@@ -84,7 +82,6 @@ export default function ServicesProtectPage() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
 
       <section className="band-dark pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,7 +257,6 @@ export default function ServicesProtectPage() {
         </div>
       </section>
 
-      <MegaFooter />
     </div>
   );
 }
