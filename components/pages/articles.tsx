@@ -20,7 +20,7 @@ function decodeHtml(text: string) {
   return text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
 }
 
-function ArticleImage({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
+function ArticleImage({ src, alt, className = "", loading = "lazy" }: { src: string; alt: string; className?: string; loading?: "lazy" | "eager" }) {
   const isPlaceholder = !src || src.includes('placeholder');
 
   if (isPlaceholder) {
@@ -36,7 +36,7 @@ function ArticleImage({ src, alt, className = "" }: { src: string; alt: string; 
       src={src}
       alt={alt}
       className={`object-cover ${className}`}
-      loading="lazy"
+      loading={loading}
       width={800}
       height={450}
     />
@@ -155,6 +155,7 @@ export default function Articles() {
                       src={featuredArticle.image}
                       alt={featuredArticle.title}
                       className="w-full h-full group-hover:scale-105 transition-transform duration-500"
+                      loading="eager"
                     />
                     <div className="absolute top-4 left-4">
                       <span className="label-industrial px-3 py-1.5 bg-yellow-400 text-charcoal-900 text-xs">
