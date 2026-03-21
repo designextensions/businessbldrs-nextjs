@@ -6,13 +6,13 @@ import { aiDevelopmentFAQs } from "@/components/ui/service-faq-schema";
 import AiDevelopmentPage from "@/components/pages/ai-development";
 
 export const metadata: Metadata = {
-  title: seoConfig.appDevelopment.title,
-  description: seoConfig.appDevelopment.description,
-  keywords: seoConfig.appDevelopment.keywords,
+  title: seoConfig.aiDevelopment.title,
+  description: seoConfig.aiDevelopment.description,
+  keywords: seoConfig.aiDevelopment.keywords,
   openGraph: {
-    title: seoConfig.appDevelopment.title,
-    description: seoConfig.appDevelopment.description,
-    images: [getOgImageUrl(seoConfig.appDevelopment.title, seoConfig.appDevelopment.description)],
+    title: seoConfig.aiDevelopment.title,
+    description: seoConfig.aiDevelopment.description,
+    images: [getOgImageUrl(seoConfig.aiDevelopment.title, seoConfig.aiDevelopment.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/ai-development" },
 };

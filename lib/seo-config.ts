@@ -220,11 +220,65 @@ export const seoConfig: Record<string, PageSEO> = {
     h1: "Application Development",
     keywords: "app development, mobile app development, web application development"
   },
+  aiDevelopment: {
+    title: "AI Development Services",
+    description: "Custom AI and machine learning solutions for businesses. Chatbots, automation, data analysis and intelligent integrations. StoryBrand Certified agency.",
+    h1: "AI Development Services",
+    keywords: "ai development, machine learning, chatbot development, ai automation, artificial intelligence services"
+  },
   resources: {
     title: "Marketing Resources & Tools",
     description: "Free marketing resources, tools, and guides from Business Builders. Access templates, checklists, videos, and expert insights to grow your business.",
     h1: "Marketing Resources",
     keywords: "marketing resources, marketing tools, free marketing guides"
+  },
+  tools: {
+    title: "Free Marketing Tools",
+    description: "Free interactive marketing tools from Business Builders. SEO auditors, cost calculators, and marketing scorecards to help you evaluate your strategy.",
+    h1: "Marketing Tools",
+    keywords: "free marketing tools, seo audit tool, marketing calculator, marketing assessment"
+  },
+  videos: {
+    title: "Marketing Video Library",
+    description: "Watch marketing strategy and growth videos from Business Builders. Tips on StoryBrand, SEO, branding, web design, and digital marketing best practices.",
+    h1: "Marketing Videos",
+    keywords: "marketing videos, storybrand videos, seo tutorial videos, business growth videos"
+  },
+  websiteTraining: {
+    title: "Website Training & Tutorials",
+    description: "Step-by-step website training and tutorials from Business Builders. Learn to manage your WordPress site, update content, and optimize performance.",
+    h1: "Website Training",
+    keywords: "website training, wordpress tutorials, website management training, cms training"
+  },
+  marketingPlanBuilder: {
+    title: "Marketing Plan Builder",
+    description: "Build a custom marketing plan for your business with our interactive tool. Define goals, identify channels, and create an actionable growth roadmap.",
+    h1: "Marketing Plan Builder",
+    keywords: "marketing plan builder, marketing plan template, marketing strategy tool, business marketing plan"
+  },
+  aiBlueprint: {
+    title: "AI Marketing Blueprint",
+    description: "Get a custom AI marketing blueprint for your business. Discover how AI can automate tasks, improve targeting, and accelerate your marketing results.",
+    h1: "AI Marketing Blueprint",
+    keywords: "ai marketing blueprint, ai marketing strategy, ai automation plan, marketing ai integration"
+  },
+  maccsupport: {
+    title: "MACC Partner Support",
+    description: "Dedicated marketing and technical support for MACC partners. Website updates, design services, and digital marketing through your MACC partnership.",
+    h1: "MACC Partner Support",
+    keywords: "macc support, macc partner services, macc marketing support, macc website services"
+  },
+  privacyPolicy: {
+    title: "Privacy Policy",
+    description: "Business Builders privacy policy. Learn how we collect, use, and protect your personal data when you visit our website and use our marketing services.",
+    h1: "Privacy Policy",
+    keywords: "privacy policy, data protection, personal information, business builders privacy"
+  },
+  portfolioBreakwater: {
+    title: "Breakwater Construction Portfolio",
+    description: "See how Business Builders transformed Breakwater Construction's brand and digital presence. Website redesign, branding, and marketing portfolio showcase.",
+    h1: "Breakwater Construction Portfolio",
+    keywords: "breakwater construction portfolio, construction marketing portfolio, website redesign case study"
   },
   events: {
     title: "Marketing Events & Workshops",

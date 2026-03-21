@@ -5,13 +5,13 @@ import { generateFAQSchema } from "@/lib/structured-data";
 import MaccsupportPage from "@/components/pages/maccsupport";
 
 export const metadata: Metadata = {
-  title: seoConfig.about.title,
-  description: seoConfig.about.description,
-  keywords: seoConfig.about.keywords,
+  title: seoConfig.maccsupport.title,
+  description: seoConfig.maccsupport.description,
+  keywords: seoConfig.maccsupport.keywords,
   openGraph: {
-    title: seoConfig.about.title,
-    description: seoConfig.about.description,
-    images: [getOgImageUrl(seoConfig.about.title, seoConfig.about.description)],
+    title: seoConfig.maccsupport.title,
+    description: seoConfig.maccsupport.description,
+    images: [getOgImageUrl(seoConfig.maccsupport.title, seoConfig.maccsupport.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/maccsupport" },
 };

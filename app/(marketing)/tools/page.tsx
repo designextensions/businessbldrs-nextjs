@@ -5,13 +5,13 @@ import { generateFAQSchema } from "@/lib/structured-data";
 import ToolsPage from "@/components/pages/tools";
 
 export const metadata: Metadata = {
-  title: seoConfig.resources.title,
-  description: seoConfig.resources.description,
-  keywords: seoConfig.resources.keywords,
+  title: seoConfig.tools.title,
+  description: seoConfig.tools.description,
+  keywords: seoConfig.tools.keywords,
   openGraph: {
-    title: seoConfig.resources.title,
-    description: seoConfig.resources.description,
-    images: [getOgImageUrl(seoConfig.resources.title, seoConfig.resources.description)],
+    title: seoConfig.tools.title,
+    description: seoConfig.tools.description,
+    images: [getOgImageUrl(seoConfig.tools.title, seoConfig.tools.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/tools" },
 };

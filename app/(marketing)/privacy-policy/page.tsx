@@ -4,13 +4,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import PrivacyPolicyPage from "@/components/pages/privacy-policy";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: seoConfig.about.description,
-  keywords: seoConfig.about.keywords,
+  title: seoConfig.privacyPolicy.title,
+  description: seoConfig.privacyPolicy.description,
+  keywords: seoConfig.privacyPolicy.keywords,
   openGraph: {
-    title: "Privacy Policy",
-    description: seoConfig.about.description,
-    images: seoConfig.about.ogImage ? [seoConfig.about.ogImage] : [],
+    title: seoConfig.privacyPolicy.title,
+    description: seoConfig.privacyPolicy.description,
+    images: [getOgImageUrl(seoConfig.privacyPolicy.title, seoConfig.privacyPolicy.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/privacy-policy" },
 };

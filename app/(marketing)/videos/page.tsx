@@ -7,13 +7,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import VideosPage from "@/components/pages/videos";
 
 export const metadata: Metadata = {
-  title: seoConfig.resources.title,
-  description: seoConfig.resources.description,
-  keywords: seoConfig.resources.keywords,
+  title: seoConfig.videos.title,
+  description: seoConfig.videos.description,
+  keywords: seoConfig.videos.keywords,
   openGraph: {
-    title: seoConfig.resources.title,
-    description: seoConfig.resources.description,
-    images: [getOgImageUrl(seoConfig.resources.title, seoConfig.resources.description)],
+    title: seoConfig.videos.title,
+    description: seoConfig.videos.description,
+    images: [getOgImageUrl(seoConfig.videos.title, seoConfig.videos.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/videos" },
 };

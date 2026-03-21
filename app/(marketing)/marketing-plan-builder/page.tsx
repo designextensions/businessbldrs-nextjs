@@ -4,13 +4,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import MarketingPlanBuilderPage from "@/components/pages/marketing-plan-builder";
 
 export const metadata: Metadata = {
-  title: seoConfig.resources.title,
-  description: seoConfig.resources.description,
-  keywords: seoConfig.resources.keywords,
+  title: seoConfig.marketingPlanBuilder.title,
+  description: seoConfig.marketingPlanBuilder.description,
+  keywords: seoConfig.marketingPlanBuilder.keywords,
   openGraph: {
-    title: seoConfig.resources.title,
-    description: seoConfig.resources.description,
-    images: [getOgImageUrl(seoConfig.resources.title, seoConfig.resources.description)],
+    title: seoConfig.marketingPlanBuilder.title,
+    description: seoConfig.marketingPlanBuilder.description,
+    images: [getOgImageUrl(seoConfig.marketingPlanBuilder.title, seoConfig.marketingPlanBuilder.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/marketing-plan-builder" },
 };

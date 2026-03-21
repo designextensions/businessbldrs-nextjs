@@ -6,13 +6,13 @@ import { aiBlueprintFAQs } from "@/components/ui/service-faq-schema";
 import AiBlueprintPage from "@/components/pages/ai-blueprint";
 
 export const metadata: Metadata = {
-  title: seoConfig.resources.title,
-  description: seoConfig.resources.description,
-  keywords: seoConfig.resources.keywords,
+  title: seoConfig.aiBlueprint.title,
+  description: seoConfig.aiBlueprint.description,
+  keywords: seoConfig.aiBlueprint.keywords,
   openGraph: {
-    title: seoConfig.resources.title,
-    description: seoConfig.resources.description,
-    images: [getOgImageUrl(seoConfig.resources.title, seoConfig.resources.description)],
+    title: seoConfig.aiBlueprint.title,
+    description: seoConfig.aiBlueprint.description,
+    images: [getOgImageUrl(seoConfig.aiBlueprint.title, seoConfig.aiBlueprint.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/ai-blueprint" },
 };

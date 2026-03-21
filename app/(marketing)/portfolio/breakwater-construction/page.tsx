@@ -4,13 +4,13 @@ import { getOgImageUrl } from "@/lib/og-utils";
 import BreakwaterConstructionPage from "@/components/pages/breakwater-construction";
 
 export const metadata: Metadata = {
-  title: seoConfig.caseStudyBreakwater.title,
-  description: seoConfig.caseStudyBreakwater.description,
-  keywords: seoConfig.caseStudyBreakwater.keywords,
+  title: seoConfig.portfolioBreakwater.title,
+  description: seoConfig.portfolioBreakwater.description,
+  keywords: seoConfig.portfolioBreakwater.keywords,
   openGraph: {
-    title: seoConfig.caseStudyBreakwater.title,
-    description: seoConfig.caseStudyBreakwater.description,
-    images: [getOgImageUrl(seoConfig.caseStudyBreakwater.title, seoConfig.caseStudyBreakwater.description)],
+    title: seoConfig.portfolioBreakwater.title,
+    description: seoConfig.portfolioBreakwater.description,
+    images: [getOgImageUrl(seoConfig.portfolioBreakwater.title, seoConfig.portfolioBreakwater.description)],
   },
   alternates: { canonical: "https://businessbldrs.com/portfolio/breakwater-construction" },
 };
