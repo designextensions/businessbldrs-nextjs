@@ -89,8 +89,41 @@ export default function MegaFooter() {
     submitMutation.mutate({ email });
   };
 
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Business Builders",
+    "description": "StoryBrand certified marketing agency helping businesses, ministries, and nonprofits grow with proven marketing strategies since 1999.",
+    "url": "https://businessbldrs.com",
+    "telephone": "+1-877-378-6101",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "St. Augustine",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.8946,
+      "longitude": -81.3145
+    },
+    "sameAs": [
+      "https://www.facebook.com/businessbldrs",
+      "https://www.linkedin.com/company/businessbldrs",
+      "https://www.instagram.com/businessbldrs/",
+      "https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg"
+    ],
+    "logo": "https://businessbldrs.com/logo-full.png",
+    "foundingDate": "1999",
+    "priceRange": "$$"
+  };
+
   return (
     <footer className="band-dark border-t-4 border-yellow-400" data-testid="footer">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">

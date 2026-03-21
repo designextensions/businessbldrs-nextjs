@@ -100,7 +100,6 @@ export default function Testimonials() {
   };
 
   const videoTestimonialsSchema = {
-    "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Client Video Testimonials",
     "description": "Video testimonials from Business Builders clients sharing their success stories",
@@ -123,8 +122,20 @@ export default function Testimonials() {
     }))
   };
 
+  const donaldMillerVideoSchema = {
+    "@type": "VideoObject",
+    "name": "Donald Miller Recommends Business Builders — StoryBrand Certified Agency",
+    "description": "Donald Miller, founder of StoryBrand and bestselling author of Building a StoryBrand, personally recommends Business Builders as a certified partner.",
+    "thumbnailUrl": "https://img.youtube.com/vi/5wzrqaNJlLA/maxresdefault.jpg",
+    "embedUrl": "https://www.youtube.com/embed/5wzrqaNJlLA",
+    "uploadDate": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Business Builders"
+    }
+  };
+
   const breadcrumbSchema = {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -151,7 +162,7 @@ export default function Testimonials() {
         canonicalUrl="https://businessbldrs.com/testimonials"
         structuredData={{
           "@context": "https://schema.org",
-          "@graph": [videoTestimonialsSchema, breadcrumbSchema]
+          "@graph": [videoTestimonialsSchema, donaldMillerVideoSchema, breadcrumbSchema]
         }}
       />
 

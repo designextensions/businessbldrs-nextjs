@@ -257,8 +257,15 @@ export default function Tools() {
           <p className="text-lg text-stone-600 leading-relaxed mb-6 text-center max-w-3xl mx-auto font-body">
             We built these free marketing tools to give business owners, ministry leaders, and nonprofit teams a practical starting point for improving their marketing. Each tool is based on the same frameworks and methodologies we use with our full-service clients, distilled into a self-service format you can use anytime.
           </p>
-          <p className="text-lg text-stone-600 leading-relaxed text-center max-w-3xl mx-auto font-body">
+          <p className="text-lg text-stone-600 leading-relaxed mb-6 text-center max-w-3xl mx-auto font-body">
             Our cost calculator helps you set realistic budgets before engaging an agency. The SEO audit identifies the technical and content issues holding your website back in search results. The marketing plan builder walks you through goal-setting, audience targeting, and channel selection so you can create a roadmap tailored to your business. Whether you are a startup exploring your first marketing investment or an established company benchmarking your current efforts, these tools give you clarity and confidence.
+          </p>
+          <h3 className="text-xl font-display uppercase text-stone-900 mb-4 text-center">Why Free Marketing Tools Matter</h3>
+          <p className="text-lg text-stone-600 leading-relaxed mb-6 text-center max-w-3xl mx-auto font-body">
+            Many businesses struggle to know where to begin with digital marketing. They may not have a dedicated marketing team, or they may be unsure which channels will deliver the best return on investment. Our free tools remove that guesswork by providing data-driven insights you can act on immediately, without any obligation or sales pressure.
+          </p>
+          <p className="text-lg text-stone-600 leading-relaxed text-center max-w-3xl mx-auto font-body">
+            These tools are designed by the same team that has helped over 500 businesses across industries including manufacturing, healthcare, legal, nonprofit, and ministry organizations. We understand that every business is unique, and our tools adapt to your specific situation. Use them as often as you like to track your progress over time, compare results after implementing changes, and identify new opportunities as your business evolves. When you are ready for hands-on support, our full-service team is here to help you take the next step.
           </p>
         </div>
       </section>

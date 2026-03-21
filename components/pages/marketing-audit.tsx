@@ -513,7 +513,7 @@ export default function MarketingAudit() {
             </button>
 
             <div className="mt-16 text-left max-w-2xl mx-auto space-y-4">
-              <h3 className="headline-md text-white">What This Audit Covers</h3>
+              <h2 className="headline-md text-white">What This Audit Covers</h2>
               <p className="text-stone-400 leading-relaxed">
                 Our free marketing audit evaluates the four pillars that drive business growth: your website performance, messaging clarity, marketing strategy, and digital presence. Each area is scored individually so you can see exactly where you excel and where opportunities exist.
               </p>

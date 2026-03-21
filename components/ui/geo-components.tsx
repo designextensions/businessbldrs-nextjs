@@ -45,7 +45,7 @@ export function Author({
         </div>
         <p className="text-sm text-stone-500 mb-2">{credentials}</p>
         {date && (
-          <time className="text-sm text-stone-400 flex items-center gap-1">
+          <time dateTime={!isNaN(Date.parse(date)) ? new Date(date).toISOString().split('T')[0] : undefined} className="text-sm text-stone-400 flex items-center gap-1">
             <span className="font-medium">Last updated:</span> {date}
           </time>
         )}

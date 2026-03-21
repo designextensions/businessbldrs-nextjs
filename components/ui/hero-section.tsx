@@ -6,9 +6,30 @@ import { trackEvent } from "@/components/ui/google-analytics";
 import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Business Builders - Clear Message. Proven Strategy. Real Growth.",
+    "description": "Business Builders is a StoryBrand certified marketing agency in St. Augustine, FL helping businesses, ministries, and nonprofits grow with proven marketing strategies.",
+    "thumbnailUrl": "https://businessbldrs.com/video-poster.jpg",
+    "contentUrl": "https://businessbldrs.com/attached_assets/0301.mp4",
+    "uploadDate": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Business Builders",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://businessbldrs.com/logo-full.png"
+      }
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-charcoal-900" data-testid="hero-section">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
       <video
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
