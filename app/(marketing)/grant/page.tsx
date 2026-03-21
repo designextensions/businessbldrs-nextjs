@@ -15,6 +15,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://businessbldrs.com/grant" },
 };
 
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Business Builders Nonprofit Marketing Grant",
+  "description": "Learn about Business Builders' annual $50,000 nonprofit marketing grant providing brand kits, website redesigns, and marketing strategy to 501(c)(3) organizations.",
+  "thumbnailUrl": "https://businessbldrs.com/og-image.png",
+  "uploadDate": "2024-01-01",
+  "contentUrl": "https://businessbldrs.com/attached_assets/0301.mp4",
+};
+
 const grantFAQs = [
   {
     question: "Who is eligible to apply for the grant?",
@@ -48,6 +58,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <GrantPage />
     </>
   );

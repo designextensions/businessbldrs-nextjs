@@ -75,7 +75,7 @@ export default function Article({ article }: ArticleProps) {
           
           {/* Author Byline with Credentials */}
           <Author 
-            name={defaultAuthor.name}
+            name={article.author || defaultAuthor.name}
             title={defaultAuthor.title}
             credentials={defaultAuthor.credentials}
             image={defaultAuthor.image}

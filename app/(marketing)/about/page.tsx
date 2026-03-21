@@ -16,6 +16,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://businessbldrs.com/about" },
 };
 
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Business Builders Brand Video",
+  "description": "Learn about Business Builders, a full-service marketing agency based in St. Augustine, Florida, helping businesses, ministries, and nonprofits grow since 1999.",
+  "thumbnailUrl": "https://businessbldrs.com/og-image.png",
+  "uploadDate": "2024-01-01",
+  "contentUrl": "https://businessbldrs.com/attached_assets/0301.mp4",
+};
+
 const faqSchema = generateFAQSchema([
   {
     question: "How long has Business Builders been in business?",
@@ -39,6 +49,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <AboutPage />
     </>
   );

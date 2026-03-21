@@ -5,10 +5,9 @@ import { and, eq } from "drizzle-orm";
 import ArticlePage from "@/components/pages/article";
 import { notFound } from "next/navigation";
 import { getOgImageUrl } from "@/lib/og-utils";
+import { getArticleSchema } from "@/lib/seo-config";
 
 export const dynamicParams = true;
-
-const BASE_URL = "https://businessbldrs.com";
 
 async function getPublishedArticleBySlug(slug: string) {
   return db.query.blogArticles.findFirst({
@@ -45,50 +44,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: article.title,
     description: article.excerpt,
-    alternates: { canonical: `${BASE_URL}/resources/articles/${slug}` },
+    alternates: { canonical: `https://businessbldrs.com/resources/articles/${slug}` },
     openGraph: {
       title: article.title,
       description: article.excerpt,
       type: "article",
       images: article.image ? [article.image] : [getOgImageUrl(article.title, article.excerpt || "")],
     },
-  };
-}
-
-function buildArticleJsonLd(article: {
-  title: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  image: string;
-  slug: string;
-}) {
-  const pageUrl = `${BASE_URL}/resources/articles/${article.slug}`;
-  return {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": article.title,
-    "description": article.excerpt,
-    "image": article.image || `${BASE_URL}/og-image.png`,
-    "datePublished": article.date,
-    "dateModified": article.date,
-    "author": {
-      "@type": "Person",
-      "name": article.author || "Business Builders",
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Business Builders",
-      "logo": {
-        "@type": "ImageObject",
-        "url": `${BASE_URL}/logo-full.png`,
-      },
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": pageUrl,
-    },
-    "url": pageUrl,
   };
 }
 
@@ -99,7 +61,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     notFound();
   }
 
-  const articleJsonLd = buildArticleJsonLd(article);
+  const articleJsonLd = getArticleSchema({
+    title: article.title,
+    description: article.excerpt,
+    image: article.image,
+    datePublished: article.date,
+    slug: article.slug,
+    author: article.author,
+  });
 
   return (
     <>

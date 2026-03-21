@@ -441,30 +441,33 @@ export function getArticleSchema(article: {
   datePublished: string;
   dateModified?: string;
   slug: string;
+  author?: string;
 }) {
+  const baseUrl = "https://businessbldrs.com";
+  const pageUrl = `${baseUrl}/resources/articles/${article.slug}`;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": article.title,
     "description": article.description,
-    "image": article.image || "https://businessbldrs.com/logo-full.png",
+    "image": article.image || `${baseUrl}/og-image.png`,
     "datePublished": article.datePublished,
     "dateModified": article.dateModified || article.datePublished,
-    "author": {
-      "@type": "Organization",
-      "name": "Business Builders"
-    },
+    "author": article.author
+      ? { "@type": "Person", "name": article.author }
+      : { "@type": "Organization", "name": "Business Builders" },
     "publisher": {
       "@type": "Organization",
       "name": "Business Builders",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://businessbldrs.com/logo-full.png"
+        "url": `${baseUrl}/logo-full.png`
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://businessbldrs.com/resources/articles/${article.slug}`
-    }
+      "@id": pageUrl
+    },
+    "url": pageUrl
   };
 }
