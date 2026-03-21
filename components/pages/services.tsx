@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import SEOHead from "@/components/ui/seo-head";
 
 import { Button } from "@/components/ui/button";
@@ -196,13 +197,13 @@ export default function ServicesPage() {
             </div>
             <div className="relative">
               <div className="border-2 border-charcoal-800 shadow-offset">
-                <img 
+                <Image 
                   src="/services-hero-new.jpg"
                   alt="Business Builders team collaborating on marketing strategy and planning"
                   className="w-full"
                   width={1200}
                   height={800}
-                  fetchPriority="high"
+                  priority
                 />
               </div>
             </div>
