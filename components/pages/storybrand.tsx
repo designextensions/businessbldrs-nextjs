@@ -94,6 +94,7 @@ export default function StoryBrand() {
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "StoryBrand Framework",
+          "url": "https://businessbldrs.com/storybrand-framework",
           "description": "Learn how the StoryBrand Framework can improve your business marketing strategy",
           "mainEntity": {
             "@type": "Service",

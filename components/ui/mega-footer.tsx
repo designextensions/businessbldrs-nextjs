@@ -166,6 +166,7 @@ export default function MegaFooter() {
                 { href: "/portfolio", label: "Portfolio" },
                 { href: "/testimonials", label: "Testimonials" },
                 { href: "/resources", label: "Resources" },
+                { href: "/request-quote", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-stone-400 hover:text-yellow-400 transition-colors font-medium">

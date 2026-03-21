@@ -57,11 +57,23 @@ const serviceSchema = generateServiceSchema({
   serviceType: "Marketing Agency",
 });
 
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Donald Miller Endorses Business Builders",
+  "description": "Donald Miller, creator of the StoryBrand Framework, endorses Business Builders as a certified StoryBrand agency helping businesses clarify their marketing message.",
+  "thumbnailUrl": "https://img.youtube.com/vi/5wzrqaNJlLA/maxresdefault.jpg",
+  "uploadDate": "2024-01-01",
+  "embedUrl": "https://www.youtube.com/embed/5wzrqaNJlLA",
+  "contentUrl": "https://www.youtube.com/watch?v=5wzrqaNJlLA",
+};
+
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <StorybrandAgencyPage />
     </>
   );

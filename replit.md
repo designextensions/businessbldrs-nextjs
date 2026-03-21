@@ -179,7 +179,9 @@ squirrel report --regression-since businessbldrs.com --format llm
 - ~~Oversized HTML (>2MB)~~ — Fixed: `getBlogArticleSummaries()` and `getFeaturedBlogArticleSummaries()` exclude `content` field from blog queries on `/resources` and `/resources/articles` pages
 - ~~Duplicate metadata (24 pages)~~ — Fixed: All pages now use unique titles/descriptions. 12+ new `seoConfig` entries centralized in `lib/seo-config.ts`. Removed hardcoded " | Business Builders" suffix from all page titles (layout template handles it)
 - ~~Title/description length violations~~ — Fixed: All titles ≤40 chars (≤60 with suffix), all descriptions 120-160 chars
-- Missing E-E-A-T signals, 35 orphan pages, keyword stuffing, invalid JSON-LD, CLS/image issues (pending Tasks #6, #7)
+- ~~Missing E-E-A-T signals~~ — Fixed (Task #6): Article JSON-LD on blog pages, WebPage schema `url` on free-seo-audit/storybrand-framework, VideoObject JSON-LD on storybrand-agency, heading hierarchy fixed across 8+ pages, thin content expanded on 4 pages, Contact link in footer
+- ~~Invalid JSON-LD~~ — Fixed (Task #6): case-study-schema already valid; WebPage schemas now include `url` field
+- 35 orphan pages, keyword stuffing, CLS/image issues (pending Task #7)
 
 ## Deployment
 

@@ -344,9 +344,9 @@ export default function MarketingAudit() {
               <CheckCircle className="w-4 h-4" />
               AUDIT COMPLETE
             </span>
-            <h1 className="headline-xl text-white mb-4">
+            <h2 className="headline-xl text-white mb-4">
               Your Marketing <span className="text-yellow-400">Scorecard</span>
-            </h1>
+            </h2>
             <p className="text-xl text-stone-300 max-w-2xl mx-auto mb-8">
               {criticalCount > 0
                 ? `We found ${criticalCount} critical ${criticalCount === 1 ? "area" : "areas"} that need immediate attention.`
@@ -391,7 +391,7 @@ export default function MarketingAudit() {
 
                       <div className="flex-1">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
-                          <h3 className="headline-md text-charcoal-900">{score.label}</h3>
+                          <h2 className="headline-md text-charcoal-900">{score.label}</h2>
                           <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-bold ${rc.bg} ${rc.color} ${rc.border} border`}>
                             <RatingIcon className="w-4 h-4" />
                             {rc.label}
@@ -516,6 +516,19 @@ export default function MarketingAudit() {
               START YOUR AUDIT
               <ArrowRight className="w-5 h-5" />
             </button>
+
+            <div className="mt-16 text-left max-w-2xl mx-auto space-y-4">
+              <h3 className="headline-md text-white">What This Audit Covers</h3>
+              <p className="text-stone-400 leading-relaxed">
+                Our free marketing audit evaluates the four pillars that drive business growth: your website performance, messaging clarity, marketing strategy, and digital presence. Each area is scored individually so you can see exactly where you excel and where opportunities exist.
+              </p>
+              <p className="text-stone-400 leading-relaxed">
+                After completing five quick questions about your current marketing efforts, you will receive a personalized scorecard with specific, actionable recommendations. These are the same insights our strategists use when onboarding new clients — condensed into a self-service format you can use right now.
+              </p>
+              <p className="text-stone-400 leading-relaxed">
+                Whether you are a small business owner evaluating your first marketing investment, a nonprofit leader looking to amplify your mission, or an established company benchmarking against best practices, this audit gives you a clear starting point for smarter marketing decisions.
+              </p>
+            </div>
           </div>
         </section>
       ) : currentStep === leadCaptureStep ? (

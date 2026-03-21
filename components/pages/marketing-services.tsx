@@ -171,7 +171,7 @@ export default function MarketingServices() {
                 <div className="w-20 h-20 bg-yellow-400 flex items-center justify-center mx-auto mb-6">
                   <credential.icon className="w-10 h-10 text-secondary" />
                 </div>
-                <h3 className="font-display uppercase text-2xl font-bold mb-2 text-secondary">{credential.title}</h3>
+                <h2 className="font-display uppercase text-2xl font-bold mb-2 text-secondary">{credential.title}</h2>
                 <div className="text-4xl font-display font-black text-yellow-500 mb-4">{credential.subtitle}</div>
                 <p className="text-stone-500 leading-relaxed">{credential.description}</p>
               </div>
@@ -328,7 +328,7 @@ export default function MarketingServices() {
                   <span className="text-secondary font-display font-bold text-2xl">ME</span>
                 </div>
                 <div>
-                  <h4 className="font-display uppercase text-xl font-bold text-secondary">Mark Evans</h4>
+                  <h3 className="font-display uppercase text-xl font-bold text-secondary">Mark Evans</h3>
                   <p className="text-yellow-500 font-semibold">Evans Automotive</p>
                 </div>
               </div>
@@ -343,7 +343,7 @@ export default function MarketingServices() {
                   <span className="text-secondary font-display font-bold text-2xl">LB</span>
                 </div>
                 <div>
-                  <h4 className="font-display uppercase text-xl font-bold text-secondary">Letti Bozard</h4>
+                  <h3 className="font-display uppercase text-xl font-bold text-secondary">Letti Bozard</h3>
                   <p className="text-yellow-500 font-semibold">Bozard Ford Lincoln</p>
                 </div>
               </div>

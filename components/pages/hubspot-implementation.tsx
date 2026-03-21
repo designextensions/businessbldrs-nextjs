@@ -252,17 +252,17 @@ export default function HubSpotImplementation() {
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <Clock className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
-                <h4 className="font-display font-bold uppercase mb-2 text-charcoal-900">Years of Experience</h4>
+                <h3 className="font-display font-bold uppercase mb-2 text-charcoal-900">Years of Experience</h3>
                 <p className="text-stone-500">Proven track record with HubSpot implementations</p>
               </div>
               <div>
                 <Users className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
-                <h4 className="font-display font-bold uppercase mb-2 text-charcoal-900">Expert Team</h4>
+                <h3 className="font-display font-bold uppercase mb-2 text-charcoal-900">Expert Team</h3>
                 <p className="text-stone-500">Certified HubSpot specialists dedicated to your success</p>
               </div>
               <div>
                 <Heart className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
-                <h4 className="font-display font-bold uppercase mb-2 text-charcoal-900">Client Success</h4>
+                <h3 className="font-display font-bold uppercase mb-2 text-charcoal-900">Client Success</h3>
                 <p className="text-stone-500">Measurable results and exceptional client experiences</p>
               </div>
             </div>
@@ -322,17 +322,17 @@ export default function HubSpotImplementation() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="border-2 border-yellow-400 p-8 shadow-offset-yellow">
               <div className="headline-md text-yellow-400 mb-4">95%</div>
-              <h4 className="font-display text-xl font-bold uppercase mb-2 text-white">Client Satisfaction</h4>
+              <h3 className="font-display text-xl font-bold uppercase mb-2 text-white">Client Satisfaction</h3>
               <p className="text-stone-400">Exceptional results with HubSpot implementations</p>
             </div>
             <div className="border-2 border-yellow-400 p-8 shadow-offset-yellow">
               <div className="headline-md text-yellow-400 mb-4">50%</div>
-              <h4 className="font-display text-xl font-bold uppercase mb-2 text-white">Faster Issue Resolution</h4>
+              <h3 className="font-display text-xl font-bold uppercase mb-2 text-white">Faster Issue Resolution</h3>
               <p className="text-stone-400">Average improvement in customer support efficiency</p>
             </div>
             <div className="border-2 border-yellow-400 p-8 shadow-offset-yellow">
               <div className="headline-md text-yellow-400 mb-4">30+</div>
-              <h4 className="font-display text-xl font-bold uppercase mb-2 text-white">Days Average Setup</h4>
+              <h3 className="font-display text-xl font-bold uppercase mb-2 text-white">Days Average Setup</h3>
               <p className="text-stone-400">Complete HubSpot implementation timeline</p>
             </div>
           </div>

@@ -50,6 +50,7 @@ export default function FreeSEOAudit() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free SEO Audit",
+    "url": "https://businessbldrs.com/free-seo-audit",
     "description": "Get a comprehensive free SEO audit for your website. Analyze your site's performance, identify opportunities, and receive actionable recommendations to improve your search rankings.",
     "provider": {
       "@type": "Organization",

@@ -88,9 +88,9 @@ export default function Events() {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-display uppercase font-bold text-stone-900 mb-3 group-hover:text-yellow-600 transition-colors">
+                  <h2 className="text-xl font-display uppercase font-bold text-stone-900 mb-3 group-hover:text-yellow-600 transition-colors">
                     {event.title}
-                  </h3>
+                  </h2>
                   
                   <p className="text-stone-500 text-sm mb-4 leading-relaxed">
                     {event.description}
@@ -138,6 +138,46 @@ export default function Events() {
           </div>
         </div>
       </div>
+
+      <section className="py-20 band-white border-t-2 border-stone-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="headline-md font-display uppercase text-charcoal-900 mb-8 text-center">
+            Why Attend Our <span className="text-yellow-500">Events</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-400 border-2 border-charcoal-900 flex items-center justify-center mx-auto mb-4">
+                <Calendar className="w-8 h-8 text-charcoal-900" />
+              </div>
+              <h3 className="font-display font-bold uppercase text-charcoal-900 mb-2">Actionable Strategies</h3>
+              <p className="text-stone-500 leading-relaxed">
+                Every session is designed around real-world marketing tactics you can implement immediately. Walk away with a clear action plan, not just inspiration.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-400 border-2 border-charcoal-900 flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-charcoal-900" />
+              </div>
+              <h3 className="font-display font-bold uppercase text-charcoal-900 mb-2">Expert-Led Sessions</h3>
+              <p className="text-stone-500 leading-relaxed">
+                Learn directly from certified StoryBrand guides, HubSpot experts, and marketing professionals with 26+ years of proven results across diverse industries.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-400 border-2 border-charcoal-900 flex items-center justify-center mx-auto mb-4">
+                <ExternalLink className="w-8 h-8 text-charcoal-900" />
+              </div>
+              <h3 className="font-display font-bold uppercase text-charcoal-900 mb-2">Meaningful Connections</h3>
+              <p className="text-stone-500 leading-relaxed">
+                Network with business owners, ministry leaders, and nonprofit directors who share your commitment to growth. Past attendees cite the relationships formed as the most valuable takeaway.
+              </p>
+            </div>
+          </div>
+          <p className="text-lg text-stone-600 text-center leading-relaxed max-w-3xl mx-auto">
+            Business Builders hosts events throughout the year ranging from intimate workshops to large-scale summits. Whether you are exploring AI-powered marketing, refining your brand message with StoryBrand, or looking for hands-on HubSpot training, our events equip you with the knowledge and connections to grow your business with confidence.
+          </p>
+        </div>
+      </section>
       
       <MegaFooter />
     </div>

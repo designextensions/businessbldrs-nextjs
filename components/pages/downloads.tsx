@@ -268,9 +268,9 @@ export default function Downloads() {
                     </div>
 
                     <div className="p-6 bg-white">
-                      <h3 className="font-display font-bold text-charcoal-900 uppercase text-lg mb-3 leading-tight group-hover:text-yellow-600 transition-colors">
+                      <h2 className="font-display font-bold text-charcoal-900 uppercase text-lg mb-3 leading-tight group-hover:text-yellow-600 transition-colors">
                         {download.title}
-                      </h3>
+                      </h2>
                       <p className="text-stone-500 text-sm leading-relaxed mb-6 line-clamp-3">
                         {download.description}
                       </p>
@@ -324,7 +324,7 @@ export default function Downloads() {
               <div className="w-20 h-20 bg-stone-200 border-2 border-stone-300 flex items-center justify-center mx-auto mb-6">
                 <Download className="w-10 h-10 text-stone-400" />
               </div>
-              <h3 className="font-display font-bold text-xl text-charcoal-900 mb-2 uppercase">NO RESOURCES FOUND</h3>
+              <h2 className="font-display font-bold text-xl text-charcoal-900 mb-2 uppercase">NO RESOURCES FOUND</h2>
               <p className="text-stone-500 mb-6 max-w-md mx-auto">
                 {searchTerm || selectedCategory !== "all"
                   ? "Try adjusting your search terms or selecting a different category."

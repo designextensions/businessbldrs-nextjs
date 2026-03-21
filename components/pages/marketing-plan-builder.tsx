@@ -348,9 +348,9 @@ export default function MarketingPlanBuilder() {
               <span className="label-industrial text-charcoal-900 bg-yellow-400 px-4 py-2 border-2 border-charcoal-800 inline-block mb-6">
                 Your Results
               </span>
-              <h1 className="headline-xl text-charcoal-900 mb-6">
+              <h2 className="headline-xl text-charcoal-900 mb-6">
                 Your Custom <span className="text-yellow-500">Marketing Plan</span>
-              </h1>
+              </h2>
               <p className="text-xl md:text-2xl text-stone-600 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Based on your responses, here's your personalized roadmap to marketing success
               </p>
@@ -542,6 +542,14 @@ export default function MarketingPlanBuilder() {
               Answer a few questions about your business and get a customized marketing plan 
               that fits your goals, budget, and timeline.
             </p>
+            <div className="text-left max-w-3xl mx-auto space-y-4">
+              <p className="text-lg text-stone-500 leading-relaxed">
+                A strong marketing plan starts with understanding your business goals, audience, and budget. Our interactive builder asks targeted questions about your industry, growth objectives, and current marketing maturity, then generates a three-phase roadmap covering messaging and strategy, content and website production, and ongoing promotion.
+              </p>
+              <p className="text-lg text-stone-500 leading-relaxed">
+                Each recommendation includes an estimated timeline, priority level, and a brief explanation of why it matters. The result is a practical marketing plan you can hand to your team, share with stakeholders, or bring to an agency like Business Builders for professional execution. No account required — start answering questions below and your plan will be generated instantly.
+              </p>
+            </div>
           </div>
         </div>
       </section>

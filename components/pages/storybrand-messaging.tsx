@@ -309,7 +309,7 @@ export default function StoryBrandMessaging() {
                   <span className="text-secondary font-display font-bold text-2xl">ME</span>
                 </div>
                 <div>
-                  <h4 className="text-xl font-display uppercase font-bold">Mark Evans</h4>
+                  <h3 className="text-xl font-display uppercase font-bold">Mark Evans</h3>
                   <p className="text-yellow-400 font-display">Evans Automotive</p>
                 </div>
               </div>
@@ -324,7 +324,7 @@ export default function StoryBrandMessaging() {
                   <span className="text-secondary font-display font-bold text-2xl">LB</span>
                 </div>
                 <div>
-                  <h4 className="text-xl font-display uppercase font-bold">Letti Bozard</h4>
+                  <h3 className="text-xl font-display uppercase font-bold">Letti Bozard</h3>
                   <p className="text-yellow-400 font-display">Bozard Ford Lincoln</p>
                 </div>
               </div>

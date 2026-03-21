@@ -200,7 +200,7 @@ export default function SocialMediaMarketing() {
                 <div className="w-20 h-20 bg-yellow-400 border-2 border-black flex items-center justify-center mx-auto mb-6">
                   <credential.icon className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="headline-md text-black mb-2">{credential.title}</h3>
+                <h2 className="headline-md text-black mb-2">{credential.title}</h2>
                 <div className="text-4xl font-display font-black text-yellow-500 mb-4">{credential.subtitle}</div>
                 <p className="text-stone-500 leading-relaxed">{credential.description}</p>
               </div>

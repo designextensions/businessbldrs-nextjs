@@ -158,7 +158,7 @@ export default function Tools() {
           {filteredTools.length === 0 ? (
             <div className="text-center py-16">
               <Settings className="w-16 h-16 text-stone-400 mx-auto mb-4" />
-              <h3 className="headline-md text-stone-900 mb-2">NO TOOLS FOUND</h3>
+              <h2 className="headline-md text-stone-900 mb-2">NO TOOLS FOUND</h2>
               <p className="text-stone-500 mb-6 font-body">
                 {searchTerm || selectedCategory !== "all" 
                   ? "Try adjusting your search terms or filters." 
@@ -220,9 +220,9 @@ export default function Tools() {
                     </div>
                     
                     <div className="p-6 bg-white">
-                      <h3 className="font-display text-xl font-bold text-stone-900 mb-3 uppercase tracking-tight group-hover:text-yellow-600 transition-colors">
+                      <h2 className="font-display text-xl font-bold text-stone-900 mb-3 uppercase tracking-tight group-hover:text-yellow-600 transition-colors">
                         {tool.title}
-                      </h3>
+                      </h2>
                       <p className="text-stone-500 mb-6 leading-relaxed font-body">
                         {tool.description}
                       </p>
@@ -251,7 +251,20 @@ export default function Tools() {
         </div>
       </section>
 
-      {/* Featured Tool Spotlight */}
+      <section className="py-16 band-white border-t-2 border-stone-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="headline-md text-stone-900 mb-6 text-center">
+            HOW THESE TOOLS <span className="text-yellow-500">HELP YOUR BUSINESS</span>
+          </h2>
+          <p className="text-lg text-stone-600 leading-relaxed mb-6 text-center max-w-3xl mx-auto font-body">
+            We built these free marketing tools to give business owners, ministry leaders, and nonprofit teams a practical starting point for improving their marketing. Each tool is based on the same frameworks and methodologies we use with our full-service clients, distilled into a self-service format you can use anytime.
+          </p>
+          <p className="text-lg text-stone-600 leading-relaxed text-center max-w-3xl mx-auto font-body">
+            Our cost calculator helps you set realistic budgets before engaging an agency. The SEO audit identifies the technical and content issues holding your website back in search results. The marketing plan builder walks you through goal-setting, audience targeting, and channel selection so you can create a roadmap tailored to your business. Whether you are a startup exploring your first marketing investment or an established company benchmarking your current efforts, these tools give you clarity and confidence.
+          </p>
+        </div>
+      </section>
+
       <section className="py-20 band-white border-t-2 border-stone-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="headline-md text-stone-900 mb-6">
