@@ -597,6 +597,7 @@ export default function Navigation() {
           </div>
         </div>
       )}
+      <div id="main-content" tabIndex={-1} className="outline-none" />
     </>
   );
 }

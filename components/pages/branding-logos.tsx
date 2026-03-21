@@ -193,7 +193,8 @@ export default function BrandingLogos() {
                 <img
                   src={logoDesignPhoto}
                   alt="Logo design and brand identity creative process"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
                   className="w-full object-cover h-96"
                   width={1280}
                   height={853}

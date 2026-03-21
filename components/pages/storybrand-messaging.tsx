@@ -188,7 +188,8 @@ export default function StoryBrandMessaging() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 width={800}
                 height={600}
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
                 alt="Business Builders marketing strategy team meeting to develop StoryBrand messaging for client growth"
                 className="w-full"
               />

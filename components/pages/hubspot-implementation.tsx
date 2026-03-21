@@ -136,7 +136,8 @@ export default function HubSpotImplementation() {
                 <img
                   src={hubspotAnalyticsPhoto}
                   alt="HubSpot Service Hub analytics and customer management"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
                   className="w-full object-cover h-96"
                   width={1280}
                   height={848}

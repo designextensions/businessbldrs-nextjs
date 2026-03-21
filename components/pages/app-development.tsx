@@ -174,7 +174,8 @@ export default function AppDevelopment() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   width={800}
                   height={600}
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
                   alt="Business team reviewing outdated technology systems that need custom app development solutions"
                   className="w-full"
                 />

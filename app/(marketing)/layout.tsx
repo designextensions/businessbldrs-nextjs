@@ -3,5 +3,5 @@ export default function MarketingLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main id="main-content" role="main" tabIndex={-1} className="outline-none">{children}</main>;
+  return <main role="main">{children}</main>;
 }
