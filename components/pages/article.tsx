@@ -2,8 +2,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-import { useQuery } from "@tanstack/react-query";
-import { useParams } from "next/navigation";
 import { ArrowLeft, Calendar, User, Clock, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/ui/navigation";
@@ -12,62 +10,15 @@ import ArticleSEO from "@/components/ui/ArticleSEO";
 import { Author, TLDR, FAQ, ExpertQuote, defaultAuthor } from "@/components/ui/geo-components";
 import type { BlogArticle } from "@/lib/db/schema";
 
-export default function Article() {
-  const params = useParams();
-  const slug = params?.slug as string | undefined;
+interface ArticleProps {
+  article: BlogArticle;
+}
 
-  const { data: articles = [], isLoading } = useQuery<BlogArticle[]>({
-    queryKey: ["/api/blog-articles"],
-  });
-
-  const article = articles.find(a => a.slug === slug || a.id.toString() === slug);
-
+export default function Article({ article }: ArticleProps) {
   const [shareUrl, setShareUrl] = useState('');
   useEffect(() => {
     setShareUrl(window.location.href);
   }, []);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen band-dark">
-        <Navigation />
-        <div className="pt-32 pb-20">
-          <div className="max-w-4xl mx-auto px-6">
-            <div className="animate-pulse">
-              <div className="h-8 bg-charcoal-800 w-3/4 mb-6"></div>
-              <div className="h-4 bg-charcoal-800 w-1/2 mb-8"></div>
-              <div className="h-64 bg-charcoal-800 mb-8"></div>
-              <div className="space-y-4">
-                <div className="h-4 bg-charcoal-800"></div>
-                <div className="h-4 bg-charcoal-800"></div>
-                <div className="h-4 bg-charcoal-800 w-5/6"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (!article) {
-    return (
-      <div className="min-h-screen band-dark">
-        <Navigation />
-        <div className="pt-32 pb-20">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h1 className="headline-lg text-white mb-6">Article Not Found</h1>
-            <p className="text-stone-400 mb-8">The article you're looking for doesn't exist or has been moved.</p>
-            <Link href="/resources">
-              <Button className="bg-yellow-400 hover:bg-yellow-500 text-black font-display uppercase tracking-wide border-2 border-black shadow-offset hover-press">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Resources
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   const shareText = `Check out this article: ${article.title}`;
 

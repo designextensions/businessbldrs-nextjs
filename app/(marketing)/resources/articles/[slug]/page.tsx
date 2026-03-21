@@ -1,7 +1,4 @@
 import type { Metadata } from "next";
-import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
-import getQueryClient from "@/lib/getQueryClient";
-import { getBlogArticles } from "@/lib/storage";
 import { db } from "@/lib/db";
 import { blogArticles } from "@/lib/db/schema";
 import { and, eq } from "drizzle-orm";
@@ -62,15 +59,5 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     notFound();
   }
 
-  const queryClient = getQueryClient();
-  await queryClient.prefetchQuery({
-    queryKey: ["/api/blog-articles"],
-    queryFn: getBlogArticles,
-  });
-
-  return (
-    <HydrationBoundary state={dehydrate(queryClient)}>
-      <ArticlePage />
-    </HydrationBoundary>
-  );
+  return <ArticlePage article={article} />;
 }
