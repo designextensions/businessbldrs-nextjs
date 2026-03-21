@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audit version="0.0.38">
+<site url="https://businessbldrs.com" crawled="75" date="2026-03-21T14:49:20.131Z"/>
+<score overall="45" grade="F">
+ <cat name="Accessibility" score="74"/>
+ <cat name="Crawlability" score="97"/>
+ <cat name="Performance" score="82"/>
+ <cat name="Images" score="76"/>
+ <cat name="Structured Data" score="82"/>
+ <cat name="Core SEO" score="89"/>
+ <cat name="Links" score="80"/>
+ <cat name="Security" score="81"/>
+ <cat name="Content" score="76"/>
+ <cat name="Video" score="44"/>
+ <cat name="E-E-A-T" score="67"/>
+ <cat name="URL Structure" score="100"/>
+ <cat name="Internationalization" score="100"/>
+ <cat name="Legal Compliance" score="100"/>
+ <cat name="Local SEO" score="100"/>
+ <cat name="Mobile" score="100"/>
+ <cat name="Social Media" score="100"/>
+</score>
+<summary passed="6807" warnings="1035" failed="426"/>
+<issues>
+ <category name="Crawlability" errors="14" warnings="2">
+  <rule id="crawl/canonical-chain" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/crawl/canonical-chain">
+   Page redirects before content is served
+   Pages (1): /
+   Items (1):
+    - / (https://businessbldrs.com → https://businessbldrs.com/) [finalUrl: https://businessbldrs.com/, chain: {&quot;sourceUrl&quot;:&quot;https://businessbldrs.com/&quot;,&quot;finalUrl&quot;:&quot;https://businessbldrs.com/&quot;,&quot;hops&quot;:[{&quot;url&quot;:&quot;https://businessbldrs.com/&quot;,&quot;statusCode&quot;:200,&quot;type&quot;:&quot;http&quot;}],&quot;chainLength&quot;:0,&quot;isLoop&quot;:false,&quot;endsInEr…]
+  </rule>
+  <rule id="crawl/html-size" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/crawl/html-size">
+   HTML is 2.7MB — exceeds Googlebot 2MB limit, content will be truncated
+   Pages (5/14): /resources, /resources/articles, /resources/articles/5-reasons-to-attend-a-marketing-workshop, /resources/articles/5-reasons-why-your-website-is-slow, /resources/articles/8-pillars-of-an-effective-website-redesign-strategy
+   Items (5/14):
+    - /resources (HTML is 2.7MB — exceeds Googlebot 2MB limit, content will be truncated)
+    - /resources/articles (HTML is 2.7MB — exceeds Googlebot 2MB limit, content will be truncated)
+    - /resources/articles/what-is-the-storybrand-framework-and-why-its-a-game-changer-for-your-marketing (HTML is 2.7MB — exceeds Googlebot 2MB limit, content will be truncated)
+    - /resources/articles/why-do-i-need-website-maintenance (HTML is 2.7MB — exceeds Googlebot 2MB limit, content will be truncated)
+    - /resources/articles/5-reasons-to-attend-a-marketing-workshop (HTML is 2.7MB — exceeds Googlebot 2MB limit, content will be truncated)
+  </rule>
+  <rule id="crawl/sitemap-coverage" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/crawl/sitemap-coverage">
+   308 sitemap URL(s) were not crawled
+   Items (5/308):
+    - /privacy-policy
+    - /terms-and-conditions
+    - /resources/articles/find-the-positive-in-the-chaos-7-keys-to-growing-through-the-coronoavirus
+    - /resources/articles/phases-of-web-application-development-phase-3-communication
+    - /resources/articles/how-to-build-a-website-that-inspires-your-customers-to-convert
+  </rule>
+ </category>
+ <category name="Core SEO" errors="1" warnings="67">
+  <rule id="core/meta-title" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/core/meta-title">
+   Title too long
+   Pages (5/34): /, /about, /ada-accessibility, /branding-logos, /daytona-beach
+   Items (5/34):
+    - / (Business Builders | Full-Service Marketing Agency  (69 chars))
+    - /schedule-call (Contact Us | St. Augustine Marketing Agency | Busi (63 chars))
+    - /about (About Us | 26+ Years of Marketing Excellence | Bus (64 chars))
+    - /branding-logos (Brand Design Services St. Augustine | Free Consult (75 chars))
+    - /jacksonville (Jacksonville Marketing Agency | Web Design &amp; SEO | (68 chars))
+  </rule>
+  <rule id="core/h1" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/core/h1">
+   No H1 tag found
+   Pages (1): /tools
+   Items (1):
+    - /tools (No H1 tag found)
+  </rule>
+  <rule id="core/meta-description" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/core/meta-description">
+   Description too long; Description too short
+   Pages (5/32): /daytona-beach, /gainesville, /grant, /hosting, /jacksonville
+   Items (5/32):
+    - /storybrand-agency (Business Builders is a StoryBrand Certified Agency (178 chars))
+    - /st-augustine (St. Augustine full-service marketing agency since  (172 chars))
+    - /jacksonville (Business Builders serves Jacksonville businesses w (189 chars))
+    - /promotions (Explore active promotions, grants, and giveaways f (209 chars))
+    - /grant (Apply for Business Builders&apos; annual $50,000 nonpro (192 chars))
+  </rule>
+  <rule id="core/title-unique" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/core/title-unique">
+   7 duplicate title(s) affecting 24 pages
+   Items (5/7):
+    - full-service marketing solutions | business builders (&quot;full-service marketing solutions | busin...&quot; (3 pages)) [pageCount: 3] (from: /services, /marketing-services, /marketing-strategy-consulting)
+    - website design &amp; development | business builders (&quot;website design &amp; development | business ...&quot; (2 pages)) [pageCount: 2] (from: /website-design, /maintenance)
+    - seo services st. augustine | business builders (&quot;seo services st. augustine | business bu...&quot; (2 pages)) [pageCount: 2] (from: /seo-services, /free-seo-audit)
+    - request a free marketing quote | business builders (&quot;request a free marketing quote | busines...&quot; (2 pages)) [pageCount: 2] (from: /request-quote, /cost-calculator)
+    - marketing case studies &amp; results | business builders (&quot;marketing case studies &amp; results | busin...&quot; (6 pages)) [pageCount: 6] (from: /portfolio, /case-studies/bozard-ford-lincoln, /case-studies/all-pro-dad, /case-studies/hines, /case-studies/rulon-international; +1 more)
+  </rule>
+ </category>
+ <category name="Security" errors="0" warnings="78">
+  <rule id="security/csp" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/csp">
+   No Content-Security-Policy header
+  </rule>
+  <rule id="security/x-frame-options" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/x-frame-options">
+   No clickjacking protection
+  </rule>
+  <rule id="security/form-captcha" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/form-captcha">
+   N public form(s) without CAPTCHA
+   Pages (5/74): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (2):
+    - form[0]
+    - form[1]
+  </rule>
+  <rule id="security/new-tab" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/new-tab">
+   1 external link(s) missing rel=&quot;noopener&quot;
+   Pages (1): /resources/articles/frauds-scams-and-the-internet
+   Items (1):
+    - http://www.bobbear.com/design-extensions-llc.html
+  </rule>
+  <rule id="security/http-to-https" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/http-to-https">
+   20 HTTP URL(s) redirect to HTTPS
+   Items (5/20):
+    - http://businessbldrs.com/ (http://businessbldrs.com/ → https://businessbldrs.com/ (301)) [statusCode: 301, chain: {&quot;sourceUrl&quot;:&quot;http://businessbldrs.com/&quot;,&quot;finalUrl&quot;:&quot;https://businessbldrs.com/&quot;,&quot;hops&quot;:[{&quot;url&quot;:&quot;http://businessbldrs.com/&quot;,&quot;statusCode&quot;:301,&quot;type&quot;:&quot;http&quot;},{&quot;url&quot;:&quot;https://businessbldrs.com/&quot;,&quot;status…]
+    - http://businessbldrs.com/services (http://businessbldrs.com/services → https://businessbldrs.com/services (301)) [statusCode: 301, chain: {&quot;sourceUrl&quot;:&quot;http://businessbldrs.com/services&quot;,&quot;finalUrl&quot;:&quot;https://businessbldrs.com/services&quot;,&quot;hops&quot;:[{&quot;url&quot;:&quot;http://businessbldrs.com/services&quot;,&quot;statusCode&quot;:301,&quot;type&quot;:&quot;http&quot;},{&quot;url&quot;:&quot;https://bus…]
+    - http://businessbldrs.com/website-design (http://businessbldrs.com/website-design → https://businessbldrs.com/website-design (301)) [statusCode: 301, chain: {&quot;sourceUrl&quot;:&quot;http://businessbldrs.com/website-design&quot;,&quot;finalUrl&quot;:&quot;https://businessbldrs.com/website-design&quot;,&quot;hops&quot;:[{&quot;url&quot;:&quot;http://businessbldrs.com/website-design&quot;,&quot;statusCode&quot;:301,&quot;type&quot;:&quot;http&quot;},{…]
+    - http://businessbldrs.com/seo-services (http://businessbldrs.com/seo-services → https://businessbldrs.com/seo-services (301)) [statusCode: 301, chain: {&quot;sourceUrl&quot;:&quot;http://businessbldrs.com/seo-services&quot;,&quot;finalUrl&quot;:&quot;https://businessbldrs.com/seo-services&quot;,&quot;hops&quot;:[{&quot;url&quot;:&quot;http://businessbldrs.com/seo-services&quot;,&quot;statusCode&quot;:301,&quot;type&quot;:&quot;http&quot;},{&quot;url&quot;:…]
+    - http://businessbldrs.com/schedule-call (http://businessbldrs.com/schedule-call → https://businessbldrs.com/schedule-call (301)) [statusCode: 301, chain: {&quot;sourceUrl&quot;:&quot;http://businessbldrs.com/schedule-call&quot;,&quot;finalUrl&quot;:&quot;https://businessbldrs.com/schedule-call&quot;,&quot;hops&quot;:[{&quot;url&quot;:&quot;http://businessbldrs.com/schedule-call&quot;,&quot;statusCode&quot;:301,&quot;type&quot;:&quot;http&quot;},{&quot;ur…]
+  </rule>
+ </category>
+ <category name="Links" errors="0" warnings="78">
+  <rule id="links/broken-external-links" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/broken-external-links">
+   2 broken external link(s): 1 with 429, 1 with 404
+   Items (2):
+    - https://www.instagram.com/businessbldrs/ (https://www.instagram.com/businessbldrs/ (429)) [status: 429] (from: /, /services, /website-design, /seo-services, /schedule-call; +69 more)
+    - https://www.techopedia.com/definition/4205/staging-server#:~:text=A%20staging%20server%20is%20a,any%20new%20software%20or%20websites. (https://www.techopedia.com/definition/4205/staging-server#:~:text=A%20staging%20server%20is%20a,any%20new%20software%20or%20websites. (404)) [status: 404] (from: /resources/articles/phases-of-web-application-development-phase-2-development)
+  </rule>
+  <rule id="links/https-downgrade" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/https-downgrade">
+   1 link(s) downgrade to HTTP
+   Pages (1): /resources/articles/frauds-scams-and-the-internet
+   Items (1):
+    - http://www.bobbear.com/design-extensions-llc.html
+  </rule>
+  <rule id="links/orphan-pages" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/orphan-pages">
+   35 orphan page(s) with &lt;2 incoming links
+   Items (5/35):
+    - /marketing-audit
+    - /st-augustine
+    - /jacksonville
+    - /ministry-blueprint
+    - /marketing-plan-builder
+  </rule>
+  <rule id="links/anchor-text" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/anchor-text">
+   4 link(s) have empty anchor text
+   Pages (5/74): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (4):
+    - https://www.facebook.com/businessbldrs | &lt;a href=&quot;https://www.facebook.com/businessbldrs&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;w-10 h-10 bg-charcoal-...
+    - https://www.linkedin.com/company/businessbldrs | &lt;a href=&quot;https://www.linkedin.com/company/businessbldrs&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;w-10 h-10 bg-c...
+    - https://www.instagram.com/businessbldrs/ | &lt;a href=&quot;https://www.instagram.com/businessbldrs/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;w-10 h-10 bg-charcoa...
+    - https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg | &lt;a href=&quot;https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;w-10...
+  </rule>
+  <rule id="links/weak-internal-links" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/weak-internal-links">
+   12 page(s) have only 1 internal link
+   Items (5/12):
+    - /marketing-audit
+    - /grant
+    - /case-studies/breakwater-construction
+    - /industries/automotive
+    - /industries/construction
+  </rule>
+ </category>
+ <category name="Content" errors="0" warnings="66">
+  <rule id="content/duplicate-title" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/duplicate-title">
+   7 duplicate title(s) found across 24 pages
+   Items (5/7):
+    - full-service marketing solutions | business builders (&quot;full-service marketing solutions | busin...&quot; (3 pages)) [pageCount: 3] (from: /services, /marketing-services, /marketing-strategy-consulting)
+    - website design &amp; development | business builders (&quot;website design &amp; development | business ...&quot; (2 pages)) [pageCount: 2] (from: /website-design, /maintenance)
+    - seo services st. augustine | business builders (&quot;seo services st. augustine | business bu...&quot; (2 pages)) [pageCount: 2] (from: /seo-services, /free-seo-audit)
+    - request a free marketing quote | business builders (&quot;request a free marketing quote | busines...&quot; (2 pages)) [pageCount: 2] (from: /request-quote, /cost-calculator)
+    - marketing case studies &amp; results | business builders (&quot;marketing case studies &amp; results | busin...&quot; (6 pages)) [pageCount: 6] (from: /portfolio, /case-studies/bozard-ford-lincoln, /case-studies/all-pro-dad, /case-studies/hines, /case-studies/rulon-international; +1 more)
+  </rule>
+  <rule id="content/duplicate-description" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/duplicate-description">
+   7 duplicate description(s) found across 24 pages
+   Items (5/7):
+    - full-service marketing agency offering web design, seo, cont (&quot;full-service marketing agency offering w...&quot; (3 pages)) [pageCount: 3] (from: /services, /marketing-services, /marketing-strategy-consulting)
+    - custom website design &amp; development in st. augustine fl. res (&quot;custom website design &amp; development in s...&quot; (2 pages)) [pageCount: 2] (from: /website-design, /maintenance)
+    - professional seo services in st. augustine &amp; jacksonville fl (&quot;professional seo services in st. augusti...&quot; (2 pages)) [pageCount: 2] (from: /seo-services, /free-seo-audit)
+    - get a free marketing consultation and quote from business bu (&quot;get a free marketing consultation and qu...&quot; (2 pages)) [pageCount: 2] (from: /request-quote, /cost-calculator)
+    - see our work — website design, branding, video &amp; marketing p (&quot;see our work — website design, branding,...&quot; (6 pages)) [pageCount: 6] (from: /portfolio, /case-studies/bozard-ford-lincoln, /case-studies/all-pro-dad, /case-studies/hines, /case-studies/rulon-international; +1 more)
+  </rule>
+  <rule id="content/heading-hierarchy" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/heading-hierarchy">
+   Skipped heading levels detected
+   Pages (2): /events, /marketing-audit
+   Items (1):
+    - H1 -&gt; H3
+  </rule>
+  <rule id="content/keyword-stuffing" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/keyword-stuffing">
+   N word(s) may be overused
+   Pages (5/58): /, /ada-accessibility, /ai-blueprint, /ai-development, /app-development
+   Items (5/25):
+    - your (&quot;your&quot; (3.1%)) [count: 24, density: 3.0729833546734953]
+    - website (&quot;website&quot; (4.3%)) [count: 31, density: 4.275862068965517]
+    - design (&quot;design&quot; (3.6%)) [count: 26, density: 3.5862068965517238]
+    - seo (&quot;seo&quot; (5.3%)) [count: 36, density: 5.286343612334802]
+    - storybrand (&quot;storybrand&quot; (3.9%)) [count: 45, density: 3.8593481989708405]
+  </rule>
+  <rule id="content/word-count" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/word-count">
+   Thin content: N words (min N)
+   Pages (4): /events, /marketing-audit, /marketing-plan-builder, /tools
+   Items (4):
+    - /marketing-audit (Thin content: 178 words (min 300))
+    - /marketing-plan-builder (Thin content: 206 words (min 300))
+    - /events (Thin content: 273 words (min 300))
+    - /tools (Thin content: 118 words (min 300))
+  </rule>
+ </category>
+ <category name="Structured Data" errors="7" warnings="5">
+  <rule id="schema/json-ld-valid" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/schema/json-ld-valid">
+   Invalid JSON-LD syntax
+   Pages (5/7): /free-seo-audit, /storybrand-framework, /case-studies/all-pro-dad, /case-studies/bozard-ford-lincoln, /case-studies/breakwater-construction
+   Items (5):
+    - parse-0 (Validation: WebPage.url is required)
+    - WebPage:url (WebPage missing url) [message: Validation: WebPage.url is required, severity: missing, path: [&quot;url&quot;]]
+    - Article:image (Article missing image) [message: Validation: Article.image is required, severity: missing, path: [&quot;image&quot;]]
+    - parse-1 (Validation: Article.publisher is required)
+    - Article:publisher (Article missing publisher) [message: Validation: Article.publisher is required, severity: missing, path: [&quot;publisher&quot;]]
+  </rule>
+  <rule id="schema/video" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/schema/video">
+   Page has video but no VideoObject schema
+   Pages (5): /, /about, /grant, /storybrand-agency, /testimonials
+  </rule>
+ </category>
+ <category name="Images" errors="11" warnings="147">
+  <rule id="images/image-file-size" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/images/image-file-size">
+   9 image(s) exceed 200.0 KB
+   Items (5/9):
+    - /attached_assets/vintage_pointing_hand_stamp_1766517389108.png [sizeBytes: 469372, size: 458.4 KB, status: 200, contentType: image/png] (from: /)
+    - /services-hero-new.jpg [sizeBytes: 230550, size: 225.1 KB, status: 200, contentType: image/jpeg] (from: /services)
+    - /service-strategy.jpg [sizeBytes: 376001, size: 367.2 KB, status: 200, contentType: image/jpeg] (from: /services)
+    - /attached_assets/BB-2023-Office-Content-Shoot-6961-2048x1152_1754613884042.jpg [sizeBytes: 207407, size: 202.5 KB, status: 200, contentType: image/jpeg] (from: /about, /team)
+    - /attached_assets/team-brandon-lowe.png [sizeBytes: 278551, size: 272.0 KB, status: 200, contentType: image/png] (from: /team)
+  </rule>
+  <rule id="images/alt-text" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/images/alt-text">
+   N image(s) missing alt text
+   Pages (5/11): /, /about, /daytona-beach, /gainesville, /jacksonville
+   Items (5):
+    - /attached_assets/vintage_growth_chart_stamp_1766517389109.webp
+    - /attached_assets/vintage_pointing_hand_stamp_1766517389108.png
+    - /attached_assets/vintage_approved_text_stamp_distressed_1766517389109.webp
+    - /attached_assets/certified_vintage_rubber_stamp_1766517389110.webp
+    - /attached_assets/vintage_ink_stamp_of_a_large_heavy_iron_anvil_1766517389109.webp
+  </rule>
+  <rule id="images/offscreen-lazy" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/offscreen-lazy">
+   N below-fold image(s) without lazy loading
+   Pages (5/59): /, /about, /ai-blueprint, /app-development, /branding-logos
+   Items (5/52):
+    - vintage_pointing_hand_stamp_1766517389108.png
+    - vintage_approved_text_stamp_distressed_1766517389109.webp
+    - BB_Full-Lockup_dark-1-3.png
+    - vintage_growth_chart_stamp_1766517389109.webp
+    - services-hero-new.jpg
+  </rule>
+  <rule id="images/dimensions" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/dimensions">
+   N image(s) missing width/height (causes CLS)
+   Pages (5/75): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (5/111):
+    - /logo-full.png | &lt;img src=&quot;https://businessbldrs.com/logo-full.png&quot; alt=&quot;Business Builders Logo&quot;&gt;
+    - /logo-compact.png | &lt;img src=&quot;https://businessbldrs.com/logo-compact.png&quot; alt=&quot;Business Builders&quot;&gt;
+    - /attached_assets/vintage_growth_chart_stamp_1766517389109.webp | &lt;img src=&quot;https://businessbldrs.com/attached_assets/vintage_growth_chart_stamp_1766517389109.webp&quot; alt=&quot;&quot;&gt;
+    - /attached_assets/vintage_pointing_hand_stamp_1766517389108.png | &lt;img src=&quot;https://businessbldrs.com/attached_assets/vintage_pointing_hand_stamp_1766517389108.png&quot; alt=&quot;&quot;&gt;
+    - /attached_assets/vintage_approved_text_stamp_distressed_1766517389109.webp | &lt;img src=&quot;https://businessbldrs.com/attached_assets/vintage_approved_text_stamp_distressed_1766517389109.webp&quot; alt=&quot;&quot;&gt;
+  </rule>
+  <rule id="images/optimized" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/images/optimized">
+   Images may not be optimized - consider using an image CDN
+   Pages (5/12): /branding-logos, /marketing-services, /ministry-blueprint, /portfolio, /resources
+  </rule>
+ </category>
+ <category name="Performance" errors="12" warnings="233">
+  <rule id="perf/lcp-hints" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/lcp-hints">
+   1 potential LCP image(s) without preload
+   Pages (5/11): /ai-blueprint, /app-development, /branding-logos, /hubspot-implementation, /maintenance
+   Items (5/9):
+    - /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1460925895917-afdab827c52f%3Fixlib%3Drb-4.0.3%26auto%3Dformat%26fit%3Dcrop%26w%3D800%26h%3D600%26q%3D80&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fattached_assets%2FScreenshot_2026-02-16_at_10.23.58_AM_1771255442299.webp&amp;w=3840&amp;q=75
+    - /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1552664730-d307ca884978%3Fixlib%3Drb-4.0.3%26auto%3Dformat%26fit%3Dcrop%26w%3D800%26h%3D600%26q%3D80&amp;w=3840&amp;q=75
+    - /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1561070791-2526d30994b5%3Fixlib%3Drb-4.0.3%26auto%3Dformat%26fit%3Dcrop%26w%3D800%26h%3D600%26q%3D80&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fassets%2Fstock_images%2Fprofessional_video_p_a35e2814.jpg&amp;w=3840&amp;q=75
+  </rule>
+  <rule id="perf/ttfb" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/ttfb">
+   Slow server response (642ms)
+   Pages (1): /resources/articles/8-pillars-of-an-effective-website-redesign-strategy
+   Items (1):
+    - /resources/articles/8-pillars-of-an-effective-website-redesign-strategy (Slow server response (642ms))
+  </rule>
+  <rule id="perf/cls-hints" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/perf/cls-hints">
+   N image(s) without width/height (CLS risk); N image(s) without width/height (CLS risk); N iframe(s) without dimensions
+   Pages (5/74): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (5/130):
+    - /attached_assets/vintage_growth_chart_stamp_1766517389109.webp
+    - /attached_assets/vintage_pointing_hand_stamp_1766517389108.png
+    - data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjMgZjQgZjYiLz48L3N2Zz4=
+    - data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjMgZjQgZjYiLz48L3N2Zz4=
+    - data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjMgZjQgZjYiLz48L3N2Zz4=
+  </rule>
+  <rule id="perf/total-byte-weight" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/perf/total-byte-weight">
+   Total tracked resources: 6787KB (very heavy)
+  </rule>
+  <rule id="perf/critical-request-chains" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/critical-request-chains">
+   2 critical request chain(s) found
+   Pages (5/75): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (2):
+    - CSS: /_next/static/chunks/6f3c1334d61c8e01.css
+    - JS: /_next/static/chunks/a6dad97d9634a72d.js
+  </rule>
+  <rule id="perf/lazy-above-fold" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/lazy-above-fold">
+   1 above-fold image(s) with lazy loading
+   Pages (4): /events, /portfolio, /promotions, /resources/articles
+   Items (4):
+    - /bozard-ford-lincoln.jpg
+    - /service-website.jpg
+    - /_next/image?url=%2Fnonprofit-grant-community.jpeg&amp;w=3840&amp;q=75
+    - https://www.futurefocusedevents.com/public/portals/833650930/siteResources/85614000003449290
+  </rule>
+  <rule id="perf/cache-headers" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/cache-headers">
+   Cache-Control without max-age
+   Pages (5/75): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+  </rule>
+ </category>
+ <category name="Accessibility" errors="381" warnings="342">
+  <rule id="a11y/button-name" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/button-name">
+   Buttons without accessible names
+   Pages (5/75): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (3):
+    - button.w-12
+    - button.p-1.5
+    - button.inline-flex
+  </rule>
+  <rule id="a11y/select-name" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/select-name">
+   2 select element(s) without accessible names
+   Pages (1): /resources/articles
+   Items (2):
+    - select
+    - select
+  </rule>
+  <rule id="a11y/aria-command-name" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/aria-command-name">
+   N command element(s) without accessible names
+   Pages (5/75): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (5):
+    - button[type=&quot;submit&quot;]
+    - a[href=&quot;https://www.facebook.com/busin...&quot;]
+    - a[href=&quot;https://www.linkedin.com/compa...&quot;]
+    - a[href=&quot;https://www.instagram.com/busi...&quot;]
+    - a[href=&quot;https://www.youtube.com/channe...&quot;]
+  </rule>
+  <rule id="a11y/aria-hidden-focus" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/aria-hidden-focus">
+   1 focusable element(s) inside aria-hidden
+   Pages (1): /grant
+   Items (1):
+    - input#honeypot
+  </rule>
+  <rule id="a11y/aria-input-field-name" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/aria-input-field-name">
+   2 input field(s) without accessible names
+   Pages (1): /resources/articles
+   Items (2):
+    - select
+    - select
+  </rule>
+  <rule id="a11y/label-content-name-mismatch" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/label-content-name-mismatch">
+   N element(s) where visible text doesn&apos;t match accessible name
+   Pages (5): /, /testimonials, /videos, /resources/articles/phases-of-web-application-development-phase-1-blueprint, /resources/articles/phases-of-web-application-development-phase-2-development
+   Items (5/25):
+    - div: visible=&quot;8:45&quot; vs aria-label=&quot;play storybrand mark&quot;
+    - div: visible=&quot;12:30&quot; vs aria-label=&quot;play complete brand &quot;
+    - div: visible=&quot;storybrandlead gener&quot; vs aria-label=&quot;play bozard ford lin&quot;
+    - div: visible=&quot;brandingstrategy&quot; vs aria-label=&quot;play ameri-force bra&quot;
+    - div: visible=&quot;marketinggrowth&quot; vs aria-label=&quot;play marketing resul&quot;
+  </rule>
+  <rule id="a11y/aria-labels" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/aria-labels">
+   N button(s) without accessible names
+   Pages (5/75): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (4):
+    - w-12 h-12 bg-yellow-400 border
+    - p-1.5 transition-colors bg-yel
+    - p-1.5 transition-colors text-s
+    - inline-flex items-center justi
+  </rule>
+  <rule id="a11y/form-labels" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/form-labels">
+   N form input(s) without labels
+   Pages (5/74): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (3):
+    - email
+    - text
+    - select
+  </rule>
+  <rule id="a11y/color-contrast" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/color-contrast">
+   N potential color contrast issue(s)
+   Pages (5/75): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (5/99):
+    - div with class &quot;px-4 py-3 text-stone-300 hover...&quot; may have low contrast
+    - div with class &quot;text-xs text-stone-400 mt-0.5...&quot; may have low contrast
+    - span with class &quot;text-xs text-stone-400 font-di...&quot; may have low contrast
+    - p with class &quot;font-display font-light italic...&quot; may have low contrast
+    - p with class &quot;text-stone-400 text-lg max-w-2...&quot; may have low contrast
+  </rule>
+  <rule id="a11y/landmark-one-main" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/landmark-one-main">
+   Page has no main landmark
+   Pages (5/73): /about, /ada-accessibility, /ai-blueprint, /ai-development, /app-development
+  </rule>
+  <rule id="a11y/video-captions" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/video-captions">
+   1 video(s) without caption tracks
+   Pages (3): /, /about, /grant
+   Items (1):
+    - /attached_assets/0301.mp4
+  </rule>
+  <rule id="a11y/heading-order" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/heading-order">
+   N heading level skip(s) detected
+   Pages (5/12): /downloads, /events, /hubspot-implementation, /marketing-audit, /marketing-services
+   Items (2):
+    - H4 after H2
+    - H3 after H1
+  </rule>
+  <rule id="a11y/identical-links-same-purpose" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/identical-links-same-purpose">
+   1 link text(s) lead to different destinations
+   Pages (5/15): /, /ada-accessibility, /branding-logos, /events, /marketing-services
+   Items (5/11):
+    - &quot;view project&quot; → 6 different URLs
+    - &quot;learn more&quot; → 7 different URLs
+    - &quot;learn more&quot; → 3 different URLs
+    - &quot;learn more&quot; → 4 different URLs
+    - &quot;visit site&quot; → 15 different URLs
+  </rule>
+  <rule id="a11y/image-redundant-alt" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/image-redundant-alt">
+   N image(s) with redundant alt text
+   Pages (4): /app-development, /branding-logos, /marketing-services, /social-media-marketing
+   Items (5/9):
+    - alt=&quot;Bozard Ford Lincoln&quot; matches filename
+    - alt=&quot;Rulon International&quot; matches filename
+    - alt=&quot;Jax Symphony&quot; matches filename
+    - alt=&quot;Inspire Nurse Leaders&quot; matches filename
+    - alt=&quot;All Pro Dad&quot; matches filename
+  </rule>
+  <rule id="a11y/link-text" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/link-text">
+   4 link(s) with no accessible text; N link(s) with generic text
+   Pages (5/74): /, /about, /ada-accessibility, /ai-blueprint, /ai-development
+   Items (5/10):
+    - https://www.facebook.com/businessbldrs (svg-no-name)
+    - https://www.linkedin.com/company/businessbldrs (svg-no-name)
+    - https://www.instagram.com/businessbldrs/ (svg-no-name)
+    - https://www.youtube.com/channel/UC3SN1I1FwktpF_lMq (svg-no-name)
+    - learn more
+  </rule>
+  <rule id="a11y/skip-link" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/skip-link">
+   No bypass mechanism for repetitive content
+   Pages (5/73): /about, /ada-accessibility, /ai-blueprint, /ai-development, /app-development
+  </rule>
+  <rule id="a11y/landmark-regions" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/landmark-regions">
+   No &lt;main&gt; landmark found
+   Pages (5/73): /about, /ada-accessibility, /ai-blueprint, /ai-development, /app-development
+  </rule>
+ </category>
+ <category name="URL Structure" errors="0" warnings="2">
+  <rule id="url/length" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/url/length">
+   URL is N characters (over N)
+   Pages (2): /resources/articles/phases-of-web-application-development-phase-2-development, /resources/articles/what-is-the-storybrand-framework-and-why-its-a-game-changer-for-your-marketing
+   Items (2):
+    - /resources/articles/what-is-the-storybrand-framework-and-why-its-a-game-changer-for-your-marketing (URL is 123 characters (over 100))
+    - /resources/articles/phases-of-web-application-development-phase-2-development (URL is 102 characters (over 100))
+  </rule>
+ </category>
+ <category name="E-E-A-T" errors="0" warnings="4">
+  <rule id="eeat/author-byline" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/author-byline">
+   No content pages have author attribution
+  </rule>
+  <rule id="eeat/contact-page" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/contact-page">
+   No Contact page found
+  </rule>
+  <rule id="eeat/privacy-policy" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/privacy-policy">
+   No Privacy Policy page found
+  </rule>
+  <rule id="eeat/content-dates" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/content-dates">
+   No content pages have datePublished
+  </rule>
+ </category>
+ <category name="Video" errors="0" warnings="11">
+  <rule id="video/video-schema" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/video/video-schema">
+   Video content without VideoObject schema
+   Pages (5): /, /about, /grant, /storybrand-agency, /testimonials
+  </rule>
+  <rule id="video/video-accessible" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/video/video-accessible">
+   No videos have caption tracks
+   Pages (3): /, /about, /grant
+  </rule>
+  <rule id="video/video-thumbnail" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/video/video-thumbnail">
+   1 video(s) missing poster attribute
+   Pages (3): /, /about, /grant
+   Items (3):
+    - / (1 video(s) missing poster attribute)
+    - /about (1 video(s) missing poster attribute)
+    - /grant (1 video(s) missing poster attribute)
+  </rule>
+ </category>
+</issues>
+</audit>
