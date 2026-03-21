@@ -1,23 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/components/ui/google-analytics";
 import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
-  const [currentTypeIndex, setCurrentTypeIndex] = useState(0);
-  const [mounted, setMounted] = useState(false);
-  const organizationTypes = ["BUSINESSES", "MINISTRIES", "NON-PROFITS"];
-
-  useEffect(() => {
-    setMounted(true);
-    const interval = setInterval(() => {
-      setCurrentTypeIndex((prev) => (prev + 1) % organizationTypes.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-charcoal-900" data-testid="hero-section">
@@ -38,10 +26,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="mb-8">
           <span className="label-industrial inline-block px-5 py-2.5 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm">
-            AI-POWERED MARKETING FOR{" "}
-            <span className="rotating-text" key={mounted ? currentTypeIndex : "initial"} suppressHydrationWarning>
-              {organizationTypes[currentTypeIndex]}
-            </span>
+            STORYBRAND CERTIFIED AGENCY
           </span>
         </div>
 
