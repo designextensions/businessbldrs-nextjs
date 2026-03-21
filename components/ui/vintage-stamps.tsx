@@ -14,8 +14,7 @@ export function PointingHandStamp({ className = "" }: StampProps) {
   return (
     <img 
       src={pointingHandImg}
-      alt=""
-      aria-hidden="true"
+      alt="Vintage pointing hand illustration"
       className={`pointer-events-none select-none ${className}`}
       draggable={false}
       width={1024}
@@ -28,8 +27,7 @@ export function AnvilStamp({ className = "" }: StampProps) {
   return (
     <img 
       src={anvilImg}
-      alt=""
-      aria-hidden="true"
+      alt="Vintage anvil stamp"
       className={`pointer-events-none select-none ${className}`}
       draggable={false}
       width={1024}
@@ -42,8 +40,7 @@ export function GrowthChartStamp({ className = "" }: StampProps) {
   return (
     <img 
       src={growthChartImg}
-      alt=""
-      aria-hidden="true"
+      alt="Vintage growth chart stamp"
       className={`pointer-events-none select-none ${className}`}
       draggable={false}
       width={1024}
@@ -56,8 +53,7 @@ export function ApprovedStamp({ className = "" }: StampProps) {
   return (
     <img 
       src={approvedImg}
-      alt=""
-      aria-hidden="true"
+      alt="Vintage approved text stamp"
       className={`pointer-events-none select-none ${className}`}
       draggable={false}
       width={1024}
@@ -70,8 +66,7 @@ export function PostalStamp({ className = "" }: StampProps) {
   return (
     <img 
       src={postalImg}
-      alt=""
-      aria-hidden="true"
+      alt="Vintage postal cancellation stamp"
       className={`pointer-events-none select-none ${className}`}
       draggable={false}
       width={1024}
@@ -84,8 +79,7 @@ export function CertifiedStamp({ className = "", style }: StampProps) {
   return (
     <img 
       src={certifiedImg}
-      alt=""
-      aria-hidden="true"
+      alt="Vintage certified rubber stamp"
       className={`pointer-events-none select-none ${className}`}
       style={style}
       draggable={false}
