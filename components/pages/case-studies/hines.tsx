@@ -109,6 +109,8 @@ export default function HinesCaseStudy() {
                   src={heroImage}
                   alt="Hines luxury community home"
                   className="w-full h-auto object-cover"
+                  width={1200}
+                  height={800}
                 />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

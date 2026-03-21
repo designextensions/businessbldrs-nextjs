@@ -130,6 +130,8 @@ export default function StoryBrand() {
               src="https://businessbldrs.com/wp-content/uploads/2024/11/marketing-blueprint-img-1-1024x436.png"
               alt="Business Builders marketing strategy blueprint showing the plan-produce-promote framework"
               className="w-full shadow-offset border-2 border-charcoal-900"
+              width={1024}
+              height={436}
             />
           </div>
 
@@ -222,6 +224,8 @@ export default function StoryBrand() {
                 src="https://businessbldrs.com/wp-content/uploads/2024/12/Mask-Group-11@2x-1024x665.png"
                 alt="StoryBrand Framework diagram showing the seven-part storytelling structure for business messaging"
                 className="w-full shadow-offset border-2 border-secondary"
+                width={1024}
+                height={665}
               />
             </div>
           </div>
@@ -282,6 +286,8 @@ export default function StoryBrand() {
                 src="https://businessbldrs.com/wp-content/uploads/2024/12/shutterstock_371016464@2x-1024x868.png"
                 alt="Team applying StoryBrand messaging strategy to business marketing materials"
                 className="w-full shadow-offset border-2 border-secondary"
+                width={1024}
+                height={868}
               />
             </div>
           </div>
@@ -339,6 +345,8 @@ export default function StoryBrand() {
                 src="https://businessbldrs.com/wp-content/uploads/2024/12/45@2x-1024x590.png"
                 alt="Business Builders StoryBrand Certified Agency team delivering marketing results for clients"
                 className="w-full shadow-offset border-2 border-secondary"
+                width={1024}
+                height={590}
               />
             </div>
             <div className="space-y-8">

@@ -246,6 +246,8 @@ export default function MarketingServices() {
                     alt={project.title}
                     loading="lazy"
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    width={600}
+                    height={400}
                   />
                   <div className="absolute bottom-4 left-4">
                     <span className="label-industrial text-yellow-400">{project.category}</span>
@@ -381,9 +383,9 @@ export default function MarketingServices() {
               <h3 className="text-xl font-bold text-charcoal-900 mb-3 group-hover:text-yellow-600">Social Media Marketing</h3>
               <p className="text-stone-500">Build authentic connections and drive engagement across all major social platforms with strategic campaigns.</p>
             </Link>
-            <Link href="/marketing-strategy-consulting" className="bento-card border-2 border-charcoal-800 p-8 hover:shadow-offset transition-all duration-300 group">
-              <h3 className="text-xl font-bold text-charcoal-900 mb-3 group-hover:text-yellow-600">Marketing Strategy</h3>
-              <p className="text-stone-500">Expert marketing strategy consulting to develop comprehensive plans that deliver measurable results and growth.</p>
+            <Link href="/marketing-audit" className="bento-card border-2 border-charcoal-800 p-8 hover:shadow-offset transition-all duration-300 group">
+              <h3 className="text-xl font-bold text-charcoal-900 mb-3 group-hover:text-yellow-600">Free Marketing Audit</h3>
+              <p className="text-stone-500">Take our quick marketing assessment to uncover gaps in your strategy and get personalized recommendations.</p>
             </Link>
           </div>
         </div>

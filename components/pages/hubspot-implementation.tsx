@@ -138,6 +138,8 @@ export default function HubSpotImplementation() {
                   alt="HubSpot Service Hub analytics and customer management"
                   loading="lazy"
                   className="w-full object-cover h-96"
+                  width={1280}
+                  height={848}
                 />
               </div>
             </div>

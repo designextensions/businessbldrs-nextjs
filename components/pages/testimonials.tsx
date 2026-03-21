@@ -208,6 +208,8 @@ export default function Testimonials() {
                     alt={`${featuredVideo.title} - client video testimonial for Business Builders`}
                     className="w-full h-full object-cover"
                     loading="eager"
+                    width={800}
+                    height={450}
                   />
                   <div className="absolute inset-0 bg-charcoal-900/40 group-hover:bg-charcoal-900/30 transition-colors" />
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -363,6 +365,8 @@ export default function Testimonials() {
                         alt={`${video.title} - client testimonial video thumbnail`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
+                        width={480}
+                        height={270}
                       />
                       <div className="absolute inset-0 bg-charcoal-900/40 group-hover:bg-charcoal-900/30 transition-colors" />
                       <div className="absolute inset-0 flex items-center justify-center">

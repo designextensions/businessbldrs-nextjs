@@ -107,6 +107,8 @@ export default function RulonInternationalCaseStudy() {
                   src={heroImage}
                   alt="Rulon International wood ceiling panels"
                   className="w-full h-auto object-cover"
+                  width={1200}
+                  height={800}
                 />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -313,6 +315,8 @@ export default function RulonInternationalCaseStudy() {
                   src="https://businessbldrs.com/wp-content/uploads/2025/01/Rulon-1.png"
                   alt="Rulon International website design"
                   className="w-full h-auto object-cover"
+                  width={1024}
+                  height={768}
                 />
               </div>
             </AnimatedSection>
@@ -384,6 +388,8 @@ export default function RulonInternationalCaseStudy() {
                     src={image}
                     alt={`Rulon International video ${index + 1}`}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={480}
+                    height={270}
                   />
                   <div className="absolute inset-0 bg-charcoal-900/40 group-hover:bg-charcoal-900/60 transition-colors duration-300 flex items-center justify-center">
                     <div className="w-12 h-12 bg-yellow-400 flex items-center justify-center">
@@ -430,6 +436,8 @@ export default function RulonInternationalCaseStudy() {
                   src="https://businessbldrs.com/wp-content/uploads/2025/01/Rulon-2.png"
                   alt="Rulon International marketing campaign results"
                   className="w-full h-auto object-cover"
+                  width={1024}
+                  height={768}
                 />
               </div>
             </AnimatedSection>

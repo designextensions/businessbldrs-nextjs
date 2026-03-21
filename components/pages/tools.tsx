@@ -196,6 +196,8 @@ export default function Tools() {
                                 src={tool.image} 
                                 alt={tool.title}
                                 className="w-8 h-8 object-contain"
+                                width={32}
+                                height={32}
                                 onError={(e) => {
                                   const target = e.target as HTMLImageElement;
                                   target.style.display = 'none';

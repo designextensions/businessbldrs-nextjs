@@ -18,6 +18,8 @@ export function PointingHandStamp({ className = "" }: StampProps) {
       aria-hidden="true"
       className={`pointer-events-none select-none ${className}`}
       draggable={false}
+      width={1024}
+      height={1024}
     />
   );
 }
@@ -30,6 +32,8 @@ export function AnvilStamp({ className = "" }: StampProps) {
       aria-hidden="true"
       className={`pointer-events-none select-none ${className}`}
       draggable={false}
+      width={1024}
+      height={1024}
     />
   );
 }
@@ -42,6 +46,8 @@ export function GrowthChartStamp({ className = "" }: StampProps) {
       aria-hidden="true"
       className={`pointer-events-none select-none ${className}`}
       draggable={false}
+      width={1024}
+      height={1024}
     />
   );
 }
@@ -54,6 +60,8 @@ export function ApprovedStamp({ className = "" }: StampProps) {
       aria-hidden="true"
       className={`pointer-events-none select-none ${className}`}
       draggable={false}
+      width={1024}
+      height={1024}
     />
   );
 }
@@ -66,6 +74,8 @@ export function PostalStamp({ className = "" }: StampProps) {
       aria-hidden="true"
       className={`pointer-events-none select-none ${className}`}
       draggable={false}
+      width={1024}
+      height={1024}
     />
   );
 }
@@ -79,6 +89,8 @@ export function CertifiedStamp({ className = "", style }: StampProps) {
       className={`pointer-events-none select-none ${className}`}
       style={style}
       draggable={false}
+      width={1024}
+      height={1024}
     />
   );
 }

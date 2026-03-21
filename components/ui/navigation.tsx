@@ -142,6 +142,12 @@ export default function Navigation() {
 
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[200] focus:bg-yellow-400 focus:text-charcoal-900 focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:border-2 focus:border-charcoal-900"
+      >
+        Skip to main content
+      </a>
       <nav
         className="navigation-header fixed top-0 left-0 right-0 w-full h-[76px] lg:h-24"
         style={{
@@ -168,12 +174,16 @@ export default function Navigation() {
                     style={{ height: `${logoHeight}px`, width: 'auto', maxWidth: '280px', opacity: fullLogoOpacity, transition: 'opacity 300ms ease-out, filter 300ms ease-out', filter: showDarkHeroNav ? 'brightness(10) saturate(0)' : 'brightness(0) saturate(100%)' }}
                     src={BB_Full_Lockup_dark_1_3}
                     alt="Business Builders Logo"
+                    width={224}
+                    height={94}
                   />
                   <img 
                     className="cursor-pointer hover:opacity-80 transition-all duration-300 ease-out object-contain absolute top-0 left-0"
                     style={{ height: `${logoHeight}px`, width: `${logoHeight}px`, opacity: compactLogoOpacity, transition: 'opacity 300ms ease-out, filter 300ms ease-out', filter: showDarkHeroNav ? 'brightness(10) saturate(0)' : 'brightness(0) saturate(100%)' }}
                     src={BBCompactLogo}
                     alt="Business Builders"
+                    width={59}
+                    height={32}
                   />
                   <span 
                     className="font-display font-black text-charcoal-900 uppercase tracking-wide whitespace-nowrap hidden sm:block"

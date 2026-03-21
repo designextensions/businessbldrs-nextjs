@@ -79,6 +79,8 @@ function TeamMemberBio() {
                   src={teamMember.image}
                   alt={`${teamMember.name}, ${teamMember.title} at Business Builders marketing agency`}
                   className="w-full max-w-md mx-auto h-auto"
+                  width={400}
+                  height={400}
                 />
               </div>
             </div>
@@ -264,6 +266,8 @@ function TeamMemberBio() {
                             src={photo}
                             alt={`${teamMember.name} at Business Builders - additional photo ${index + 1}`}
                             className="w-full h-auto shadow-offset-sm"
+                            width={600}
+                            height={400}
                           />
                         </div>
                       ))}

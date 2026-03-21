@@ -109,6 +109,8 @@ export default function AllProDadCaseStudy() {
                   src={heroImage}
                   alt="All Pro Dad - Father and son with baseball"
                   className="w-full h-auto object-cover"
+                  width={1200}
+                  height={800}
                 />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -118,6 +120,8 @@ export default function AllProDadCaseStudy() {
                     src="https://allprodad.com/wp-content/themes/allprodad/img/logo.png"
                     alt="All Pro Dad Logo"
                     className="h-12 w-auto"
+                    width={200}
+                    height={48}
                   />
                 </div>
               </div>

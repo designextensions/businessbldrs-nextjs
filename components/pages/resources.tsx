@@ -271,6 +271,8 @@ export default function Resources() {
                       src={video.thumbnail}
                       alt={`${video.title} - marketing resource video by Business Builders`}
                       className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-300"
+                      width={480}
+                      height={270}
                     />
                     <div
                       className="absolute inset-0 bg-charcoal-900/40 flex items-center justify-center cursor-pointer"
@@ -354,6 +356,8 @@ export default function Resources() {
                         src={article.image}
                         alt={article.title}
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                        width={800}
+                        height={450}
                       />
                     ) : (
                       <FallbackResourceImage title={article.title} category={article.category} />
@@ -509,6 +513,8 @@ export default function Resources() {
                           src={tool.image}
                           alt={tool.title}
                           className="w-full h-full object-cover"
+                          width={400}
+                          height={300}
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
                             target.style.display = 'none';

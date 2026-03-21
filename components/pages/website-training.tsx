@@ -132,6 +132,8 @@ export default function WebsiteTraining() {
                   src={heroImage}
                   alt="Man reviews documents while on video call - website training"
                   className="w-full"
+                  width={800}
+                  height={600}
                 />
               </div>
             </div>
@@ -206,6 +208,8 @@ export default function WebsiteTraining() {
                           src={wordpressLoginImage}
                           alt="WordPress Login Screen Interface" 
                           className="w-full h-64 object-contain mb-4"
+                          width={800}
+                          height={450}
                         />
                         <p className="text-stone-400 text-sm">WordPress login screen (yoursitename.com/wp-admin)</p>
                       </div>
@@ -289,6 +293,8 @@ export default function WebsiteTraining() {
                 src={dashboardImage}
                 alt="WordPress Dashboard Interface" 
                 className="w-4/5 h-auto mx-auto"
+                width={800}
+                height={500}
               />
             </div>
 

@@ -48,7 +48,7 @@ export default function ScheduleCall() {
       
       <Navigation />
       
-      <main>
+      <div>
         {/* Breadcrumbs */}
         <section className="pt-24 pb-8 band-dark">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -322,7 +322,7 @@ export default function ScheduleCall() {
             </div>
           </div>
         </section>
-      </main>
+      </div>
 
       <MegaFooter />
     </div>

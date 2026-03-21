@@ -163,6 +163,8 @@ export default function StAugustine() {
                 src={stAugustineImage}
                 alt="Castillo de San Marcos - Historic St. Augustine, Florida where Business Builders is headquartered"
                 className="w-full border-2 border-charcoal-900 shadow-offset"
+                width={1356}
+                height={1402}
               />
             </div>
           </div>

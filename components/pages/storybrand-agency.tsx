@@ -7,7 +7,7 @@ import { useState } from "react";
 const teamMeetingImg = "/attached_assets/Screenshot_2026-02-16_at_10.23.58_AM_1771255442299.webp";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, CheckCircle, Star, Users, Target, TrendingUp, Award, MessageSquare, FileText, BarChart3, Shield, Zap, BookOpen, Quote, ChevronRight } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Users, Target, TrendingUp, Award, MessageSquare, FileText, BarChart3, Shield, Zap, BookOpen, Quote, ChevronRight, Heart } from "lucide-react";
 import Navigation from "@/components/ui/navigation";
 import MegaFooter from "@/components/ui/mega-footer";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
@@ -743,6 +743,11 @@ export default function StoryBrandAgency() {
               <Zap className="w-8 h-8 text-yellow-400 mb-4" />
               <h3 className="font-display uppercase font-bold text-charcoal-900 mb-2 group-hover:text-yellow-600 transition-colors">StoryBrand Website Design</h3>
               <p className="text-stone-500 text-sm leading-relaxed">See how we translate your BrandScript into a conversion-focused website that turns visitors into customers.</p>
+            </Link>
+            <Link href="/ministry-blueprint" className="bg-white border-2 border-charcoal-800 p-6 shadow-offset hover:-translate-y-1 transition-all duration-300 group block">
+              <Heart className="w-8 h-8 text-yellow-400 mb-4" />
+              <h3 className="font-display uppercase font-bold text-charcoal-900 mb-2 group-hover:text-yellow-600 transition-colors">Ministry Blueprint</h3>
+              <p className="text-stone-500 text-sm leading-relaxed">A tailored StoryBrand messaging and marketing roadmap designed specifically for churches, ministries, and nonprofits.</p>
             </Link>
           </div>
         </div>

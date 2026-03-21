@@ -50,6 +50,8 @@ export default function MinistryBlueprint() {
                   src="/ministry-baptism-scene.png"
                   alt="Ministry outreach and baptism scene - Business Builders Ministry Blueprint helps churches grow their digital presence"
                   className="w-full bento-card"
+                  width={800}
+                  height={600}
                 />
               </div>
             </div>
@@ -129,6 +131,8 @@ export default function MinistryBlueprint() {
                   src="/debbie-stiegler-testimonial.png"
                   alt="Debbie Stiegler, Executive Director of Ministry at Abundant Life - Business Builders client testimonial"
                   className="w-24 h-24 object-cover border-2 border-charcoal-800"
+                  width={96}
+                  height={96}
                 />
                 <div className="text-center md:text-left">
                   <h3 className="font-display font-bold text-xl uppercase text-charcoal-900 mb-2">Outstanding Support and Service!</h3>

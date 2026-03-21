@@ -200,6 +200,8 @@ export default function ServicesPage() {
                   src="/services-hero-new.jpg"
                   alt="Business Builders team collaborating on marketing strategy and planning"
                   className="w-full"
+                  width={1200}
+                  height={800}
                 />
               </div>
             </div>
@@ -264,6 +266,9 @@ export default function ServicesPage() {
                       }
                       alt={`${service.title} - Business Builders professional marketing services`}
                       className="w-full"
+                      width={index === 0 ? 1280 : 600}
+                      height={index === 0 ? 800 : 400}
+                      loading={index < 2 ? undefined : "lazy"}
                     />
                   </div>
                 </div>

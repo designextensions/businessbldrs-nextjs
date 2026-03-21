@@ -127,6 +127,8 @@ export default function BozardFordLincolnCaseStudy() {
                   src={heroImage}
                   alt="Bozard Ford Lincoln automotive dealership"
                   className="w-full h-auto object-cover"
+                  width={1200}
+                  height={800}
                 />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -257,6 +259,8 @@ export default function BozardFordLincolnCaseStudy() {
                         src={video.src}
                         alt={video.title}
                         className="w-full h-48 object-cover"
+                        width={480}
+                        height={270}
                       />
                       <div className="absolute inset-0 bg-charcoal-900/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <div className="w-16 h-16 bg-yellow-400 flex items-center justify-center">

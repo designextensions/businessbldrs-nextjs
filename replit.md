@@ -181,7 +181,7 @@ squirrel report --regression-since businessbldrs.com --format llm
 - ~~Title/description length violations~~ — Fixed: All titles ≤40 chars (≤60 with suffix), all descriptions 120-160 chars
 - ~~Missing E-E-A-T signals~~ — Fixed (Task #6): Article JSON-LD on blog pages, WebPage schema `url` on free-seo-audit/storybrand-framework, VideoObject JSON-LD on storybrand-agency, heading hierarchy fixed across 8+ pages, thin content expanded on 4 pages, Contact link in footer
 - ~~Invalid JSON-LD~~ — Fixed (Task #6): case-study-schema already valid; WebPage schemas now include `url` field
-- 35 orphan pages, keyword stuffing, CLS/image issues (pending Task #7)
+- ~~35 orphan pages, CLS/image issues~~ — Fixed (Task #7): width/height on all images (nav logos, footer logo, 20+ page components, vintage stamps), `<main>` landmark + skip-nav link, aria-labels on social links, security headers (X-Frame-Options, X-Content-Type-Options, Referrer-Policy), cache headers for static assets, service area footer links (7 geo pages), internal links to orphan pages (marketing-audit, marketing-plan-builder, ministry-blueprint, grant, free-seo-audit)
 
 ## Deployment
 

@@ -117,6 +117,8 @@ export default function Videos() {
                       alt={`${featuredVideo.title} - featured video by Business Builders`}
                       className="w-full h-full object-cover"
                       loading="eager"
+                      width={800}
+                      height={450}
                     />
                     <div className="absolute inset-0 bg-charcoal-900/40 group-hover:bg-charcoal-900/30 transition-colors" />
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -218,6 +220,8 @@ export default function Videos() {
                       alt={`${video.title} - video by Business Builders`}
                       className="w-full aspect-video object-cover"
                       loading="lazy"
+                      width={480}
+                      height={270}
                     />
                     <div className="absolute inset-0 bg-charcoal-900/40 group-hover:bg-charcoal-900/20 transition-colors" />
                     <div className="absolute inset-0 flex items-center justify-center">

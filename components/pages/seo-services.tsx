@@ -474,9 +474,9 @@ export default function SEOServices() {
               <h3 className="text-xl font-bold text-charcoal-900 mb-3 group-hover:text-yellow-600">Marketing Services</h3>
               <p className="text-stone-500">Comprehensive digital marketing solutions including PPC, email, and social media to amplify your SEO results.</p>
             </Link>
-            <Link href="/social-media-marketing" className="bento-card border-2 border-charcoal-800 p-8 hover:shadow-offset transition-all duration-300 group">
-              <h3 className="text-xl font-bold text-charcoal-900 mb-3 group-hover:text-yellow-600">Social Media Marketing</h3>
-              <p className="text-stone-500">Build brand awareness and drive engagement across all major social platforms with strategic content and campaigns.</p>
+            <Link href="/free-seo-audit" className="bento-card border-2 border-charcoal-800 p-8 hover:shadow-offset transition-all duration-300 group">
+              <h3 className="text-xl font-bold text-charcoal-900 mb-3 group-hover:text-yellow-600">Free SEO Audit</h3>
+              <p className="text-stone-500">Get a comprehensive SEO analysis of your website with actionable recommendations to improve your search rankings.</p>
             </Link>
           </div>
         </div>

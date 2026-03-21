@@ -134,6 +134,8 @@ export default function Article({ article }: ArticleProps) {
               src={article.image} 
               alt={article.title}
               className="w-full h-[400px] object-cover"
+              width={1200}
+              height={400}
             />
           </div>
         </div>

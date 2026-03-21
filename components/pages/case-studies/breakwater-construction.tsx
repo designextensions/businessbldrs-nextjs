@@ -128,6 +128,8 @@ export default function BreakwaterConstructionCaseStudy() {
                   src={heroImage}
                   alt="Breakwater Construction custom pool project"
                   className="w-full h-auto object-cover"
+                  width={1200}
+                  height={800}
                 />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

@@ -77,6 +77,8 @@ export default function Events() {
                     alt={`${event.title} - Business Builders event`}
                     loading="lazy"
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                    width={800}
+                    height={450}
                   />
                   <div className="absolute top-4 left-4 flex items-center gap-2 bg-white px-3 py-1 border-2 border-stone-900">
                     <MapPin className="w-4 h-4" />

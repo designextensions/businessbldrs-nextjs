@@ -37,6 +37,8 @@ function ArticleImage({ src, alt, className = "" }: { src: string; alt: string; 
       alt={alt}
       className={`object-cover ${className}`}
       loading="lazy"
+      width={800}
+      height={450}
     />
   );
 }

@@ -195,6 +195,8 @@ export default function BrandingLogos() {
                   alt="Logo design and brand identity creative process"
                   loading="lazy"
                   className="w-full object-cover h-96"
+                  width={1280}
+                  height={853}
                 />
               </div>
             </div>
@@ -251,6 +253,8 @@ export default function BrandingLogos() {
                     alt={project.title}
                     loading="lazy"
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    width={1024}
+                    height={576}
                   />
                   <div className="absolute bottom-4 left-4">
                     <span className="label-industrial text-yellow-400 bg-secondary px-3 py-1 border-2 border-yellow-400">{project.category}</span>
@@ -299,6 +303,10 @@ export default function BrandingLogos() {
             <Link href="/storybrand-messaging" className="bento-card border-2 border-charcoal-800 p-8 hover:shadow-offset transition-all duration-300 group">
               <h3 className="text-xl font-bold text-charcoal-900 mb-3 group-hover:text-yellow-600">StoryBrand Messaging</h3>
               <p className="text-stone-500">Pair your visual brand with crystal clear messaging using the proven StoryBrand framework.</p>
+            </Link>
+            <Link href="/marketing-plan-builder" className="bento-card border-2 border-charcoal-800 p-8 hover:shadow-offset transition-all duration-300 group">
+              <h3 className="text-xl font-bold text-charcoal-900 mb-3 group-hover:text-yellow-600">Marketing Plan Builder</h3>
+              <p className="text-stone-500">Build a custom marketing plan step-by-step with our interactive planning tool designed for growing businesses.</p>
             </Link>
             <Link href="/video-production" className="bento-card border-2 border-charcoal-800 p-8 hover:shadow-offset transition-all duration-300 group">
               <h3 className="text-xl font-bold text-charcoal-900 mb-3 group-hover:text-yellow-600">Video Production</h3>

@@ -49,7 +49,7 @@ export default function Home() {
       <ThirdPartyOptimizer delayMs={2000} />
       <SitemapMeta />
       <Navigation />
-      <main className="min-h-screen overflow-x-hidden">
+      <div className="min-h-screen overflow-x-hidden">
         <header>
           <HeroSection />
         </header>
@@ -68,7 +68,7 @@ export default function Home() {
         <FAQSection />
         
         <MegaFooter />
-      </main>
+      </div>
     </>
   );
 }

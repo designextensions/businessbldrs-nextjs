@@ -99,6 +99,8 @@ export default function MegaFooter() {
                 src={BB_Full_Lockup_dark_1_3}
                 alt="Business Builders Logo"
                 className="h-12 w-auto mb-6"
+                width={224}
+                height={94}
               />
               <p className="text-stone-400 font-serif italic leading-relaxed">
                 Helping businesses, ministries, and non-profits grow with proven
@@ -166,6 +168,7 @@ export default function MegaFooter() {
                 { href: "/portfolio", label: "Portfolio" },
                 { href: "/testimonials", label: "Testimonials" },
                 { href: "/resources", label: "Resources" },
+                { href: "/grant", label: "Nonprofit Grant" },
                 { href: "/request-quote", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
@@ -208,16 +211,17 @@ export default function MegaFooter() {
               <p className="label-industrial text-stone-500 mb-4">FOLLOW US</p>
               <div className="flex gap-3">
                 {[
-                  { icon: Facebook, href: "https://www.facebook.com/businessbldrs" },
-                  { icon: Linkedin, href: "https://www.linkedin.com/company/businessbldrs" },
-                  { icon: Instagram, href: "https://www.instagram.com/businessbldrs/" },
-                  { icon: Youtube, href: "https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg" },
+                  { icon: Facebook, href: "https://www.facebook.com/businessbldrs", label: "Facebook" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/company/businessbldrs", label: "LinkedIn" },
+                  { icon: Instagram, href: "https://www.instagram.com/businessbldrs/", label: "Instagram" },
+                  { icon: Youtube, href: "https://www.youtube.com/channel/UC3SN1I1FwktpF_lMqaZveIg", label: "YouTube" },
                 ].map((social, i) => (
                   <a
                     key={i}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={social.label}
                     className="w-10 h-10 bg-charcoal-800 border-2 border-charcoal-700 flex items-center justify-center hover:bg-yellow-400 hover:border-charcoal-900 transition-all group"
                   >
                     <social.icon className="w-5 h-5 text-stone-400 group-hover:text-charcoal-900" />
@@ -229,6 +233,24 @@ export default function MegaFooter() {
         </div>
 
         <div className="mt-12 pt-8 border-t-2 border-charcoal-800">
+          <div className="mb-6">
+            <p className="label-industrial text-stone-500 mb-3">SERVICE AREAS</p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2">
+              {[
+                { href: "/st-augustine", label: "St. Augustine" },
+                { href: "/jacksonville", label: "Jacksonville" },
+                { href: "/palm-coast", label: "Palm Coast" },
+                { href: "/ponte-vedra", label: "Ponte Vedra" },
+                { href: "/orange-park", label: "Orange Park" },
+                { href: "/gainesville", label: "Gainesville" },
+                { href: "/daytona-beach", label: "Daytona Beach" },
+              ].map((area) => (
+                <Link key={area.href} href={area.href} className="text-stone-500 hover:text-yellow-400 text-sm transition-colors">
+                  {area.label}
+                </Link>
+              ))}
+            </div>
+          </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-stone-500 text-sm" suppressHydrationWarning>
               © {currentYear} Business Builders. All rights reserved.

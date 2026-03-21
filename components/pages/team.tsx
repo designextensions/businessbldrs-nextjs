@@ -153,6 +153,8 @@ export default function Team() {
                         src={member.image}
                         alt={`${member.name}, ${member.title} at Business Builders marketing agency`}
                         className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                        width={400}
+                        height={400}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/20 to-transparent opacity-60" />
                       <div className="absolute bottom-4 left-4 right-4">
@@ -223,6 +225,8 @@ export default function Team() {
                   src={teamCollabImage}
                   alt="Business Builders Team Collaboration"
                   className="w-full"
+                  width={2048}
+                  height={1152}
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-yellow-400 border-2 border-charcoal-900 p-6 shadow-offset hidden lg:block">
