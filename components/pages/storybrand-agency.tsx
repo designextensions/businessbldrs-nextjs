@@ -671,7 +671,7 @@ export default function StoryBrandAgency() {
                 <p className="text-stone-500 text-sm mb-6">{pkg.desc}</p>
                 <Link href="/storybrand-messaging">
                   <Button className={`w-full font-display uppercase text-sm font-bold border-2 border-charcoal-900 shadow-offset-sm hover-press ${pkg.popular ? 'bg-yellow-400 text-charcoal-900 hover:bg-yellow-300' : 'bg-charcoal-900 text-white hover:bg-charcoal-800'}`}>
-                    VIEW DETAILS
+                    View {pkg.name} Details
                   </Button>
                 </Link>
               </div>

@@ -388,7 +388,7 @@ export default function HubSpotImplementation() {
                 className="border-2 border-charcoal-900 bg-transparent text-charcoal-900 px-12 py-6 font-display font-bold text-xl uppercase hover:bg-charcoal-900 hover:text-white transition-all duration-300"
                 data-testid="button-learn-more"
               >
-                Learn More
+                Explore HubSpot Solutions
               </Button>
             </Link>
           </div>

@@ -195,6 +195,7 @@ export default function MegaFooter() {
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-charcoal-800 border-2 border-charcoal-700 text-white placeholder:text-stone-500 focus:border-yellow-400"
                 data-testid="input-newsletter-email"
+                aria-label="Email address for newsletter"
               />
               <Button
                 type="submit"

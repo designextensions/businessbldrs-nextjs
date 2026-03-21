@@ -258,7 +258,7 @@ export default function MarketingServices() {
                   className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-secondary transition-all duration-300 text-sm font-display uppercase"
                   asChild
                 >
-                  <a href={project.url} target="_blank" rel="noopener noreferrer">LEARN MORE</a>
+                  <a href={project.url} target="_blank" rel="noopener noreferrer">{`View ${project.title} Project`}</a>
                 </Button>
               </div>
             ))}

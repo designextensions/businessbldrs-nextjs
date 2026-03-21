@@ -267,7 +267,7 @@ export default function BrandingLogos() {
                     className="border-2 border-secondary text-secondary hover:bg-yellow-400 hover:border-yellow-400 hover:text-black transition-all duration-300 font-display uppercase"
                     asChild
                   >
-                    <a href={project.url} target="_blank" rel="noopener noreferrer">LEARN MORE</a>
+                    <a href={project.url} target="_blank" rel="noopener noreferrer">{`View ${project.title} Project`}</a>
                   </Button>
                 </div>
               </div>

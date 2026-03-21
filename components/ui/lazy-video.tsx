@@ -102,6 +102,7 @@ export default function LazyVideo({
             autoPlay={autoPlay}
             muted={muted}
             loop={loop}
+            aria-hidden="true"
             playsInline={playsInline}
             poster={poster}
             preload="metadata" // Only load metadata initially

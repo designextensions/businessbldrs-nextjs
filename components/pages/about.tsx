@@ -78,6 +78,7 @@ export default function About() {
           muted
           playsInline
           loop
+          aria-hidden="true"
         >
           <source src="/attached_assets/0301.mp4" type="video/mp4" />
         </video>

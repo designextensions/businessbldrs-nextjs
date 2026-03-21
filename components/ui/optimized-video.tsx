@@ -38,6 +38,7 @@ export function OptimizedVideo({
           autoPlay={autoPlay}
           muted={muted}
           loop={loop}
+          aria-hidden="true"
           controls={controls}
           preload={preload}
           className="w-full h-full"

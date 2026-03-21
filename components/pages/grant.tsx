@@ -212,6 +212,7 @@ export default function GrantPage() {
           muted
           playsInline
           loop
+          aria-hidden="true"
         >
           <source src="/attached_assets/0301.mp4" type="video/mp4" />
         </video>
@@ -430,7 +431,7 @@ export default function GrantPage() {
                 </div>
               </div>
 
-              <div className="sr-only" aria-hidden="true">
+              <div className="sr-only">
                 <label htmlFor="honeypot">Leave this blank</label>
                 <input
                   type="text"

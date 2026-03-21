@@ -137,7 +137,7 @@ export default function Navigation() {
   const navLinkColor = showDarkHeroNav ? '#ffffff' : undefined;
   const navLinkClass = `font-display font-bold text-sm lg:text-base ${showDarkHeroNav ? '' : 'text-charcoal-900'} hover:text-yellow-500 transition-colors uppercase tracking-wide flex items-center`;
   const dropdownClass = "absolute top-full left-0 mt-2 w-56 bg-charcoal-900 border-2 border-white/20 shadow-offset opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50";
-  const dropdownItemClass = "px-4 py-3 text-stone-300 hover:text-charcoal-900 hover:bg-yellow-400 transition-colors cursor-pointer flex items-center text-sm font-medium";
+  const dropdownItemClass = "px-4 py-3 text-stone-200 hover:text-charcoal-900 hover:bg-yellow-400 transition-colors cursor-pointer flex items-center text-sm font-medium";
   const megaMenuItemClass = "flex items-start gap-3 px-3 py-2.5 rounded-sm hover:bg-charcoal-800 transition-colors cursor-pointer group/item";
 
   return (
@@ -241,7 +241,7 @@ export default function Navigation() {
                                   <MessageSquare className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">StoryBrand Agency</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">Certified StoryBrand marketing agency — clarify your message & grow</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">Certified StoryBrand marketing agency — clarify your message & grow</div>
                                   </div>
                                 </div>
                               </Link>
@@ -250,7 +250,7 @@ export default function Navigation() {
                                   <FileText className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">Marketing Blueprint</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">StoryBrand Blueprint packages from $1,950</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">StoryBrand Blueprint packages from $1,950</div>
                                   </div>
                                 </div>
                               </Link>
@@ -259,7 +259,7 @@ export default function Navigation() {
                                   <Bot className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">AI Blueprint</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">AI strategy & custom workflow planning</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">AI strategy & custom workflow planning</div>
                                   </div>
                                 </div>
                               </Link>
@@ -278,7 +278,7 @@ export default function Navigation() {
                                   <Palette className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">Branding & Logos</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">Build a memorable brand identity</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">Build a memorable brand identity</div>
                                   </div>
                                 </div>
                               </Link>
@@ -287,7 +287,7 @@ export default function Navigation() {
                                   <Globe className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">Website Design</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">Custom sites that convert visitors to leads</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">Custom sites that convert visitors to leads</div>
                                   </div>
                                 </div>
                               </Link>
@@ -296,7 +296,7 @@ export default function Navigation() {
                                   <Video className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">Video Production</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">Professional video to tell your story</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">Professional video to tell your story</div>
                                   </div>
                                 </div>
                               </Link>
@@ -305,7 +305,7 @@ export default function Navigation() {
                                   <Smartphone className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">App Development</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">Custom mobile & web applications</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">Custom mobile & web applications</div>
                                   </div>
                                 </div>
                               </Link>
@@ -314,7 +314,7 @@ export default function Navigation() {
                                   <Bot className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">AI Development</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">Custom AI tools & automated workflows</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">Custom AI tools & automated workflows</div>
                                   </div>
                                 </div>
                               </Link>
@@ -333,7 +333,7 @@ export default function Navigation() {
                                   <TrendingUp className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">Marketing Services</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">Full-service marketing strategy & execution</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">Full-service marketing strategy & execution</div>
                                   </div>
                                 </div>
                               </Link>
@@ -342,7 +342,7 @@ export default function Navigation() {
                                   <Search className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">SEO Services</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">Get found online with search optimization</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">Get found online with search optimization</div>
                                   </div>
                                 </div>
                               </Link>
@@ -351,7 +351,7 @@ export default function Navigation() {
                                   <BarChart3 className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">Social Media</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">Engage audiences across social platforms</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">Engage audiences across social platforms</div>
                                   </div>
                                 </div>
                               </Link>
@@ -360,7 +360,7 @@ export default function Navigation() {
                                   <Settings className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">HubSpot CRM</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">CRM setup, automation & reporting</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">CRM setup, automation & reporting</div>
                                   </div>
                                 </div>
                               </Link>
@@ -379,7 +379,7 @@ export default function Navigation() {
                                   <Server className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">Managed Hosting</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">99.9% uptime, SSL & nightly backups</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">99.9% uptime, SSL & nightly backups</div>
                                   </div>
                                 </div>
                               </Link>
@@ -388,7 +388,7 @@ export default function Navigation() {
                                   <Settings className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">Maintenance</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">WordPress updates, security & support</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">WordPress updates, security & support</div>
                                   </div>
                                 </div>
                               </Link>
@@ -397,7 +397,7 @@ export default function Navigation() {
                                   <Shield className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
                                     <div className="font-display font-bold text-sm text-white uppercase">ADA Compliance</div>
-                                    <div className="text-xs text-stone-400 mt-0.5">Website accessibility & legal protection</div>
+                                    <div className="text-xs text-stone-300 mt-0.5">Website accessibility & legal protection</div>
                                   </div>
                                 </div>
                               </Link>
@@ -447,6 +447,8 @@ export default function Navigation() {
                     onClick={() => setIsOpen(!isOpen)}
                     className="w-12 h-12 bg-yellow-400 border-2 border-charcoal-900 shadow-offset-sm flex items-center justify-center hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
                     data-testid="button-mobile-menu"
+                    aria-label={isOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={isOpen}
                   >
                     {isOpen ? <X className="w-6 h-6 text-charcoal-900" /> : <Menu className="w-6 h-6 text-charcoal-900" />}
                   </button>
@@ -467,6 +469,7 @@ export default function Navigation() {
                 <button 
                   onClick={() => setIsOpen(false)}
                   className="w-12 h-12 bg-yellow-400 border-2 border-charcoal-900 flex items-center justify-center"
+                  aria-label="Close menu"
                 >
                   <X className="w-6 h-6 text-charcoal-900" />
                 </button>
@@ -474,7 +477,7 @@ export default function Navigation() {
 
               <div className="space-y-4">
                 <div>
-                  <button onClick={() => toggleSection('company')} className="w-full text-left group">
+                  <button onClick={() => toggleSection('company')} className="w-full text-left group" aria-expanded={expandedSections.company}>
                     <div className="flex items-center justify-between py-4 border-b-2 border-charcoal-800">
                       <span className="font-display font-bold text-2xl text-white uppercase">Company</span>
                       <ChevronRight className={`w-6 h-6 text-yellow-400 transition-transform ${expandedSections.company ? 'rotate-90' : ''}`} />
@@ -490,7 +493,7 @@ export default function Navigation() {
                 </div>
 
                 <div>
-                  <button onClick={() => toggleSection('services')} className="w-full text-left group">
+                  <button onClick={() => toggleSection('services')} className="w-full text-left group" aria-expanded={expandedSections.services}>
                     <div className="flex items-center justify-between py-4 border-b-2 border-charcoal-800">
                       <span className="font-display font-bold text-2xl text-white uppercase">Services</span>
                       <ChevronRight className={`w-6 h-6 text-yellow-400 transition-transform ${expandedSections.services ? 'rotate-90' : ''}`} />
@@ -558,7 +561,7 @@ export default function Navigation() {
                 </Link>
                 
                 <div>
-                  <button onClick={() => toggleSection('resources')} className="w-full text-left">
+                  <button onClick={() => toggleSection('resources')} className="w-full text-left" aria-expanded={expandedSections.resources}>
                     <div className="flex items-center justify-between py-4 border-b-2 border-charcoal-800">
                       <span className="font-display font-bold text-2xl text-white uppercase">Resources</span>
                       <ChevronRight className={`w-6 h-6 text-yellow-400 transition-transform ${expandedSections.resources ? 'rotate-90' : ''}`} />

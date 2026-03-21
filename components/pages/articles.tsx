@@ -214,6 +214,7 @@ export default function Articles() {
                 onChange={(e) => { setSelectedCategory(e.target.value); setVisibleCount(12); }}
                 className="w-44 h-10 bg-white border-2 border-stone-300 text-charcoal-900 text-sm px-3 rounded-md appearance-none cursor-pointer focus:outline-none focus:border-yellow-400"
                 style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 12px center" }}
+                aria-label="Filter by category"
               >
                 <option value="all">All Categories</option>
                 {categories.map((category) => (
@@ -226,6 +227,7 @@ export default function Articles() {
                 onChange={(e) => setSortBy(e.target.value as SortBy)}
                 className="w-36 h-10 bg-white border-2 border-stone-300 text-charcoal-900 text-sm px-3 rounded-md appearance-none cursor-pointer focus:outline-none focus:border-yellow-400"
                 style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 12px center" }}
+                aria-label="Sort articles"
               >
                 <option value="newest">Newest</option>
                 <option value="oldest">Oldest</option>
@@ -236,12 +238,16 @@ export default function Articles() {
                 <button
                   onClick={() => setViewType('grid')}
                   className={`p-1.5 transition-colors ${viewType === 'grid' ? 'bg-yellow-400 text-charcoal-900' : 'text-stone-500 hover:text-charcoal-900'}`}
+                  aria-label="Grid view"
+                  aria-pressed={viewType === 'grid'}
                 >
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setViewType('list')}
                   className={`p-1.5 transition-colors ${viewType === 'list' ? 'bg-yellow-400 text-charcoal-900' : 'text-stone-500 hover:text-charcoal-900'}`}
+                  aria-label="List view"
+                  aria-pressed={viewType === 'list'}
                 >
                   <List className="w-4 h-4" />
                 </button>

@@ -243,7 +243,7 @@ export default function ServicesPage() {
                     </div>
                     <Link href={service.link}>
                       <Button>
-                        Learn More
+                        {`Explore ${service.title}`}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </Link>
