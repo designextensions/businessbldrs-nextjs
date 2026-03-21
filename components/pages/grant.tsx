@@ -431,7 +431,7 @@ export default function GrantPage() {
                 </div>
               </div>
 
-              <div className="sr-only">
+              <div className="sr-only" aria-hidden="true">
                 <label htmlFor="honeypot">Leave this blank</label>
                 <input
                   type="text"
