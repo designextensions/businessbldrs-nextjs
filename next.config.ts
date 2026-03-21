@@ -34,7 +34,7 @@ const nextConfig: NextConfig = {
       ],
     },
     {
-      source: "/:path((?!api|_next|favicon\\.ico|.*\\.jpg|.*\\.jpeg|.*\\.png|.*\\.gif|.*\\.svg|.*\\.webp|.*\\.ico|.*\\.woff|.*\\.woff2|.*\\.mp4|.*\\.webm|.*\\.css|.*\\.js).*)",
+      source: "/((?!api|admin|_next|favicon\\.ico|.*\\.jpg|.*\\.jpeg|.*\\.png|.*\\.gif|.*\\.svg|.*\\.webp|.*\\.ico|.*\\.woff|.*\\.woff2|.*\\.mp4|.*\\.webm|.*\\.css|.*\\.js).*)",
       headers: [
         { key: "Cache-Control", value: "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400" },
       ],
