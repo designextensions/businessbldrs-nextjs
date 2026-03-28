@@ -148,7 +148,7 @@ export default function MegaFooter() {
                 </div>
                 <span className="text-white font-display font-bold group-hover:text-yellow-400 transition-colors">(877) 378-6101</span>
               </a>
-              <Link href="/request-quote" className="flex items-center gap-3 group">
+              <Link prefetch={false} href="/request-quote" className="flex items-center gap-3 group">
                 <div className="w-10 h-10 bg-charcoal-800 border-2 border-charcoal-700 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-yellow-400" />
                 </div>
@@ -182,7 +182,7 @@ export default function MegaFooter() {
                 { href: "/marketing-strategy-consulting", label: "Marketing Strategy" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-stone-400 hover:text-yellow-400 transition-colors font-medium">
+                  <Link prefetch={false} href={link.href} className="text-stone-400 hover:text-yellow-400 transition-colors font-medium">
                     {link.label}
                   </Link>
                 </li>
@@ -205,7 +205,7 @@ export default function MegaFooter() {
                 { href: "/request-quote", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-stone-400 hover:text-yellow-400 transition-colors font-medium">
+                  <Link prefetch={false} href={link.href} className="text-stone-400 hover:text-yellow-400 transition-colors font-medium">
                     {link.label}
                   </Link>
                 </li>
@@ -290,10 +290,10 @@ export default function MegaFooter() {
               © {currentYear} Business Builders. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <Link href="/privacy-policy" className="text-stone-500 hover:text-yellow-400 text-sm transition-colors">
+              <Link prefetch={false} href="/privacy-policy" className="text-stone-500 hover:text-yellow-400 text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms-and-conditions" className="text-stone-500 hover:text-yellow-400 text-sm transition-colors">
+              <Link prefetch={false} href="/terms-and-conditions" className="text-stone-500 hover:text-yellow-400 text-sm transition-colors">
                 Terms & Conditions
               </Link>
             </div>

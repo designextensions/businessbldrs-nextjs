@@ -167,7 +167,7 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-full">
             <div className="flex-shrink-0 relative">
-              <Link href="/">
+              <Link prefetch={false} href="/">
                 <div className="relative flex items-center" style={{ height: `${logoHeight}px`, width: isMobile ? 'auto' : '280px', maxWidth: isMobile ? '200px' : '280px' }}>
                   <img 
                     className="cursor-pointer hover:opacity-80 transition-all duration-300 ease-out object-contain absolute top-0 left-0"
@@ -203,13 +203,13 @@ export default function Navigation() {
             <div className="flex items-center gap-6">
               <div className="hidden lg:flex items-center gap-4">
                 <div className="relative group">
-                  <Link href="/about" className={navLinkClass} style={{ color: navLinkColor }}>
+                  <Link prefetch={false} href="/about" className={navLinkClass} style={{ color: navLinkColor }}>
                     About <ChevronDown className="w-4 h-4 ml-1" />
                   </Link>
                   <div className={dropdownClass}>
-                    <Link href="/about"><div className={dropdownItemClass}><Users className="w-4 h-4 mr-3 text-yellow-400" /> About Us</div></Link>
-                    <Link href="/team"><div className={dropdownItemClass}><UserCheck className="w-4 h-4 mr-3 text-yellow-400" /> Our Team</div></Link>
-                    <Link href="/testimonials"><div className={dropdownItemClass}><Star className="w-4 h-4 mr-3 text-yellow-400" /> Testimonials</div></Link>
+                    <Link prefetch={false} href="/about"><div className={dropdownItemClass}><Users className="w-4 h-4 mr-3 text-yellow-400" /> About Us</div></Link>
+                    <Link prefetch={false} href="/team"><div className={dropdownItemClass}><UserCheck className="w-4 h-4 mr-3 text-yellow-400" /> Our Team</div></Link>
+                    <Link prefetch={false} href="/testimonials"><div className={dropdownItemClass}><Star className="w-4 h-4 mr-3 text-yellow-400" /> Testimonials</div></Link>
                   </div>
                 </div>
 
@@ -217,7 +217,7 @@ export default function Navigation() {
                   onMouseEnter={openServicesMenu}
                   onMouseLeave={closeServicesMenu}
                 >
-                  <Link href="/services" className={navLinkClass} style={{ color: navLinkColor }}>
+                  <Link prefetch={false} href="/services" className={navLinkClass} style={{ color: navLinkColor }}>
                     Services <ChevronDown className="w-4 h-4 ml-1" />
                   </Link>
                   <div
@@ -230,13 +230,13 @@ export default function Navigation() {
                       <div className="bg-charcoal-900 border-2 border-white/20 shadow-offset">
                         <div className="grid grid-cols-4 divide-x-2 divide-charcoal-700">
                           <div className="p-6">
-                            <Link href="/services/plan" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
+                            <Link prefetch={false} href="/services/plan" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
                               <Target className="w-5 h-5 text-yellow-400" />
                               <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400 hover:text-yellow-300">Plan</span>
                               <ArrowRight className="w-3 h-3 text-yellow-400 ml-auto" />
                             </Link>
                             <div className="space-y-1">
-                              <Link href="/storybrand-agency">
+                              <Link prefetch={false} href="/storybrand-agency">
                                 <div className={megaMenuItemClass}>
                                   <MessageSquare className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -245,7 +245,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/storybrand-messaging">
+                              <Link prefetch={false} href="/storybrand-messaging">
                                 <div className={megaMenuItemClass}>
                                   <FileText className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -254,7 +254,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/ai-blueprint">
+                              <Link prefetch={false} href="/ai-blueprint">
                                 <div className={megaMenuItemClass}>
                                   <Bot className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -267,13 +267,13 @@ export default function Navigation() {
                           </div>
 
                           <div className="p-6">
-                            <Link href="/services/produce" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
+                            <Link prefetch={false} href="/services/produce" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
                               <Palette className="w-5 h-5 text-yellow-400" />
                               <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400 hover:text-yellow-300">Produce</span>
                               <ArrowRight className="w-3 h-3 text-yellow-400 ml-auto" />
                             </Link>
                             <div className="space-y-1">
-                              <Link href="/branding-logos">
+                              <Link prefetch={false} href="/branding-logos">
                                 <div className={megaMenuItemClass}>
                                   <Palette className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -282,7 +282,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/website-design">
+                              <Link prefetch={false} href="/website-design">
                                 <div className={megaMenuItemClass}>
                                   <Globe className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -291,7 +291,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/video-production">
+                              <Link prefetch={false} href="/video-production">
                                 <div className={megaMenuItemClass}>
                                   <Video className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -300,7 +300,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/app-development">
+                              <Link prefetch={false} href="/app-development">
                                 <div className={megaMenuItemClass}>
                                   <Smartphone className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -309,7 +309,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/ai-development">
+                              <Link prefetch={false} href="/ai-development">
                                 <div className={megaMenuItemClass}>
                                   <Bot className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -322,13 +322,13 @@ export default function Navigation() {
                           </div>
 
                           <div className="p-6">
-                            <Link href="/services/promote" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
+                            <Link prefetch={false} href="/services/promote" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
                               <Megaphone className="w-5 h-5 text-yellow-400" />
                               <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400 hover:text-yellow-300">Promote</span>
                               <ArrowRight className="w-3 h-3 text-yellow-400 ml-auto" />
                             </Link>
                             <div className="space-y-1">
-                              <Link href="/marketing-services">
+                              <Link prefetch={false} href="/marketing-services">
                                 <div className={megaMenuItemClass}>
                                   <TrendingUp className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -337,7 +337,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/seo-services">
+                              <Link prefetch={false} href="/seo-services">
                                 <div className={megaMenuItemClass}>
                                   <Search className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -346,7 +346,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/social-media-marketing">
+                              <Link prefetch={false} href="/social-media-marketing">
                                 <div className={megaMenuItemClass}>
                                   <BarChart3 className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -355,7 +355,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/hubspot-implementation">
+                              <Link prefetch={false} href="/hubspot-implementation">
                                 <div className={megaMenuItemClass}>
                                   <Settings className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -368,13 +368,13 @@ export default function Navigation() {
                           </div>
 
                           <div className="p-6">
-                            <Link href="/services/protect" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
+                            <Link prefetch={false} href="/services/protect" className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-yellow-400 hover:border-yellow-300 transition-colors">
                               <Shield className="w-5 h-5 text-yellow-400" />
                               <span className="font-display font-black text-sm uppercase tracking-wider text-yellow-400 hover:text-yellow-300">Protect</span>
                               <ArrowRight className="w-3 h-3 text-yellow-400 ml-auto" />
                             </Link>
                             <div className="space-y-1">
-                              <Link href="/hosting">
+                              <Link prefetch={false} href="/hosting">
                                 <div className={megaMenuItemClass}>
                                   <Server className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -383,7 +383,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/maintenance">
+                              <Link prefetch={false} href="/maintenance">
                                 <div className={megaMenuItemClass}>
                                   <Settings className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -392,7 +392,7 @@ export default function Navigation() {
                                   </div>
                                 </div>
                               </Link>
-                              <Link href="/ada-accessibility">
+                              <Link prefetch={false} href="/ada-accessibility">
                                 <div className={megaMenuItemClass}>
                                   <Shield className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                                   <div>
@@ -407,7 +407,7 @@ export default function Navigation() {
 
                         <div className="border-t-2 border-charcoal-700 px-6 py-3 bg-charcoal-800 flex items-center justify-between">
                           <span className="text-xs text-stone-400 font-display uppercase tracking-wider">Plan, Produce, Promote & Protect — our proven process to grow your business</span>
-                          <Link href="/services">
+                          <Link prefetch={false} href="/services">
                             <div className="flex items-center gap-1 text-xs font-display font-bold uppercase text-yellow-400 hover:text-yellow-300 transition-colors">
                               View All Services <ArrowRight className="w-3 h-3" />
                             </div>
@@ -418,25 +418,25 @@ export default function Navigation() {
                   </div>
                 </div>
 
-                <Link href="/portfolio" className={navLinkClass} style={{ color: navLinkColor }}>Portfolio</Link>
-                <Link href="/events" className={navLinkClass} style={{ color: navLinkColor }}>Events</Link>
+                <Link prefetch={false} href="/portfolio" className={navLinkClass} style={{ color: navLinkColor }}>Portfolio</Link>
+                <Link prefetch={false} href="/events" className={navLinkClass} style={{ color: navLinkColor }}>Events</Link>
 
                 <div className="relative group">
-                  <Link href="/resources" className={navLinkClass} style={{ color: navLinkColor }}>
+                  <Link prefetch={false} href="/resources" className={navLinkClass} style={{ color: navLinkColor }}>
                     Resources <ChevronDown className="w-4 h-4 ml-1" />
                   </Link>
                   <div className={dropdownClass}>
-                    <Link href="/resources"><div className={dropdownItemClass}><Book className="w-4 h-4 mr-3 text-yellow-400" /> All Resources</div></Link>
-                    <Link href="/resources/articles"><div className={dropdownItemClass}><Book className="w-4 h-4 mr-3 text-yellow-400" /> Articles</div></Link>
-                    <Link href="/videos"><div className={dropdownItemClass}><Video className="w-4 h-4 mr-3 text-yellow-400" /> Videos</div></Link>
-                    <Link href="/downloads"><div className={dropdownItemClass}><Settings className="w-4 h-4 mr-3 text-yellow-400" /> Downloads</div></Link>
-                    <Link href="/promotions"><div className={dropdownItemClass}><Gift className="w-4 h-4 mr-3 text-yellow-400" /> Promotions</div></Link>
+                    <Link prefetch={false} href="/resources"><div className={dropdownItemClass}><Book className="w-4 h-4 mr-3 text-yellow-400" /> All Resources</div></Link>
+                    <Link prefetch={false} href="/resources/articles"><div className={dropdownItemClass}><Book className="w-4 h-4 mr-3 text-yellow-400" /> Articles</div></Link>
+                    <Link prefetch={false} href="/videos"><div className={dropdownItemClass}><Video className="w-4 h-4 mr-3 text-yellow-400" /> Videos</div></Link>
+                    <Link prefetch={false} href="/downloads"><div className={dropdownItemClass}><Settings className="w-4 h-4 mr-3 text-yellow-400" /> Downloads</div></Link>
+                    <Link prefetch={false} href="/promotions"><div className={dropdownItemClass}><Gift className="w-4 h-4 mr-3 text-yellow-400" /> Promotions</div></Link>
                   </div>
                 </div>
               </div>
             
               <div className="flex items-center gap-3">
-                <Link href="/request-quote">
+                <Link prefetch={false} href="/request-quote">
                   <Button size="default" data-testid="button-nav-quote">
                     REQUEST A QUOTE
                   </Button>
@@ -485,9 +485,9 @@ export default function Navigation() {
                   </button>
                   {expandedSections.company && (
                     <div className="pl-4 pt-3 space-y-2 border-l-2 border-yellow-400 ml-2">
-                      <Link href="/about"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>About Us</div></Link>
-                      <Link href="/team"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Our Team</div></Link>
-                      <Link href="/testimonials"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Testimonials</div></Link>
+                      <Link prefetch={false} href="/about"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>About Us</div></Link>
+                      <Link prefetch={false} href="/team"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Our Team</div></Link>
+                      <Link prefetch={false} href="/testimonials"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Testimonials</div></Link>
                     </div>
                   )}
                 </div>
@@ -507,9 +507,9 @@ export default function Navigation() {
                           <span className="font-display font-bold text-xs uppercase tracking-wider text-yellow-400">Plan</span>
                         </div>
                         <div className="pl-4 space-y-1 border-l-2 border-yellow-400 ml-2">
-                          <Link href="/storybrand-agency"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>StoryBrand Agency</div></Link>
-                          <Link href="/storybrand-messaging"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Marketing Blueprint</div></Link>
-                          <Link href="/ai-blueprint"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>AI Blueprint</div></Link>
+                          <Link prefetch={false} href="/storybrand-agency"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>StoryBrand Agency</div></Link>
+                          <Link prefetch={false} href="/storybrand-messaging"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Marketing Blueprint</div></Link>
+                          <Link prefetch={false} href="/ai-blueprint"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>AI Blueprint</div></Link>
                         </div>
                       </div>
                       <div>
@@ -518,11 +518,11 @@ export default function Navigation() {
                           <span className="font-display font-bold text-xs uppercase tracking-wider text-yellow-400">Produce</span>
                         </div>
                         <div className="pl-4 space-y-1 border-l-2 border-yellow-400 ml-2">
-                          <Link href="/branding-logos"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Branding & Logos</div></Link>
-                          <Link href="/website-design"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Website Design</div></Link>
-                          <Link href="/video-production"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Video Production</div></Link>
-                          <Link href="/app-development"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>App Development</div></Link>
-                          <Link href="/ai-development"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>AI Development</div></Link>
+                          <Link prefetch={false} href="/branding-logos"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Branding & Logos</div></Link>
+                          <Link prefetch={false} href="/website-design"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Website Design</div></Link>
+                          <Link prefetch={false} href="/video-production"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Video Production</div></Link>
+                          <Link prefetch={false} href="/app-development"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>App Development</div></Link>
+                          <Link prefetch={false} href="/ai-development"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>AI Development</div></Link>
                         </div>
                       </div>
                       <div>
@@ -531,10 +531,10 @@ export default function Navigation() {
                           <span className="font-display font-bold text-xs uppercase tracking-wider text-yellow-400">Promote</span>
                         </div>
                         <div className="pl-4 space-y-1 border-l-2 border-yellow-400 ml-2">
-                          <Link href="/marketing-services"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Marketing Services</div></Link>
-                          <Link href="/seo-services"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>SEO Services</div></Link>
-                          <Link href="/social-media-marketing"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Social Media</div></Link>
-                          <Link href="/hubspot-implementation"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>HubSpot CRM</div></Link>
+                          <Link prefetch={false} href="/marketing-services"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Marketing Services</div></Link>
+                          <Link prefetch={false} href="/seo-services"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>SEO Services</div></Link>
+                          <Link prefetch={false} href="/social-media-marketing"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Social Media</div></Link>
+                          <Link prefetch={false} href="/hubspot-implementation"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>HubSpot CRM</div></Link>
                         </div>
                       </div>
                       <div>
@@ -543,20 +543,20 @@ export default function Navigation() {
                           <span className="font-display font-bold text-xs uppercase tracking-wider text-yellow-400">Protect</span>
                         </div>
                         <div className="pl-4 space-y-1 border-l-2 border-yellow-400 ml-2">
-                          <Link href="/hosting"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Managed Hosting</div></Link>
-                          <Link href="/maintenance"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Maintenance</div></Link>
-                          <Link href="/ada-accessibility"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>ADA Compliance</div></Link>
+                          <Link prefetch={false} href="/hosting"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Managed Hosting</div></Link>
+                          <Link prefetch={false} href="/maintenance"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>Maintenance</div></Link>
+                          <Link prefetch={false} href="/ada-accessibility"><div className="py-2 text-lg text-stone-300 hover:text-yellow-400" onClick={() => setIsOpen(false)}>ADA Compliance</div></Link>
                         </div>
                       </div>
                     </div>
                   )}
                 </div>
 
-                <Link href="/portfolio">
+                <Link prefetch={false} href="/portfolio">
                   <div className="py-4 border-b-2 border-charcoal-800 font-display font-bold text-2xl text-white uppercase hover:text-yellow-400" onClick={() => setIsOpen(false)}>Portfolio</div>
                 </Link>
                 
-                <Link href="/events">
+                <Link prefetch={false} href="/events">
                   <div className="py-4 border-b-2 border-charcoal-800 font-display font-bold text-2xl text-white uppercase hover:text-yellow-400" onClick={() => setIsOpen(false)}>Events</div>
                 </Link>
                 
@@ -586,7 +586,7 @@ export default function Navigation() {
               </div>
 
               <div className="mt-8 pt-6 border-t-2 border-charcoal-800">
-                <Link href="/request-quote">
+                <Link prefetch={false} href="/request-quote">
                   <Button 
                     onClick={() => setIsOpen(false)}
                     className="w-full"

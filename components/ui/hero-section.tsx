@@ -36,6 +36,7 @@ export default function HeroSection() {
         muted
         playsInline
         loop
+        preload="metadata"
         aria-hidden="true"
         poster="/video-poster.jpg"
       >
