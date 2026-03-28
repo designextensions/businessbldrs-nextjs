@@ -41,9 +41,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const metaDescription = article.excerpt && article.excerpt.length > 160
+    ? article.excerpt.slice(0, 157) + "..."
+    : article.excerpt;
+
   return {
     title: article.title,
-    description: article.excerpt,
+    description: metaDescription,
     alternates: { canonical: `https://businessbldrs.com/resources/articles/${slug}` },
     openGraph: {
       title: article.title,
@@ -77,13 +81,18 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     content: article.content ?? undefined,
   });
 
-  let jsonLd;
-  if (videoSchemas.length > 0) {
-    const { "@context": _ctx, ...articleWithoutContext } = articleJsonLd;
-    jsonLd = { "@context": "https://schema.org", "@graph": [articleWithoutContext, ...videoSchemas] };
-  } else {
-    jsonLd = articleJsonLd;
-  }
+  const breadcrumbSchema = {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://businessbldrs.com" },
+      { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://businessbldrs.com/resources" },
+      { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://businessbldrs.com/resources/articles/${article.slug}` },
+    ],
+  };
+
+  const { "@context": _ctx, ...articleWithoutContext } = articleJsonLd;
+  const graphItems = [articleWithoutContext, breadcrumbSchema, ...videoSchemas];
+  const jsonLd = { "@context": "https://schema.org", "@graph": graphItems };
 
   return (
     <>
