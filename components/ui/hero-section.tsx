@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { trackEvent } from "@/components/ui/google-analytics";
 import { ArrowRight } from "lucide-react";
@@ -64,7 +63,7 @@ export default function HeroSection() {
           Get a team that leverages the latest in AI, combined with StoryBrand messaging, to help you grow!
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col items-center">
           <Link href="/request-quote">
             <button
               onClick={() => trackEvent('click', {
@@ -72,27 +71,27 @@ export default function HeroSection() {
                 event_label: 'hero_cta_quote_button',
                 button_location: 'hero_section'
               })}
-              className="group w-full sm:w-auto whitespace-nowrap bg-charcoal-900 text-white px-8 py-4 font-bold tracking-wide text-lg flex items-center justify-center gap-3 border-b-4 border-yellow-400 hover:bg-charcoal-800 transition-all"
+              className="group w-full sm:w-auto whitespace-nowrap bg-yellow-400 text-charcoal-900 px-10 py-4 font-bold tracking-wide text-lg flex items-center justify-center gap-3 rounded-sm shadow-lg hover:bg-yellow-300 transition-all"
               data-testid="button-hero-quote"
             >
               REQUEST A QUOTE
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </Link>
-          <Link href="/marketing-audit">
-            <Button
-              onClick={() => trackEvent('click', {
-                event_category: 'engagement',
-                event_label: 'hero_marketing_audit_button',
-                button_location: 'hero_section'
-              })}
-              variant="outline"
-              size="xl"
-              className="w-full sm:w-auto whitespace-nowrap border-white/40 text-white hover:border-white hover:bg-white/10"
-              data-testid="button-hero-audit"
-            >
-              GET YOUR MARKETING SCORE
-            </Button>
+          <p className="text-sm text-white/70 mt-3">
+            Takes ~2 minutes &bull; No obligation
+          </p>
+          <Link
+            href="/marketing-audit"
+            onClick={() => trackEvent('click', {
+              event_category: 'engagement',
+              event_label: 'hero_marketing_audit_button',
+              button_location: 'hero_section'
+            })}
+            className="mt-8 text-white underline underline-offset-4 decoration-white/60 hover:decoration-white transition-colors"
+            data-testid="button-hero-audit"
+          >
+            Prefer a low-lift start? Get your free marketing score
           </Link>
         </div>
       </div>
