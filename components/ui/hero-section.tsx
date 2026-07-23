@@ -91,7 +91,7 @@ export default function HeroSection() {
               className="w-full sm:w-auto whitespace-nowrap border-white/40 text-white hover:border-white hover:bg-white/10"
               data-testid="button-hero-audit"
             >
-              FREE MARKETING AUDIT
+              GET YOUR MARKETING SCORE
             </Button>
           </Link>
         </div>

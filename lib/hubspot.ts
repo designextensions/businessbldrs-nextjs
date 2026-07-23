@@ -89,7 +89,10 @@ export class HubSpotService {
   }
 
   async createContact(contact: InsertContact): Promise<HubSpotResponse | null> {
-    if (!this.isConfigured()) return null;
+    if (!this.isConfigured()) {
+      console.warn('[hubspot] Not configured: missing HUBSPOT_API_KEY or HUBSPOT_PORTAL_ID');
+      return null;
+    }
 
     try {
       const hubspotContact = this.mapContactToHubSpot(contact);

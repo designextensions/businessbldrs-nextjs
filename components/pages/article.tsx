@@ -6,6 +6,7 @@ import { ArrowLeft, Calendar, User, Clock, Share2, Facebook, Twitter, Linkedin }
 import { Button } from "@/components/ui/button";
 import ArticleSEO from "@/components/ui/ArticleSEO";
 import { Author, TLDR, FAQ, ExpertQuote, defaultAuthor } from "@/components/ui/geo-components";
+import MarketingScoreCta from "@/components/ui/marketing-score-cta";
 import type { BlogArticle } from "@/lib/db/schema";
 
 interface ArticleProps {
@@ -39,7 +40,7 @@ export default function Article({ article }: ArticleProps) {
   return (
     <div className="min-h-screen">
       {article && <ArticleSEO article={article} />}
-      
+
       {/* Article Header - Light Band */}
       <section className="band-white pt-32 pb-12">
         <div className="max-w-4xl mx-auto px-6">
@@ -197,7 +198,14 @@ export default function Article({ article }: ArticleProps) {
           </div>
         </div>
       </section>
-      
+
+      {/* Marketing Score CTA */}
+      <section className="band-white pb-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <MarketingScoreCta />
+        </div>
+      </section>
+
       {/* Related Services CTA */}
       <section className="band-stone py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

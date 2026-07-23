@@ -17,6 +17,7 @@ interface AuditAnswers {
 
 interface CategoryScore {
   label: string;
+  score: number;
   rating: "good" | "needs-work" | "critical";
   icon: typeof Target;
   color: string;
@@ -159,6 +160,7 @@ function calculateScores(answers: AuditAnswers): CategoryScore[] {
   return [
     {
       label: "PLAN",
+      score: planScore,
       rating: getRating(planScore),
       icon: Target,
       color: "text-blue-600",
@@ -170,6 +172,7 @@ function calculateScores(answers: AuditAnswers): CategoryScore[] {
     },
     {
       label: "PRODUCE",
+      score: produceScore,
       rating: getRating(produceScore),
       icon: Globe,
       color: "text-emerald-600",
@@ -181,6 +184,7 @@ function calculateScores(answers: AuditAnswers): CategoryScore[] {
     },
     {
       label: "PROMOTE",
+      score: promoteScore,
       rating: getRating(promoteScore),
       icon: Megaphone,
       color: "text-purple-600",
@@ -192,6 +196,7 @@ function calculateScores(answers: AuditAnswers): CategoryScore[] {
     },
     {
       label: "PROTECT",
+      score: protectScore,
       rating: getRating(protectScore),
       icon: Shield,
       color: "text-red-600",
@@ -202,6 +207,16 @@ function calculateScores(answers: AuditAnswers): CategoryScore[] {
       serviceName: "Security & Maintenance",
     },
   ];
+}
+
+function calculateOverallScore(scores: CategoryScore[]): number {
+  const maxPerPillar = 3;
+  const total = scores.reduce((sum, s) => sum + s.score, 0);
+  return Math.round((total / (scores.length * maxPerPillar)) * 100);
+}
+
+function findWeakestPillar(scores: CategoryScore[]): CategoryScore {
+  return scores.reduce((weakest, s) => (s.score < weakest.score ? s : weakest), scores[0]);
 }
 
 const ratingConfig = {
@@ -236,6 +251,7 @@ export default function MarketingAudit() {
     setIsSubmitting(true);
     setSubmitError("");
     try {
+      const computedScores = calculateScores(answers);
       const res = await fetch("/api/audit-leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -244,6 +260,8 @@ export default function MarketingAudit() {
           email: leadInfo.email.trim(),
           domain: leadInfo.domain.trim(),
           honeypot: leadInfo.honeypot,
+          scores: computedScores.map((s) => ({ label: s.label, rating: s.rating })),
+          weakestPillar: findWeakestPillar(computedScores).label,
         }),
       });
 
@@ -309,6 +327,8 @@ export default function MarketingAudit() {
   const scores = showResults ? calculateScores(answers) : [];
   const criticalCount = scores.filter((s) => s.rating === "critical").length;
   const needsWorkCount = scores.filter((s) => s.rating === "needs-work").length;
+  const overallScore = scores.length > 0 ? calculateOverallScore(scores) : 0;
+  const weakestPillar = scores.length > 0 ? findWeakestPillar(scores) : null;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -344,6 +364,15 @@ export default function MarketingAudit() {
             <h2 className="headline-xl text-white mb-4">
               Your Marketing <span className="text-yellow-400">Scorecard</span>
             </h2>
+
+            <div className="mb-8">
+              <p className="label-industrial text-stone-400 mb-2">YOUR MARKETING SCORE</p>
+              <div className="flex items-baseline justify-center gap-1">
+                <span className="text-7xl md:text-8xl font-bold text-yellow-400 leading-none">{overallScore}</span>
+                <span className="text-2xl font-bold text-stone-400">/100</span>
+              </div>
+            </div>
+
             <p className="text-xl text-stone-300 max-w-2xl mx-auto mb-8">
               {criticalCount > 0
                 ? `We found ${criticalCount} critical ${criticalCount === 1 ? "area" : "areas"} that need immediate attention.`
@@ -372,6 +401,19 @@ export default function MarketingAudit() {
 
         <section className="band-stone py-16">
           <div className="max-w-5xl mx-auto px-6">
+            {weakestPillar && weakestPillar.recommendations.length > 0 && (
+              <div className="bento-card bg-white p-8 mb-8 border-l-4 border-l-yellow-400">
+                <span className="label-industrial inline-block px-3 py-1 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 text-xs mb-4">
+                  START HERE
+                </span>
+                <h3 className="headline-md text-charcoal-900 mb-2">
+                  Your biggest opportunity: {weakestPillar.label}
+                </h3>
+                <p className="text-stone-600">
+                  {weakestPillar.recommendations[0]}
+                </p>
+              </div>
+            )}
             <div className="space-y-8">
               {scores.map((score) => {
                 const rc = ratingConfig[score.rating];
@@ -470,9 +512,9 @@ export default function MarketingAudit() {
   return (
     <div className="min-h-screen bg-white">
       <SEOHead
-        title="Free Marketing Audit | Business Builders"
-        description="Take our free 2-minute marketing audit and get a personalized scorecard showing exactly where your business stands across Plan, Produce, Promote, and Protect."
-        keywords="free marketing audit, marketing scorecard, marketing assessment, business marketing evaluation"
+        title="Free Marketing Score & Audit | Business Builders"
+        description="Take our free 60-second marketing audit and get a personalized marketing score showing exactly where your business stands across Plan, Produce, Promote, and Protect."
+        keywords="free marketing audit, marketing score, marketing scorecard, marketing assessment, business marketing evaluation"
         canonicalUrl="https://businessbldrs.com/marketing-audit"
         structuredData={structuredData}
         pageType="website"
@@ -492,15 +534,15 @@ export default function MarketingAudit() {
           <div className="relative max-w-3xl mx-auto px-6 pt-32 pb-16 text-center">
             <span className="label-industrial inline-flex items-center gap-2 px-4 py-2 bg-yellow-400 text-charcoal-900 border-2 border-charcoal-900 shadow-offset-sm mb-6">
               <Target className="w-4 h-4" />
-              FREE MARKETING AUDIT
+              FREE MARKETING SCORE
             </span>
 
             <h1 className="headline-xl text-white mb-4">
-              Where Does Your Marketing <span className="text-yellow-400">Stand?</span>
+              What's Your Marketing <span className="text-yellow-400">Score?</span>
             </h1>
 
             <p className="text-lg text-stone-400 mb-8 max-w-xl mx-auto">
-              5 quick questions. Instant personalized scorecard.
+              5 questions. 60 seconds. Instant scorecard.
             </p>
 
             <button
@@ -508,20 +550,20 @@ export default function MarketingAudit() {
               className="bg-yellow-400 text-charcoal-900 px-10 py-4 font-bold tracking-wide text-lg inline-flex items-center gap-3 border-2 border-charcoal-900 shadow-offset-sm hover:bg-yellow-300 transition-colors"
               data-testid="audit-start-button"
             >
-              START YOUR AUDIT
+              GET MY SCORE
               <ArrowRight className="w-5 h-5" />
             </button>
 
             <div className="mt-16 text-left max-w-2xl mx-auto space-y-4">
-              <h2 className="headline-md text-white">What This Audit Covers</h2>
+              <h2 className="headline-md text-white">What Your Score Covers</h2>
               <p className="text-stone-400 leading-relaxed">
-                Our free marketing audit evaluates the four pillars that drive business growth: your website performance, messaging clarity, marketing strategy, and digital presence. Each area is scored individually so you can see exactly where you excel and where opportunities exist.
+                Your marketing score measures the four pillars that drive business growth: your website performance, messaging clarity, marketing strategy, and digital presence. Each area is scored individually so you can see exactly where you excel and where opportunities exist.
               </p>
               <p className="text-stone-400 leading-relaxed">
-                After completing five quick questions about your current marketing efforts, you will receive a personalized scorecard with specific, actionable recommendations. These are the same insights our strategists use when onboarding new clients — condensed into a self-service format you can use right now.
+                After completing five quick questions about your current marketing efforts, you will receive a personalized scorecard with specific, actionable recommendations. These are the same insights our strategists use when onboarding new clients, condensed into a self-service format you can use right now.
               </p>
               <p className="text-stone-400 leading-relaxed">
-                Whether you are a small business owner evaluating your first marketing investment, a nonprofit leader looking to amplify your mission, or an established company benchmarking against best practices, this audit gives you a clear starting point for smarter marketing decisions.
+                Whether you are a small business owner evaluating your first marketing investment, a nonprofit leader looking to amplify your mission, or an established company benchmarking against best practices, your score gives you a clear starting point for smarter marketing decisions.
               </p>
             </div>
           </div>
@@ -536,7 +578,7 @@ export default function MarketingAudit() {
             </span>
 
             <h2 className="headline-lg text-white mb-4">
-              Your Results Are <span className="text-yellow-400">Ready!</span>
+              Your Score Is <span className="text-yellow-400">Ready!</span>
             </h2>
 
             <p className="text-xl text-stone-300 mb-10 max-w-xl mx-auto leading-relaxed">
