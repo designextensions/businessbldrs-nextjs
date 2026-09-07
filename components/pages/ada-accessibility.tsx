@@ -476,6 +476,9 @@ export default function ADAAccessibilityPage() {
           <p className="text-xl text-charcoal-700 mb-8 max-w-2xl mx-auto">
             The cost of proactive compliance is a fraction of a single lawsuit settlement. Don't wait until you get sued.
           </p>
+          <p className="text-lg text-charcoal-800 mb-8">
+            Florida business? See our <Link href="/ada-compliance-florida" className="underline font-semibold">Florida ADA website compliance</Link> page for state-specific lawsuit trends and answers.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/request-quote">
               <Button className="bg-charcoal-900 text-white px-12 py-6 font-display font-bold text-xl uppercase border-2 border-charcoal-900 shadow-offset hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-offset-sm transition-all duration-200">

@@ -60,6 +60,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/maintenance`, lastModified: SERVICE_UPDATED, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/hosting`, lastModified: SERVICE_UPDATED, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/ada-accessibility`, lastModified: SERVICE_UPDATED, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE_URL}/ada-compliance-florida`, lastModified: SERVICE_UPDATED, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/st-augustine`, lastModified: GEO_UPDATED, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/jacksonville`, lastModified: GEO_UPDATED, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/palm-coast`, lastModified: GEO_UPDATED, changeFrequency: "monthly", priority: 0.7 },
