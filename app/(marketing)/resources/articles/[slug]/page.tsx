@@ -11,10 +11,7 @@ export const dynamicParams = true;
 
 async function getPublishedArticleBySlug(slug: string) {
   return db.query.blogArticles.findFirst({
-    where: and(
-      eq(blogArticles.slug, slug),
-      eq(blogArticles.isPublished, true),
-    ),
+    where: and(eq(blogArticles.slug, slug), eq(blogArticles.isPublished, true)),
   });
 }
 
@@ -30,7 +27,11 @@ export async function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
   const article = await getPublishedArticleBySlug(slug);
 
@@ -41,24 +42,33 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
-  const metaDescription = article.excerpt && article.excerpt.length > 160
-    ? article.excerpt.slice(0, 157) + "..."
-    : article.excerpt;
+  const metaDescription =
+    article.excerpt && article.excerpt.length > 160
+      ? article.excerpt.slice(0, 157) + "..."
+      : article.excerpt;
 
   return {
     title: article.title,
     description: metaDescription,
-    alternates: { canonical: `https://businessbldrs.com/resources/articles/${slug}` },
+    alternates: {
+      canonical: `https://businessbldrs.com/resources/articles/${slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
       type: "article",
-      images: article.image ? [article.image] : [getOgImageUrl(article.title, article.excerpt || "")],
+      images: article.image
+        ? [article.image]
+        : [getOgImageUrl(article.title, article.excerpt || "")],
     },
   };
 }
 
-export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const article = await getPublishedArticleBySlug(slug);
   if (!article) {
@@ -71,7 +81,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     image: article.image,
     datePublished: article.date,
     slug: article.slug,
-    author: article.author,
+    author:
+      article.author && !article.author.includes("@")
+        ? article.author
+        : undefined,
   });
 
   const videoSchemas = getArticleVideoSchemas({
@@ -83,10 +96,25 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   const breadcrumbSchema = {
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://businessbldrs.com" },
-      { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://businessbldrs.com/resources" },
-      { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://businessbldrs.com/resources/articles/${article.slug}` },
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://businessbldrs.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Resources",
+        item: "https://businessbldrs.com/resources",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: `https://businessbldrs.com/resources/articles/${article.slug}`,
+      },
     ],
   };
 
